@@ -75,16 +75,12 @@ const ArchUpdateIndicator = new Lang.Class({
 		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
 		this._applySettings();
 
-		// Start checking
+		// Schedule first check
 		let that = this;
 		this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, BOOT_WAIT, function () {
 			that._checkUpdates();
 			that._FirstTimeoutId = null;
 			return false; // Run once
-		});
-		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
-			that._checkUpdates();
-			return true; 
 		});
 
 	},
@@ -99,6 +95,12 @@ const ArchUpdateIndicator = new Lang.Class({
 		BOOT_WAIT		   = this._settings.get_int('boot-wait');
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
 		this._checkShowHide();
+		let that = this;
+		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
+		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
+			that._checkUpdates();
+			return true;
+		});
 	},
 
 	destroy: function() {
