@@ -48,6 +48,19 @@ const ArchUpdateIndicator = new Lang.Class({
 		box.add_child(this.label);
 		this.actor.add_child(box);
 		
+		// Create the menu
+		this.menuLabel = new PopupMenu.PopupMenuItem( _('Waiting first check'), { reactive: false } );
+		this.updatesSection = new PopupMenu.PopupMenuSection();
+		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
+
+		this.menu.addMenuItem(this.menuLabel);
+		this.menu.addMenuItem(this.updatesSection);
+		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+		this.menu.addMenuItem(this.checkNowMenuItem);
+
+		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
+
+		// Start checking
 		let that = this;
 		this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, BOOT_WAIT, function () {
 			that._checkUpdates();
@@ -80,23 +93,27 @@ const ArchUpdateIndicator = new Lang.Class({
 			// Updates pending
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this.label.set_text(updatesCount.toString());
+			this.menuLabel.label.set_text(updatesCount.toString() + ' updates pending');
 			this.actor.visible = true;
 			
 		} else if (updatesCount < 0) {
 			// Error
 			this.updateIcon.set_icon_name('arch-fade-symbolic');
+			this.menuLabel.label.set_text('Error');
 			this.actor.visible = false;
 		
 		} else {
 			// Up to date
 			this.updateIcon.set_icon_name('arch-uptodate-symbolic');
 			this.label.set_text('');
+			this.menuLabel.label.set_text('Up to date :)');
 			this.actor.visible = true;
 		}
 	
 	},
 
 	_checkUpdates: function() {
+		this.updateIcon.set_icon_name('arch-fade-symbolic');
 		try {
 		
 			this.output = GLib.spawn_command_line_sync('checkupdates');
@@ -113,7 +130,6 @@ const ArchUpdateIndicator = new Lang.Class({
 			// TODO log err.message.toString() ?
 			this._updateStatus(-1);
 		}
-
 	},
 
 
