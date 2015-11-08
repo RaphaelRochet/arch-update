@@ -24,6 +24,7 @@ const Gettext = imports.gettext.domain('arch-update');
 const _ = Gettext.gettext;
 
 let ALWAYS_VISIBLE     = true;
+let SHOW_COUNT         = true;
 let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 
@@ -94,6 +95,7 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_applySettings: function() {
 		ALWAYS_VISIBLE     = this._settings.get_boolean('always-visible');
+		SHOW_COUNT        = this._settings.get_boolean('show-count');
 		BOOT_WAIT		   = this._settings.get_int('boot-wait');
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
 		this._checkShowHide();
@@ -118,6 +120,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		} else {
 			this.actor.visible = true;
 		}
+		this.label.visible = SHOW_COUNT;
 	},
 
 	_updateStatus: function(updatesCount) {

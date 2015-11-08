@@ -60,12 +60,24 @@ function buildPrefsWidget(){
 	});
 	settings.bind('always-visible' , field_visible , 'active' , Gio.SettingsBindFlags.DEFAULT);
 
-	grid.attach(etq_wait               , 2, 1, 2, 1);
+	let etq_count = new Gtk.Label({
+		label: _("Show updates count on indicator"),
+		hexpand: true,
+		halign: Gtk.Align.START
+	});
+	let field_count = new Gtk.Switch({
+		active: true
+	});
+	settings.bind('show-count' , field_count , 'active' , Gio.SettingsBindFlags.DEFAULT);
+	
+	grid.attach(etq_wait          , 2, 1, 2, 1);
 	grid.attach(field_wait        , 4, 1, 2, 1);
-	grid.attach(etq_interval           , 2, 2, 2, 1);
+	grid.attach(etq_interval      , 2, 2, 2, 1);
 	grid.attach(field_interval    , 4, 2, 2, 1);
 	grid.attach(etq_visible       , 2, 3, 2, 1);
 	grid.attach(field_visible     , 4, 3, 2, 1);
+	grid.attach(etq_count         , 2, 4, 2, 1);
+	grid.attach(field_count       , 4, 4, 2, 1);
 	
 	grid.show_all();
 

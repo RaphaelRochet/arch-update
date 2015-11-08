@@ -24,5 +24,13 @@
         </description>
     </key>
 
+    <key name="show-count" type="b">
+      <default>true</default>
+        <summary>Show updates count on indicator</summary>
+        <description>
+            If true, the indicator will display the number of updates pending
+        </description>
+    </key>
+
   </schema>
 </schemalist>
