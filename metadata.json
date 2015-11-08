@@ -1,0 +1,10 @@
+{
+  "description": "Notify Arch Updates", 
+  "name": "ArchLinux Updates Indicator", 
+  "shell-version": [
+    "3.18"
+  ], 
+  "url": "", 
+  "uuid": "arch-update@RaphaelRochet", 
+  "version": 1
+}
