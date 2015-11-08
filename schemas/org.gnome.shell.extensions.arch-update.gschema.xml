@@ -1,0 +1,28 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.arch-update"
+      path="/org/gnome/shell/extensions/arch-update/">
+
+    <key type="i" name="boot-wait">
+        <default>15</default>
+        <summary>Time to wait before first check (seconds)</summary>
+        <description>A first check is made this number of seconds after startup</description>
+        <range min="5" max="5000"/>
+    </key>
+
+    <key type="i" name="check-interval">
+        <default>60</default>
+        <summary>Interval between updates check (minutes)</summary>
+        <description>Time to wait between two automatic checks</description>
+        <range min="30" max="2000"/>
+    </key>
+
+    <key name="always-visible" type="b">
+      <default>true</default>
+        <summary>Indicator is always visble</summary>
+        <description>
+            If true, the indicator is always visible, even when non updates are pending
+        </description>
+    </key>
+
+  </schema>
+</schemalist>

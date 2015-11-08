@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-08 18:34+0100\n"
+"PO-Revision-Date: 2015-11-08 18:34+0100\n"
+"Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: extension.js:55
+msgid "Waiting first check"
+msgstr "En attente du premier test"
+
+#: extension.js:57
+msgid "Check now"
+msgstr "Vérifier maintenant"
+
+#: extension.js:58
+msgid "Settings"
+msgstr "Paramètres"
+
+#: extension.js:134
+msgid "Error"
+msgstr "Erreur"
+
+#: extension.js:139
+msgid "Up to date :)"
+msgstr "Tout est à jour :)"
+
+#: prefs.js:26
+msgid "Time to wait before first check (seconds)"
+msgstr "Temps d'attente avant le premier test (secondes)"
+
+#: prefs.js:40
+msgid "Interval between updates check (minutes)"
+msgstr "Intervalle entre les vérifications (minutes)"
+
+#: prefs.js:54
+msgid "Always visible"
+msgstr "Toujours visible"
+
+#: extension.js:149
+msgid "Checking"
+msgstr "Vérification en cours"
+
+#: extension.js:126
+msgid "updates pending"
+msgstr "mise(s) à jour en attente"

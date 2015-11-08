@@ -15,14 +15,20 @@ const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
+const Util = imports.misc.util;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
+const Utils = Me.imports.utils;
 
+const Gettext = imports.gettext.domain('arch-update');
+const _ = Gettext.gettext;
+
+let ALWAYS_VISIBLE     = true;
 let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 
 function init() {
-	// TODO : Translation init
+	Utils.initTranslations("arch-update");
 }
 
 const ArchUpdateIndicator = new Lang.Class({
@@ -37,7 +43,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.parent(0.0, "ArchUpdateIndicator");
 		Gtk.IconTheme.get_default().append_search_path(Me.dir.get_child('icons').get_path());
 
-		this.updateIcon = new St.Icon({icon_name: "arch-uptodate-symbolic", style_class: 'system-status-icon'});
+		this.updateIcon = new St.Icon({icon_name: "arch-unknown-symbolic", style_class: 'system-status-icon'});
 
 		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
 		this.label = new St.Label({ text: '',
@@ -52,13 +58,21 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menuLabel = new PopupMenu.PopupMenuItem( _('Waiting first check'), { reactive: false } );
 		this.updatesSection = new PopupMenu.PopupMenuSection();
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
+		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
 
 		this.menu.addMenuItem(this.menuLabel);
 		this.menu.addMenuItem(this.updatesSection);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.checkNowMenuItem);
+		this.menu.addMenuItem(settingsMenuItem);
 
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
+		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
+
+		// Load settings
+		this._settings = Utils.getSettings();
+		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
+		this._applySettings();
 
 		// Start checking
 		let that = this;
@@ -74,6 +88,17 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	},
 
+	_openSettings: function () {
+		Util.spawn([ "gnome-shell-extension-prefs", Me.uuid ]);
+	},
+
+	_applySettings: function() {
+		ALWAYS_VISIBLE     = this._settings.get_boolean('always-visible');
+		BOOT_WAIT		   = this._settings.get_int('boot-wait');
+		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
+		this._checkShowHide();
+	},
+
 	destroy: function() {
 		if (this._FirstTimeoutId) {
 			GLib.source_remove(this._FirstTimeoutId);
@@ -87,35 +112,44 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.parent();
 	},
 
+	_checkShowHide: function() {
+		if (!ALWAYS_VISIBLE && this._UpdatesPending < 1) {
+			this.actor.visible = false;
+		} else {
+			this.actor.visible = true;
+		}
+	},
+
 	_updateStatus: function(updatesCount) {
-		
+		updatesCount = typeof updatesCount === 'number' ? updatesCount : this._UpdatesPending;
 		if (updatesCount > 0) {
 			// Updates pending
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this.label.set_text(updatesCount.toString());
-			this.menuLabel.label.set_text(updatesCount.toString() + ' updates pending');
-			this.actor.visible = true;
-			
-		} else if (updatesCount < 0) {
+			this.menuLabel.label.set_text(updatesCount.toString() + ' ' + _('updates pending') );
+		} else if (updatesCount == -1) {
+			// Unknown
+			this.updateIcon.set_icon_name('arch-unknown-symbolic');
+			this.menuLabel.label.set_text('');
+		} else if (updatesCount == -2) {
 			// Error
-			this.updateIcon.set_icon_name('arch-fade-symbolic');
-			this.menuLabel.label.set_text('Error');
-			this.actor.visible = false;
-		
+			this.updateIcon.set_icon_name('arch-error-symbolic');
+			this.menuLabel.label.set_text(_('Error'));
 		} else {
 			// Up to date
 			this.updateIcon.set_icon_name('arch-uptodate-symbolic');
 			this.label.set_text('');
-			this.menuLabel.label.set_text('Up to date :)');
-			this.actor.visible = true;
+			this.menuLabel.label.set_text(_('Up to date :)'));
 		}
-	
+		
+		this._UpdatesPending = updatesCount;
+		this._checkShowHide();
 	},
 
 	_checkUpdates: function() {
 		this.updateIcon.set_icon_name('arch-fade-symbolic');
 		try {
-		
+			this.menuLabel.label.set_text(_('Checking'));
 			this.output = GLib.spawn_command_line_sync('checkupdates');
 			
 			// One package per line so number of updates is easy to compute
@@ -128,7 +162,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			
 		} catch (err) {
 			// TODO log err.message.toString() ?
-			this._updateStatus(-1);
+			this._updateStatus(-2);
 		}
 	},
 
