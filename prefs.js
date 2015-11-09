@@ -69,7 +69,17 @@ function buildPrefsWidget(){
 		active: true
 	});
 	settings.bind('show-count' , field_count , 'active' , Gio.SettingsBindFlags.DEFAULT);
-	
+
+	let etq_notify = new Gtk.Label({
+		label: _("Send a notification when new updates are available"),
+		hexpand: true,
+		halign: Gtk.Align.START
+	});
+	let field_notify = new Gtk.Switch({
+		active: false
+	});
+	settings.bind('notify' , field_notify , 'active' , Gio.SettingsBindFlags.DEFAULT);
+
 	grid.attach(etq_wait          , 2, 1, 2, 1);
 	grid.attach(field_wait        , 4, 1, 2, 1);
 	grid.attach(etq_interval      , 2, 2, 2, 1);
@@ -78,6 +88,8 @@ function buildPrefsWidget(){
 	grid.attach(field_visible     , 4, 3, 2, 1);
 	grid.attach(etq_count         , 2, 4, 2, 1);
 	grid.attach(field_count       , 4, 4, 2, 1);
+	grid.attach(etq_notify        , 2, 5, 2, 1);
+	grid.attach(field_notify      , 4, 5, 2, 1);
 	
 	grid.show_all();
 

@@ -14,6 +14,7 @@ const Main = imports.ui.main;
 const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
+const MessageTray = imports.ui.messageTray;
 
 const Util = imports.misc.util;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -27,6 +28,7 @@ let ALWAYS_VISIBLE     = true;
 let SHOW_COUNT         = true;
 let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
+let NOTIFY             = false;
 
 function init() {
 	Utils.initTranslations("arch-update");
@@ -94,6 +96,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		SHOW_COUNT        = this._settings.get_boolean('show-count');
 		BOOT_WAIT		   = this._settings.get_int('boot-wait');
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
+		NOTIFY = this._settings.get_boolean('notify');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
@@ -132,6 +135,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this.label.set_text(updatesCount.toString());
 			this.menuLabel.label.set_text(updatesCount.toString() + ' ' + _('updates pending') );
+			if (NOTIFY && this._UpdatesPending < updatesCount) {
+				this._showNotification(updatesCount.toString() + ' ' + _('updates pending') );
+			}
 		} else if (updatesCount == -1) {
 			// Unknown
 			this.updateIcon.set_icon_name('arch-unknown-symbolic');
@@ -152,7 +158,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_checkUpdates: function() {
-		this.updateIcon.set_icon_name('arch-fade-symbolic');
+		this.updateIcon.set_icon_name('arch-unknown-symbolic');
 		try {
 			this.menuLabel.label.set_text(_('Checking'));
 			this.output = GLib.spawn_command_line_sync('checkupdates');
@@ -169,6 +175,30 @@ const ArchUpdateIndicator = new Lang.Class({
 			// TODO log err.message.toString() ?
 			this._updateStatus(-2);
 		}
+	},
+
+	_showNotification: function(message) {
+		if (this._notifSource == null) {
+			// We have to prepare this only once
+			this._notifSource = new MessageTray.SystemNotificationSource();
+			this._notifSource.createIcon = function() {
+				return new St.Icon({ icon_name: 'arch-lit-symbolic' });
+			};
+			// Take care of note leaving unneeded sources
+			this._notifSource.connect('destroy', Lang.bind(this, function() {this._notifSource = null;}));
+			Main.messageTray.add(this._notifSource);
+		}
+		let notification = null;
+		// We do not want to have multiple notifications stacked
+		// instead we will update previous
+		if (this._notifSource.notifications.length == 0) {
+			notification = new MessageTray.Notification(this._notifSource, _('New ArchLinux Updates'), message);
+			notification.setTransient(true); // Auto dismiss
+		} else {
+			notification = this._notifSource.notifications[0];
+			notification.update(message, null, { clear: true });
+		}
+		this._notifSource.notify(notification);
 	},
 
 

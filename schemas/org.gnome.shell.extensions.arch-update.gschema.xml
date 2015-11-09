@@ -32,5 +32,11 @@
         </description>
     </key>
 
+    <key name="notify" type="b">
+      <default>false</default>
+        <summary>Send a notification when new updates are available</summary>
+        <description>Send a notification when new updates are available</description>
+    </key>
+
   </schema>
 </schemalist>

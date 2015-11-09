@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 18:46+0100\n"
+"POT-Creation-Date: 2015-11-09 15:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:55 extension.js:59
+#: extension.js:55 extension.js:59 extension.js:61
 msgid "Waiting first check"
 msgstr ""
 
-#: extension.js:57 extension.js:61
+#: extension.js:57 extension.js:61 extension.js:63
 msgid "Check now"
 msgstr ""
 
-#: extension.js:58 extension.js:62
+#: extension.js:58 extension.js:62 extension.js:64
 msgid "Settings"
 msgstr ""
 
-#: extension.js:134 extension.js:140
+#: extension.js:134 extension.js:140 extension.js:148
 msgid "Error"
 msgstr ""
 
-#: extension.js:139 extension.js:145
+#: extension.js:139 extension.js:145 extension.js:153
 msgid "Up to date :)"
 msgstr ""
 
@@ -49,14 +49,22 @@ msgstr ""
 msgid "Always visible"
 msgstr ""
 
-#: extension.js:149 extension.js:155
+#: extension.js:149 extension.js:155 extension.js:163
 msgid "Checking"
 msgstr ""
 
-#: extension.js:126 extension.js:132
+#: extension.js:126 extension.js:132 extension.js:137 extension.js:139
 msgid "updates pending"
 msgstr ""
 
 #: prefs.js:64
 msgid "Show updates count on indicator"
+msgstr ""
+
+#: extension.js:195
+msgid "New ArchLinux Updates"
+msgstr ""
+
+#: prefs.js:74
+msgid "Send a notification when new updates are available"
 msgstr ""
