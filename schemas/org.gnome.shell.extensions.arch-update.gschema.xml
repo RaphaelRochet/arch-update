@@ -38,5 +38,11 @@
         <description>Send a notification when new updates are available</description>
     </key>
 
+    <key name="howmuch" type="i">
+      <default>0</default>
+        <summary>How much information to show on notifications</summary>
+        <description>0:count, 1:list</description>
+    </key>
+
   </schema>
 </schemalist>

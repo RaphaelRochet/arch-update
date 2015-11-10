@@ -29,6 +29,7 @@ let SHOW_COUNT         = true;
 let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
+let HOWMUCH            = 0;
 
 function init() {
 	Utils.initTranslations("arch-update");
@@ -97,6 +98,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		BOOT_WAIT		   = this._settings.get_int('boot-wait');
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
 		NOTIFY = this._settings.get_boolean('notify');
+		HOWMUCH = this._settings.get_int('howmuch');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
@@ -136,7 +138,13 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.label.set_text(updatesCount.toString());
 			this.menuLabel.label.set_text(updatesCount.toString() + ' ' + _('updates pending') );
 			if (NOTIFY && this._UpdatesPending < updatesCount) {
-				this._showNotification(updatesCount.toString() + ' ' + _('updates pending') );
+				let message = '';
+				if (HOWMUCH > 0) {
+					message = this._updateList.slice(0, this._updateList.length-1).join(', ');
+				} else {
+					message = updatesCount.toString() + ' ' + _('updates pending') ;
+				}
+				this._showNotification(message);
 			}
 		} else if (updatesCount == -1) {
 			// Unknown
@@ -164,9 +172,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.output = GLib.spawn_command_line_sync('checkupdates');
 			
 			// One package per line so number of updates is easy to compute
-			let lines = this.output[1].toString().split("\n");
-			if (lines.length >= 2) {
-				this._updateStatus(lines.length - 1);
+			this._updateList = this.output[1].toString().split("\n");
+			if (this._updateList.length >= 2) {
+				this._updateStatus(this._updateList.length - 1);
 			} else {
 				this._updateStatus(0);
 			}

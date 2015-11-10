@@ -80,6 +80,19 @@ function buildPrefsWidget(){
 	});
 	settings.bind('notify' , field_notify , 'active' , Gio.SettingsBindFlags.DEFAULT);
 
+	let etq_howmuch = new Gtk.Label({
+		label: _("How much information to show on notifications"),
+		hexpand: true,
+		halign: Gtk.Align.START
+	});
+	let field_howmuch = new Gtk.ComboBoxText();
+	let howmuch_values = { 0: _("Count only"), 1: _("Packages names") } ;
+	for (let id in howmuch_values) {
+		field_howmuch.append(id, howmuch_values[id]);
+	}
+	//field_howmuch.set_active_id('default');
+	settings.bind('howmuch', field_howmuch, 'active', Gio.SettingsBindFlags.DEFAULT);
+
 	grid.attach(etq_wait          , 2, 1, 2, 1);
 	grid.attach(field_wait        , 4, 1, 2, 1);
 	grid.attach(etq_interval      , 2, 2, 2, 1);
@@ -90,6 +103,8 @@ function buildPrefsWidget(){
 	grid.attach(field_count       , 4, 4, 2, 1);
 	grid.attach(etq_notify        , 2, 5, 2, 1);
 	grid.attach(field_notify      , 4, 5, 2, 1);
+	grid.attach(etq_howmuch       , 2, 6, 2, 1);
+	grid.attach(field_howmuch     , 4, 6, 2, 1);
 	
 	grid.show_all();
 
