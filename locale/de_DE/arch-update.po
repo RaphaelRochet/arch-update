@@ -64,7 +64,7 @@ msgid "Show updates count on indicator"
 msgstr "Zeige Anzahl an Aktualisierungen"
 
 #: extension.js:195 extension.js:203
-msgid "New ArchLinux Updates"
+msgid "New Arch Linux Updates"
 msgstr "Neue Arch Linux Aktualisierungen"
 
 #: prefs.js:74
