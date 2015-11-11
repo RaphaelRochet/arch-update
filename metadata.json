@@ -1,5 +1,5 @@
 {
-  "description": "Notify Arch Updates", 
+  "description": "Update indicator for Arch Linux and GNOME Shell", 
   "name": "Arch Linux Updates Indicator",
   "shell-version": [
     "3.18"
