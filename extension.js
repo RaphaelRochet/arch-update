@@ -1,5 +1,5 @@
 /* 
-	Archlinux Updates checker 
+	Arch Linux Updates checker
 */
 
 const Clutter = imports.gi.Clutter;
@@ -31,6 +31,9 @@ let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
 
+let FIRST_BOOT         = 1;
+let UPDATES_PENDING    = -1;
+
 function init() {
 	Utils.initTranslations("arch-update");
 }
@@ -41,7 +44,6 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_TimeoutId: null,
 	_FirstTimeoutId: null,
-	_UpdatesPending: 0,
 
 	_init: function() {
 		this.parent(0.0, "ArchUpdateIndicator");
@@ -78,14 +80,20 @@ const ArchUpdateIndicator = new Lang.Class({
 		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
 		this._applySettings();
 
-		// Schedule first check
-		let that = this;
-		this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, BOOT_WAIT, function () {
-			that._checkUpdates();
-			that._FirstTimeoutId = null;
-			return false; // Run once
-		});
-
+		if (FIRST_BOOT) {
+			// Schedule first check only if this is the first extension load
+			// This won't be run again if extension is disabled/enabled (like when screen is locked)
+			let that = this;
+			this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, BOOT_WAIT, function () {
+				that._checkUpdates();
+				that._FirstTimeoutId = null;
+				FIRST_BOOT = 0;
+				return false; // Run once
+			});
+		} else {
+			// Restore previous state
+			this._updateStatus();
+		}
 	},
 
 	_openSettings: function () {
@@ -122,7 +130,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_checkShowHide: function() {
-		if (!ALWAYS_VISIBLE && this._UpdatesPending < 1) {
+		if (!ALWAYS_VISIBLE && UPDATES_PENDING < 1) {
 			this.actor.visible = false;
 		} else {
 			this.actor.visible = true;
@@ -131,13 +139,13 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_updateStatus: function(updatesCount) {
-		updatesCount = typeof updatesCount === 'number' ? updatesCount : this._UpdatesPending;
+		updatesCount = typeof updatesCount === 'number' ? updatesCount : UPDATES_PENDING;
 		if (updatesCount > 0) {
 			// Updates pending
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this.label.set_text(updatesCount.toString());
 			this.menuLabel.label.set_text(updatesCount.toString() + ' ' + _('updates pending') );
-			if (NOTIFY && this._UpdatesPending < updatesCount) {
+			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				let message = '';
 				if (HOWMUCH > 0) {
 					message = this._updateList.slice(0, this._updateList.length-1).join(', ');
@@ -161,7 +169,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.menuLabel.label.set_text(_('Up to date :)'));
 		}
 		
-		this._UpdatesPending = updatesCount;
+		UPDATES_PENDING = updatesCount;
 		this._checkShowHide();
 	},
 
@@ -200,7 +208,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		// We do not want to have multiple notifications stacked
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
-			notification = new MessageTray.Notification(this._notifSource, _('New ArchLinux Updates'), message);
+			notification = new MessageTray.Notification(this._notifSource, _('New Arch Linux Updates'), message);
 			notification.setTransient(true); // Auto dismiss
 		} else {
 			notification = this._notifSource.notifications[0];

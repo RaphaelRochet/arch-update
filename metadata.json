@@ -1,10 +1,10 @@
 {
-  "description": "Notify Arch Updates", 
-  "name": "ArchLinux Updates Indicator", 
+  "description": "Update indicator for Arch Linux and GNOME Shell", 
+  "name": "Arch Linux Updates Indicator",
   "shell-version": [
     "3.18"
   ], 
-  "url": "", 
+  "url": "https://github.com/RaphaelRochet/arch-update", 
   "uuid": "arch-update@RaphaelRochet", 
-  "version": 2
+  "version": 3
 }
