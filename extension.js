@@ -1,5 +1,5 @@
 /* 
-	Archlinux Updates checker 
+	Arch Linux Updates checker
 */
 
 const Clutter = imports.gi.Clutter;
@@ -200,7 +200,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		// We do not want to have multiple notifications stacked
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
-			notification = new MessageTray.Notification(this._notifSource, _('New ArchLinux Updates'), message);
+			notification = new MessageTray.Notification(this._notifSource, _('New Arch Linux Updates'), message);
 			notification.setTransient(true); // Auto dismiss
 		} else {
 			notification = this._notifSource.notifications[0];
