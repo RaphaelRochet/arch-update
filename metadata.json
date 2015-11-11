@@ -1,6 +1,6 @@
 {
   "description": "Notify Arch Updates", 
-  "name": "ArchLinux Updates Indicator", 
+  "name": "Arch Linux Updates Indicator",
   "shell-version": [
     "3.18"
   ], 

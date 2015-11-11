@@ -1,5 +1,5 @@
 # arch-update
-Update indicator for ArchLinux and Gnome-Shell
+Update indicator for Arch Linux and GNOME Shell
 
 It uses pacman's «checkupdates» and thus does not need root access.
 
