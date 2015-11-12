@@ -50,5 +50,11 @@
       <description>Command to run to update packages.</description>
     </key>
 
+    <key name="pacman-dir" type="s">
+      <default>"/var/lib/pacman/local"</default>
+        <summary>Pacman directory to monitor</summary>
+        <description></description>
+    </key>
+    
   </schema>
 </schemalist>

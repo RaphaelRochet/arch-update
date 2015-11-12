@@ -97,6 +97,17 @@ function buildPrefsWidget(){
 	let field_updatecmd = new Gtk.Entry();
 	vbox_updatecmd.add(field_updatecmd);
 
+	let vbox_pacmandir = new Gtk.VBox();
+	vbox_pacmandir.pack_start(
+		new Gtk.Label({
+			label: _("Pacman local directory path - To detect when new packages are installed"),
+			hexpand: true,
+			halign: Gtk.Align.START
+		})
+	, true, true, 0);
+	let field_pacmandir = new Gtk.Entry();
+	vbox_pacmandir.add(field_pacmandir);
+
 	// Bind fields to settings
 	settings.bind('boot-wait' , field_wait , 'value' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('check-interval' , field_interval , 'value' , Gio.SettingsBindFlags.DEFAULT);
@@ -105,6 +116,7 @@ function buildPrefsWidget(){
 	settings.bind('notify' , field_notify , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('howmuch', field_howmuch, 'active', Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('update-cmd' , field_updatecmd , 'text' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('pacman-dir' , field_pacmandir , 'text' , Gio.SettingsBindFlags.DEFAULT);
 
 	let grid = new Gtk.Grid({
 		margin: 0, row_spacing: 10, column_spacing: 20, column_homogeneous: false, row_homogeneous: true
@@ -124,7 +136,8 @@ function buildPrefsWidget(){
 	vbox.add(grid);
 	vbox.add(hbox_howmuch);
 	vbox.add(vbox_updatecmd);
-
+	vbox.add(vbox_pacmandir);
+	
 	vbox.show_all();
 
 	return vbox;

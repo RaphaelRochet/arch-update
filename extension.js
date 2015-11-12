@@ -9,6 +9,7 @@ const St = imports.gi.St;
 const GObject = imports.gi.GObject;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
+const Gio = imports.gi.Gio;
 
 const Main = imports.ui.main;
 const Panel = imports.ui.panel;
@@ -34,6 +35,7 @@ let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Do
 
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
+let PACMAN_DIR         = "/var/lib/pacman/local";
 
 function init() {
 	Utils.initTranslations("arch-update");
@@ -92,11 +94,13 @@ const ArchUpdateIndicator = new Lang.Class({
 				that._checkUpdates();
 				that._FirstTimeoutId = null;
 				FIRST_BOOT = 0;
+				that._startFolderMonitor();
 				return false; // Run once
 			});
 		} else {
 			// Restore previous state
 			this._updateStatus();
+			this._startFolderMonitor();
 		}
 	},
 
@@ -116,6 +120,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
+		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
@@ -145,6 +150,14 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.actor.visible = true;
 		}
 		this.label.visible = SHOW_COUNT;
+	},
+
+	_startFolderMonitor: function() {
+		if (PACMAN_DIR) {
+			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
+			this.monitor = this.pacman_dir.monitor_directory(0, null, null);
+			this.monitor.connect('changed', Lang.bind(this, this._checkUpdates));
+		}
 	},
 
 	_updateStatus: function(updatesCount) {
