@@ -156,8 +156,18 @@ const ArchUpdateIndicator = new Lang.Class({
 		if (PACMAN_DIR) {
 			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
 			this.monitor = this.pacman_dir.monitor_directory(0, null, null);
-			this.monitor.connect('changed', Lang.bind(this, this._checkUpdates));
+			this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
 		}
+	},
+	_onFolderChanged: function() {
+		// Folder have changed ! Let's schedule a check in a few seconds
+		let that = this;
+		if (this._FirstTimeoutId) GLib.source_remove(this._FirstTimeoutId);
+		this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 5, function () {
+			that._checkUpdates();
+			that._FirstTimeoutId = null;
+			return false;
+		});
 	},
 
 	_updateStatus: function(updatesCount) {
