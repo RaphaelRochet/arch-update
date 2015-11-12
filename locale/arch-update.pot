@@ -81,3 +81,15 @@ msgstr ""
 #: prefs.js:89
 msgid "Packages names"
 msgstr ""
+
+#:
+msgid "Update now"
+msgstr ""
+
+#:
+msgid "Command to update packages"
+msgstr ""
+
+#:
+msgid "Command to open a terminal"
+msgstr ""

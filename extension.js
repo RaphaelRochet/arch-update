@@ -30,6 +30,8 @@ let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
+let UPDATE_CMD         = "sudo pacman -Syu";
+let TERMINAL_CMD       = "gnome-terminal";
 
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
@@ -65,15 +67,18 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.updatesSection = new PopupMenu.PopupMenuSection();
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
+		let updateNowMenuItem = new PopupMenu.PopupMenuItem(_("Update now"));
 
 		this.menu.addMenuItem(this.menuLabel);
 		this.menu.addMenuItem(this.updatesSection);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.checkNowMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
+		this.menu.addMenuItem(updateNowMenuItem);
 
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
+		updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
 
 		// Load settings
 		this._settings = Utils.getSettings();
@@ -100,6 +105,12 @@ const ArchUpdateIndicator = new Lang.Class({
 		Util.spawn([ "gnome-shell-extension-prefs", Me.uuid ]);
 	},
 
+	_updateNow: function () {
+		// Read at the end of command is needed to prevent the terminal from exiting when the update cmd finishes.
+		let args = "sh -c '" + UPDATE_CMD + ";read -p \"\x0a\x0aPress enter to exit.\"'";
+		Util.spawn([ TERMINAL_CMD, "-e", args ]);
+	},
+
 	_applySettings: function() {
 		ALWAYS_VISIBLE     = this._settings.get_boolean('always-visible');
 		SHOW_COUNT        = this._settings.get_boolean('show-count');
@@ -107,6 +118,8 @@ const ArchUpdateIndicator = new Lang.Class({
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
+		UPDATE_CMD = this._settings.get_string('update-cmd');
+		TERMINAL_CMD = this._settings.get_string('terminal-cmd');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);

@@ -44,5 +44,17 @@
         <description>0:count, 1:list</description>
     </key>
 
+    <key name="update-cmd" type="s">
+      <default>"sudo pacman -Syu"</default>
+      <summary>Command to run to update packages.</summary>
+      <description>Command to run to update packages.</description>
+    </key>
+
+    <key name="terminal-cmd" type="s">
+      <default>"gnome-terminal"</default>
+      <summary>Command to run to run a graphical terminal.</summary>
+      <description>Command to run to run a graphical terminal.</description>
+    </key>
+
   </schema>
 </schemalist>
