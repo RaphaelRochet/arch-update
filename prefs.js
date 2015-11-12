@@ -101,14 +101,6 @@ function buildPrefsWidget(){
 	let field_updateCmd = new Gtk.Entry();
 	settings.bind('update-cmd' , field_updateCmd , 'text' , Gio.SettingsBindFlags.DEFAULT);
 
-	let etq_terminalCmd = new Gtk.Label({
-		label: _("Command to open a terminal"),
-		hexpand: true,
-		halign: Gtk.Align.START
-	});
-	let field_terminalCmd = new Gtk.Entry();
-	settings.bind('terminal-cmd' , field_terminalCmd , 'text' , Gio.SettingsBindFlags.DEFAULT);
-
 	grid.attach(etq_wait          , 2, 1, 2, 1);
 	grid.attach(field_wait        , 4, 1, 2, 1);
 	grid.attach(etq_interval      , 2, 2, 2, 1);
@@ -122,9 +114,7 @@ function buildPrefsWidget(){
 	grid.attach(etq_howmuch       , 2, 6, 2, 1);
 	grid.attach(field_howmuch     , 4, 6, 2, 1);
 	grid.attach(etq_updateCmd     , 2, 7, 2, 1);
-	grid.attach(field_updateCmd   , 4, 7, 2, 1);
-	grid.attach(etq_terminalCmd   , 2, 8, 2, 1);
-	grid.attach(field_terminalCmd , 4, 8, 2, 1);
+	grid.attach(field_updateCmd   , 2, 8, 4, 1);
 	
 	grid.show_all();
 

@@ -30,8 +30,7 @@ let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
-let UPDATE_CMD         = "sudo pacman -Syu";
-let TERMINAL_CMD       = "gnome-terminal";
+let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
 
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
@@ -71,10 +70,10 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		this.menu.addMenuItem(this.menuLabel);
 		this.menu.addMenuItem(this.updatesSection);
+		this.menu.addMenuItem(updateNowMenuItem);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.checkNowMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
-		this.menu.addMenuItem(updateNowMenuItem);
 
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
@@ -106,9 +105,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_updateNow: function () {
-		// Read at the end of command is needed to prevent the terminal from exiting when the update cmd finishes.
-		let args = "sh -c '" + UPDATE_CMD + ";read -p \"\x0a\x0aPress enter to exit.\"'";
-		Util.spawn([ TERMINAL_CMD, "-e", args ]);
+		Util.spawnCommandLine(UPDATE_CMD);
 	},
 
 	_applySettings: function() {
@@ -119,7 +116,6 @@ const ArchUpdateIndicator = new Lang.Class({
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
-		TERMINAL_CMD = this._settings.get_string('terminal-cmd');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
