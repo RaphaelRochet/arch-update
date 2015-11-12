@@ -17,10 +17,6 @@ function init() {
 
 function buildPrefsWidget(){
 
-	let grid = new Gtk.Grid({ 
-		margin: 10, row_spacing: 10, column_spacing: 20, column_homogeneous: false, row_homogeneous: true 
-		});
-
 	// Prepare labels and controls
 	let etq_wait = new Gtk.Label({
 		label: _("Time to wait before first check (seconds)"),
@@ -34,7 +30,6 @@ function buildPrefsWidget(){
 			step_increment: 1
 		})
 	});
-	settings.bind('boot-wait' , field_wait , 'value' , Gio.SettingsBindFlags.DEFAULT);
 
 	let etq_interval = new Gtk.Label({
 		label: _("Interval between updates check (minutes)"),
@@ -48,7 +43,6 @@ function buildPrefsWidget(){
 			step_increment: 30
 		})
 	});
-	settings.bind('check-interval' , field_interval , 'value' , Gio.SettingsBindFlags.DEFAULT);
 
 	let etq_visible = new Gtk.Label({
 		label: _("Always visible"),
@@ -58,7 +52,6 @@ function buildPrefsWidget(){
 	let field_visible = new Gtk.Switch({
 		active: true
 	});
-	settings.bind('always-visible' , field_visible , 'active' , Gio.SettingsBindFlags.DEFAULT);
 
 	let etq_count = new Gtk.Label({
 		label: _("Show updates count on indicator"),
@@ -68,7 +61,6 @@ function buildPrefsWidget(){
 	let field_count = new Gtk.Switch({
 		active: true
 	});
-	settings.bind('show-count' , field_count , 'active' , Gio.SettingsBindFlags.DEFAULT);
 
 	let etq_notify = new Gtk.Label({
 		label: _("Send a notification when new updates are available"),
@@ -78,29 +70,45 @@ function buildPrefsWidget(){
 	let field_notify = new Gtk.Switch({
 		active: false
 	});
-	settings.bind('notify' , field_notify , 'active' , Gio.SettingsBindFlags.DEFAULT);
 
-	let etq_howmuch = new Gtk.Label({
-		label: _("How much information to show on notifications"),
-		hexpand: true,
-		halign: Gtk.Align.START
-	});
+	let hbox_howmuch = new Gtk.HBox();
+	hbox_howmuch.pack_start(
+		new Gtk.Label({
+			label: _("How much information to show on notifications"),
+			hexpand: true,
+			halign: Gtk.Align.START
+		})
+	, true, true, 0);
 	let field_howmuch = new Gtk.ComboBoxText();
 	let howmuch_values = { 0: _("Count only"), 1: _("Packages names") } ;
 	for (let id in howmuch_values) {
 		field_howmuch.append(id, howmuch_values[id]);
 	}
-	//field_howmuch.set_active_id('default');
+	hbox_howmuch.add(field_howmuch);
+
+	let vbox_updatecmd = new Gtk.VBox();
+	vbox_updatecmd.pack_start(
+		new Gtk.Label({
+			label: _("Command to update packages"),
+			hexpand: true,
+			halign: Gtk.Align.START
+		})
+	, true, true, 0);
+	let field_updatecmd = new Gtk.Entry();
+	vbox_updatecmd.add(field_updatecmd);
+
+	// Bind fields to settings
+	settings.bind('boot-wait' , field_wait , 'value' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('check-interval' , field_interval , 'value' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('always-visible' , field_visible , 'active' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('show-count' , field_count , 'active' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('notify' , field_notify , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('howmuch', field_howmuch, 'active', Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('update-cmd' , field_updatecmd , 'text' , Gio.SettingsBindFlags.DEFAULT);
 
-	let etq_updateCmd = new Gtk.Label({
-		label: _("Command to update packages"),
-		hexpand: true,
-		halign: Gtk.Align.START
+	let grid = new Gtk.Grid({
+		margin: 0, row_spacing: 10, column_spacing: 20, column_homogeneous: false, row_homogeneous: true
 	});
-	let field_updateCmd = new Gtk.Entry();
-	settings.bind('update-cmd' , field_updateCmd , 'text' , Gio.SettingsBindFlags.DEFAULT);
-
 	grid.attach(etq_wait          , 2, 1, 2, 1);
 	grid.attach(field_wait        , 4, 1, 2, 1);
 	grid.attach(etq_interval      , 2, 2, 2, 1);
@@ -111,13 +119,14 @@ function buildPrefsWidget(){
 	grid.attach(field_count       , 4, 4, 2, 1);
 	grid.attach(etq_notify        , 2, 5, 2, 1);
 	grid.attach(field_notify      , 4, 5, 2, 1);
-	grid.attach(etq_howmuch       , 2, 6, 2, 1);
-	grid.attach(field_howmuch     , 4, 6, 2, 1);
-	grid.attach(etq_updateCmd     , 2, 7, 2, 1);
-	grid.attach(field_updateCmd   , 2, 8, 4, 1);
 	
-	grid.show_all();
+	let vbox = new Gtk.VBox( {margin: 10, spacing: 10} );
+	vbox.add(grid);
+	vbox.add(hbox_howmuch);
+	vbox.add(vbox_updatecmd);
 
-	return grid;
+	vbox.show_all();
+
+	return vbox;
 };
 
