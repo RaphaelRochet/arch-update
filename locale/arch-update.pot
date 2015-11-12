@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-12 19:47+0100\n"
+"POT-Creation-Date: 2015-11-12 23:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,74 +17,78 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:65
+#: extension.js:65 extension.js:67
 msgid "Waiting first check"
 msgstr ""
 
-#: extension.js:67
+#: extension.js:67 extension.js:69
 msgid "Check now"
 msgstr ""
 
-#: extension.js:68
+#: extension.js:68 extension.js:70
 msgid "Settings"
 msgstr ""
 
-#: extension.js:69
+#: extension.js:69 extension.js:71
 msgid "Update now"
 msgstr ""
 
-#: extension.js:156 extension.js:162
+#: extension.js:156 extension.js:162 extension.js:179 extension.js:185
 msgid "updates pending"
 msgstr ""
 
-#: extension.js:173
+#: extension.js:173 extension.js:196
 msgid "Error"
 msgstr ""
 
-#: extension.js:178
+#: extension.js:178 extension.js:201
 msgid "Up to date :)"
 msgstr ""
 
-#: extension.js:188
+#: extension.js:188 extension.js:211
 msgid "Checking"
 msgstr ""
 
-#: extension.js:220
+#: extension.js:220 extension.js:243
 msgid "New Arch Linux Updates"
 msgstr ""
 
-#: prefs.js:26
+#: prefs.js:26 prefs.js:22
 msgid "Time to wait before first check (seconds)"
 msgstr ""
 
-#: prefs.js:40
+#: prefs.js:40 prefs.js:35
 msgid "Interval between updates check (minutes)"
 msgstr ""
 
-#: prefs.js:54
+#: prefs.js:54 prefs.js:48
 msgid "Always visible"
 msgstr ""
 
-#: prefs.js:64
+#: prefs.js:64 prefs.js:57
 msgid "Show updates count on indicator"
 msgstr ""
 
-#: prefs.js:74
+#: prefs.js:74 prefs.js:66
 msgid "Send a notification when new updates are available"
 msgstr ""
 
-#: prefs.js:84
+#: prefs.js:84 prefs.js:77
 msgid "How much information to show on notifications"
 msgstr ""
 
-#: prefs.js:89
+#: prefs.js:89 prefs.js:83
 msgid "Count only"
 msgstr ""
 
-#: prefs.js:89
+#: prefs.js:89 prefs.js:83
 msgid "Packages names"
 msgstr ""
 
-#: prefs.js:97
+#: prefs.js:97 prefs.js:92
 msgid "Command to update packages"
+msgstr ""
+
+#: prefs.js:103
+msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-12 19:47+0100\n"
-"PO-Revision-Date: 2015-11-12 19:48+0100\n"
+"POT-Creation-Date: 2015-11-12 23:43+0100\n"
+"PO-Revision-Date: 2015-11-12 23:44+0100\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -18,77 +18,81 @@ msgstr ""
 "X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: extension.js:65
+#: extension.js:65 extension.js:67
 msgid "Waiting first check"
 msgstr "En attente du premier test"
 
-#: extension.js:67
+#: extension.js:67 extension.js:69
 msgid "Check now"
 msgstr "Vérifier maintenant"
 
-#: extension.js:68
+#: extension.js:68 extension.js:70
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:69
+#: extension.js:69 extension.js:71
 msgid "Update now"
 msgstr "Mettre à jour maintenant"
 
-#: extension.js:156 extension.js:162
+#: extension.js:156 extension.js:162 extension.js:179 extension.js:185
 msgid "updates pending"
 msgstr "mise(s) à jour en attente"
 
-#: extension.js:173
+#: extension.js:173 extension.js:196
 msgid "Error"
 msgstr "Erreur"
 
-#: extension.js:178
+#: extension.js:178 extension.js:201
 msgid "Up to date :)"
 msgstr "Tout est à jour :)"
 
-#: extension.js:188
+#: extension.js:188 extension.js:211
 msgid "Checking"
 msgstr "Vérification en cours"
 
-#: extension.js:220
+#: extension.js:220 extension.js:243
 msgid "New Arch Linux Updates"
 msgstr "Nouvelles mises à jour"
 
-#: prefs.js:26
+#: prefs.js:26 prefs.js:22
 msgid "Time to wait before first check (seconds)"
 msgstr "Temps d'attente avant le premier test (secondes)"
 
-#: prefs.js:40
+#: prefs.js:40 prefs.js:35
 msgid "Interval between updates check (minutes)"
 msgstr "Intervalle entre les vérifications (minutes)"
 
-#: prefs.js:54
+#: prefs.js:54 prefs.js:48
 msgid "Always visible"
 msgstr "Toujours visible"
 
-#: prefs.js:64
+#: prefs.js:64 prefs.js:57
 msgid "Show updates count on indicator"
 msgstr "Afficher le nombre de mises à jour"
 
-#: prefs.js:74
+#: prefs.js:74 prefs.js:66
 msgid "Send a notification when new updates are available"
 msgstr "Afficher une notification quand de nouvelles mises à jour sont disponibles"
 
-#: prefs.js:84
+#: prefs.js:84 prefs.js:77
 msgid "How much information to show on notifications"
 msgstr "Quantité d'information dans les notifications"
 
-#: prefs.js:89
+#: prefs.js:89 prefs.js:83
 msgid "Count only"
 msgstr "Juste le nombre"
 
-#: prefs.js:89
+#: prefs.js:89 prefs.js:83
 msgid "Packages names"
 msgstr "Noms des paquets"
 
-#: prefs.js:97
+#: prefs.js:97 prefs.js:92
 msgid "Command to update packages"
 msgstr "Commande pour mettre à jour les paquets"
+
+#: prefs.js:103
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr "Dossier local de Pacman - Pour détecter quand des paquets sont installés"
 
 #~ msgid "Command to open a terminal"
 #~ msgstr "Commande pour ouvrir un terminal"
