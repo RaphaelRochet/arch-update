@@ -7,78 +7,106 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-11 13:40+0100\n"
+"POT-Creation-Date: 2015-11-13 12:17+0100\n"
 "PO-Revision-Date: 2015-11-11 14:24+0100\n"
+"Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.5\n"
-"Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de_DE\n"
 
-#: extension.js:55 extension.js:59 extension.js:61 extension.js:62
+#: extension.js:67
 msgid "Waiting first check"
 msgstr "Warte auf erste Überprüfung"
 
-#: extension.js:57 extension.js:61 extension.js:63 extension.js:64
+#: extension.js:69
 msgid "Check now"
 msgstr "Jetzt überprüfen"
 
-#: extension.js:58 extension.js:62 extension.js:64 extension.js:65
+#: extension.js:70
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: extension.js:134 extension.js:140 extension.js:148 extension.js:156
-msgid "Error"
-msgstr "Fehler"
-
-#: extension.js:139 extension.js:145 extension.js:153 extension.js:161
-msgid "Up to date :)"
+#: extension.js:71
+#, fuzzy
+msgid "Update now"
 msgstr "Auf dem Laufenden"
 
-#: prefs.js:26
-msgid "Time to wait before first check (seconds)"
-msgstr "Wartezeit vor erster Überprüfung (Sekunden)"
-
-#: prefs.js:40
-msgid "Interval between updates check (minutes)"
-msgstr "Intervall zwischen Überprüfungen (Minuten)"
-
-#: prefs.js:54
-msgid "Always visible"
-msgstr "Immer sichtbar"
-
-#: extension.js:149 extension.js:155 extension.js:163 extension.js:171
-msgid "Checking"
-msgstr "Überprüfe"
-
-#: extension.js:126 extension.js:132 extension.js:137 extension.js:139
-#: extension.js:145
+#: extension.js:179 extension.js:185
 msgid "updates pending"
 msgstr "ausstehende Aktualisierungen"
 
-#: prefs.js:64
-msgid "Show updates count on indicator"
-msgstr "Zeige Anzahl an Aktualisierungen"
+#: extension.js:196
+msgid "Error"
+msgstr "Fehler"
 
-#: extension.js:195 extension.js:203
+#: extension.js:201
+msgid "Up to date :)"
+msgstr "Auf dem Laufenden"
+
+#: extension.js:211
+msgid "Checking"
+msgstr "Überprüfe"
+
+#: extension.js:243
 msgid "New Arch Linux Updates"
 msgstr "Neue Arch Linux Aktualisierungen"
 
-#: prefs.js:74
+#: prefs.xml:21
+msgid "<b>Timers</b>"
+msgstr ""
+
+#: prefs.xml:32
+msgid "Time to wait before first check (seconds)"
+msgstr "Wartezeit vor erster Überprüfung (Sekunden)"
+
+#: prefs.xml:49
+msgid "Interval between updates check (minutes)"
+msgstr "Intervall zwischen Überprüfungen (Minuten)"
+
+#: prefs.xml:69
+msgid "<b>Indicator</b>"
+msgstr ""
+
+#: prefs.xml:80
+msgid "Always visible"
+msgstr "Immer sichtbar"
+
+#: prefs.xml:97
+msgid "Show updates count on indicator"
+msgstr "Zeige Anzahl an Aktualisierungen"
+
+#: prefs.xml:117
+msgid "<b>Notification</b>"
+msgstr ""
+
+#: prefs.xml:128
 msgid "Send a notification when new updates are available"
 msgstr "Sende eine Benachrichtigung, sobald Aktualisierungen verfügbar sind"
 
-#: prefs.js:84
+#: prefs.xml:145
 msgid "How much information to show on notifications"
 msgstr "Informationen, welche in der Benachrichtigung angezeigt werden"
 
-#: prefs.js:89
+#: prefs.xml:153
 msgid "Count only"
 msgstr "Nur Anzahl"
 
-#: prefs.js:89
+#: prefs.xml:154
 msgid "Packages names"
 msgstr "Paketnamen"
+
+#: prefs.xml:168
+msgid "<b>Advanced settings</b>"
+msgstr ""
+
+#: prefs.xml:180
+msgid "Command to update packages"
+msgstr ""
+
+#: prefs.xml:196
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr ""
