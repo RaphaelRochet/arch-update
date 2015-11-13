@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-13 12:17+0100\n"
-"PO-Revision-Date: 2015-11-11 14:24+0100\n"
+"PO-Revision-Date: 2015-11-13 12:51+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -31,9 +31,8 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 #: extension.js:71
-#, fuzzy
 msgid "Update now"
-msgstr "Auf dem Laufenden"
+msgstr "Jetzt aktualisieren"
 
 #: extension.js:179 extension.js:185
 msgid "updates pending"
@@ -57,7 +56,7 @@ msgstr "Neue Arch Linux Aktualisierungen"
 
 #: prefs.xml:21
 msgid "<b>Timers</b>"
-msgstr ""
+msgstr "<b>Timer</b>"
 
 #: prefs.xml:32
 msgid "Time to wait before first check (seconds)"
@@ -69,7 +68,7 @@ msgstr "Intervall zwischen Überprüfungen (Minuten)"
 
 #: prefs.xml:69
 msgid "<b>Indicator</b>"
-msgstr ""
+msgstr "<b>Anzeige</b>"
 
 #: prefs.xml:80
 msgid "Always visible"
@@ -81,7 +80,7 @@ msgstr "Zeige Anzahl an Aktualisierungen"
 
 #: prefs.xml:117
 msgid "<b>Notification</b>"
-msgstr ""
+msgstr "<b>Benachrichtigung</b>"
 
 #: prefs.xml:128
 msgid "Send a notification when new updates are available"
@@ -101,12 +100,12 @@ msgstr "Paketnamen"
 
 #: prefs.xml:168
 msgid "<b>Advanced settings</b>"
-msgstr ""
+msgstr "<b>Erweiterte Einstellungen</b>"
 
 #: prefs.xml:180
 msgid "Command to update packages"
-msgstr ""
+msgstr "Kommando um Pakete zu aktualisieren"
 
 #: prefs.xml:196
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
+msgstr "Lokales Pacman Verzeichnis - Benötigt, um festzustellen, dass neue Pakete installiert werden"
