@@ -1,0 +1,174 @@
+<?xml version="1.0"?> 
+<interface domain="arch-update">
+
+<object class="GtkAdjustment" id="Adjust_1">
+	<property name="lower">5</property>
+	<property name="upper">5000</property>
+	<property name="step_increment">1</property>
+</object>
+<object class="GtkAdjustment" id="Adjust_2">
+	<property name="lower">30</property>
+	<property name="upper">2000</property>
+	<property name="step_increment">30</property>
+</object>
+
+<object class="GtkVBox" id="vbox_built">
+	<property name="margin">10</property>
+	<property name="spacing">10</property>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property name="label" translatable="true">Time to wait before first check (seconds)</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSpinButton" id="field_wait">
+					<property name="adjustment">Adjust_1</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property name="label" translatable="true">Interval between updates check (minutes)</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSpinButton" id="field_interval">
+					<property name="adjustment">Adjust_2</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property name="label" translatable="true">Always visible</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSwitch" id="field_visible">
+					<property name="active">true</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property name="label" translatable="true">Show updates count on indicator</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSwitch" id="field_count">
+					<property name="active">true</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property name="label" translatable="true">Send a notification when new updates are available</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSwitch" id="field_notify">
+					<property name="active">true</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property name="label" translatable="true">How much information to show on notifications</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkComboBoxText" id="field_howmuch">
+					<items>
+						<item translatable="yes" id="0">Count only</item>
+						<item translatable="yes" id="1">Packages names</item>
+					</items>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkExpander">
+			<property name="label" translatable="true">&lt;b&gt;Advanced settings&lt;/b&gt;</property>
+			<property name="use_markup">true</property>
+			<property name="expanded">false</property>
+
+			<child>
+				<object class="GtkVBox">
+					<property name="spacing">10</property>
+
+					<child>
+						<object class="GtkVBox">
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="true">Command to update packages</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkEntry" id="field_updatecmd">
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkVBox">
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="true">Pacman local directory path - To detect when new packages are installed</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkEntry" id="field_pacmandir">
+								</object>
+							</child>
+						</object>
+					</child>
+
+				</object>
+			</child>
+
+		</object>
+	</child>
+
+</object>
+
+</interface>
