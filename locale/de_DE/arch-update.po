@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-13 12:17+0100\n"
-"PO-Revision-Date: 2015-11-13 12:51+0100\n"
+"PO-Revision-Date: 2015-11-13 12:56+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -104,7 +104,7 @@ msgstr "<b>Erweiterte Einstellungen</b>"
 
 #: prefs.xml:180
 msgid "Command to update packages"
-msgstr "Kommando um Pakete zu aktualisieren"
+msgstr "Kommando, um Pakete zu aktualisieren"
 
 #: prefs.xml:196
 msgid "Pacman local directory path - To detect when new packages are installed"
