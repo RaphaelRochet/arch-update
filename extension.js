@@ -9,6 +9,7 @@ const St = imports.gi.St;
 const GObject = imports.gi.GObject;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
+const Gio = imports.gi.Gio;
 
 const Main = imports.ui.main;
 const Panel = imports.ui.panel;
@@ -30,9 +31,11 @@ let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
+let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
 
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
+let PACMAN_DIR         = "/var/lib/pacman/local";
 
 function init() {
 	Utils.initTranslations("arch-update");
@@ -65,15 +68,18 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.updatesSection = new PopupMenu.PopupMenuSection();
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
+		let updateNowMenuItem = new PopupMenu.PopupMenuItem(_("Update now"));
 
 		this.menu.addMenuItem(this.menuLabel);
 		this.menu.addMenuItem(this.updatesSection);
+		this.menu.addMenuItem(updateNowMenuItem);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.checkNowMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
 
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
+		updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
 
 		// Load settings
 		this._settings = Utils.getSettings();
@@ -88,16 +94,22 @@ const ArchUpdateIndicator = new Lang.Class({
 				that._checkUpdates();
 				that._FirstTimeoutId = null;
 				FIRST_BOOT = 0;
+				that._startFolderMonitor();
 				return false; // Run once
 			});
 		} else {
 			// Restore previous state
 			this._updateStatus();
+			this._startFolderMonitor();
 		}
 	},
 
 	_openSettings: function () {
 		Util.spawn([ "gnome-shell-extension-prefs", Me.uuid ]);
+	},
+
+	_updateNow: function () {
+		Util.spawnCommandLine(UPDATE_CMD);
 	},
 
 	_applySettings: function() {
@@ -107,6 +119,8 @@ const ArchUpdateIndicator = new Lang.Class({
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
+		UPDATE_CMD = this._settings.get_string('update-cmd');
+		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
@@ -136,6 +150,24 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.actor.visible = true;
 		}
 		this.label.visible = SHOW_COUNT;
+	},
+
+	_startFolderMonitor: function() {
+		if (PACMAN_DIR) {
+			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
+			this.monitor = this.pacman_dir.monitor_directory(0, null, null);
+			this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
+		}
+	},
+	_onFolderChanged: function() {
+		// Folder have changed ! Let's schedule a check in a few seconds
+		let that = this;
+		if (this._FirstTimeoutId) GLib.source_remove(this._FirstTimeoutId);
+		this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 5, function () {
+			that._checkUpdates();
+			that._FirstTimeoutId = null;
+			return false;
+		});
 	},
 
 	_updateStatus: function(updatesCount) {

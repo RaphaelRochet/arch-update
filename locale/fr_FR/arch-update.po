@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-10 23:51+0100\n"
-"PO-Revision-Date: 2015-11-10 23:52+0100\n"
+"POT-Creation-Date: 2015-11-13 12:17+0100\n"
+"PO-Revision-Date: 2015-11-13 12:19+0100\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -18,67 +18,97 @@ msgstr ""
 "X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: extension.js:55 extension.js:59 extension.js:61 extension.js:62
+#: extension.js:67
 msgid "Waiting first check"
 msgstr "En attente du premier test"
 
-#: extension.js:57 extension.js:61 extension.js:63 extension.js:64
+#: extension.js:69
 msgid "Check now"
 msgstr "Vérifier maintenant"
 
-#: extension.js:58 extension.js:62 extension.js:64 extension.js:65
+#: extension.js:70
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:134 extension.js:140 extension.js:148 extension.js:156
-msgid "Error"
-msgstr "Erreur"
+#: extension.js:71
+msgid "Update now"
+msgstr "Mettre à jour maintenant"
 
-#: extension.js:139 extension.js:145 extension.js:153 extension.js:161
-msgid "Up to date :)"
-msgstr "Tout est à jour :)"
-
-#: prefs.js:26
-msgid "Time to wait before first check (seconds)"
-msgstr "Temps d'attente avant le premier test (secondes)"
-
-#: prefs.js:40
-msgid "Interval between updates check (minutes)"
-msgstr "Intervalle entre les vérifications (minutes)"
-
-#: prefs.js:54
-msgid "Always visible"
-msgstr "Toujours visible"
-
-#: extension.js:149 extension.js:155 extension.js:163 extension.js:171
-msgid "Checking"
-msgstr "Vérification en cours"
-
-#: extension.js:126 extension.js:132 extension.js:137 extension.js:139
-#: extension.js:145
+#: extension.js:179 extension.js:185
 msgid "updates pending"
 msgstr "mise(s) à jour en attente"
 
-#: prefs.js:64
-msgid "Show updates count on indicator"
-msgstr "Afficher le nombre de mises à jour"
+#: extension.js:196
+msgid "Error"
+msgstr "Erreur"
 
-#: extension.js:195 extension.js:203
+#: extension.js:201
+msgid "Up to date :)"
+msgstr "Tout est à jour :)"
+
+#: extension.js:211
+msgid "Checking"
+msgstr "Vérification en cours"
+
+#: extension.js:243
 msgid "New Arch Linux Updates"
 msgstr "Nouvelles mises à jour"
 
-#: prefs.js:74
+#: prefs.xml:21
+msgid "<b>Timers</b>"
+msgstr "<b>Minuteries</b>"
+
+#: prefs.xml:32
+msgid "Time to wait before first check (seconds)"
+msgstr "Temps d'attente avant le premier test (secondes)"
+
+#: prefs.xml:49
+msgid "Interval between updates check (minutes)"
+msgstr "Intervalle entre les vérifications (minutes)"
+
+#: prefs.xml:69
+msgid "<b>Indicator</b>"
+msgstr "<b>Indicateur</b>"
+
+#: prefs.xml:80
+msgid "Always visible"
+msgstr "Toujours visible"
+
+#: prefs.xml:97
+msgid "Show updates count on indicator"
+msgstr "Afficher le nombre de mises à jour"
+
+#: prefs.xml:117
+msgid "<b>Notification</b>"
+msgstr "<b>Notification</b>"
+
+#: prefs.xml:128
 msgid "Send a notification when new updates are available"
 msgstr "Afficher une notification quand de nouvelles mises à jour sont disponibles"
 
-#: prefs.js:84
+#: prefs.xml:145
 msgid "How much information to show on notifications"
 msgstr "Quantité d'information dans les notifications"
 
-#: prefs.js:89
+#: prefs.xml:153
 msgid "Count only"
 msgstr "Juste le nombre"
 
-#: prefs.js:89
+#: prefs.xml:154
 msgid "Packages names"
 msgstr "Noms des paquets"
+
+#: prefs.xml:168
+msgid "<b>Advanced settings</b>"
+msgstr "<b>Réglages avancés</b>"
+
+#: prefs.xml:180
+msgid "Command to update packages"
+msgstr "Commande pour mettre à jour les paquets"
+
+#: prefs.xml:196
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr "Dossier local de Pacman - Pour détecter quand des paquets sont installés"
+
+#~ msgid "Command to open a terminal"
+#~ msgstr "Commande pour ouvrir un terminal"

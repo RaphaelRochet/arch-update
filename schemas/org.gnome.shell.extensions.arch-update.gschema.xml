@@ -44,5 +44,17 @@
         <description>0:count, 1:list</description>
     </key>
 
+    <key name="update-cmd" type="s">
+      <default>"gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '"</default>
+      <summary>Command to run to update packages.</summary>
+      <description>Command to run to update packages.</description>
+    </key>
+
+    <key name="pacman-dir" type="s">
+      <default>"/var/lib/pacman/local"</default>
+        <summary>Pacman directory to monitor</summary>
+        <description></description>
+    </key>
+    
   </schema>
 </schemalist>
