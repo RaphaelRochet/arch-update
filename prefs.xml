@@ -14,7 +14,16 @@
 
 <object class="GtkVBox" id="vbox_built">
 	<property name="margin">10</property>
-	<property name="spacing">10</property>
+	<property name="spacing">5</property>
+
+	<child>
+		<object class="GtkLabel">
+			<property name="label" translatable="true">&lt;b&gt;Timers&lt;/b&gt;</property>
+			<property name="use_markup">true</property>
+			<property name="hexpand">true</property>
+			<property name="halign">1</property>
+		</object>
+	</child>
 
 	<child>
 		<object class="GtkBox">
@@ -47,6 +56,20 @@
 					<property name="adjustment">Adjust_2</property>
 				</object>
 			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkSeparator">
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkLabel">
+			<property name="label" translatable="true">&lt;b&gt;Indicator&lt;/b&gt;</property>
+			<property name="use_markup">true</property>
+			<property name="hexpand">true</property>
+			<property name="halign">1</property>
 		</object>
 	</child>
 
@@ -85,6 +108,20 @@
 	</child>
 
 	<child>
+		<object class="GtkSeparator">
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkLabel">
+			<property name="label" translatable="true">&lt;b&gt;Notification&lt;/b&gt;</property>
+			<property name="use_markup">true</property>
+			<property name="hexpand">true</property>
+			<property name="halign">1</property>
+		</object>
+	</child>
+
+	<child>
 		<object class="GtkBox">
 			<child>
 				<object class="GtkLabel">
@@ -118,6 +155,11 @@
 					</items>
 				</object>
 			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkSeparator">
 		</object>
 	</child>
 
