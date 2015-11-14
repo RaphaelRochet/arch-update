@@ -71,18 +71,18 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.updatesSection = new PopupMenu.PopupMenuSection();
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
-		let updateNowMenuItem = new PopupMenu.PopupMenuItem(_("Update now"));
+		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now')); this.updateNowMenuItem.actor.visible = false;
 
 		this.menu.addMenuItem(this.menuLabel);
 		this.menu.addMenuItem(this.updatesSection);
-		this.menu.addMenuItem(updateNowMenuItem);
+		this.menu.addMenuItem(this.updateNowMenuItem);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.checkNowMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
 
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
-		updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
+		this.updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
 
 		// Load settings
 		this._settings = Utils.getSettings();
@@ -186,6 +186,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this.label.set_text(updatesCount.toString());
 			this.menuLabel.label.set_text(updatesCount.toString() + ' ' + _('updates pending') );
+			this.updateNowMenuItem.actor.visible = true;
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				let message = '';
 				if (HOWMUCH > 0) {
@@ -199,15 +200,18 @@ const ArchUpdateIndicator = new Lang.Class({
 			// Unknown
 			this.updateIcon.set_icon_name('arch-unknown-symbolic');
 			this.menuLabel.label.set_text('');
+			this.updateNowMenuItem.actor.visible = false;
 		} else if (updatesCount == -2) {
 			// Error
 			this.updateIcon.set_icon_name('arch-error-symbolic');
 			this.menuLabel.label.set_text(_('Error'));
+			this.updateNowMenuItem.actor.visible = false;
 		} else {
 			// Up to date
 			this.updateIcon.set_icon_name('arch-uptodate-symbolic');
 			this.label.set_text('');
 			this.menuLabel.label.set_text(_('Up to date :)'));
+			this.updateNowMenuItem.actor.visible = false;
 		}
 		
 		UPDATES_PENDING = updatesCount;
