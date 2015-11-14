@@ -48,6 +48,8 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_TimeoutId: null,
 	_FirstTimeoutId: null,
+	_updateProcess_sourceId: null,
+	_updateProcess_stream: null,
 
 	_init: function() {
 		this.parent(0.0, "ArchUpdateIndicator");
@@ -133,6 +135,12 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	destroy: function() {
+		if (this._updateProcess_sourceId) {
+			// We leave the checkupdate process end by itself but undef handles to avoid zombies
+			GLib.source_remove(this._updateProcess_sourceId);
+			this._updateProcess_sourceId = null;
+			this._updateProcess_stream = null;
+		}
 		if (this._FirstTimeoutId) {
 			GLib.source_remove(this._FirstTimeoutId);
 			this._FirstTimeoutId = null;
@@ -141,7 +149,6 @@ const ArchUpdateIndicator = new Lang.Class({
 			GLib.source_remove(this._TimeoutId);
 			this._TimeoutId = null;
 		}
-
 		this.parent();
 	},
 
@@ -182,7 +189,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				let message = '';
 				if (HOWMUCH > 0) {
-					message = this._updateList.slice(0, this._updateList.length-1).join(', ');
+					message = this._updateList.join(', ');
 				} else {
 					message = updatesCount.toString() + ' ' + _('updates pending') ;
 				}
@@ -209,22 +216,42 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_checkUpdates: function() {
 		this.updateIcon.set_icon_name('arch-unknown-symbolic');
+		this.menuLabel.label.set_text(_('Checking'));
+		if(this.updateProcess_sourceId) {
+			// A check is already running ! Maybe we should kill it and run another one ?
+			return;
+		}
+		// Run asynchronously, to avoid  shell freeze - even for a 1s check
 		try {
-			this.menuLabel.label.set_text(_('Checking'));
-			this.output = GLib.spawn_command_line_sync('checkupdates');
-			
-			// One package per line so number of updates is easy to compute
-			this._updateList = this.output[1].toString().split("\n");
-			if (this._updateList.length >= 2) {
-				this._updateStatus(this._updateList.length - 1);
-			} else {
-				this._updateStatus(0);
-			}
-			
+			let [res, pid, in_fd, out_fd, err_fd]  = GLib.spawn_async_with_pipes(null, ['/usr/bin/checkupdates'], null, GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
+			// Let's buffer the command's output - that's a input for us !
+			this._updateProcess_stream = new Gio.DataInputStream({
+				base_stream: new Gio.UnixInputStream({fd: out_fd})
+			});
+			// We will process the output at once when it's done
+			this._updateProcess_sourceId = GLib.child_watch_add(0, pid, Lang.bind(this, function() {this._checkUpdatesEnd()}));
 		} catch (err) {
 			// TODO log err.message.toString() ?
 			this._updateStatus(-2);
 		}
+	},
+
+	_checkUpdatesEnd: function() {
+		// Read the buffered output
+		let updateList = [];
+		let out, size;
+		do {
+			[out, size] = this._updateProcess_stream.read_line_utf8(null);
+			if (out) updateList.push(out);
+		} while (out);
+		// Free resources
+		this._updateProcess_stream.close(null);
+		this._updateProcess_stream = null;
+		GLib.source_remove(this.updateProcess_sourceId);
+		this._updateProcess_sourceId = null;
+		// Update indicator
+		this._updateList = updateList;
+		this._updateStatus(this._updateList.length);
 	},
 
 	_showNotification: function(message) {
