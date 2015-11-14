@@ -244,7 +244,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			notification.setTransient(true); // Auto dismiss
 		} else {
 			notification = this._notifSource.notifications[0];
-			notification.update(message, null, { clear: true });
+			notification.update(_('New Arch Linux Updates'), message, { clear: true });
 		}
 		this._notifSource.notify(notification);
 	},
