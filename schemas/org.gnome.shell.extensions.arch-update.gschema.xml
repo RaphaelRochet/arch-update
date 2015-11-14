@@ -44,6 +44,12 @@
         <description>0:count, 1:list</description>
     </key>
 
+    <key name="transient" type="b">
+      <default>true</default>
+        <summary>Use transient notifications (auto dismiss)</summary>
+        <description></description>
+    </key>
+
     <key name="update-cmd" type="s">
       <default>"gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '"</default>
       <summary>Command to run to update packages.</summary>

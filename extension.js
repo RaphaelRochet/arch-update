@@ -31,6 +31,7 @@ let BOOT_WAIT		   = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
+let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
 
 let FIRST_BOOT         = 1;
@@ -119,6 +120,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
+		TRANSIENT = this._settings.get_boolean('transient');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
 		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		this._checkShowHide();
@@ -241,11 +243,11 @@ const ArchUpdateIndicator = new Lang.Class({
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
 			notification = new MessageTray.Notification(this._notifSource, _('New Arch Linux Updates'), message);
-			notification.setTransient(true); // Auto dismiss
 		} else {
 			notification = this._notifSource.notifications[0];
 			notification.update(_('New Arch Linux Updates'), message, { clear: true });
 		}
+		notification.setTransient(TRANSIENT);
 		this._notifSource.notify(notification);
 	},
 
