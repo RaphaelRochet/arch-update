@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-14 13:19+0100\n"
+"POT-Creation-Date: 2015-11-15 20:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:68
-msgid "Waiting first check"
-msgstr ""
-
-#: extension.js:70
+#: extension.js:81
 msgid "Check now"
 msgstr ""
 
-#: extension.js:71
+#: extension.js:82
 msgid "Settings"
 msgstr ""
 
-#: extension.js:72
+#: extension.js:83
 msgid "Update now"
 msgstr ""
 
-#: extension.js:181 extension.js:187
+#: extension.js:100
+msgid "Waiting first check"
+msgstr ""
+
+#: extension.js:197 extension.js:212
 msgid "updates pending"
 msgstr ""
 
-#: extension.js:198
+#: extension.js:223
 msgid "Error"
 msgstr ""
 
-#: extension.js:203
+#: extension.js:228
 msgid "Up to date :)"
 msgstr ""
 
-#: extension.js:213
+#: extension.js:247
 msgid "Checking"
 msgstr ""
 
-#: extension.js:245 extension.js:248
+#: extension.js:300 extension.js:303
 msgid "New Arch Linux Updates"
 msgstr ""
 
@@ -98,17 +98,21 @@ msgid "Count only"
 msgstr ""
 
 #: prefs.xml:171
-msgid "Packages names"
+msgid "New updates names"
 msgstr ""
 
-#: prefs.xml:185
+#: prefs.xml:172
+msgid "All updates names"
+msgstr ""
+
+#: prefs.xml:186
 msgid "<b>Advanced settings</b>"
 msgstr ""
 
-#: prefs.xml:197
+#: prefs.xml:198
 msgid "Command to update packages"
 msgstr ""
 
-#: prefs.xml:213
+#: prefs.xml:214
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""

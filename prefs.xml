@@ -168,7 +168,8 @@
 				<object class="GtkComboBoxText" id="field_howmuch">
 					<items>
 						<item translatable="yes" id="0">Count only</item>
-						<item translatable="yes" id="1">Packages names</item>
+						<item translatable="yes" id="1">New updates names</item>
+						<item translatable="yes" id="2">All updates names</item>
 					</items>
 				</object>
 			</child>

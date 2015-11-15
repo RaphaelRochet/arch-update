@@ -25,6 +25,7 @@ const Utils = Me.imports.utils;
 const Gettext = imports.gettext.domain('arch-update');
 const _ = Gettext.gettext;
 
+/* Options */
 let ALWAYS_VISIBLE     = true;
 let SHOW_COUNT         = true;
 let BOOT_WAIT		   = 15;      // 15s
@@ -33,10 +34,13 @@ let NOTIFY             = false;
 let HOWMUCH            = 0;
 let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
+let PACMAN_DIR         = "/var/lib/pacman/local";
 
+/* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
-let PACMAN_DIR         = "/var/lib/pacman/local";
+let UPDATES_LIST       = [];
+
 
 function init() {
 	Utils.initTranslations("arch-update");
@@ -196,7 +200,14 @@ const ArchUpdateIndicator = new Lang.Class({
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				let message = '';
 				if (HOWMUCH > 0) {
-					message = this._updateList.join(', ');
+					let updateList = [];
+					if (HOWMUCH > 1) {
+						updateList = this._updateList;
+					} else {
+						// Keep only packets that was not in the previous notification
+						updateList = this._updateList.filter(function(pkg) { return UPDATES_LIST.indexOf(pkg) < 0 });
+					}
+					message = updateList.join(', ');
 				} else {
 					message = updatesCount.toString() + ' ' + _('updates pending') ;
 				}
@@ -216,7 +227,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.label.set_text('');
 			this._updateMenuExpander( false, _('Up to date :)') );
 		}
-		
+		UPDATES_LIST = this._updateList;
 		UPDATES_PENDING = updatesCount;
 		this._checkShowHide();
 	},
