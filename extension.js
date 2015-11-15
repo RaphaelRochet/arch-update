@@ -65,18 +65,23 @@ const ArchUpdateIndicator = new Lang.Class({
 		box.add_child(this.updateIcon);
 		box.add_child(this.label);
 		this.actor.add_child(box);
-		
-		// Create the menu
-		this.menuLabel = new PopupMenu.PopupMenuItem( _('Waiting first check'), { reactive: false } );
-		this.updatesSection = new PopupMenu.PopupMenuSection();
+
+		// Prepare the special menu : a submenu for updates list that will look like a regular menu item when disabled
+		// Scrollability will also be taken care of by the popupmenu
+		this.menuExpander = new PopupMenu.PopupSubMenuMenuItem('');
+		this.updatesListMenuLabel = new St.Label();
+		this.menuExpander.menu.box.add(this.updatesListMenuLabel);
+		this.menuExpander.menu.box.style_class = 'arch-updates-list';
+
+		// Other standard menu items
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
-		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now')); this.updateNowMenuItem.actor.visible = false;
+		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now'));
 
-		this.menu.addMenuItem(this.menuLabel);
-		this.menu.addMenuItem(this.updatesSection);
-		this.menu.addMenuItem(this.updateNowMenuItem);
+		// Assemble all menu items into the popup menu
+		this.menu.addMenuItem(this.menuExpander);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+		this.menu.addMenuItem(this.updateNowMenuItem);
 		this.menu.addMenuItem(this.checkNowMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
 
@@ -88,6 +93,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this._settings = Utils.getSettings();
 		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
 		this._applySettings();
+		this._updateMenuExpander(false, _('Waiting first check'));
 
 		if (FIRST_BOOT) {
 			// Schedule first check only if this is the first extension load
@@ -184,9 +190,9 @@ const ArchUpdateIndicator = new Lang.Class({
 		if (updatesCount > 0) {
 			// Updates pending
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
+			this._updateMenuExpander( true, updatesCount.toString() + ' ' + _('updates pending') );
+			this.updatesListMenuLabel.set_text( this._updateList.join("\n") );
 			this.label.set_text(updatesCount.toString());
-			this.menuLabel.label.set_text(updatesCount.toString() + ' ' + _('updates pending') );
-			this.updateNowMenuItem.actor.visible = true;
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				let message = '';
 				if (HOWMUCH > 0) {
@@ -199,28 +205,35 @@ const ArchUpdateIndicator = new Lang.Class({
 		} else if (updatesCount == -1) {
 			// Unknown
 			this.updateIcon.set_icon_name('arch-unknown-symbolic');
-			this.menuLabel.label.set_text('');
-			this.updateNowMenuItem.actor.visible = false;
+			this._updateMenuExpander( false, '' );
 		} else if (updatesCount == -2) {
 			// Error
 			this.updateIcon.set_icon_name('arch-error-symbolic');
-			this.menuLabel.label.set_text(_('Error'));
-			this.updateNowMenuItem.actor.visible = false;
+			this._updateMenuExpander( false, _('Error') );
 		} else {
 			// Up to date
 			this.updateIcon.set_icon_name('arch-uptodate-symbolic');
 			this.label.set_text('');
-			this.menuLabel.label.set_text(_('Up to date :)'));
-			this.updateNowMenuItem.actor.visible = false;
+			this._updateMenuExpander( false, _('Up to date :)') );
 		}
 		
 		UPDATES_PENDING = updatesCount;
 		this._checkShowHide();
 	},
 
+	_updateMenuExpander: function(enabled, label) {
+		// We make our expander look like a regular menu label if disabled
+		this.menuExpander.actor.reactive = enabled;
+		this.menuExpander._triangle.visible = enabled;
+		this.menuExpander.label.set_text(label);
+		
+		// 'Update now' visibility is linked so let's save a few lines and set it here
+		this.updateNowMenuItem.actor.visible = enabled;
+	},
+
 	_checkUpdates: function() {
 		this.updateIcon.set_icon_name('arch-unknown-symbolic');
-		this.menuLabel.label.set_text(_('Checking'));
+		this._updateMenuExpander( false, _('Checking') );
 		if(this.updateProcess_sourceId) {
 			// A check is already running ! Maybe we should kill it and run another one ?
 			return;
