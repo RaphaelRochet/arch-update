@@ -4,11 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-15 20:19+0100\n"
-"PO-Revision-Date: 2015-11-11 14:15+0100\n"
+"PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_CZ\n"
@@ -86,7 +85,7 @@ msgstr "Zobrazit upozornění při dostupných aktualizacích"
 
 #: prefs.xml:145
 msgid "Use transient notifications (auto dismiss)"
-msgstr ""
+msgstr "Používat dočasná upozornění (samozavírací)"
 
 #: prefs.xml:162
 msgid "How much information to show on notifications"
@@ -97,14 +96,12 @@ msgid "Count only"
 msgstr "Pouze počet"
 
 #: prefs.xml:171
-#, fuzzy
 msgid "New updates names"
-msgstr "Jména balíčků"
+msgstr "Jména nových aktualizací"
 
 #: prefs.xml:172
-#, fuzzy
 msgid "All updates names"
-msgstr "Jména balíčků"
+msgstr "Jména všech aktualizací"
 
 #: prefs.xml:186
 msgid "<b>Advanced settings</b>"
@@ -116,5 +113,4 @@ msgstr "Příkaz pro aktualizaci balíčků"
 
 #: prefs.xml:214
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
-"Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
+msgstr "Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
