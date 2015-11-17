@@ -112,7 +112,8 @@ const ArchUpdateIndicator = new Lang.Class({
 			});
 		} else {
 			// Restore previous state
-			this._updateStatus();
+			this._updateList = UPDATES_LIST;
+			this._updateStatus(UPDATES_PENDING);
 			this._startFolderMonitor();
 		}
 	},
@@ -213,21 +214,26 @@ const ArchUpdateIndicator = new Lang.Class({
 				}
 				this._showNotification(message);
 			}
-		} else if (updatesCount == -1) {
-			// Unknown
-			this.updateIcon.set_icon_name('arch-unknown-symbolic');
-			this._updateMenuExpander( false, '' );
-		} else if (updatesCount == -2) {
-			// Error
-			this.updateIcon.set_icon_name('arch-error-symbolic');
-			this._updateMenuExpander( false, _('Error') );
+			// Store the new list
+			UPDATES_LIST = this._updateList;
 		} else {
-			// Up to date
-			this.updateIcon.set_icon_name('arch-uptodate-symbolic');
-			this.label.set_text('');
-			this._updateMenuExpander( false, _('Up to date :)') );
+			if (updatesCount == -1) {
+				// Unknown
+				this.updateIcon.set_icon_name('arch-unknown-symbolic');
+				this._updateMenuExpander( false, '' );
+			} else if (updatesCount == -2) {
+				// Error
+				this.updateIcon.set_icon_name('arch-error-symbolic');
+				this._updateMenuExpander( false, _('Error') );
+			} else {
+				// Up to date
+				this.updateIcon.set_icon_name('arch-uptodate-symbolic');
+				this.label.set_text('');
+				this._updateMenuExpander( false, _('Up to date :)') );
+			}
+			// Reset stored list
+			UPDATES_LIST = [];
 		}
-		UPDATES_LIST = this._updateList;
 		UPDATES_PENDING = updatesCount;
 		this._checkShowHide();
 	},
