@@ -10,6 +10,13 @@ Update indicator for Arch Linux and GNOME Shell
 
 ## Changes 
 
+### v5
+- Option to have permanent notifications
+- Asynchronous checking - No more 1 sec Shell freeze during updates check !
+- 'Updates pending' menu item can now be expanded to show updates list
+- Option to only list new updates in notifications
+- Aded "Update Now" action button on notifications
+
 ### v4
 - Run update command from indicator
 - Autodetect when updates are done
