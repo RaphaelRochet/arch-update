@@ -3,13 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-13 12:39+0100\n"
-"PO-Revision-Date: 2015-11-11 14:15+0100\n"
+"POT-Creation-Date: 2015-11-15 20:19+0100\n"
+"PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_CZ\n"
@@ -17,46 +15,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:67
-msgid "Waiting first check"
-msgstr "Čekání na první kontrolu"
-
-#: extension.js:69
+#: extension.js:81
 msgid "Check now"
 msgstr "Zkontrolovat"
 
-#: extension.js:70
+#: extension.js:82
 msgid "Settings"
 msgstr "Nastavení"
 
-#: extension.js:71
-#, fuzzy
+#: extension.js:83
 msgid "Update now"
-msgstr "Vše aktualizováno"
+msgstr "Aktualizovat"
 
-#: extension.js:179 extension.js:185
+#: extension.js:100
+msgid "Waiting first check"
+msgstr "Čekání na první kontrolu"
+
+#: extension.js:197 extension.js:212
 msgid "updates pending"
-msgstr "čekající aktualizace"
+msgstr "čekajících aktualizací"
 
-#: extension.js:196
+#: extension.js:223
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:201
+#: extension.js:228
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 
-#: extension.js:211
+#: extension.js:247
 msgid "Checking"
 msgstr "Kontroluji"
 
-#: extension.js:243
+#: extension.js:300 extension.js:303
 msgid "New Arch Linux Updates"
 msgstr "Nové aktualizace pro Arch Linux"
 
 #: prefs.xml:21
 msgid "<b>Timers</b>"
-msgstr ""
+msgstr "<b>Časování</b>"
 
 #: prefs.xml:32
 msgid "Time to wait before first check (seconds)"
@@ -68,11 +65,11 @@ msgstr "Časový interval mezi aktualizacemi (minuty)"
 
 #: prefs.xml:69
 msgid "<b>Indicator</b>"
-msgstr ""
+msgstr "<b>Indikátor</b>"
 
 #: prefs.xml:80
 msgid "Always visible"
-msgstr "Vždy viditelné"
+msgstr "Vždy viditelný"
 
 #: prefs.xml:97
 msgid "Show updates count on indicator"
@@ -80,32 +77,40 @@ msgstr "Zobrazovat u indikátoru počet aktualizací"
 
 #: prefs.xml:117
 msgid "<b>Notification</b>"
-msgstr ""
+msgstr "<b>Upozornění</b>"
 
 #: prefs.xml:128
 msgid "Send a notification when new updates are available"
 msgstr "Zobrazit upozornění při dostupných aktualizacích"
 
 #: prefs.xml:145
+msgid "Use transient notifications (auto dismiss)"
+msgstr "Používat dočasná upozornění (samozavírací)"
+
+#: prefs.xml:162
 msgid "How much information to show on notifications"
 msgstr "Množství zobrazovaných informací"
 
-#: prefs.xml:153
+#: prefs.xml:170
 msgid "Count only"
 msgstr "Pouze počet"
 
-#: prefs.xml:154
-msgid "Packages names"
-msgstr "Jména balíčků"
+#: prefs.xml:171
+msgid "New updates names"
+msgstr "Jména nových aktualizací"
 
-#: prefs.xml:168
+#: prefs.xml:172
+msgid "All updates names"
+msgstr "Jména všech aktualizací"
+
+#: prefs.xml:186
 msgid "<b>Advanced settings</b>"
-msgstr ""
+msgstr "<b>Další možnosti</b>"
 
-#: prefs.xml:180
+#: prefs.xml:198
 msgid "Command to update packages"
-msgstr ""
+msgstr "Příkaz pro aktualizaci balíčků"
 
-#: prefs.xml:196
+#: prefs.xml:214
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
+msgstr "Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"

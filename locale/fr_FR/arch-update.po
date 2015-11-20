@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-13 12:17+0100\n"
-"PO-Revision-Date: 2015-11-13 12:19+0100\n"
+"POT-Creation-Date: 2015-11-15 20:19+0100\n"
+"PO-Revision-Date: 2015-11-15 20:20+0100\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -18,39 +18,39 @@ msgstr ""
 "X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: extension.js:67
-msgid "Waiting first check"
-msgstr "En attente du premier test"
-
-#: extension.js:69
+#: extension.js:81
 msgid "Check now"
 msgstr "Vérifier maintenant"
 
-#: extension.js:70
+#: extension.js:82
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:71
+#: extension.js:83
 msgid "Update now"
 msgstr "Mettre à jour maintenant"
 
-#: extension.js:179 extension.js:185
+#: extension.js:100
+msgid "Waiting first check"
+msgstr "En attente du premier test"
+
+#: extension.js:197 extension.js:212
 msgid "updates pending"
 msgstr "mise(s) à jour en attente"
 
-#: extension.js:196
+#: extension.js:223
 msgid "Error"
 msgstr "Erreur"
 
-#: extension.js:201
+#: extension.js:228
 msgid "Up to date :)"
 msgstr "Tout est à jour :)"
 
-#: extension.js:211
+#: extension.js:247
 msgid "Checking"
 msgstr "Vérification en cours"
 
-#: extension.js:243
+#: extension.js:300 extension.js:303
 msgid "New Arch Linux Updates"
 msgstr "Nouvelles mises à jour"
 
@@ -87,26 +87,34 @@ msgid "Send a notification when new updates are available"
 msgstr "Afficher une notification quand de nouvelles mises à jour sont disponibles"
 
 #: prefs.xml:145
+msgid "Use transient notifications (auto dismiss)"
+msgstr "Utiliser des notifications transitoires (s'auto-effacent)"
+
+#: prefs.xml:162
 msgid "How much information to show on notifications"
 msgstr "Quantité d'information dans les notifications"
 
-#: prefs.xml:153
+#: prefs.xml:170
 msgid "Count only"
 msgstr "Juste le nombre"
 
-#: prefs.xml:154
-msgid "Packages names"
-msgstr "Noms des paquets"
+#: prefs.xml:171
+msgid "New updates names"
+msgstr "Noms des nouvelles mises à jour"
 
-#: prefs.xml:168
+#: prefs.xml:172
+msgid "All updates names"
+msgstr "Noms de toutes les mises à jour"
+
+#: prefs.xml:186
 msgid "<b>Advanced settings</b>"
 msgstr "<b>Réglages avancés</b>"
 
-#: prefs.xml:180
+#: prefs.xml:198
 msgid "Command to update packages"
 msgstr "Commande pour mettre à jour les paquets"
 
-#: prefs.xml:196
+#: prefs.xml:214
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Dossier local de Pacman - Pour détecter quand des paquets sont installés"
 

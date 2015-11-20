@@ -5,9 +5,15 @@ Update indicator for Arch Linux and GNOME Shell
 - Uses pacman's «checkupdates» and thus does not need root access
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
+- Launcher for your favorite update command
 - Comes in English, French, Czech, German languages. (Thanks translators !)
 
 ## Changes 
+
+### v4
+- Run update command from indicator
+- Autodetect when updates are done
+- Prefs dialog reworked
 
 ### v3
 - Notification option
