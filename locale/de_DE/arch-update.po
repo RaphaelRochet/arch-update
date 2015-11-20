@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-15 20:19+0100\n"
-"PO-Revision-Date: 2015-11-13 12:56+0100\n"
+"PO-Revision-Date: 2015-11-20 12:01+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -88,7 +88,7 @@ msgstr "Sende eine Benachrichtigung, sobald Aktualisierungen verfügbar sind"
 
 #: prefs.xml:145
 msgid "Use transient notifications (auto dismiss)"
-msgstr ""
+msgstr "Verwende kurzlebige Benachrichtigung (automatische Ausblendung)"
 
 #: prefs.xml:162
 msgid "How much information to show on notifications"
@@ -99,14 +99,12 @@ msgid "Count only"
 msgstr "Nur Anzahl"
 
 #: prefs.xml:171
-#, fuzzy
 msgid "New updates names"
-msgstr "Paketnamen"
+msgstr "Namen der neuen Aktualisierungen"
 
 #: prefs.xml:172
-#, fuzzy
 msgid "All updates names"
-msgstr "Paketnamen"
+msgstr "Namen aller Aktualisierungen"
 
 #: prefs.xml:186
 msgid "<b>Advanced settings</b>"
