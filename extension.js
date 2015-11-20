@@ -304,6 +304,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
 			notification = new MessageTray.Notification(this._notifSource, _('New Arch Linux Updates'), message);
+			notification.addAction( _('Update now') , Lang.bind(this, function() {this._updateNow()}) );
 		} else {
 			notification = this._notifSource.notifications[0];
 			notification.update(_('New Arch Linux Updates'), message, { clear: true });
