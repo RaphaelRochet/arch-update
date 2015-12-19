@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-18 19:38+0100\n"
-"PO-Revision-Date: 2015-12-18 20:30+0100\n"
+"PO-Revision-Date: 2015-12-19 17:51+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr "Attendi il primo controllo"
 
 #: extension.js:197 extension.js:212
 msgid "updates pending"
-msgstr "Aggiornamenti pendenti"
+msgstr "aggiornamenti disponibili"
 
 #: extension.js:223
 msgid "Error"
