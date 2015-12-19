@@ -6,9 +6,12 @@ Update indicator for Arch Linux and GNOME Shell
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
 - Launcher for your favorite update command
-- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese languages. (Thanks translators !)
+- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian languages. (Thanks translators !)
 
 ## Changes 
+
+### v8
+- Added Italian language
 
 ### v7
 - Added Brazilian Portuguese translation
