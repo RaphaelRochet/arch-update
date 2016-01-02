@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Artur "artur9010" Motyka <arturmotyka99@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-15 20:19+0100\n"
+"PO-Revision-Date: 2016-01-02 16:38+0100\n"
+"Last-Translator: Artur \"artur9010\" Motyka <arturmotyka99@gmail.com>\n"
+"Language-Team: polski <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
+
+#: extension.js:81
+msgid "Check now"
+msgstr "Sprawdź teraz"
+
+#: extension.js:82
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: extension.js:83
+msgid "Update now"
+msgstr "Aktualizuj teraz"
+
+#: extension.js:100
+msgid "Waiting first check"
+msgstr "Oczekuje na pierwsze sprawdzenie"
+
+#: extension.js:197 extension.js:212
+msgid "updates pending"
+msgstr "oczekujących aktualizacji"
+
+#: extension.js:223
+msgid "Error"
+msgstr "Błąd"
+
+#: extension.js:228
+msgid "Up to date :)"
+msgstr "Wszystko jest aktualne"
+
+#: extension.js:247
+msgid "Checking"
+msgstr "Sprawdzam"
+
+#: extension.js:300 extension.js:303
+msgid "New Arch Linux Updates"
+msgstr "Nowe aktualizacje"
+
+#: prefs.xml:21
+msgid "<b>Timers</b>"
+msgstr ""
+
+#: prefs.xml:32
+msgid "Time to wait before first check (seconds)"
+msgstr ""
+
+#: prefs.xml:49
+msgid "Interval between updates check (minutes)"
+msgstr "Czas co jaki sprawdzać aktualizacje (w minutach)"
+
+#: prefs.xml:69
+msgid "<b>Indicator</b>"
+msgstr ""
+
+#: prefs.xml:80
+msgid "Always visible"
+msgstr "Zawsze widoczny"
+
+#: prefs.xml:97
+msgid "Show updates count on indicator"
+msgstr ""
+
+#: prefs.xml:117
+msgid "<b>Notification</b>"
+msgstr "<b>Powiadomienia</b>"
+
+#: prefs.xml:128
+msgid "Send a notification when new updates are available"
+msgstr "Wyświetl powiadomienie gdy nowe aktualizacje będą dostępne"
+
+#: prefs.xml:145
+msgid "Use transient notifications (auto dismiss)"
+msgstr "Automatycznie ukrywaj powiadomienia"
+
+#: prefs.xml:162
+msgid "How much information to show on notifications"
+msgstr ""
+
+#: prefs.xml:170
+msgid "Count only"
+msgstr "Tylko liczba"
+
+#: prefs.xml:171
+msgid "New updates names"
+msgstr ""
+
+#: prefs.xml:172
+msgid "All updates names"
+msgstr ""
+
+#: prefs.xml:186
+msgid "<b>Advanced settings</b>"
+msgstr "<b>Zaawansowane</b>"
+
+#: prefs.xml:198
+msgid "Command to update packages"
+msgstr "Polecenie służące do aktualizacji"
+
+#: prefs.xml:214
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr "Lokacja pliku wykonalnego pacmana"
