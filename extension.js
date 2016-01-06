@@ -1,4 +1,4 @@
-/* 
+/*
 	Arch Linux Updates checker
 */
 
@@ -65,7 +65,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.label = new St.Label({ text: '',
 			y_expand: true,
 			y_align: Clutter.ActorAlign.CENTER });
-		
+
 		box.add_child(this.updateIcon);
 		box.add_child(this.label);
 		this.actor.add_child(box);
@@ -127,10 +127,10 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_applySettings: function() {
-		ALWAYS_VISIBLE     = this._settings.get_boolean('always-visible');
-		SHOW_COUNT        = this._settings.get_boolean('show-count');
-		BOOT_WAIT		   = this._settings.get_int('boot-wait');
-		CHECK_INTERVAL     = 60 * this._settings.get_int('check-interval');
+		ALWAYS_VISIBLE = this._settings.get_boolean('always-visible');
+		SHOW_COUNT = this._settings.get_boolean('show-count');
+		BOOT_WAIT = this._settings.get_int('boot-wait');
+		CHECK_INTERVAL = 60 * this._settings.get_int('check-interval');
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
 		TRANSIENT = this._settings.get_boolean('transient');
@@ -243,7 +243,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menuExpander.actor.reactive = enabled;
 		this.menuExpander._triangle.visible = enabled;
 		this.menuExpander.label.set_text(label);
-		
+
 		// 'Update now' visibility is linked so let's save a few lines and set it here
 		this.updateNowMenuItem.actor.visible = enabled;
 	},

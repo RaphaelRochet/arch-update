@@ -1,4 +1,4 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 <interface domain="arch-update">
 
 <object class="GtkAdjustment" id="Adjust_1">
