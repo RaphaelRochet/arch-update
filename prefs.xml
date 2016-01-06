@@ -195,6 +195,22 @@
 						<object class="GtkVBox">
 							<child>
 								<object class="GtkLabel">
+									<property name="label" translatable="yes">Command to check for package updates</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkEntry" id="field_checkcmd">
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkVBox">
+							<child>
+								<object class="GtkLabel">
 									<property name="label" translatable="yes">Command to update packages</property>
 									<property name="hexpand">true</property>
 									<property name="halign">1</property>

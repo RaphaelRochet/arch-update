@@ -50,6 +50,12 @@
         <description></description>
     </key>
 
+    <key name="check-cmd" type="s">
+      <default>"/usr/bin/checkupdates"</default>
+      <summary>Command to run to check for updated packages.</summary>
+      <description>Command to run to check for updated packages.</description>
+    </key>
+
     <key name="update-cmd" type="s">
       <default>"gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '"</default>
       <summary>Command to run to update packages.</summary>

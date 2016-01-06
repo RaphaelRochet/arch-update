@@ -34,6 +34,7 @@ let NOTIFY             = false;
 let HOWMUCH            = 0;
 let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
+let CHECK_CMD          = "/usr/bin/checkupdates";
 let PACMAN_DIR         = "/var/lib/pacman/local";
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
@@ -135,6 +136,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		HOWMUCH = this._settings.get_int('howmuch');
 		TRANSIENT = this._settings.get_boolean('transient');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
+		CHECK_CMD = this._settings.get_string('check-cmd');
 		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		this._checkShowHide();
 		let that = this;
@@ -257,7 +259,10 @@ const ArchUpdateIndicator = new Lang.Class({
 		}
 		// Run asynchronously, to avoid  shell freeze - even for a 1s check
 		try {
-			let [res, pid, in_fd, out_fd, err_fd]  = GLib.spawn_async_with_pipes(null, ['/usr/bin/checkupdates'], null, GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
+			// Parse check command line
+			let [parseok, argvp] = GLib.shell_parse_argv( CHECK_CMD );
+			if (!parseok) { throw 'Parse error' };
+			let [res, pid, in_fd, out_fd, err_fd]  = GLib.spawn_async_with_pipes(null, argvp, null, GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
 			// Let's buffer the command's output - that's a input for us !
 			this._updateProcess_stream = new Gio.DataInputStream({
 				base_stream: new Gio.UnixInputStream({fd: out_fd})
