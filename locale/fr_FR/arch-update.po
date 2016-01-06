@@ -7,50 +7,50 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 20:19+0100\n"
-"PO-Revision-Date: 2015-11-15 20:20+0100\n"
+"POT-Creation-Date: 2016-01-06 18:49+0100\n"
+"PO-Revision-Date: 2016-01-06 19:06+0100\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: extension.js:81
+#: extension.js:82
 msgid "Check now"
 msgstr "Vérifier maintenant"
 
-#: extension.js:82
+#: extension.js:83
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:83
+#: extension.js:84 extension.js:312
 msgid "Update now"
 msgstr "Mettre à jour maintenant"
 
-#: extension.js:100
+#: extension.js:101
 msgid "Waiting first check"
 msgstr "En attente du premier test"
 
-#: extension.js:197 extension.js:212
+#: extension.js:200 extension.js:215
 msgid "updates pending"
 msgstr "mise(s) à jour en attente"
 
-#: extension.js:223
+#: extension.js:229
 msgid "Error"
 msgstr "Erreur"
 
-#: extension.js:228
+#: extension.js:234
 msgid "Up to date :)"
 msgstr "Tout est à jour :)"
 
-#: extension.js:247
+#: extension.js:255
 msgid "Checking"
 msgstr "Vérification en cours"
 
-#: extension.js:300 extension.js:303
+#: extension.js:311 extension.js:315
 msgid "New Arch Linux Updates"
 msgstr "Nouvelles mises à jour"
 
@@ -111,10 +111,14 @@ msgid "<b>Advanced settings</b>"
 msgstr "<b>Réglages avancés</b>"
 
 #: prefs.xml:198
+msgid "Command to check for package updates"
+msgstr "Commande pour rechercher les mises à jour de paquets"
+
+#: prefs.xml:214
 msgid "Command to update packages"
 msgstr "Commande pour mettre à jour les paquets"
 
-#: prefs.xml:214
+#: prefs.xml:230
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Dossier local de Pacman - Pour détecter quand des paquets sont installés"
 

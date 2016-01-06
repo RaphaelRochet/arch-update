@@ -4,9 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\n"
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 20:19+0100\n"
+"POT-Creation-Date: 2016-01-06 18:49+0100\n"
 "PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,39 +16,39 @@ msgstr "Project-Id-Version: PACKAGE VERSION\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:81
+#: extension.js:82
 msgid "Check now"
 msgstr "Zkontrolovat"
 
-#: extension.js:82
+#: extension.js:83
 msgid "Settings"
 msgstr "Nastavení"
 
-#: extension.js:83
+#: extension.js:84 extension.js:312
 msgid "Update now"
 msgstr "Aktualizovat"
 
-#: extension.js:100
+#: extension.js:101
 msgid "Waiting first check"
 msgstr "Čekání na první kontrolu"
 
-#: extension.js:197 extension.js:212
+#: extension.js:200 extension.js:215
 msgid "updates pending"
 msgstr "čekajících aktualizací"
 
-#: extension.js:223
+#: extension.js:229
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:228
+#: extension.js:234
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 
-#: extension.js:247
+#: extension.js:255
 msgid "Checking"
 msgstr "Kontroluji"
 
-#: extension.js:300 extension.js:303
+#: extension.js:311 extension.js:315
 msgid "New Arch Linux Updates"
 msgstr "Nové aktualizace pro Arch Linux"
 
@@ -108,9 +109,15 @@ msgid "<b>Advanced settings</b>"
 msgstr "<b>Další možnosti</b>"
 
 #: prefs.xml:198
-msgid "Command to update packages"
+#, fuzzy
+msgid "Command to check for package updates"
 msgstr "Příkaz pro aktualizaci balíčků"
 
 #: prefs.xml:214
+msgid "Command to update packages"
+msgstr "Příkaz pro aktualizaci balíčků"
+
+#: prefs.xml:230
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr "Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
+msgstr ""
+"Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
