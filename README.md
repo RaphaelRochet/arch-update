@@ -2,13 +2,17 @@
 Update indicator for Arch Linux and GNOME Shell
 
 ## Features
-- Uses pacman's «checkupdates» and thus does not need root access
+- Uses pacman's «checkupdates» by default and thus does not need root access
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
 - Launcher for your favorite update command
-- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian languages. (Thanks translators !)
+- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian languages. (Thanks translators !)
 
 ## Changes 
+
+### v9
+- Added option to change command used to check for updates (for advanced users)
+- Added Romanian and Polish translations
 
 ### v8
 - Added Italian language
