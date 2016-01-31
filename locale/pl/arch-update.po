@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-06 18:49+0100\n"
-"PO-Revision-Date: 2016-01-02 16:38+0100\n"
+"PO-Revision-Date: 2016-01-31 12:00+0100\n"
 "Last-Translator: Artur \"artur9010\" Motyka <arturmotyka99@gmail.com>\n"
 "Language-Team: polski <>\n"
 "Language: \n"
@@ -37,7 +37,7 @@ msgstr "Oczekuje na pierwsze sprawdzenie"
 
 #: extension.js:200 extension.js:215
 msgid "updates pending"
-msgstr "oczekujących aktualizacji"
+msgstr "dostępnych aktualizacji"
 
 #: extension.js:229
 msgid "Error"
@@ -57,11 +57,11 @@ msgstr "Nowe aktualizacje"
 
 #: prefs.xml:21
 msgid "<b>Timers</b>"
-msgstr ""
+msgstr "<b>Czasomierze</b>"
 
 #: prefs.xml:32
 msgid "Time to wait before first check (seconds)"
-msgstr ""
+msgstr "Czas przed pierwszym sprawdzeniem (w sekundach)"
 
 #: prefs.xml:49
 msgid "Interval between updates check (minutes)"
@@ -69,7 +69,7 @@ msgstr "Czas co jaki sprawdzać aktualizacje (w minutach)"
 
 #: prefs.xml:69
 msgid "<b>Indicator</b>"
-msgstr ""
+msgstr "<b>Indykator</b>"
 
 #: prefs.xml:80
 msgid "Always visible"
@@ -77,7 +77,7 @@ msgstr "Zawsze widoczny"
 
 #: prefs.xml:97
 msgid "Show updates count on indicator"
-msgstr ""
+msgstr "Pokazuj ilość aktualizacji na indykatorze"
 
 #: prefs.xml:117
 msgid "<b>Notification</b>"
@@ -93,7 +93,7 @@ msgstr "Automatycznie ukrywaj powiadomienia"
 
 #: prefs.xml:162
 msgid "How much information to show on notifications"
-msgstr ""
+msgstr "Jak dużo informacji ma być wyświetlanych na powiadomieniu"
 
 #: prefs.xml:170
 msgid "Count only"
@@ -101,20 +101,19 @@ msgstr "Tylko liczba"
 
 #: prefs.xml:171
 msgid "New updates names"
-msgstr ""
+msgstr "Nazwy nowych aktulalizacji"
 
 #: prefs.xml:172
 msgid "All updates names"
-msgstr ""
+msgstr "Nazwy wszystkich aktualizacji"
 
 #: prefs.xml:186
 msgid "<b>Advanced settings</b>"
 msgstr "<b>Zaawansowane</b>"
 
 #: prefs.xml:198
-#, fuzzy
 msgid "Command to check for package updates"
-msgstr "Polecenie służące do aktualizacji"
+msgstr "Polecenie służące do sprawdzania aktualizacji"
 
 #: prefs.xml:214
 msgid "Command to update packages"
