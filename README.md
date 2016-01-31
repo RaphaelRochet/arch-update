@@ -8,6 +8,17 @@ Update indicator for Arch Linux and GNOME Shell
 - Launcher for your favorite update command
 - Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian languages. (Thanks translators !)
 
+## One-click install
+It's on extensions.gnome.org :
+https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/
+
+## Install from AUR
+Thanks to michiwend you can install it from Arch Linux User Repository : gnome-shell-extension-arch-update
+https://aur.archlinux.org/packages/gnome-shell-extension-arch-update/
+
+## Manual install
+To install, simply download as zip and unzip contents in ~/.local/share/gnome-shell/extensions/arch-update@RaphaelRochet
+
 ## Changes 
 
 ### v9
@@ -38,13 +49,6 @@ Update indicator for Arch Linux and GNOME Shell
 ### v3
 - Notification option
 - Czech and German languages added
-
-## One-click install
-It's on extensions.gnome.org :
-https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/
-
-## Manual install
-To install, simply download as zip and unzip contents in ~/.local/share/gnome-shell/extensions/arch-update@RaphaelRochet
 
 ## Credits
 All icons are based on Thayer Williams' Archer logo, winner of Arch Linux logo contest.
