@@ -21,6 +21,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes 
 
+### v10
+- Licence added : GNU GPL v3
+- Updated translations : Polish and Brazilian portuguese
+
 ### v9
 - Added option to change command used to check for updates (for advanced users)
 - Added Romanian and Polish translations
