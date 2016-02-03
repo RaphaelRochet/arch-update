@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!--
     This file is part of Arch Linux Updates Indicator
 
@@ -16,7 +17,6 @@
 
     Copyright 2016 Raphaël Rochet
 -->
-<?xml version="1.0"?>
 <interface domain="arch-update">
 
 <object class="GtkAdjustment" id="Adjust_1">

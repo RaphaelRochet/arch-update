@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-28 14:55-0300\n"
+"POT-Creation-Date: 2016-02-03 10:33+0100\n"
 "PO-Revision-Date: 2016-01-28 15:03-0300\n"
 "Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: \n"
@@ -18,108 +18,115 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: extension.js:82
+#: extension.js:98
 msgid "Check now"
 msgstr "Verificar agora"
 
-#: extension.js:83
+#: extension.js:99
 msgid "Settings"
 msgstr "Configurações"
 
-#: extension.js:84 extension.js:312
+#: extension.js:100 extension.js:337
 msgid "Update now"
 msgstr "Atualizar agora"
 
-#: extension.js:101
+#: extension.js:117
 msgid "Waiting first check"
 msgstr "Aguardando pela primeira verificação"
 
-#: extension.js:200 extension.js:215
+#: extension.js:217 extension.js:232
 msgid "updates pending"
 msgstr "atualizações pendentes"
 
-#: extension.js:229
+#: extension.js:246
 msgid "Error"
 msgstr "Erro"
 
-#: extension.js:234
+#: extension.js:251
 msgid "Up to date :)"
 msgstr "Atualizado :)"
 
-#: extension.js:255
+#: extension.js:272
 msgid "Checking"
 msgstr "Verificando"
 
-#: extension.js:311 extension.js:315
+#: extension.js:336 extension.js:340
 msgid "New Arch Linux Updates"
 msgstr "Novas atualizações do Arch Linux"
 
-#: prefs.xml:21
-msgid "<b>Timers</b>"
-msgstr "<b>Temporizadores</b>"
+#: prefs.xml:39
+msgid "<b>Checking for updates</b>"
+msgstr ""
 
-#: prefs.xml:32
+#: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
 msgstr "Tempo de espera antes da primeira verificação (segundos)"
 
-#: prefs.xml:49
+#: prefs.xml:67
 msgid "Interval between updates check (minutes)"
 msgstr "Intervalo entre as verificações de atualização (minutos)"
 
-#: prefs.xml:69
+#: prefs.xml:84
+msgid "Strip out versions numbers"
+msgstr ""
+
+#: prefs.xml:104
 msgid "<b>Indicator</b>"
 msgstr "<b>Indicador</b>"
 
-#: prefs.xml:80
+#: prefs.xml:115
 msgid "Always visible"
 msgstr "Visível sempre"
 
-#: prefs.xml:97
+#: prefs.xml:132
 msgid "Show updates count on indicator"
 msgstr "Exibir o contador de atualização no indicador"
 
-#: prefs.xml:117
+#: prefs.xml:152
 msgid "<b>Notification</b>"
 msgstr "<b>Notificação</b>"
 
-#: prefs.xml:128
+#: prefs.xml:163
 msgid "Send a notification when new updates are available"
 msgstr "Enviar uma notificação quando novas atualizações estiverem disponíveis"
 
-#: prefs.xml:145
+#: prefs.xml:180
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Utilizar notificações temporárias (descartar automaticamente)"
 
-#: prefs.xml:162
+#: prefs.xml:197
 msgid "How much information to show on notifications"
 msgstr "O que exibir nas notificações"
 
-#: prefs.xml:170
+#: prefs.xml:205
 msgid "Count only"
 msgstr "Somente o contador"
 
-#: prefs.xml:171
+#: prefs.xml:206
 msgid "New updates names"
 msgstr "Nomes das novas atualizações"
 
-#: prefs.xml:172
+#: prefs.xml:207
 msgid "All updates names"
 msgstr "Nomes de todas as atualizações"
 
-#: prefs.xml:186
+#: prefs.xml:221
 msgid "<b>Advanced settings</b>"
 msgstr "<b>Configurações avançadas</b>"
 
-#: prefs.xml:198
+#: prefs.xml:233
 msgid "Command to check for package updates"
 msgstr "Comando para verificar se há atualizações de pacotes"
 
-#: prefs.xml:214
+#: prefs.xml:249
 msgid "Command to update packages"
 msgstr "Comando para atualizar pacotes"
 
-#: prefs.xml:230
+#: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Caminho do diretório local do Pacman - Para detectar quando os novos pacotes "
 "são instalados"
+
+#~ msgid "<b>Timers</b>"
+#~ msgstr "<b>Temporizadores</b>"

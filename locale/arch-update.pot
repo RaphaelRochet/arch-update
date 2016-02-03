@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-06 18:49+0100\n"
+"POT-Creation-Date: 2016-02-03 10:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,106 +17,110 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:82
+#: extension.js:98
 msgid "Check now"
 msgstr ""
 
-#: extension.js:83
+#: extension.js:99
 msgid "Settings"
 msgstr ""
 
-#: extension.js:84 extension.js:312
+#: extension.js:100 extension.js:337
 msgid "Update now"
 msgstr ""
 
-#: extension.js:101
+#: extension.js:117
 msgid "Waiting first check"
 msgstr ""
 
-#: extension.js:200 extension.js:215
+#: extension.js:217 extension.js:232
 msgid "updates pending"
 msgstr ""
 
-#: extension.js:229
+#: extension.js:246
 msgid "Error"
 msgstr ""
 
-#: extension.js:234
+#: extension.js:251
 msgid "Up to date :)"
 msgstr ""
 
-#: extension.js:255
+#: extension.js:272
 msgid "Checking"
 msgstr ""
 
-#: extension.js:311 extension.js:315
+#: extension.js:336 extension.js:340
 msgid "New Arch Linux Updates"
 msgstr ""
 
-#: prefs.xml:21
-msgid "<b>Timers</b>"
+#: prefs.xml:39
+msgid "<b>Checking for updates</b>"
 msgstr ""
 
-#: prefs.xml:32
+#: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
 msgstr ""
 
-#: prefs.xml:49
+#: prefs.xml:67
 msgid "Interval between updates check (minutes)"
 msgstr ""
 
-#: prefs.xml:69
+#: prefs.xml:84
+msgid "Strip out versions numbers"
+msgstr ""
+
+#: prefs.xml:104
 msgid "<b>Indicator</b>"
 msgstr ""
 
-#: prefs.xml:80
+#: prefs.xml:115
 msgid "Always visible"
 msgstr ""
 
-#: prefs.xml:97
+#: prefs.xml:132
 msgid "Show updates count on indicator"
 msgstr ""
 
-#: prefs.xml:117
+#: prefs.xml:152
 msgid "<b>Notification</b>"
 msgstr ""
 
-#: prefs.xml:128
+#: prefs.xml:163
 msgid "Send a notification when new updates are available"
 msgstr ""
 
-#: prefs.xml:145
+#: prefs.xml:180
 msgid "Use transient notifications (auto dismiss)"
 msgstr ""
 
-#: prefs.xml:162
+#: prefs.xml:197
 msgid "How much information to show on notifications"
 msgstr ""
 
-#: prefs.xml:170
+#: prefs.xml:205
 msgid "Count only"
 msgstr ""
 
-#: prefs.xml:171
+#: prefs.xml:206
 msgid "New updates names"
 msgstr ""
 
-#: prefs.xml:172
+#: prefs.xml:207
 msgid "All updates names"
 msgstr ""
 
-#: prefs.xml:186
+#: prefs.xml:221
 msgid "<b>Advanced settings</b>"
 msgstr ""
 
-#: prefs.xml:198
+#: prefs.xml:233
 msgid "Command to check for package updates"
 msgstr ""
 
-#: prefs.xml:214
+#: prefs.xml:249
 msgid "Command to update packages"
 msgstr ""
 
-#: prefs.xml:230
+#: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
