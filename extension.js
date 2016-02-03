@@ -51,6 +51,7 @@ let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
 let CHECK_CMD          = "/usr/bin/checkupdates";
 let PACMAN_DIR         = "/var/lib/pacman/local";
+let STRIP_VERSIONS     = true;
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
@@ -153,6 +154,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		UPDATE_CMD = this._settings.get_string('update-cmd');
 		CHECK_CMD = this._settings.get_string('check-cmd');
 		PACMAN_DIR = this._settings.get_string('pacman-dir');
+		STRIP_VERSIONS = this._settings.get_boolean('strip-versions');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
@@ -298,6 +300,14 @@ const ArchUpdateIndicator = new Lang.Class({
 			[out, size] = this._updateProcess_stream.read_line_utf8(null);
 			if (out) updateList.push(out);
 		} while (out);
+		// If version numbers should be stripped, do it
+		if (STRIP_VERSIONS == true) {
+			updateList = updateList.map(function(p) {
+				// Try to keep only what's before the first space
+				var chunks = p.split(" ",2);
+				return chunks[0];
+			});
+		}
 		// Free resources
 		this._updateProcess_stream.close(null);
 		this._updateProcess_stream = null;

@@ -68,5 +68,12 @@
         <description></description>
     </key>
 
+    <key name="strip-versions" type="b">
+      <default>true</default>
+        <summary>Remove version numbers from checkupdates output</summary>
+        <description></description>
+    </key>
+
+
   </schema>
 </schemalist>

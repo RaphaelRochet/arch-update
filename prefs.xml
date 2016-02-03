@@ -36,7 +36,7 @@
 
 	<child>
 		<object class="GtkLabel">
-			<property name="label" translatable="yes">&lt;b&gt;Timers&lt;/b&gt;</property>
+			<property name="label" translatable="yes">&lt;b&gt;Checking for updates&lt;/b&gt;</property>
 			<property name="use_markup">true</property>
 			<property name="hexpand">true</property>
 			<property name="halign">1</property>
@@ -72,6 +72,23 @@
 			<child>
 				<object class="GtkSpinButton" id="field_interval">
 					<property name="adjustment">Adjust_2</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property translatable="yes" name="label">Strip out versions numbers</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSwitch" id="field_stripversions">
+					<property name="active">true</property>
 				</object>
 			</child>
 		</object>
