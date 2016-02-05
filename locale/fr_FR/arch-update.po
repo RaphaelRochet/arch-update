@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 10:33+0100\n"
-"PO-Revision-Date: 2016-02-03 10:35+0100\n"
+"POT-Creation-Date: 2016-02-05 11:37+0100\n"
+"PO-Revision-Date: 2016-02-05 11:38+0100\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -16,43 +16,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
 
-#: extension.js:98
+#: extension.js:100
 msgid "Check now"
 msgstr "Vérifier maintenant"
 
-#: extension.js:99
+#: extension.js:101
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:100 extension.js:337
+#: extension.js:102 extension.js:343
 msgid "Update now"
 msgstr "Mettre à jour maintenant"
 
-#: extension.js:117
+#: extension.js:119
 msgid "Waiting first check"
 msgstr "En attente du premier test"
 
-#: extension.js:217 extension.js:232
-msgid "updates pending"
-msgstr "mise(s) à jour en attente"
+#: extension.js:219
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "%d mise à jour en attente"
+msgstr[1] "%d mises à jour en attente"
 
-#: extension.js:246
+#: extension.js:232 extension.js:237
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Nouvelle mise à jour"
+msgstr[1] "Nouvelles mises à jour"
+
+#: extension.js:238
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "Il y a %d mise à jour en attente"
+msgstr[1] "Il y a %d mises à jour en attente"
+
+#: extension.js:252
 msgid "Error"
 msgstr "Erreur"
 
-#: extension.js:251
+#: extension.js:257
 msgid "Up to date :)"
 msgstr "Tout est à jour :)"
 
-#: extension.js:272
+#: extension.js:278
 msgid "Checking"
 msgstr "Vérification en cours"
-
-#: extension.js:336 extension.js:340
-msgid "New Arch Linux Updates"
-msgstr "Nouvelles mises à jour"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"

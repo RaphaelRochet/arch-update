@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 10:33+0100\n"
+"POT-Creation-Date: 2016-02-05 11:37+0100\n"
 "PO-Revision-Date: 2015-11-20 12:01+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
@@ -18,41 +18,54 @@ msgstr ""
 "X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:98
+#: extension.js:100
 msgid "Check now"
 msgstr "Jetzt überprüfen"
 
-#: extension.js:99
+#: extension.js:101
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: extension.js:100 extension.js:337
+#: extension.js:102 extension.js:343
 msgid "Update now"
 msgstr "Jetzt aktualisieren"
 
-#: extension.js:117
+#: extension.js:119
 msgid "Waiting first check"
 msgstr "Warte auf erste Überprüfung"
 
-#: extension.js:217 extension.js:232
-msgid "updates pending"
-msgstr "ausstehende Aktualisierungen"
+#: extension.js:219
+#, fuzzy, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "ausstehende Aktualisierungen"
+msgstr[1] "ausstehende Aktualisierungen"
 
-#: extension.js:246
+#: extension.js:232 extension.js:237
+#, fuzzy
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Neue Arch Linux Aktualisierungen"
+msgstr[1] "Neue Arch Linux Aktualisierungen"
+
+#: extension.js:238
+#, fuzzy, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "ausstehende Aktualisierungen"
+msgstr[1] "ausstehende Aktualisierungen"
+
+#: extension.js:252
 msgid "Error"
 msgstr "Fehler"
 
-#: extension.js:251
+#: extension.js:257
 msgid "Up to date :)"
 msgstr "Auf dem Laufenden"
 
-#: extension.js:272
+#: extension.js:278
 msgid "Checking"
 msgstr "Überprüfe"
-
-#: extension.js:336 extension.js:340
-msgid "New Arch Linux Updates"
-msgstr "Neue Arch Linux Aktualisierungen"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"

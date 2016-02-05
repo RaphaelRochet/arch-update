@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 10:33+0100\n"
+"POT-Creation-Date: 2016-02-05 11:37+0100\n"
 "PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,41 +16,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:98
+#: extension.js:100
 msgid "Check now"
 msgstr "Zkontrolovat"
 
-#: extension.js:99
+#: extension.js:101
 msgid "Settings"
 msgstr "Nastavení"
 
-#: extension.js:100 extension.js:337
+#: extension.js:102 extension.js:343
 msgid "Update now"
 msgstr "Aktualizovat"
 
-#: extension.js:117
+#: extension.js:119
 msgid "Waiting first check"
 msgstr "Čekání na první kontrolu"
 
-#: extension.js:217 extension.js:232
-msgid "updates pending"
-msgstr "čekajících aktualizací"
+#: extension.js:219
+#, fuzzy, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "čekajících aktualizací"
+msgstr[1] "čekajících aktualizací"
 
-#: extension.js:246
+#: extension.js:232 extension.js:237
+#, fuzzy
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Nové aktualizace pro Arch Linux"
+msgstr[1] "Nové aktualizace pro Arch Linux"
+
+#: extension.js:238
+#, fuzzy, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "čekajících aktualizací"
+msgstr[1] "čekajících aktualizací"
+
+#: extension.js:252
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:251
+#: extension.js:257
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 
-#: extension.js:272
+#: extension.js:278
 msgid "Checking"
 msgstr "Kontroluji"
-
-#: extension.js:336 extension.js:340
-msgid "New Arch Linux Updates"
-msgstr "Nové aktualizace pro Arch Linux"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
