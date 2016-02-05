@@ -37,6 +37,7 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Utils = Me.imports.utils;
 
+const Format = imports.format;
 const Gettext = imports.gettext.domain('arch-update');
 const _ = Gettext.gettext;
 
@@ -60,6 +61,7 @@ let UPDATES_LIST       = [];
 
 
 function init() {
+	String.prototype.format = Format.format;
 	Utils.initTranslations("arch-update");
 }
 
@@ -214,11 +216,10 @@ const ArchUpdateIndicator = new Lang.Class({
 		if (updatesCount > 0) {
 			// Updates pending
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
-			this._updateMenuExpander( true, updatesCount.toString() + ' ' + _('updates pending') );
+			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.updatesListMenuLabel.set_text( this._updateList.join("\n") );
 			this.label.set_text(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
-				let message = '';
 				if (HOWMUCH > 0) {
 					let updateList = [];
 					if (HOWMUCH > 1) {
@@ -227,11 +228,16 @@ const ArchUpdateIndicator = new Lang.Class({
 						// Keep only packets that was not in the previous notification
 						updateList = this._updateList.filter(function(pkg) { return UPDATES_LIST.indexOf(pkg) < 0 });
 					}
-					message = updateList.join(', ');
+					this._showNotification(
+						Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updateList.length ),
+						updateList.join(', ')
+					);
 				} else {
-					message = updatesCount.toString() + ' ' + _('updates pending') ;
+					this._showNotification(
+						Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updatesCount ),
+						Gettext.ngettext( "There is %d update pending", "There are %d updates pending", updatesCount ).format(updatesCount)
+					);
 				}
-				this._showNotification(message);
 			}
 			// Store the new list
 			UPDATES_LIST = this._updateList;
@@ -318,7 +324,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this._updateStatus(this._updateList.length);
 	},
 
-	_showNotification: function(message) {
+	_showNotification: function(title, message) {
 		if (this._notifSource == null) {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
@@ -333,11 +339,11 @@ const ArchUpdateIndicator = new Lang.Class({
 		// We do not want to have multiple notifications stacked
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
-			notification = new MessageTray.Notification(this._notifSource, _('New Arch Linux Updates'), message);
+			notification = new MessageTray.Notification(this._notifSource, title, message);
 			notification.addAction( _('Update now') , Lang.bind(this, function() {this._updateNow()}) );
 		} else {
 			notification = this._notifSource.notifications[0];
-			notification.update(_('New Arch Linux Updates'), message, { clear: true });
+			notification.update( title, message, { clear: true });
 		}
 		notification.setTransient(TRANSIENT);
 		this._notifSource.notify(notification);
