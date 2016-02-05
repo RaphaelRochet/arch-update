@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Khaled Hosny <khaledhosny@eglug.org>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-05 11:37+0100\n"
+"PO-Revision-Date: 2016-02-05 15:19+0400\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Virtaal 1.0.0-beta1\n"
+
+#: extension.js:100
+msgid "Check now"
+msgstr "التمس الآن"
+
+#: extension.js:101
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: extension.js:102 extension.js:343
+msgid "Update now"
+msgstr "حدّث الآن"
+
+#: extension.js:119
+msgid "Waiting first check"
+msgstr "ينتظر أول تحديث"
+
+#: extension.js:219
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "لا تحديثات منتظرة"
+msgstr[1] "تحديث واحد منتظر"
+msgstr[2] "تحديثان منتظران"
+msgstr[3] "%d تحديثات منتظرة"
+msgstr[4] "%d تحديثا منتظرًا"
+msgstr[5] "%d تحديث منتظر"
+
+#: extension.js:232 extension.js:237
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "لا تحديثات أرتش لينكس جديدة"
+msgstr[1] "تحديث أرتش لينكس جديد"
+msgstr[2] "تحديثا أرتش لينكس جديدان"
+msgstr[3] "تحديثات أرتش لينكس جديدة"
+msgstr[4] "تحديثات أرتش لينكس جديدة"
+msgstr[5] "تحديثات أرتش لينكس جديدة"
+
+#: extension.js:238
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "لا يوجد تحديثات منتظرة"
+msgstr[1] "يوجد تحديث واحد منتظر"
+msgstr[2] "يوجد تحديثان منتظران"
+msgstr[3] "يوجد %d تحديثات منتظرة"
+msgstr[4] "يوجد %d تحديثا منتظرًا"
+msgstr[5] "يوجد %d تحديث منتظر"
+
+#: extension.js:252
+msgid "Error"
+msgstr "عُطل"
+
+#: extension.js:257
+msgid "Up to date :)"
+msgstr "محَدَّث :)"
+
+#: extension.js:278
+msgid "Checking"
+msgstr "يلتمس"
+
+#: prefs.xml:39
+msgid "<b>Checking for updates</b>"
+msgstr "<b>يلتمس التحديثات</b>"
+
+#: prefs.xml:50
+msgid "Time to wait before first check (seconds)"
+msgstr "الوقت المنتظر قبل التماس أول تحديث (بالثواني)"
+
+#: prefs.xml:67
+msgid "Interval between updates check (minutes)"
+msgstr "المدة بين التماس التحديثات (بالدقائق)"
+
+#: prefs.xml:84
+msgid "Strip out versions numbers"
+msgstr "أزل أرقام الإصدارات"
+
+#: prefs.xml:104
+msgid "<b>Indicator</b>"
+msgstr "<b>المؤشر</b>"
+
+#: prefs.xml:115
+msgid "Always visible"
+msgstr "ظاهر دائما"
+
+#: prefs.xml:132
+msgid "Show updates count on indicator"
+msgstr "اعرض عدد التحديثات في المؤشر"
+
+#: prefs.xml:152
+msgid "<b>Notification</b>"
+msgstr "<b>التنبيهات</b>"
+
+#: prefs.xml:163
+msgid "Send a notification when new updates are available"
+msgstr "أرسل تنبيهًا عند توفر تحديثات جديدة"
+
+#: prefs.xml:180
+msgid "Use transient notifications (auto dismiss)"
+msgstr "أستخدم تنبيهات عابرة (تختفي تلقائيًا)"
+
+#: prefs.xml:197
+msgid "How much information to show on notifications"
+msgstr "ما مقدار المعلومات المعروضة في التنبيهات"
+
+#: prefs.xml:205
+msgid "Count only"
+msgstr "العدد فقط"
+
+#: prefs.xml:206
+msgid "New updates names"
+msgstr "أسماء التحديثات الجديدة"
+
+#: prefs.xml:207
+msgid "All updates names"
+msgstr "كل أسماء التحديثات"
+
+#: prefs.xml:221
+msgid "<b>Advanced settings</b>"
+msgstr "<b>الإعدادات المتقدمة</b>"
+
+#: prefs.xml:233
+msgid "Command to check for package updates"
+msgstr "أمر التماس التحديثات"
+
+#: prefs.xml:249
+msgid "Command to update packages"
+msgstr "أمر تحديث الحزم"
+
+#: prefs.xml:265
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr "مسار دليل Pacman المحلي - لمعرفة أن التحديثات الجديدة ثُبتت"
