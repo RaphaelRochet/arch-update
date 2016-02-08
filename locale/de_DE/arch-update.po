@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 11:37+0100\n"
-"PO-Revision-Date: 2015-11-20 12:01+0100\n"
+"PO-Revision-Date: 2016-02-08 12:26+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: extension.js:100
@@ -35,25 +35,24 @@ msgid "Waiting first check"
 msgstr "Warte auf erste Überprüfung"
 
 #: extension.js:219
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "ausstehende Aktualisierungen"
-msgstr[1] "ausstehende Aktualisierungen"
+msgstr[0] "%d ausstehende Aktualisierung"
+msgstr[1] "%d ausstehende Aktualisierungen"
 
 #: extension.js:232 extension.js:237
-#, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] "Neue Arch Linux Aktualisierungen"
+msgstr[0] "Neue Arch Linux Aktualisierung"
 msgstr[1] "Neue Arch Linux Aktualisierungen"
 
 #: extension.js:238
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] "ausstehende Aktualisierungen"
-msgstr[1] "ausstehende Aktualisierungen"
+msgstr[0] "Es gibt %d ausstehende Aktualisierung"
+msgstr[1] "Es gibt %d ausstehende Aktualisierungen"
 
 #: extension.js:252
 msgid "Error"
@@ -61,7 +60,7 @@ msgstr "Fehler"
 
 #: extension.js:257
 msgid "Up to date :)"
-msgstr "Auf dem Laufenden"
+msgstr "Auf dem Laufenden :)"
 
 #: extension.js:278
 msgid "Checking"
@@ -69,7 +68,7 @@ msgstr "Überprüfe"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
-msgstr ""
+msgstr "<b>Überprüfe auf Aktualisierungen</b>"
 
 #: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
@@ -81,7 +80,7 @@ msgstr "Intervall zwischen Überprüfungen (Minuten)"
 
 #: prefs.xml:84
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Versionsnummern weglassen"
 
 #: prefs.xml:104
 msgid "<b>Indicator</b>"
@@ -128,9 +127,8 @@ msgid "<b>Advanced settings</b>"
 msgstr "<b>Erweiterte Einstellungen</b>"
 
 #: prefs.xml:233
-#, fuzzy
 msgid "Command to check for package updates"
-msgstr "Kommando, um Pakete zu aktualisieren"
+msgstr "Kommando, um auf Aktualisierungen zu prüfen"
 
 #: prefs.xml:249
 msgid "Command to update packages"
@@ -139,8 +137,8 @@ msgstr "Kommando, um Pakete zu aktualisieren"
 #: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
-"Lokales Pacman Verzeichnis - Benötigt, um festzustellen, dass neue Pakete "
-"installiert werden"
+"Lokales Pacman Verzeichnis - Wird benötigt, um festzustellen, dass neue "
+"Pakete installiert werden"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Timer</b>"
