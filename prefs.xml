@@ -1,4 +1,22 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
+<!--
+    This file is part of Arch Linux Updates Indicator
+
+    Arch Linux Updates Indicator is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Arch Linux Updates Indicator is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Arch Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
+
+    Copyright 2016 Raphaël Rochet
+-->
 <interface domain="arch-update">
 
 <object class="GtkAdjustment" id="Adjust_1">
@@ -18,7 +36,7 @@
 
 	<child>
 		<object class="GtkLabel">
-			<property name="label" translatable="yes">&lt;b&gt;Timers&lt;/b&gt;</property>
+			<property name="label" translatable="yes">&lt;b&gt;Checking for updates&lt;/b&gt;</property>
 			<property name="use_markup">true</property>
 			<property name="hexpand">true</property>
 			<property name="halign">1</property>
@@ -54,6 +72,23 @@
 			<child>
 				<object class="GtkSpinButton" id="field_interval">
 					<property name="adjustment">Adjust_2</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
+					<property translatable="yes" name="label">Strip out versions numbers</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSwitch" id="field_stripversions">
+					<property name="active">true</property>
 				</object>
 			</child>
 		</object>
@@ -142,6 +177,23 @@
 		<object class="GtkBox">
 			<child>
 				<object class="GtkLabel">
+					<property translatable="yes" name="label">Use transient notifications (auto dismiss)</property>
+					<property name="hexpand">true</property>
+					<property name="halign">1</property>
+				</object>
+			</child>
+			<child>
+				<object class="GtkSwitch" id="field_transient">
+					<property name="active">true</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkBox">
+			<child>
+				<object class="GtkLabel">
 					<property translatable="yes" name="label">How much information to show on notifications</property>
 					<property name="hexpand">true</property>
 					<property name="halign">1</property>
@@ -151,7 +203,8 @@
 				<object class="GtkComboBoxText" id="field_howmuch">
 					<items>
 						<item translatable="yes" id="0">Count only</item>
-						<item translatable="yes" id="1">Packages names</item>
+						<item translatable="yes" id="1">New updates names</item>
+						<item translatable="yes" id="2">All updates names</item>
 					</items>
 				</object>
 			</child>
@@ -172,6 +225,22 @@
 			<child>
 				<object class="GtkVBox">
 					<property name="spacing">10</property>
+
+					<child>
+						<object class="GtkVBox">
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Command to check for package updates</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkEntry" id="field_checkcmd">
+								</object>
+							</child>
+						</object>
+					</child>
 
 					<child>
 						<object class="GtkVBox">

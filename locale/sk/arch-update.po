@@ -1,139 +1,142 @@
-# SOME DESCRIPTIVE TITLE.
+# Slovak translation for Arch-update.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dušan Kazik <prescott66@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-05 11:37+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2016-02-05 17:31+0100\n"
+"PO-Revision-Date: 2016-02-05 17:40+0100\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"Language: sk\n"
 
 #: extension.js:100
 msgid "Check now"
-msgstr ""
+msgstr "Skontrolovať teraz"
 
 #: extension.js:101
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 #: extension.js:102 extension.js:343
 msgid "Update now"
-msgstr ""
+msgstr "Aktualizovať teraz"
 
 #: extension.js:119
 msgid "Waiting first check"
-msgstr ""
+msgstr "Čaká sa na prvú kontrolu"
 
 #: extension.js:219
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d dostupná aktualizácia"
+msgstr[1] "%d dostupné aktualizácie"
+msgstr[2] "%d dostupných aktualizácií"
 
 #: extension.js:232 extension.js:237
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Nová aktualizácia systému Arch"
+msgstr[1] "Nové aktualizácie systému Arch"
+msgstr[2] "Nové aktualizácie systému Arch"
 
 #: extension.js:238
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Je dostupná %d aktualizácia"
+msgstr[1] "Sú dostupné %d aktualizácie"
+msgstr[2] "Je dostupných %d aktualizácií"
 
 #: extension.js:252
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: extension.js:257
 msgid "Up to date :)"
-msgstr ""
+msgstr "Všetko je aktuálne :)"
 
 #: extension.js:278
 msgid "Checking"
-msgstr ""
+msgstr "Kontroluje sa"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
-msgstr ""
+msgstr "<b>Kontrolujú sa aktualizácie</b>"
 
 #: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
-msgstr ""
+msgstr "Čas čakania pred prvou kontrolou (v sekundách)"
 
 #: prefs.xml:67
 msgid "Interval between updates check (minutes)"
-msgstr ""
+msgstr "Interval medzi kontrolami aktualizácií (v minútach)"
 
 #: prefs.xml:84
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Odstrániť čísla verzií"
 
 #: prefs.xml:104
 msgid "<b>Indicator</b>"
-msgstr ""
+msgstr "<b>Indikátor</b>"
 
 #: prefs.xml:115
 msgid "Always visible"
-msgstr ""
+msgstr "Vždy viditeľný"
 
 #: prefs.xml:132
 msgid "Show updates count on indicator"
-msgstr ""
+msgstr "Zobraziť počet aktualizácií na indikátore"
 
 #: prefs.xml:152
 msgid "<b>Notification</b>"
-msgstr ""
+msgstr "<b>Oznámenie</b>"
 
 #: prefs.xml:163
 msgid "Send a notification when new updates are available"
-msgstr ""
+msgstr "Odoslať oznámenie, keď sú dostupné nové aktualizácie"
 
 #: prefs.xml:180
 msgid "Use transient notifications (auto dismiss)"
-msgstr ""
+msgstr "Použiť prechodné oznámenia (automatické zahodenie)"
 
 #: prefs.xml:197
 msgid "How much information to show on notifications"
-msgstr ""
+msgstr "Koľko informácií zobraziť v oznámeniach"
 
 #: prefs.xml:205
 msgid "Count only"
-msgstr ""
+msgstr "Iba počet"
 
 #: prefs.xml:206
 msgid "New updates names"
-msgstr ""
+msgstr "Názvy nových aktualizácií"
 
 #: prefs.xml:207
 msgid "All updates names"
-msgstr ""
+msgstr "Názvy všetkých aktualizácií"
 
 #: prefs.xml:221
 msgid "<b>Advanced settings</b>"
-msgstr ""
+msgstr "<b>Pokročilé nastavenia</b>"
 
 #: prefs.xml:233
 msgid "Command to check for package updates"
-msgstr ""
+msgstr "Príkaz na kontrolu aktualizácií balíkov"
 
 #: prefs.xml:249
 msgid "Command to update packages"
-msgstr ""
+msgstr "Príkaz na aktualizáciu balíkov"
 
 #: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
+msgstr "Cesta k miestnemu adresáru nástroja Pacman - na zistenie, kedy sú nainštalované nové balíky"

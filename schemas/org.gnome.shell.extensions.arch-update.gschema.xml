@@ -44,6 +44,18 @@
         <description>0:count, 1:list</description>
     </key>
 
+    <key name="transient" type="b">
+      <default>true</default>
+        <summary>Use transient notifications (auto dismiss)</summary>
+        <description></description>
+    </key>
+
+    <key name="check-cmd" type="s">
+      <default>"/usr/bin/checkupdates"</default>
+      <summary>Command to run to check for updated packages.</summary>
+      <description>Command to run to check for updated packages.</description>
+    </key>
+
     <key name="update-cmd" type="s">
       <default>"gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '"</default>
       <summary>Command to run to update packages.</summary>
@@ -55,6 +67,13 @@
         <summary>Pacman directory to monitor</summary>
         <description></description>
     </key>
-    
+
+    <key name="strip-versions" type="b">
+      <default>true</default>
+        <summary>Remove version numbers from checkupdates output</summary>
+        <description></description>
+    </key>
+
+
   </schema>
 </schemalist>

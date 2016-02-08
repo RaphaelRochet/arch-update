@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-13 12:17+0100\n"
-"PO-Revision-Date: 2015-11-13 12:56+0100\n"
+"POT-Creation-Date: 2016-02-05 11:37+0100\n"
+"PO-Revision-Date: 2015-11-20 12:01+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -18,94 +18,129 @@ msgstr ""
 "X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:67
-msgid "Waiting first check"
-msgstr "Warte auf erste Überprüfung"
-
-#: extension.js:69
+#: extension.js:100
 msgid "Check now"
 msgstr "Jetzt überprüfen"
 
-#: extension.js:70
+#: extension.js:101
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: extension.js:71
+#: extension.js:102 extension.js:343
 msgid "Update now"
 msgstr "Jetzt aktualisieren"
 
-#: extension.js:179 extension.js:185
-msgid "updates pending"
-msgstr "ausstehende Aktualisierungen"
+#: extension.js:119
+msgid "Waiting first check"
+msgstr "Warte auf erste Überprüfung"
 
-#: extension.js:196
+#: extension.js:219
+#, fuzzy, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "ausstehende Aktualisierungen"
+msgstr[1] "ausstehende Aktualisierungen"
+
+#: extension.js:232 extension.js:237
+#, fuzzy
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Neue Arch Linux Aktualisierungen"
+msgstr[1] "Neue Arch Linux Aktualisierungen"
+
+#: extension.js:238
+#, fuzzy, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "ausstehende Aktualisierungen"
+msgstr[1] "ausstehende Aktualisierungen"
+
+#: extension.js:252
 msgid "Error"
 msgstr "Fehler"
 
-#: extension.js:201
+#: extension.js:257
 msgid "Up to date :)"
 msgstr "Auf dem Laufenden"
 
-#: extension.js:211
+#: extension.js:278
 msgid "Checking"
 msgstr "Überprüfe"
 
-#: extension.js:243
-msgid "New Arch Linux Updates"
-msgstr "Neue Arch Linux Aktualisierungen"
+#: prefs.xml:39
+msgid "<b>Checking for updates</b>"
+msgstr ""
 
-#: prefs.xml:21
-msgid "<b>Timers</b>"
-msgstr "<b>Timer</b>"
-
-#: prefs.xml:32
+#: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
 msgstr "Wartezeit vor erster Überprüfung (Sekunden)"
 
-#: prefs.xml:49
+#: prefs.xml:67
 msgid "Interval between updates check (minutes)"
 msgstr "Intervall zwischen Überprüfungen (Minuten)"
 
-#: prefs.xml:69
+#: prefs.xml:84
+msgid "Strip out versions numbers"
+msgstr ""
+
+#: prefs.xml:104
 msgid "<b>Indicator</b>"
 msgstr "<b>Anzeige</b>"
 
-#: prefs.xml:80
+#: prefs.xml:115
 msgid "Always visible"
 msgstr "Immer sichtbar"
 
-#: prefs.xml:97
+#: prefs.xml:132
 msgid "Show updates count on indicator"
 msgstr "Zeige Anzahl an Aktualisierungen"
 
-#: prefs.xml:117
+#: prefs.xml:152
 msgid "<b>Notification</b>"
 msgstr "<b>Benachrichtigung</b>"
 
-#: prefs.xml:128
+#: prefs.xml:163
 msgid "Send a notification when new updates are available"
 msgstr "Sende eine Benachrichtigung, sobald Aktualisierungen verfügbar sind"
 
-#: prefs.xml:145
+#: prefs.xml:180
+msgid "Use transient notifications (auto dismiss)"
+msgstr "Verwende kurzlebige Benachrichtigung (automatische Ausblendung)"
+
+#: prefs.xml:197
 msgid "How much information to show on notifications"
 msgstr "Informationen, welche in der Benachrichtigung angezeigt werden"
 
-#: prefs.xml:153
+#: prefs.xml:205
 msgid "Count only"
 msgstr "Nur Anzahl"
 
-#: prefs.xml:154
-msgid "Packages names"
-msgstr "Paketnamen"
+#: prefs.xml:206
+msgid "New updates names"
+msgstr "Namen der neuen Aktualisierungen"
 
-#: prefs.xml:168
+#: prefs.xml:207
+msgid "All updates names"
+msgstr "Namen aller Aktualisierungen"
+
+#: prefs.xml:221
 msgid "<b>Advanced settings</b>"
 msgstr "<b>Erweiterte Einstellungen</b>"
 
-#: prefs.xml:180
+#: prefs.xml:233
+#, fuzzy
+msgid "Command to check for package updates"
+msgstr "Kommando, um Pakete zu aktualisieren"
+
+#: prefs.xml:249
 msgid "Command to update packages"
 msgstr "Kommando, um Pakete zu aktualisieren"
 
-#: prefs.xml:196
+#: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr "Lokales Pacman Verzeichnis - Benötigt, um festzustellen, dass neue Pakete installiert werden"
+msgstr ""
+"Lokales Pacman Verzeichnis - Benötigt, um festzustellen, dass neue Pakete "
+"installiert werden"
+
+#~ msgid "<b>Timers</b>"
+#~ msgstr "<b>Timer</b>"
