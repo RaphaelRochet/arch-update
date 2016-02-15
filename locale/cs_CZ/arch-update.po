@@ -15,6 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: extension.js:100
 msgid "Check now"
@@ -33,25 +34,24 @@ msgid "Waiting first check"
 msgstr "Čekání na první kontrolu"
 
 #: extension.js:219
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "čekajících aktualizací"
-msgstr[1] "čekajících aktualizací"
+msgstr[0] "%d čekající aktualizace"
+msgstr[1] "%d čekajících aktualizací"
 
 #: extension.js:232 extension.js:237
-#, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nové aktualizace pro Arch Linux"
+msgstr[0] "Nová aktualizace pro Arch Linux"
 msgstr[1] "Nové aktualizace pro Arch Linux"
 
 #: extension.js:238
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] "čekajících aktualizací"
-msgstr[1] "čekajících aktualizací"
+msgstr[0] "Je dostupná %d čekající aktualizace"
+msgstr[1] "Je dostupných %d čekajících aktualizací"
 
 #: extension.js:252
 msgid "Error"
@@ -67,7 +67,7 @@ msgstr "Kontroluji"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
-msgstr ""
+msgstr "<b>Kontrola aktualizací</b>"
 
 #: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
@@ -79,7 +79,7 @@ msgstr "Časový interval mezi aktualizacemi (minuty)"
 
 #: prefs.xml:84
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Nezobrazovat čísla verzí"
 
 #: prefs.xml:104
 msgid "<b>Indicator</b>"
@@ -126,9 +126,8 @@ msgid "<b>Advanced settings</b>"
 msgstr "<b>Další možnosti</b>"
 
 #: prefs.xml:233
-#, fuzzy
 msgid "Command to check for package updates"
-msgstr "Příkaz pro aktualizaci balíčků"
+msgstr "Příkaz pro kontrolu aktuálnosti balíčků"
 
 #: prefs.xml:249
 msgid "Command to update packages"
@@ -136,8 +135,4 @@ msgstr "Příkaz pro aktualizaci balíčků"
 
 #: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
-"Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
-
-#~ msgid "<b>Timers</b>"
-#~ msgstr "<b>Časování</b>"
+msgstr "Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
