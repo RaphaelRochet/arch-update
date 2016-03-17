@@ -276,7 +276,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	_checkUpdates: function() {
 		this.updateIcon.set_icon_name('arch-unknown-symbolic');
 		this._updateMenuExpander( false, _('Checking') );
-		if(this.updateProcess_sourceId) {
+		if(this._updateProcess_sourceId) {
 			// A check is already running ! Maybe we should kill it and run another one ?
 			return;
 		}
@@ -317,7 +317,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		// Free resources
 		this._updateProcess_stream.close(null);
 		this._updateProcess_stream = null;
-		GLib.source_remove(this.updateProcess_sourceId);
+		GLib.source_remove(this._updateProcess_sourceId);
 		this._updateProcess_sourceId = null;
 		// Update indicator
 		this._updateList = updateList;
