@@ -1,144 +1,136 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dingzhong Chen <wsxy162@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-05 11:37+0100\n"
-"PO-Revision-Date: 2016-02-08 12:26+0100\n"
-"Last-Translator: Karol Babioch <karol@babioch.de>\n"
+"POT-Creation-Date: 2016-02-23 20:39+0800\n"
+"PO-Revision-Date: 2016-02-23 21:09+0800\n"
 "Language-Team: \n"
-"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"Language: zh_CN\n"
 
 #: extension.js:100
 msgid "Check now"
-msgstr "Jetzt überprüfen"
+msgstr "立即检查"
 
 #: extension.js:101
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "设置"
 
 #: extension.js:102 extension.js:343
 msgid "Update now"
-msgstr "Jetzt aktualisieren"
+msgstr "立即更新"
 
 #: extension.js:119
 msgid "Waiting first check"
-msgstr "Warte auf erste Überprüfung"
+msgstr "正在等待首次检查"
 
 #: extension.js:219
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "%d ausstehende Aktualisierung"
-msgstr[1] "%d ausstehende Aktualisierungen"
+msgstr[0] "%d 个更新正等待操作"
 
 #: extension.js:232 extension.js:237
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] "Neue Arch Linux Aktualisierung"
-msgstr[1] "Neue Arch Linux Aktualisierungen"
+msgstr[0] "Arch Linux 有新的更新"
 
 #: extension.js:238
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] "Es gibt %d ausstehende Aktualisierung"
-msgstr[1] "Es gibt %d ausstehende Aktualisierungen"
+msgstr[0] "有 %d 个更新正在等待操作"
 
 #: extension.js:252
 msgid "Error"
-msgstr "Fehler"
+msgstr "错误"
 
 #: extension.js:257
 msgid "Up to date :)"
-msgstr "Auf dem Laufenden :)"
+msgstr "已是最新 ^_^"
 
 #: extension.js:278
 msgid "Checking"
-msgstr "Überprüfe"
+msgstr "正在检查"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
-msgstr "<b>Überprüfe auf Aktualisierungen</b>"
+msgstr "<b>正在检查更新</b>"
 
 #: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
-msgstr "Wartezeit vor erster Überprüfung (Sekunden)"
+msgstr "首次检查前等待时间(秒)"
 
 #: prefs.xml:67
 msgid "Interval between updates check (minutes)"
-msgstr "Intervall zwischen Überprüfungen (Minuten)"
+msgstr "更新检查间隔(秒)"
 
 #: prefs.xml:84
 msgid "Strip out versions numbers"
-msgstr "Versionsnummern weglassen"
+msgstr "剔除版本号"
 
 #: prefs.xml:104
 msgid "<b>Indicator</b>"
-msgstr "<b>Anzeige</b>"
+msgstr "<b>指示器</b>"
 
 #: prefs.xml:115
 msgid "Always visible"
-msgstr "Immer sichtbar"
+msgstr "始终显示"
 
 #: prefs.xml:132
 msgid "Show updates count on indicator"
-msgstr "Zeige Anzahl an Aktualisierungen"
+msgstr "在指示器上显示更新数目"
 
 #: prefs.xml:152
 msgid "<b>Notification</b>"
-msgstr "<b>Benachrichtigung</b>"
+msgstr "<b>通知</b>"
 
 #: prefs.xml:163
 msgid "Send a notification when new updates are available"
-msgstr "Sende eine Benachrichtigung, sobald Aktualisierungen verfügbar sind"
+msgstr "当有新的更新可用时发送通知"
 
 #: prefs.xml:180
 msgid "Use transient notifications (auto dismiss)"
-msgstr "Verwende kurzlebige Benachrichtigung (automatische Ausblendung)"
+msgstr "使用暂时性通知(自动消除)"
 
 #: prefs.xml:197
 msgid "How much information to show on notifications"
-msgstr "Informationen, welche in der Benachrichtigung angezeigt werden"
+msgstr "在通知上显示多少信息"
 
 #: prefs.xml:205
 msgid "Count only"
-msgstr "Nur Anzahl"
+msgstr "仅数目"
 
 #: prefs.xml:206
 msgid "New updates names"
-msgstr "Namen der neuen Aktualisierungen"
+msgstr "新更新名称"
 
 #: prefs.xml:207
 msgid "All updates names"
-msgstr "Namen aller Aktualisierungen"
+msgstr "所有更新名称"
 
 #: prefs.xml:221
 msgid "<b>Advanced settings</b>"
-msgstr "<b>Erweiterte Einstellungen</b>"
+msgstr "<b>高级设置</b>"
 
 #: prefs.xml:233
 msgid "Command to check for package updates"
-msgstr "Kommando, um auf Aktualisierungen zu prüfen"
+msgstr "检查软件包更新的命令"
 
 #: prefs.xml:249
 msgid "Command to update packages"
-msgstr "Kommando, um Pakete zu aktualisieren"
+msgstr "更新软件包的命令"
 
 #: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
-"Lokales Pacman Verzeichnis - Wird benötigt, um festzustellen, dass neue "
-"Pakete installiert werden"
-
-#~ msgid "<b>Timers</b>"
-#~ msgstr "<b>Timer</b>"
+msgstr "Pacman 本地目录路径 - 用于检测新软件包被安装的时间"

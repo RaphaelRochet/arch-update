@@ -1,144 +1,144 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fábio Nogueira <fnogueira@gnome.org>, 2015-2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 11:37+0100\n"
-"PO-Revision-Date: 2016-02-08 12:26+0100\n"
-"Last-Translator: Karol Babioch <karol@babioch.de>\n"
+"PO-Revision-Date: 2016-02-05 16:42-0300\n"
+"Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: \n"
-"Language: de_DE\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: extension.js:100
 msgid "Check now"
-msgstr "Jetzt überprüfen"
+msgstr "Verificar agora"
 
 #: extension.js:101
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Configurações"
 
 #: extension.js:102 extension.js:343
 msgid "Update now"
-msgstr "Jetzt aktualisieren"
+msgstr "Atualizar agora"
 
 #: extension.js:119
 msgid "Waiting first check"
-msgstr "Warte auf erste Überprüfung"
+msgstr "Aguardando pela primeira verificação"
 
 #: extension.js:219
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "%d ausstehende Aktualisierung"
-msgstr[1] "%d ausstehende Aktualisierungen"
+msgstr[0] "%d atualização pendente"
+msgstr[1] "%d atualizações pendentes"
 
 #: extension.js:232 extension.js:237
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] "Neue Arch Linux Aktualisierung"
-msgstr[1] "Neue Arch Linux Aktualisierungen"
+msgstr[0] "Nova atualização do Arch Linux"
+msgstr[1] "Novas atualizações do Arch Linux"
 
 #: extension.js:238
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] "Es gibt %d ausstehende Aktualisierung"
-msgstr[1] "Es gibt %d ausstehende Aktualisierungen"
+msgstr[0] "Existe %d atualização pendente"
+msgstr[1] "Existem %d atualizações pendentes"
 
 #: extension.js:252
 msgid "Error"
-msgstr "Fehler"
+msgstr "Erro"
 
 #: extension.js:257
 msgid "Up to date :)"
-msgstr "Auf dem Laufenden :)"
+msgstr "Atualizado :)"
 
 #: extension.js:278
 msgid "Checking"
-msgstr "Überprüfe"
+msgstr "Verificando"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
-msgstr "<b>Überprüfe auf Aktualisierungen</b>"
+msgstr "<b>Verificando por atualizações</b>"
 
 #: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
-msgstr "Wartezeit vor erster Überprüfung (Sekunden)"
+msgstr "Tempo de espera antes da primeira verificação (segundos)"
 
 #: prefs.xml:67
 msgid "Interval between updates check (minutes)"
-msgstr "Intervall zwischen Überprüfungen (Minuten)"
+msgstr "Intervalo entre as verificações de atualização (minutos)"
 
 #: prefs.xml:84
 msgid "Strip out versions numbers"
-msgstr "Versionsnummern weglassen"
+msgstr "Retirar os números das versões"
 
 #: prefs.xml:104
 msgid "<b>Indicator</b>"
-msgstr "<b>Anzeige</b>"
+msgstr "<b>Indicador</b>"
 
 #: prefs.xml:115
 msgid "Always visible"
-msgstr "Immer sichtbar"
+msgstr "Visível sempre"
 
 #: prefs.xml:132
 msgid "Show updates count on indicator"
-msgstr "Zeige Anzahl an Aktualisierungen"
+msgstr "Exibir o contador de atualização no indicador"
 
 #: prefs.xml:152
 msgid "<b>Notification</b>"
-msgstr "<b>Benachrichtigung</b>"
+msgstr "<b>Notificação</b>"
 
 #: prefs.xml:163
 msgid "Send a notification when new updates are available"
-msgstr "Sende eine Benachrichtigung, sobald Aktualisierungen verfügbar sind"
+msgstr "Enviar uma notificação quando novas atualizações estiverem disponíveis"
 
 #: prefs.xml:180
 msgid "Use transient notifications (auto dismiss)"
-msgstr "Verwende kurzlebige Benachrichtigung (automatische Ausblendung)"
+msgstr "Utilizar notificações temporárias (descartar automaticamente)"
 
 #: prefs.xml:197
 msgid "How much information to show on notifications"
-msgstr "Informationen, welche in der Benachrichtigung angezeigt werden"
+msgstr "O que exibir nas notificações"
 
 #: prefs.xml:205
 msgid "Count only"
-msgstr "Nur Anzahl"
+msgstr "Somente o contador"
 
 #: prefs.xml:206
 msgid "New updates names"
-msgstr "Namen der neuen Aktualisierungen"
+msgstr "Nomes das novas atualizações"
 
 #: prefs.xml:207
 msgid "All updates names"
-msgstr "Namen aller Aktualisierungen"
+msgstr "Nomes de todas as atualizações"
 
 #: prefs.xml:221
 msgid "<b>Advanced settings</b>"
-msgstr "<b>Erweiterte Einstellungen</b>"
+msgstr "<b>Configurações avançadas</b>"
 
 #: prefs.xml:233
 msgid "Command to check for package updates"
-msgstr "Kommando, um auf Aktualisierungen zu prüfen"
+msgstr "Comando para verificar se há atualizações de pacotes"
 
 #: prefs.xml:249
 msgid "Command to update packages"
-msgstr "Kommando, um Pakete zu aktualisieren"
+msgstr "Comando para atualizar pacotes"
 
 #: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
-"Lokales Pacman Verzeichnis - Wird benötigt, um festzustellen, dass neue "
-"Pakete installiert werden"
+"Caminho do diretório local do Pacman - Para detectar quando os novos pacotes "
+"são instalados"
 
 #~ msgid "<b>Timers</b>"
-#~ msgstr "<b>Timer</b>"
+#~ msgstr "<b>Temporizadores</b>"

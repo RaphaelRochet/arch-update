@@ -4,9 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\n"
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 20:19+0100\n"
+"POT-Creation-Date: 2016-02-05 11:37+0100\n"
 "PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,103 +15,124 @@ msgstr "Project-Id-Version: PACKAGE VERSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: extension.js:81
+#: extension.js:100
 msgid "Check now"
 msgstr "Zkontrolovat"
 
-#: extension.js:82
+#: extension.js:101
 msgid "Settings"
 msgstr "Nastavení"
 
-#: extension.js:83
+#: extension.js:102 extension.js:343
 msgid "Update now"
 msgstr "Aktualizovat"
 
-#: extension.js:100
+#: extension.js:119
 msgid "Waiting first check"
 msgstr "Čekání na první kontrolu"
 
-#: extension.js:197 extension.js:212
-msgid "updates pending"
-msgstr "čekajících aktualizací"
+#: extension.js:219
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "%d čekající aktualizace"
+msgstr[1] "%d čekajících aktualizací"
 
-#: extension.js:223
+#: extension.js:232 extension.js:237
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Nová aktualizace pro Arch Linux"
+msgstr[1] "Nové aktualizace pro Arch Linux"
+
+#: extension.js:238
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "Je dostupná %d čekající aktualizace"
+msgstr[1] "Je dostupných %d čekajících aktualizací"
+
+#: extension.js:252
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:228
+#: extension.js:257
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 
-#: extension.js:247
+#: extension.js:278
 msgid "Checking"
 msgstr "Kontroluji"
 
-#: extension.js:300 extension.js:303
-msgid "New Arch Linux Updates"
-msgstr "Nové aktualizace pro Arch Linux"
+#: prefs.xml:39
+msgid "<b>Checking for updates</b>"
+msgstr "<b>Kontrola aktualizací</b>"
 
-#: prefs.xml:21
-msgid "<b>Timers</b>"
-msgstr "<b>Časování</b>"
-
-#: prefs.xml:32
+#: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
 msgstr "Čas zpoždění před první kontrolou (sekundy)"
 
-#: prefs.xml:49
+#: prefs.xml:67
 msgid "Interval between updates check (minutes)"
 msgstr "Časový interval mezi aktualizacemi (minuty)"
 
-#: prefs.xml:69
+#: prefs.xml:84
+msgid "Strip out versions numbers"
+msgstr "Nezobrazovat čísla verzí"
+
+#: prefs.xml:104
 msgid "<b>Indicator</b>"
 msgstr "<b>Indikátor</b>"
 
-#: prefs.xml:80
+#: prefs.xml:115
 msgid "Always visible"
 msgstr "Vždy viditelný"
 
-#: prefs.xml:97
+#: prefs.xml:132
 msgid "Show updates count on indicator"
 msgstr "Zobrazovat u indikátoru počet aktualizací"
 
-#: prefs.xml:117
+#: prefs.xml:152
 msgid "<b>Notification</b>"
 msgstr "<b>Upozornění</b>"
 
-#: prefs.xml:128
+#: prefs.xml:163
 msgid "Send a notification when new updates are available"
 msgstr "Zobrazit upozornění při dostupných aktualizacích"
 
-#: prefs.xml:145
+#: prefs.xml:180
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Používat dočasná upozornění (samozavírací)"
 
-#: prefs.xml:162
+#: prefs.xml:197
 msgid "How much information to show on notifications"
 msgstr "Množství zobrazovaných informací"
 
-#: prefs.xml:170
+#: prefs.xml:205
 msgid "Count only"
 msgstr "Pouze počet"
 
-#: prefs.xml:171
+#: prefs.xml:206
 msgid "New updates names"
 msgstr "Jména nových aktualizací"
 
-#: prefs.xml:172
+#: prefs.xml:207
 msgid "All updates names"
 msgstr "Jména všech aktualizací"
 
-#: prefs.xml:186
+#: prefs.xml:221
 msgid "<b>Advanced settings</b>"
 msgstr "<b>Další možnosti</b>"
 
-#: prefs.xml:198
+#: prefs.xml:233
+msgid "Command to check for package updates"
+msgstr "Příkaz pro kontrolu aktuálnosti balíčků"
+
+#: prefs.xml:249
 msgid "Command to update packages"
 msgstr "Příkaz pro aktualizaci balíčků"
 
-#: prefs.xml:214
+#: prefs.xml:265
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
