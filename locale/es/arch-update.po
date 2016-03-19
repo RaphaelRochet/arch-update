@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Cristian Beroiza <cberoiza@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-05 11:37+0100\n"
-"PO-Revision-Date: 2015-11-29 16:07-0300\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2016-03-18 23:23-0300\n"
+"Last-Translator: Cristian Beroiza <cberoiza@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: extension.js:100
@@ -35,25 +35,24 @@ msgid "Waiting first check"
 msgstr "Espera antes de la primera comprobación"
 
 #: extension.js:219
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "Actualizaciones pendientes"
-msgstr[1] "Actualizaciones pendientes"
+msgstr[0] "%d actualización pendiente"
+msgstr[1] "%d actualizaciones pendientes"
 
 #: extension.js:232 extension.js:237
-#, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nuevas actualizaciones de Arch Linux"
 msgstr[1] "Nuevas actualizaciones de Arch Linux"
 
 #: extension.js:238
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] "Actualizaciones pendientes"
-msgstr[1] "Actualizaciones pendientes"
+msgstr[0] "Existe %d actualización pendiente"
+msgstr[1] "Existen %d actualizaciones pendientes"
 
 #: extension.js:252
 msgid "Error"
@@ -69,7 +68,7 @@ msgstr "Comprobar"
 
 #: prefs.xml:39
 msgid "<b>Checking for updates</b>"
-msgstr ""
+msgstr "<b>Comprobando actualizaciones</b>"
 
 #: prefs.xml:50
 msgid "Time to wait before first check (seconds)"
@@ -81,7 +80,7 @@ msgstr "Intervalo entre comprobaciones de actualización (minutos)"
 
 #: prefs.xml:84
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Quitar número de versiones"
 
 #: prefs.xml:104
 msgid "<b>Indicator</b>"
@@ -128,9 +127,8 @@ msgid "<b>Advanced settings</b>"
 msgstr "<b>Ajustes avanzados</b>"
 
 #: prefs.xml:233
-#, fuzzy
 msgid "Command to check for package updates"
-msgstr "Comando para actualizar los paquetes"
+msgstr "Comando para comprobar actualizaciones de los paquetes"
 
 #: prefs.xml:249
 msgid "Command to update packages"
