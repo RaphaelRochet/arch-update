@@ -21,7 +21,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes 
 
-### 13
+### v14
+- Gnome 3.20 compatibility
+
+### v13
 - New translation : Serbian (sr and sr@latin)
 - Updated translation : Spanish
 - Minor bug fix
