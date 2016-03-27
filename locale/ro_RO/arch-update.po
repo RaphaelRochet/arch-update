@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-05 11:37+0100\n"
+"POT-Creation-Date: 2016-03-27 16:49+0200\n"
 "PO-Revision-Date: 2016-01-04 04:53+0200\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language: ro_RO\n"
@@ -18,125 +18,130 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
-#: extension.js:100
+#: extension.js:101
 msgid "Check now"
 msgstr "Verifică acum"
 
-#: extension.js:101
+#: extension.js:102
 msgid "Settings"
 msgstr "Setări"
 
-#: extension.js:102 extension.js:343
+#: extension.js:103 extension.js:356
 msgid "Update now"
 msgstr "Actualizează acum"
 
-#: extension.js:119
+#: extension.js:122
 msgid "Waiting first check"
 msgstr "Așteaptă prima verificare"
 
-#: extension.js:219
+#: extension.js:231
 #, fuzzy, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "actualizări în așteptare"
 msgstr[1] "actualizări în așteptare"
 
-#: extension.js:232 extension.js:237
+#: extension.js:244 extension.js:249
 #, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Actualizări noi pentru Arch Linux"
 msgstr[1] "Actualizări noi pentru Arch Linux"
 
-#: extension.js:238
+#: extension.js:250
 #, fuzzy, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "actualizări în așteptare"
 msgstr[1] "actualizări în așteptare"
 
-#: extension.js:252
+#: extension.js:265
 msgid "Error"
 msgstr "Eroare"
 
-#: extension.js:257
+#: extension.js:270
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 
-#: extension.js:278
+#: extension.js:291
 msgid "Checking"
 msgstr "Se verifică"
 
-#: prefs.xml:39
+#: prefs.xml:44
 msgid "<b>Checking for updates</b>"
 msgstr ""
 
-#: prefs.xml:50
+#: prefs.xml:55
 msgid "Time to wait before first check (seconds)"
 msgstr "Timp de așteptare înainte de prima verificare (secunde)"
 
-#: prefs.xml:67
+#: prefs.xml:72
 msgid "Interval between updates check (minutes)"
 msgstr "Interval între verificări de actualizare (minute)"
 
-#: prefs.xml:84
+#: prefs.xml:89
 msgid "Strip out versions numbers"
 msgstr ""
 
-#: prefs.xml:104
+#: prefs.xml:109
 msgid "<b>Indicator</b>"
 msgstr "<b>Indicator</b>"
 
-#: prefs.xml:115
+#: prefs.xml:120
 msgid "Always visible"
 msgstr "Întotdeauna vizibil"
 
-#: prefs.xml:132
+#: prefs.xml:137
 msgid "Show updates count on indicator"
 msgstr "Arată numărul actualizărilor în indicator"
 
-#: prefs.xml:152
+#: prefs.xml:154
+msgid ""
+" Auto-expand updates list if count is less than this number (0 to disable)"
+msgstr ""
+
+#: prefs.xml:174
 msgid "<b>Notification</b>"
 msgstr "<b>Notificare</b>"
 
-#: prefs.xml:163
+#: prefs.xml:185
 msgid "Send a notification when new updates are available"
 msgstr "Trimite notificare când noi actualizări sunt disponibile"
 
-#: prefs.xml:180
+#: prefs.xml:202
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Folosește notificări tranzitorii (auto închidere)"
 
-#: prefs.xml:197
+#: prefs.xml:219
 msgid "How much information to show on notifications"
 msgstr "Cât de multă informație să fie arătată în notificări"
 
-#: prefs.xml:205
+#: prefs.xml:227
 msgid "Count only"
 msgstr "Doar număr"
 
-#: prefs.xml:206
+#: prefs.xml:228
 msgid "New updates names"
 msgstr "Nunele noilor actualizări"
 
-#: prefs.xml:207
+#: prefs.xml:229
 msgid "All updates names"
 msgstr "Numele tuturor actualizărilor"
 
-#: prefs.xml:221
+#: prefs.xml:243
 msgid "<b>Advanced settings</b>"
 msgstr "<b>Setări avansate</b>"
 
-#: prefs.xml:233
+#: prefs.xml:255
 #, fuzzy
 msgid "Command to check for package updates"
 msgstr "Comandă pentru actualizarea pachetelor"
 
-#: prefs.xml:249
+#: prefs.xml:271
 msgid "Command to update packages"
 msgstr "Comandă pentru actualizarea pachetelor"
 
-#: prefs.xml:265
+#: prefs.xml:287
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Calea locală a dosarului Pacman - Pentru a detecta când noi pachete sunt "
