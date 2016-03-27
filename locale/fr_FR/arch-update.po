@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-27 16:49+0200\n"
-"PO-Revision-Date: 2016-02-05 11:38+0100\n"
+"PO-Revision-Date: 2016-03-27 16:51+0200\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #: extension.js:101
@@ -95,9 +95,8 @@ msgid "Show updates count on indicator"
 msgstr "Afficher le nombre de mises à jour"
 
 #: prefs.xml:154
-msgid ""
-" Auto-expand updates list if count is less than this number (0 to disable)"
-msgstr ""
+msgid " Auto-expand updates list if count is less than this number (0 to disable)"
+msgstr "Étendre automatiquement la liste des mises à jour s'il y en a moins que ce nombre (0 pour désactiver)"
 
 #: prefs.xml:174
 msgid "<b>Notification</b>"
@@ -105,8 +104,7 @@ msgstr "<b>Notification</b>"
 
 #: prefs.xml:185
 msgid "Send a notification when new updates are available"
-msgstr ""
-"Afficher une notification quand de nouvelles mises à jour sont disponibles"
+msgstr "Afficher une notification quand de nouvelles mises à jour sont disponibles"
 
 #: prefs.xml:202
 msgid "Use transient notifications (auto dismiss)"
@@ -142,8 +140,7 @@ msgstr "Commande pour mettre à jour les paquets"
 
 #: prefs.xml:287
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr ""
-"Dossier local de Pacman - Pour détecter quand des paquets sont installés"
+msgstr "Dossier local de Pacman - Pour détecter quand des paquets sont installés"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Minuteries</b>"
