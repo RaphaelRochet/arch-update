@@ -50,6 +50,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property name="label" translatable="yes">Time to wait before first check (seconds)</property>
@@ -67,6 +68,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property name="label" translatable="yes">Interval between updates check (minutes)</property>
@@ -84,6 +86,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property translatable="yes" name="label">Strip out versions numbers</property>
@@ -115,6 +118,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property name="label" translatable="yes">Always visible</property>
@@ -132,6 +136,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property name="label" translatable="yes">Show updates count on indicator</property>
@@ -149,6 +154,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property name="label" translatable="yes"> Auto-expand updates list if count is less than this number (0 to disable)</property>
@@ -180,6 +186,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property name="label" translatable="yes">Send a notification when new updates are available</property>
@@ -197,6 +204,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property translatable="yes" name="label">Use transient notifications (auto dismiss)</property>
@@ -214,6 +222,7 @@
 
 	<child>
 		<object class="GtkBox">
+			<property name="spacing">5</property>
 			<child>
 				<object class="GtkLabel">
 					<property translatable="yes" name="label">How much information to show on notifications</property>
