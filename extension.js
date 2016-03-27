@@ -200,7 +200,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	_onMenuOpened: function() {
 		// This event is fired when menu is shown or hidden
 		// Only open the submenu if the menu is being opened and there is something to show
-		if (this.menu.isOpen && UPDATES_PENDING <= AUTO_EXPAND_LIST) {
+		if (this.menu.isOpen && UPDATES_PENDING > 0 && UPDATES_PENDING <= AUTO_EXPAND_LIST) {
 			this.menuExpander.setSubmenuShown(true);
 		}
 	},
