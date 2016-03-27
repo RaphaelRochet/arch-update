@@ -53,6 +53,7 @@ let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Do
 let CHECK_CMD          = "/usr/bin/checkupdates";
 let PACMAN_DIR         = "/var/lib/pacman/local";
 let STRIP_VERSIONS     = true;
+let AUTO_EXPAND_LIST   = 0;
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
@@ -108,6 +109,8 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menu.addMenuItem(this.checkNowMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
 
+		// Bind some events
+		this.menu.connect('open-state-changed', Lang.bind(this, this._onMenuOpened));
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
 		this.updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
@@ -157,6 +160,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		CHECK_CMD = this._settings.get_string('check-cmd');
 		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		STRIP_VERSIONS = this._settings.get_boolean('strip-versions');
+		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
@@ -191,6 +195,14 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.actor.visible = true;
 		}
 		this.label.visible = SHOW_COUNT;
+	},
+
+	_onMenuOpened: function() {
+		// This event is fired when menu is shown or hidden
+		// Only open the submenu if the menu is being opened and there is something to show
+		if (this.menu.isOpen && UPDATES_PENDING <= AUTO_EXPAND_LIST) {
+			this.menuExpander.setSubmenuShown(true);
+		}
 	},
 
 	_startFolderMonitor: function() {
@@ -242,6 +254,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			// Store the new list
 			UPDATES_LIST = this._updateList;
 		} else {
+			this.updatesListMenuLabel.set_text("");
 			if (updatesCount == -1) {
 				// Unknown
 				this.updateIcon.set_icon_name('arch-unknown-symbolic');

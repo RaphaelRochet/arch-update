@@ -74,6 +74,12 @@
         <description></description>
     </key>
 
+    <key name="auto-expand-list" type="i">
+      <default>0</default>
+        <summary>Auto-open list submenu when updates count is lower than this number</summary>
+        <description></description>
+        <range min="0" max="100"/>
+    </key>
 
   </schema>
 </schemalist>
