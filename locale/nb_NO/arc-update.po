@@ -131,7 +131,7 @@ msgstr "<b>Avanserte innstillinger</b>"
 
 #: prefs.xml:255
 msgid "Command to check for package updates"
-msgstr "Kommando for å sjekke for nye pakkeoppdateringer"
+msgstr "Kommando for å sjekke etter nye pakkeoppdateringer"
 
 #: prefs.xml:271
 msgid "Command to update packages"
