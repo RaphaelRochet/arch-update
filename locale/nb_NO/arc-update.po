@@ -37,7 +37,7 @@ msgstr "Venter på første sjekk"
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d oppdatering venter"
-msgstr[1] "%d oppdateriner venter"
+msgstr[1] "%d oppdateringer venter"
 
 #: extension.js:244 extension.js:249
 msgid "New Arch Linux Update"
