@@ -39,7 +39,7 @@ function buildPrefsWidget(){
 	// Prepare labels and controls
 	let buildable = new Gtk.Builder();
 	buildable.add_from_file( Me.dir.get_path() + '/prefs.xml' );
-	let box = buildable.get_object('vbox_built');
+	let box = buildable.get_object('scrolled_window_built');
 
 	// Bind fields to settings
 	settings.bind('boot-wait' , buildable.get_object('field_wait') , 'value' , Gio.SettingsBindFlags.DEFAULT);
