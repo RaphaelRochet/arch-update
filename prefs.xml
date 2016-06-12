@@ -38,12 +38,14 @@
 <object class="GtkScrolledWindow" id="scrolled_window_built">
 	<property name="hscrollbar-policy">never</property>
 	<property name="vscrollbar-policy">automatic</property>
+	<property name="expand">true</property>
 
 	<child>
-		<object class="GtkVBox" id="vbox_built">
+		<object class="GtkGrid">
 			<property name="margin">10</property>
-			<property name="spacing">5</property>
-			<property name="expand">true</property>
+			<property name="row-spacing">5</property>
+			<property name="row-homogeneous">false</property>
+			<property name="orientation">vertical</property>
 
 			<child>
 				<object class="GtkLabel">
