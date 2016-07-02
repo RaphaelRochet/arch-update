@@ -21,6 +21,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes 
 
+### v16
+- Add vertical scroll bar on preferences window
+
 ### v15
 - New feature : auto-expand update list
 - New translation : Norwegian Bokmal
