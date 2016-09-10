@@ -48,11 +48,23 @@
 			<property name="orientation">vertical</property>
 
 			<child>
-				<object class="GtkLabel">
-					<property name="label" translatable="yes">&lt;b&gt;Checking for updates&lt;/b&gt;</property>
-					<property name="use_markup">true</property>
-					<property name="hexpand">true</property>
-					<property name="halign">1</property>
+				<object class="GtkBox">
+					<property name="spacing">5</property>
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">&lt;b&gt;Checking for updates&lt;/b&gt;</property>
+							<property name="use_markup">true</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkLabel" id="version_info">
+							<property name="label" translatable="yes">Version info placeholder</property>
+							<property name="hexpand">false</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
 				</object>
 			</child>
 

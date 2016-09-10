@@ -41,6 +41,9 @@ function buildPrefsWidget(){
 	buildable.add_from_file( Me.dir.get_path() + '/prefs.xml' );
 	let box = buildable.get_object('scrolled_window_built');
 
+	let version_label = buildable.get_object('version_info');
+	version_label.set_text('[Arch-update v' + Me.metadata.version.toString() + ']');
+
 	// Bind fields to settings
 	settings.bind('boot-wait' , buildable.get_object('field_wait') , 'value' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('check-interval' , buildable.get_object('field_interval') , 'value' , Gio.SettingsBindFlags.DEFAULT);
