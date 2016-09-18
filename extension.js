@@ -98,15 +98,19 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menuExpander.menu.box.style_class = 'arch-updates-list';
 
 		// Other standard menu items
-		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
 		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now'));
+
+		// A little trick on "check now" menuitem to keep menu opened
+		this.checkNowMenuItem = new PopupMenu.PopupMenuItem(_('Check now'));
+		this.checkNowMenuContainer = new PopupMenu.PopupMenuSection();
+		this.checkNowMenuContainer.actor.add_actor(this.checkNowMenuItem.actor);
 
 		// Assemble all menu items into the popup menu
 		this.menu.addMenuItem(this.menuExpander);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.updateNowMenuItem);
-		this.menu.addMenuItem(this.checkNowMenuItem);
+		this.menu.addMenuItem(this.checkNowMenuContainer);
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
