@@ -80,8 +80,8 @@ fi
 # Create 'package>=version' lists
 # ("package_a>=version package_b>=version ...")
 #
-list1=`zcat $filename1 | grep "pacman -Syu" | tr -d '"' | cut -d ' ' -f 4`
-list2=`zcat $filename2 | grep "pacman -Syu" | tr -d '"' | cut -d ' ' -f 4`
+list1=`zcat $filename1 | grep -os "pacman -Syu .*>=.*" | tr -d '"' | cut -d ' ' -f 3`
+list2=`zcat $filename2 | grep -os "pacman -Syu .*>=.*" | tr -d '"' | cut -d ' ' -f 3`
 
 #
 # Create package->version map
