@@ -24,7 +24,7 @@ EXIT_DOWNLOAD_FAILURE=2
 base_url=https://lists.archlinux.org/pipermail/arch-security
 download_dir=/tmp/arch-update
 year=`date +%Y`
-month=`LC_ALL=en date +%B`
+month=`LC_ALL=C date +%B`
 months=( January February March April May June July August September October November December )
 delimeter=' '
 
