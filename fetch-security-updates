@@ -28,6 +28,12 @@ month=`LC_ALL=C date +%B`
 months=( January February March April May June July August September October November December )
 delimeter=' '
 
+function cmp_version_gt()
+{
+  test "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1";
+}
+
+
 if ! which wget &> /dev/null || ! which zcat &> /dev/null; then
   exit $EXIT_DEPENDENCY_FAILURE
 fi
@@ -104,11 +110,22 @@ for p in $list2; do
   map[$package]=$version
 done
 
+# Run checkupdates and only list packages
+# that are in the map of security relevant packages
 #
-# List 'package version' pairs
-#
-for key in ${!map[@]}; do
-  echo "$key$delimeter${map[$key]}"
+checkupdates | while read -r line; do
+  package=`echo $line | cut -d ' ' -f 1`
+  ver_cur=x`echo $line | cut -d ' ' -f 3`
+  ver_upd=x`echo $line | cut -d ' ' -f 4`
+  ver_sec=x${map[$package]}
+  
+  if [ $ver_cur != "x" ] && [ $ver_upd != "x" ] && [ $ver_sec != "x" ]; then
+    if cmp_version_gt $ver_sec $ver_cur; then
+      if [ $ver_upd == $ver_sec ] || cmp_version_gt $ver_upd $ver_sec; then
+        echo $line
+      fi
+    fi
+  fi
 done
 
 exit $EXIT_SUCCESS
