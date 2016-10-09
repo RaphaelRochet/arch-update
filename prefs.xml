@@ -35,302 +35,332 @@
 	<property name="step_increment">1</property>
 </object>
 
-<object class="GtkScrolledWindow" id="scrolled_window_built">
-	<property name="hscrollbar-policy">never</property>
-	<property name="vscrollbar-policy">automatic</property>
+<object class="GtkNotebook" id="prefs_widget">
 	<property name="expand">true</property>
 
 	<child>
 		<object class="GtkGrid">
-			<property name="margin">10</property>
-			<property name="row-spacing">5</property>
+			<property name="margin">18</property>
+			<property name="row-spacing">18</property>
 			<property name="row-homogeneous">false</property>
 			<property name="orientation">vertical</property>
 
 			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">&lt;b&gt;Checking for updates&lt;/b&gt;</property>
-							<property name="use_markup">true</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkLabel" id="version_info">
-							<property name="label" translatable="yes">Version info placeholder</property>
-							<property name="hexpand">false</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Time to wait before first check (seconds)</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSpinButton" id="field_wait">
-							<property name="adjustment">Adjust_1</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Interval between updates check (minutes)</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSpinButton" id="field_interval">
-							<property name="adjustment">Adjust_2</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property translatable="yes" name="label">Strip out versions numbers</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSwitch" id="field_stripversions">
-							<property name="active">true</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkSeparator">
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkLabel">
-					<property name="label" translatable="yes">&lt;b&gt;Indicator&lt;/b&gt;</property>
-					<property name="use_markup">true</property>
-					<property name="hexpand">true</property>
-					<property name="halign">1</property>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Always visible</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSwitch" id="field_visible">
-							<property name="active">true</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Show updates count on indicator</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSwitch" id="field_count">
-							<property name="active">true</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes"> Auto-expand updates list if count is less than this number (0 to disable)</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSpinButton" id="field_autoexpandlist">
-							<property name="adjustment">Adjust_3</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkSeparator">
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkLabel">
-					<property name="label" translatable="yes">&lt;b&gt;Notification&lt;/b&gt;</property>
-					<property name="use_markup">true</property>
-					<property name="hexpand">true</property>
-					<property name="halign">1</property>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Send a notification when new updates are available</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSwitch" id="field_notify">
-							<property name="active">true</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property translatable="yes" name="label">Use transient notifications (auto dismiss)</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSwitch" id="field_transient">
-							<property name="active">true</property>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="spacing">5</property>
-					<child>
-						<object class="GtkLabel">
-							<property translatable="yes" name="label">How much information to show on notifications</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkComboBoxText" id="field_howmuch">
-							<items>
-								<item translatable="yes" id="0">Count only</item>
-								<item translatable="yes" id="1">New updates names</item>
-								<item translatable="yes" id="2">All updates names</item>
-							</items>
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkSeparator">
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkExpander">
-					<property name="label" translatable="yes">&lt;b&gt;Advanced settings&lt;/b&gt;</property>
-					<property name="use_markup">true</property>
-					<property name="expanded">false</property>
+				<object class="GtkVBox">
+				<property name="spacing">6</property>
 
 					<child>
-						<object class="GtkVBox">
-							<property name="spacing">10</property>
-
+						<object class="GtkBox">
+							<property name="spacing">12</property>
 							<child>
-								<object class="GtkVBox">
-									<child>
-										<object class="GtkLabel">
-											<property name="label" translatable="yes">Command to check for package updates</property>
-											<property name="hexpand">true</property>
-											<property name="halign">1</property>
-										</object>
-									</child>
-									<child>
-										<object class="GtkEntry" id="field_checkcmd">
-										</object>
-									</child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Checking for updates</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+									<attributes>
+										<attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
+									</attributes>
 								</object>
 							</child>
-
 							<child>
-								<object class="GtkVBox">
-									<child>
-										<object class="GtkLabel">
-											<property name="label" translatable="yes">Command to update packages</property>
-											<property name="hexpand">true</property>
-											<property name="halign">1</property>
-										</object>
-									</child>
-									<child>
-										<object class="GtkEntry" id="field_updatecmd">
-										</object>
-									</child>
+								<object class="GtkLabel" id="version_info">
+									<property name="label">Version info placeholder</property>
+									<property name="hexpand">false</property>
+									<property name="halign">1</property>
 								</object>
 							</child>
+						</object>
+					</child>
 
+					<child>
+						<object class="GtkBox">
+							<property name="margin-left">12</property>
+							<property name="spacing">12</property>
 							<child>
-								<object class="GtkVBox">
-									<child>
-										<object class="GtkLabel">
-											<property name="label" translatable="yes">Pacman local directory path - To detect when new packages are installed</property>
-											<property name="hexpand">true</property>
-											<property name="halign">1</property>
-										</object>
-									</child>
-									<child>
-										<object class="GtkEntry" id="field_pacmandir">
-										</object>
-									</child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Time to wait before first check (seconds)</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
 								</object>
 							</child>
+							<child>
+								<object class="GtkSpinButton" id="field_wait">
+									<property name="adjustment">Adjust_1</property>
+								</object>
+							</child>
+						</object>
+					</child>
 
+					<child>
+						<object class="GtkBox">
+							<property name="margin-left">12</property>
+							<property name="spacing">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Interval between updates check (minutes)</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSpinButton" id="field_interval">
+									<property name="adjustment">Adjust_2</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="margin-left">12</property>
+							<property name="spacing">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property translatable="yes" name="label">Strip out versions numbers</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_stripversions">
+									<property name="active">true</property>
+								</object>
+							</child>
 						</object>
 					</child>
 
 				</object>
 			</child>
 
+			<child>
+				<object class="GtkVBox">
+				<property name="spacing">6</property>
+
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Indicator</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+							<attributes>
+								<attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
+							</attributes>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Always visible</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_visible">
+									<property name="active">true</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Show updates count on indicator</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_count">
+									<property name="active">true</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<property name="hexpand">true</property>
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Auto-expand updates list if updates count is less than this number (0 to disable)</property>
+									<property name="hexpand">true</property>
+									<property name="xalign">0</property>
+									<property name="wrap">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSpinButton" id="field_autoexpandlist">
+									<property name="adjustment">Adjust_3</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
+				</object>
+			</child>
+
+			<child>
+				<object class="GtkVBox">
+					<property name="spacing">6</property>
+
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Notification</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+							<attributes>
+								<attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
+							</attributes>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Send a notification when new updates are available</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_notify">
+									<property name="active">true</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property translatable="yes" name="label">Use transient notifications (auto dismiss)</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_transient">
+									<property name="active">true</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property translatable="yes" name="label">How much information to show on notifications</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkComboBoxText" id="field_howmuch">
+									<items>
+										<item translatable="yes" id="0">Count only</item>
+										<item translatable="yes" id="1">New updates names</item>
+										<item translatable="yes" id="2">All updates names</item>
+									</items>
+								</object>
+							</child>
+						</object>
+					</child>
+
+				</object>
+			</child>
+
+		</object>
+	</child>
+
+	<child type="tab">
+		<object class="GtkLabel">
+			<property name="label" translatable="yes">Basic settings</property>
+		</object>
+	</child>
+
+	<child>
+		<object class="GtkGrid">
+			<property name="margin">18</property>
+			<property name="row-spacing">18</property>
+			<property name="row-homogeneous">false</property>
+			<property name="orientation">vertical</property>
+
+			<child>
+				<object class="GtkVBox">
+					<property name="spacing">6</property>
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Command to check for package updates</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkEntry" id="field_checkcmd">
+						</object>
+					</child>
+				</object>
+			</child>
+
+			<child>
+				<object class="GtkVBox">
+					<property name="spacing">6</property>
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Command to update packages</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkEntry" id="field_updatecmd">
+						</object>
+					</child>
+				</object>
+			</child>
+
+			<child>
+				<object class="GtkVBox">
+					<property name="spacing">6</property>
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Pacman local directory path - To detect when new packages are installed</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkEntry" id="field_pacmandir">
+						</object>
+					</child>
+				</object>
+			</child>
+
+		</object>
+	</child>
+
+	<child type="tab">
+		<object class="GtkLabel">
+			<property name="label" translatable="yes">Advanced settings</property>
 		</object>
 	</child>
 

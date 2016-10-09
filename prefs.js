@@ -39,7 +39,7 @@ function buildPrefsWidget(){
 	// Prepare labels and controls
 	let buildable = new Gtk.Builder();
 	buildable.add_from_file( Me.dir.get_path() + '/prefs.xml' );
-	let box = buildable.get_object('scrolled_window_built');
+	let box = buildable.get_object('prefs_widget');
 
 	let version_label = buildable.get_object('version_info');
 	version_label.set_text('[Arch-update v' + Me.metadata.version.toString() + ']');
