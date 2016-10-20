@@ -21,6 +21,12 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v18
+- Gnome 3.22
+- New preferences window
+- Cleaner translations (some text are not translated yet)
+- Menu does not close when updating
+
 ### v17
 - New translation : Russian
 - Updated translation : Czech

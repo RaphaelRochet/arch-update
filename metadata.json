@@ -3,9 +3,10 @@
   "name": "Arch Linux Updates Indicator",
   "shell-version": [
     "3.18",
-    "3.20"
+    "3.20",
+    "3.22"
   ], 
   "url": "https://github.com/RaphaelRochet/arch-update", 
   "uuid": "arch-update@RaphaelRochet", 
-  "version": 17
+  "version": 18
 }
