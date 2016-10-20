@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-27 16:49+0200\n"
+"POT-Creation-Date: 2016-10-20 22:16+0200\n"
 "PO-Revision-Date: 2016-03-07 19:37+0100\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Generator: Poedit 1.8.7\n"
 
 #: extension.js:101
-msgid "Check now"
-msgstr "Proveri odmah"
-
-#: extension.js:102
 msgid "Settings"
 msgstr "Postavke"
 
-#: extension.js:103 extension.js:356
+#: extension.js:102 extension.js:374
 msgid "Update now"
 msgstr "Nadogradi odmah"
 
-#: extension.js:122
+#: extension.js:105
+msgid "Check now"
+msgstr "Proveri odmah"
+
+#: extension.js:126
 msgid "Waiting first check"
 msgstr "Čekam prvu proveru"
 
-#: extension.js:231
+#: extension.js:245
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -43,14 +43,14 @@ msgstr[0] "%d nadogradnja na čekanju"
 msgstr[1] "%d nadogradnje na čekanju"
 msgstr[2] "%d nadogradnji na čekanju"
 
-#: extension.js:244 extension.js:249
+#: extension.js:258 extension.js:263
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nova nadogradnja Archlinuksa"
 msgstr[1] "Nove nadogradnje Archlinuksa"
 msgstr[2] "Nove nadogradnje Archlinuksa"
 
-#: extension.js:250
+#: extension.js:264
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -58,93 +58,103 @@ msgstr[0] "Na čekanju je %d nadogradnja"
 msgstr[1] "Na čekanju su %d nadogradnje"
 msgstr[2] "Na čekanju je %d nadogradnji"
 
-#: extension.js:265
+#: extension.js:280
 msgid "Error"
 msgstr "Greška"
 
-#: extension.js:270
-msgid "Up to date :)"
-msgstr "Ažurno :)"
-
-#: extension.js:291
+#: extension.js:284
 msgid "Checking"
 msgstr "Proveravam"
 
-#: prefs.xml:44
-msgid "<b>Checking for updates</b>"
+#: extension.js:288
+msgid "Up to date :)"
+msgstr "Ažurno :)"
+
+#: prefs.xml:57
+#, fuzzy
+msgid "Checking for updates"
 msgstr "<b>Tražim nadogradnje</b>"
 
-#: prefs.xml:55
+#: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
 msgstr "Vreme čekanja pre prve provere (sekunde)"
 
-#: prefs.xml:72
+#: prefs.xml:100
 msgid "Interval between updates check (minutes)"
 msgstr "Interval između provera ažurnosti (minuti)"
 
-#: prefs.xml:89
+#: prefs.xml:119
 msgid "Strip out versions numbers"
 msgstr "Bez brojeva verzija"
 
-#: prefs.xml:109
-msgid "<b>Indicator</b>"
+#: prefs.xml:141
+#, fuzzy
+msgid "Indicator"
 msgstr "<b>Indikator</b>"
 
-#: prefs.xml:120
+#: prefs.xml:156
 msgid "Always visible"
 msgstr "Uvek vidljiv"
 
-#: prefs.xml:137
+#: prefs.xml:175
 msgid "Show updates count on indicator"
 msgstr "Prikaz broja nadogradnji na indikatoru"
 
-#: prefs.xml:154
+#: prefs.xml:195
 msgid ""
-" Auto-expand updates list if count is less than this number (0 to disable)"
+"Auto-expand updates list if updates count is less than this number (0 to "
+"disable)"
 msgstr ""
 
-#: prefs.xml:174
-msgid "<b>Notification</b>"
+#: prefs.xml:218
+#, fuzzy
+msgid "Notification"
 msgstr "<b>Obaveštenje</b>"
 
-#: prefs.xml:185
+#: prefs.xml:233
 msgid "Send a notification when new updates are available"
 msgstr "Prikaz obaveštenja o dostupnim nadogradnjama"
 
-#: prefs.xml:202
+#: prefs.xml:252
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Prolazna obaveštenja (automatsko odbacivanje)"
 
-#: prefs.xml:219
+#: prefs.xml:271
 msgid "How much information to show on notifications"
 msgstr "Koliko se podataka prikazuje u obaveštenjima"
 
-#: prefs.xml:227
+#: prefs.xml:279
 msgid "Count only"
 msgstr "samo broj"
 
-#: prefs.xml:228
+#: prefs.xml:280
 msgid "New updates names"
 msgstr "imena novih nadogradnji"
 
-#: prefs.xml:229
+#: prefs.xml:281
 msgid "All updates names"
 msgstr "imena svih nadogradnji"
 
-#: prefs.xml:243
-msgid "<b>Advanced settings</b>"
-msgstr "<b>Napredne postavke</b>"
+#: prefs.xml:296
+#, fuzzy
+msgid "Basic settings"
+msgstr "Postavke"
 
-#: prefs.xml:255
+#: prefs.xml:312
 msgid "Command to check for package updates"
 msgstr "Komanda za traženje nadogradnji"
 
-#: prefs.xml:271
+#: prefs.xml:329
 msgid "Command to update packages"
 msgstr "Komanda za nadogradnju paketa"
 
-#: prefs.xml:287
+#: prefs.xml:346
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Putanja Pacmanove lokalne fascikle — za otkrivanje kada su novi paketi "
 "instalirani"
+
+#: prefs.xml:363
+#, fuzzy
+msgid "Advanced settings"
+msgstr "<b>Napredne postavke</b>"
