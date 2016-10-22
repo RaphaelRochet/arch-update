@@ -254,10 +254,13 @@ const ArchUpdateIndicator = new Lang.Class({
 						// Keep only packets that was not in the previous notification
 						updateList = this._updateList.filter(function(pkg) { return UPDATES_LIST.indexOf(pkg) < 0 });
 					}
-					this._showNotification(
-						Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updateList.length ),
-						updateList.join(', ')
-					);
+					if (updateList.length > 0) {
+						// Show notification only if there's new updates
+						this._showNotification(
+							Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updateList.length ),
+							updateList.join(', ')
+						);
+					}
 				} else {
 					this._showNotification(
 						Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updatesCount ),
@@ -286,9 +289,9 @@ const ArchUpdateIndicator = new Lang.Class({
 				// Up to date
 				this.updateIcon.set_icon_name('arch-uptodate-symbolic');
 				this._updateMenuExpander( false, _('Up to date :)') );
+				UPDATES_LIST = []; // Reset stored list
 			}
-			// Reset stored list
-			UPDATES_LIST = [];
+
 		}
 		UPDATES_PENDING = updatesCount;
 		this._checkAutoExpandList();
