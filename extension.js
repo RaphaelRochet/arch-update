@@ -74,6 +74,8 @@ const ArchUpdateIndicator = new Lang.Class({
 	_FirstTimeoutId: null,
 	_updateProcess_sourceId: null,
 	_updateProcess_stream: null,
+	_updateProcess_pid: null,
+	_updateList: [],
 
 	_init: function() {
 		this.parent(0.0, "ArchUpdateIndicator");
@@ -101,6 +103,18 @@ const ArchUpdateIndicator = new Lang.Class({
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
 		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now'));
 
+		// A special "Checking" menu item with a stop button
+		this.checkingMenuItem = new PopupMenu.PopupBaseMenuItem( {reactive:false} );
+		let checkingLabel = new St.Label({ text: _('Checking') + " …" });
+		let cancelButton = new St.Button({
+			child: new St.Icon({ icon_name: 'process-stop-symbolic' }),
+			style_class: 'system-menu-action arch-updates-menubutton',
+			x_expand: true
+		});
+		cancelButton.set_x_align(Clutter.ActorAlign.END);
+		this.checkingMenuItem.actor.add_actor( checkingLabel );
+		this.checkingMenuItem.actor.add_actor( cancelButton  );
+
 		// A little trick on "check now" menuitem to keep menu opened
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem( _('Check now') );
 		this.checkNowMenuContainer = new PopupMenu.PopupMenuSection();
@@ -110,12 +124,14 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menu.addMenuItem(this.menuExpander);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.updateNowMenuItem);
+		this.menu.addMenuItem(this.checkingMenuItem);
 		this.menu.addMenuItem(this.checkNowMenuContainer);
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
 		this.menu.connect('open-state-changed', Lang.bind(this, this._onMenuOpened));
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
+		cancelButton.connect('clicked', Lang.bind(this, this._cancelCheck));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
 		this.updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
 
@@ -123,6 +139,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this._settings = Utils.getSettings();
 		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
 		this._applySettings();
+		this._showChecking(false);
 		this._updateMenuExpander(false, _('Waiting first check'));
 
 		if (FIRST_BOOT) {
@@ -237,6 +254,17 @@ const ArchUpdateIndicator = new Lang.Class({
 		});
 	},
 
+	_showChecking: function(isChecking) {
+		if (isChecking == true) {
+			this.updateIcon.set_icon_name('arch-unknown-symbolic');
+			this.checkNowMenuContainer.actor.visible = false;
+			this.checkingMenuItem.actor.visible = true;;
+		} else {
+			this.checkNowMenuContainer.actor.visible = true;;
+			this.checkingMenuItem.actor.visible = false;;
+		}
+	},
+
 	_updateStatus: function(updatesCount) {
 		updatesCount = typeof updatesCount === 'number' ? updatesCount : UPDATES_PENDING;
 		if (updatesCount > 0) {
@@ -281,17 +309,12 @@ const ArchUpdateIndicator = new Lang.Class({
 				// Error
 				this.updateIcon.set_icon_name('arch-error-symbolic');
 				this._updateMenuExpander( false, _('Error') );
-			} else if (updatesCount == -3) {
-				// Checking for updates
-				this.updateIcon.set_icon_name('arch-unknown-symbolic');
-				this._updateMenuExpander( false, _('Checking') );
 			} else {
 				// Up to date
 				this.updateIcon.set_icon_name('arch-uptodate-symbolic');
 				this._updateMenuExpander( false, _('Up to date :)') );
 				UPDATES_LIST = []; // Reset stored list
 			}
-
 		}
 		UPDATES_PENDING = updatesCount;
 		this._checkAutoExpandList();
@@ -299,10 +322,16 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_updateMenuExpander: function(enabled, label) {
+		if (label == "") {
+			// No text, hide the menuitem
+			this.menuExpander.actor.visible = false;
+		} else {
 		// We make our expander look like a regular menu label if disabled
-		this.menuExpander.actor.reactive = enabled;
-		this.menuExpander._triangle.visible = enabled;
-		this.menuExpander.label.set_text(label);
+			this.menuExpander.actor.reactive = enabled;
+			this.menuExpander._triangle.visible = enabled;
+			this.menuExpander.label.set_text(label);
+			this.menuExpander.actor.visible = true;
+		}
 
 		// 'Update now' visibility is linked so let's save a few lines and set it here
 		this.updateNowMenuItem.actor.reactive = enabled;
@@ -314,7 +343,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			return;
 		}
 		// Run asynchronously, to avoid  shell freeze - even for a 1s check
-		this._updateStatus(-3);
+		this._showChecking(true);
 		try {
 			// Parse check command line
 			let [parseok, argvp] = GLib.shell_parse_argv( CHECK_CMD );
@@ -325,14 +354,23 @@ const ArchUpdateIndicator = new Lang.Class({
 				base_stream: new Gio.UnixInputStream({fd: out_fd})
 			});
 			// We will process the output at once when it's done
-			this._updateProcess_sourceId = GLib.child_watch_add(0, pid, Lang.bind(this, function() {this._checkUpdatesEnd()}));
+			this._updateProcess_sourceId = GLib.child_watch_add(0, pid, Lang.bind(this, function() {this._checkUpdatesRead()}));
+			this._updateProcess_pid = pid;
 		} catch (err) {
+			this._showChecking(false);
 			// TODO log err.message.toString() ?
 			this._updateStatus(-2);
 		}
 	},
 
-	_checkUpdatesEnd: function() {
+	_cancelCheck: function() {
+		if (this._updateProcess_pid == null) { return; };
+		Util.spawnCommandLine( "kill " + this._updateProcess_pid );
+		this._updateProcess_pid = null; // Prevent double kill
+		this._checkUpdatesEnd();
+	},
+
+	_checkUpdatesRead: function() {
 		// Read the buffered output
 		let updateList = [];
 		let out, size;
@@ -348,13 +386,19 @@ const ArchUpdateIndicator = new Lang.Class({
 				return chunks[0];
 			});
 		}
+		this._updateList = updateList;
+		this._checkUpdatesEnd();
+	},
+
+	_checkUpdatesEnd: function() {
 		// Free resources
 		this._updateProcess_stream.close(null);
 		this._updateProcess_stream = null;
 		GLib.source_remove(this._updateProcess_sourceId);
 		this._updateProcess_sourceId = null;
+		this._updateProcess_pid = null;
 		// Update indicator
-		this._updateList = updateList;
+		this._showChecking(false);
 		this._updateStatus(this._updateList.length);
 	},
 

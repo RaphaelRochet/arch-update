@@ -21,3 +21,16 @@
 	margin: 10px;
 	padding-left: 20px;
 }
+
+.arch-updates-menubutton {
+	/* Meant to be used as an override to display a small system-menu-action */
+	border-radius: 10px;
+	padding: 0px 4px;
+}
+.arch-updates-menubutton:hover, .arch-updates-menubutton:focus {
+	/* 1px borders disapears, need to compensate */
+	padding: 1px 5px;
+}
+.arch-updates-menubutton > StIcon {
+	icon-size: 16px;
+}
