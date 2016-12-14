@@ -21,6 +21,11 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v19
+- Ability to cancel checking
+- New translation : Catalan
+- Updated translations : Spanish, Brazilian
+
 ### v18
 - Gnome 3.22
 - New preferences window
