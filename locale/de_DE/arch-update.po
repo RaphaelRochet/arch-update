@@ -44,8 +44,8 @@ msgstr[1] "%d ausstehende Aktualisierungen"
 #: extension.js:258 extension.js:263
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] "Neue Arch Linux Aktualisierung"
-msgstr[1] "Neue Arch Linux Aktualisierungen"
+msgstr[0] "Neue Arch-Linux-Aktualisierung"
+msgstr[1] "Neue Arch-Linux-Aktualisierungen"
 
 #: extension.js:264
 #, javascript-format
@@ -69,7 +69,7 @@ msgstr "Auf dem Laufenden :)"
 #: prefs.xml:57
 #, fuzzy
 msgid "Checking for updates"
-msgstr "<b>Überprüfe auf Aktualisierungen</b>"
+msgstr "Überprüfe auf Aktualisierungen"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -86,7 +86,7 @@ msgstr "Versionsnummern weglassen"
 #: prefs.xml:141
 #, fuzzy
 msgid "Indicator"
-msgstr "<b>Anzeige</b>"
+msgstr "Anzeige"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -100,12 +100,13 @@ msgstr "Zeige Anzahl an Aktualisierungen"
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
-msgstr ""
+msgstr "Liste mit Aktualisierungen automatisch ausklappen, wenn Anzahl der "
+"Aktualisierungen geringer als diese Zahl ist (0 zum Deaktivieren)"
 
 #: prefs.xml:218
 #, fuzzy
 msgid "Notification"
-msgstr "<b>Benachrichtigung</b>"
+msgstr "Benachrichtigung"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
@@ -147,13 +148,13 @@ msgstr "Kommando, um Pakete zu aktualisieren"
 #: prefs.xml:346
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
-"Lokales Pacman Verzeichnis - Wird benötigt, um festzustellen, dass neue "
+"Lokales Pacman-Verzeichnis – Wird benötigt, um festzustellen, dass neue "
 "Pakete installiert werden"
 
 #: prefs.xml:363
 #, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Erweiterte Einstellungen</b>"
+msgstr "Erweiterte Einstellungen"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Timer</b>"
