@@ -67,7 +67,6 @@ msgid "Up to date :)"
 msgstr "Auf dem Laufenden :)"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
 msgstr "Überprüfe auf Aktualisierungen"
 
@@ -84,7 +83,6 @@ msgid "Strip out versions numbers"
 msgstr "Versionsnummern weglassen"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
 msgstr "Anzeige"
 
@@ -104,7 +102,6 @@ msgstr "Liste mit Aktualisierungen automatisch ausklappen, wenn Anzahl der "
 "Aktualisierungen geringer als diese Zahl ist (0 zum Deaktivieren)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
 msgstr "Benachrichtigung"
 
@@ -133,7 +130,6 @@ msgid "All updates names"
 msgstr "Namen aller Aktualisierungen"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
 msgstr "Einstellungen"
 
@@ -152,7 +148,6 @@ msgstr ""
 "Pakete installiert werden"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
 
