@@ -2,14 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Cristian Beroiza <cberoiza@gmail.com>, 2016.
+# Alonso Lara <alonso.lara.plana@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-20 22:16+0200\n"
-"PO-Revision-Date: 2016-10-29 14:53+0200\n"
-"Last-Translator: Cristian Beroiza <cberoiza@gmail.com>\n"
+"PO-Revision-Date: 2017-03-03 19:41+0100\n"
+"Last-Translator: Alonso Lara <alonso.lara.plana@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -67,9 +68,8 @@ msgid "Up to date :)"
 msgstr "Actualizado :)"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
-msgstr "<b>Comprobando actualizaciones</b>"
+msgstr "Comprobando actualizaciones"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -84,9 +84,8 @@ msgid "Strip out versions numbers"
 msgstr "Quitar número de versiones"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>Indicador</b>"
+msgstr "Indicador"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -105,9 +104,8 @@ msgstr ""
 "para deshabilitar)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
-msgstr "<b>Notificaciones</b>"
+msgstr "Notificaciones"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
@@ -134,9 +132,8 @@ msgid "All updates names"
 msgstr "Todos los nombres de las actualizaciones"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
-msgstr "Ajustes"
+msgstr "Ajustes básicos"
 
 #: prefs.xml:312
 msgid "Command to check for package updates"
@@ -153,9 +150,5 @@ msgstr ""
 "instalada"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Ajustes avanzados</b>"
-
-#~ msgid "<b>Timers</b>"
-#~ msgstr "<b>Temporizadores</b>"
+msgstr "Ajustes avanzados"
