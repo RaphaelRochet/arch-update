@@ -21,6 +21,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v20
+- Translations updates (German, Spanish)
+
 ### v19
 - Ability to cancel checking
 - New translation : Catalan
