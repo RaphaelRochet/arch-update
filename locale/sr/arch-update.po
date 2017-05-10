@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
-"PO-Revision-Date: 2016-03-07 19:29+0100\n"
+"POT-Creation-Date: 2017-05-10 15:52+0200\n"
+"PO-Revision-Date: 2017-05-10 20:15+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.0.1\n"
 
 #: extension.js:101
 msgid "Settings"
@@ -71,9 +71,8 @@ msgid "Up to date :)"
 msgstr "Ажурно :)"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
-msgstr "<b>Тражим надоградње</b>"
+msgstr "Провера надоградњи"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -88,9 +87,8 @@ msgid "Strip out versions numbers"
 msgstr "Без бројева верзија"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>Индикатор</b>"
+msgstr "Индикатор"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -105,11 +103,11 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
+"Аутоматски рашири списак уколико број надоградњи није већи од (0 онемогућује)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
-msgstr "<b>Обавештење</b>"
+msgstr "Обавештења"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
@@ -136,9 +134,8 @@ msgid "All updates names"
 msgstr "имена свих надоградњи"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
-msgstr "Поставке"
+msgstr "Основне поставке"
 
 #: prefs.xml:312
 msgid "Command to check for package updates"
@@ -155,6 +152,5 @@ msgstr ""
 "инсталирани"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Напредне поставке</b>"
+msgstr "Напредне поставке"
