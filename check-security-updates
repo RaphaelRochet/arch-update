@@ -1,0 +1,131 @@
+#!/bin/bash
+
+#    This file is part of Arch Linux Updates Indicator
+#
+#    Arch Linux Updates Indicator is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    Arch Linux Updates Indicator is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with Arch Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Copyright 2016 Patrick Ulbrich
+
+EXIT_SUCCESS=0
+EXIT_DEPENDENCY_FAILURE=1
+EXIT_DOWNLOAD_FAILURE=2
+
+base_url=https://lists.archlinux.org/pipermail/arch-security
+download_dir=/tmp/arch-update
+year=`date +%Y`
+month=`LC_ALL=C date +%B`
+months=( January February March April May June July August September October November December )
+delimeter=' '
+
+function cmp_version_gt()
+{
+  test "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1";
+}
+
+
+if ! which wget &> /dev/null || ! which zcat &> /dev/null; then
+  exit $EXIT_DEPENDENCY_FAILURE
+fi
+
+n=0
+while [ $n -lt 12 ] && [ ${months[n]} != $month ]; do
+  n=$(( $n + 1 ))
+done
+
+if [ $n == 0 ]; then
+  last_month=${months[11]}
+  last_year=$(( $year - 1 ))
+else
+  n=$(( $n - 1 ))
+  last_month=${months[n]}
+  last_year=$year
+fi
+
+filename1=$year-$month.txt.gz
+filename2=$last_year-$last_month.txt.gz
+
+if [ ! -d $download_dir ]; then
+  mkdir -p $download_dir &> /dev/null
+fi
+
+cd $download_dir
+
+if [ -f $filename1 ]; then
+  rm $filename1 &> /dev/null
+fi
+
+if [ -f $filename2 ]; then
+  rm $filename2 &> /dev/null
+fi
+
+#
+# Download security advisory archives
+# of current and last month
+#
+
+if ! wget $base_url/$filename1 &> /dev/null; then
+  exit $EXIT_DOWNLOAD_FAILURE
+fi
+
+if ! wget $base_url/$filename2 &> /dev/null; then
+  exit $EXIT_DOWNLOAD_FAILURE
+fi
+
+#
+# Create 'package>=version' lists
+# ("package_a>=version package_b>=version ...")
+#
+list1=`zcat $filename1 | grep -os "pacman -Syu .*>=.*" | tr -d '"' | cut -d ' ' -f 3`
+list2=`zcat $filename2 | grep -os "pacman -Syu .*>=.*" | tr -d '"' | cut -d ' ' -f 3`
+
+#
+# Create package->version map
+#
+declare -A map
+
+for p in $list1; do
+  tmp=`echo $p | tr -d '>' | tr '=' ' '`
+  package=`echo $tmp | cut -d ' ' -f 1`
+  version=`echo $tmp | cut -d ' ' -f 2`
+  map[$package]=$version
+done
+
+for p in $list2; do
+  tmp=`echo $p | tr -d '>' | tr '=' ' '`
+  package=`echo $tmp | cut -d ' ' -f 1`
+  version=`echo $tmp | cut -d ' ' -f 2`
+  # Note: this replaces a lower version 
+  # of the same package in the map.
+  map[$package]=$version
+done
+
+# Run checkupdates and only list packages
+# that are in the map of security relevant packages
+#
+checkupdates | while read -r line; do
+  package=`echo $line | cut -d ' ' -f 1`
+  ver_cur=x`echo $line | cut -d ' ' -f 3`
+  ver_upd=x`echo $line | cut -d ' ' -f 4`
+  ver_sec=x${map[$package]}
+  
+  if [ $ver_cur != "x" ] && [ $ver_upd != "x" ] && [ $ver_sec != "x" ]; then
+    if cmp_version_gt $ver_sec $ver_cur; then
+      if [ $ver_upd == $ver_sec ] || cmp_version_gt $ver_upd $ver_sec; then
+        echo $line
+      fi
+    fi
+  fi
+done
+
+exit $EXIT_SUCCESS
