@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Khaled Hosny <khaledhosny@eglug.org>, 2016.
+# Khaled Hosny <khaledhosny@eglug.org>, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-20 22:16+0200\n"
-"PO-Revision-Date: 2016-02-05 15:19+0400\n"
+"PO-Revision-Date: 2017-05-21 22:02+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -79,9 +79,8 @@ msgid "Up to date :)"
 msgstr "محَدَّث :)"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
-msgstr "<b>يلتمس التحديثات</b>"
+msgstr "يلتمس التحديثات"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -96,9 +95,8 @@ msgid "Strip out versions numbers"
 msgstr "أزل أرقام الإصدارات"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>المؤشر</b>"
+msgstr "المؤشر"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -113,11 +111,11 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
+"ابسط قائمة التحديثات تلقائيًا إن كان عددهم أقل من هذا الرقم (0 يعطل هذا)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
-msgstr "<b>التنبيهات</b>"
+msgstr "التنبيهات"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
@@ -144,9 +142,8 @@ msgid "All updates names"
 msgstr "كل أسماء التحديثات"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
-msgstr "الإعدادات"
+msgstr "الإعدادات الأساسيّة"
 
 #: prefs.xml:312
 msgid "Command to check for package updates"
@@ -161,6 +158,5 @@ msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "مسار دليل Pacman المحلي - لمعرفة أن التحديثات الجديدة ثُبتت"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>الإعدادات المتقدمة</b>"
+msgstr "الإعدادات المتقدمة"
