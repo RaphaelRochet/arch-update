@@ -21,6 +21,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v23
+- Updated translation : Arabic
+
 ### v22
 - Updated translation : Serbian
 - New translation : Turkish
