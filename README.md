@@ -21,6 +21,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v24
+- Gnome 3.26
+- Updated Romanian translation
+
 ### v23
 - Updated translation : Arabic
 
