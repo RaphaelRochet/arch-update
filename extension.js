@@ -239,7 +239,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	_startFolderMonitor: function() {
 		if (PACMAN_DIR) {
 			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
-			this.monitor = this.pacman_dir.monitor_directory(0, null, null);
+			this.monitor = this.pacman_dir.monitor_directory(0, null);
 			this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
 		}
 	},
