@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2016-02-08 12:26+0100\n"
 "Last-Translator: Karol Babioch <karol@babioch.de>\n"
 "Language-Team: \n"
@@ -18,51 +18,55 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Jetzt aktualisieren"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Überprüfe"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Jetzt überprüfen"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "Warte auf erste Überprüfung"
 
-#: extension.js:245
+#: extension.js:283
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d ausstehende Aktualisierung"
 msgstr[1] "%d ausstehende Aktualisierungen"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Neue Arch-Linux-Aktualisierung"
 msgstr[1] "Neue Arch-Linux-Aktualisierungen"
 
-#: extension.js:264
+#: extension.js:305
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Es gibt %d ausstehende Aktualisierung"
 msgstr[1] "Es gibt %d ausstehende Aktualisierungen"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Fehler"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Überprüfe"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Auf dem Laufenden :)"
 
@@ -98,7 +102,8 @@ msgstr "Zeige Anzahl an Aktualisierungen"
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
-msgstr "Liste mit Aktualisierungen automatisch ausklappen, wenn Anzahl der "
+msgstr ""
+"Liste mit Aktualisierungen automatisch ausklappen, wenn Anzahl der "
 "Aktualisierungen geringer als diese Zahl ist (0 zum Deaktivieren)"
 
 #: prefs.xml:218
@@ -148,6 +153,11 @@ msgstr ""
 "Pakete installiert werden"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Kommando, um Pakete zu aktualisieren"
+
+#: prefs.xml:380
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
 

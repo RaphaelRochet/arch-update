@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2015-12-19 17:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,52 +18,56 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Aggiorna ora"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Verificando"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Verifica ora"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "Attendi il primo controllo"
 
-#: extension.js:245
+#: extension.js:283
 #, fuzzy, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "aggiornamenti disponibili"
 msgstr[1] "aggiornamenti disponibili"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 #, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nuovi aggiornamenti di Arch Linux"
 msgstr[1] "Nuovi aggiornamenti di Arch Linux"
 
-#: extension.js:264
+#: extension.js:305
 #, fuzzy, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "aggiornamenti disponibili"
 msgstr[1] "aggiornamenti disponibili"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Errore"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Verificando"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Aggiornato :)"
 
@@ -153,6 +157,11 @@ msgstr ""
 "pacchetti"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Comando per aggiornare i pacchetti"
+
+#: prefs.xml:380
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>Impostazioni avanzate</b>"

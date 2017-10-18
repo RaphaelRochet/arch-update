@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2016-01-31 12:00+0100\n"
 "Last-Translator: Artur \"artur9010\" Motyka <arturmotyka99@gmail.com>\n"
 "Language-Team: polski <>\n"
@@ -19,52 +19,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Aktualizuj teraz"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Sprawdzam"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Sprawdź teraz"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "Oczekuje na pierwsze sprawdzenie"
 
-#: extension.js:245
+#: extension.js:283
 #, fuzzy, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "dostępnych aktualizacji"
 msgstr[1] "dostępnych aktualizacji"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 #, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nowe aktualizacje"
 msgstr[1] "Nowe aktualizacje"
 
-#: extension.js:264
+#: extension.js:305
 #, fuzzy, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "dostępnych aktualizacji"
 msgstr[1] "dostępnych aktualizacji"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Błąd"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Sprawdzam"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Wszystko jest aktualne"
 
@@ -151,6 +155,11 @@ msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Lokacja pliku wykonalnego pacmana"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Polecenie służące do aktualizacji"
+
+#: prefs.xml:380
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>Zaawansowane</b>"

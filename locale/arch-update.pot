@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,51 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr ""
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr ""
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr ""
+
+#: extension.js:121
 msgid "Check now"
 msgstr ""
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr ""
 
-#: extension.js:245
+#: extension.js:283
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] ""
 msgstr[1] ""
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] ""
 msgstr[1] ""
 
-#: extension.js:264
+#: extension.js:305
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] ""
 msgstr[1] ""
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr ""
 
-#: extension.js:284
-msgid "Checking"
-msgstr ""
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr ""
 
@@ -145,5 +149,9 @@ msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 
 #: prefs.xml:363
+msgid "Command to open package manager (optional)"
+msgstr ""
+
+#: prefs.xml:380
 msgid "Advanced settings"
 msgstr ""

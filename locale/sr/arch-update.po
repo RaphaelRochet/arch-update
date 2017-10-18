@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 15:52+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2017-05-10 20:15+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -19,23 +19,31 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.1\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Поставке"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Надогради одмах"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Проверавам"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Провери одмах"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "Чекам прву проверу"
 
-#: extension.js:245
+#: extension.js:283
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -43,14 +51,14 @@ msgstr[0] "%d надоградња на чекању"
 msgstr[1] "%d надоградње на чекању"
 msgstr[2] "%d надоградњи на чекању"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Нова надоградња Арчлинукса"
 msgstr[1] "Нове надоградње Арчлинукса"
 msgstr[2] "Нове надоградње Арчлинукса"
 
-#: extension.js:264
+#: extension.js:305
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -58,15 +66,11 @@ msgstr[0] "На чекању је %d надоградња"
 msgstr[1] "На чекању су %d надоградње"
 msgstr[2] "На чекању је %d надоградњи"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Грешка"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Проверавам"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Ажурно :)"
 
@@ -152,5 +156,10 @@ msgstr ""
 "инсталирани"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Команда за надоградњу пакета"
+
+#: prefs.xml:380
 msgid "Advanced settings"
 msgstr "Напредне поставке"

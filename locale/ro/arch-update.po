@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2017-07-19 06:49+0300\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
@@ -20,23 +20,31 @@ msgstr ""
 "20)) ? 1 : 2);\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Setări"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Actualizează acum"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Se verifică"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Verifică acum"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "Se așteaptă prima verificare"
 
-#: extension.js:245
+#: extension.js:283
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -44,14 +52,14 @@ msgstr[0] "%d actualizare în așteptare"
 msgstr[1] "%d actualizări în așteptare"
 msgstr[2] "%d de actualizări în așteptare"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Actualizare nouă pentru Arch Linux"
 msgstr[1] "Actualizări noi pentru Arch Linux"
 msgstr[2] "Actualizări noi pentru Arch Linux"
 
-#: extension.js:264
+#: extension.js:305
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -59,15 +67,11 @@ msgstr[0] "Există %d actualizare în așteptare"
 msgstr[1] "Există %d actualizări în așteptare"
 msgstr[2] "Există %d de actualizări în așteptare"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Eroare"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Se verifică"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 
@@ -154,6 +158,11 @@ msgstr ""
 "pachete noi"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Comandă pentru actualizarea pachetelor"
+
+#: prefs.xml:380
 msgid "Advanced settings"
 msgstr "Setări avansate"
 

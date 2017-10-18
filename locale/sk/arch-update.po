@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2016-02-05 17:40+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: \n"
@@ -18,23 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Poedit 1.8.6\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Aktualizovať teraz"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Kontroluje sa"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Skontrolovať teraz"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "Čaká sa na prvú kontrolu"
 
-#: extension.js:245
+#: extension.js:283
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -42,14 +50,14 @@ msgstr[0] "%d dostupná aktualizácia"
 msgstr[1] "%d dostupné aktualizácie"
 msgstr[2] "%d dostupných aktualizácií"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nová aktualizácia systému Arch"
 msgstr[1] "Nové aktualizácie systému Arch"
 msgstr[2] "Nové aktualizácie systému Arch"
 
-#: extension.js:264
+#: extension.js:305
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -57,15 +65,11 @@ msgstr[0] "Je dostupná %d aktualizácia"
 msgstr[1] "Sú dostupné %d aktualizácie"
 msgstr[2] "Je dostupných %d aktualizácií"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Kontroluje sa"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Všetko je aktuálne :)"
 
@@ -154,6 +158,11 @@ msgstr ""
 "nainštalované nové balíky"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Príkaz na aktualizáciu balíkov"
+
+#: prefs.xml:380
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>Pokročilé nastavenia</b>"

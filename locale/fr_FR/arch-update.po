@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 22:16+0200\n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
 "PO-Revision-Date: 2016-10-20 22:19+0200\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
@@ -18,51 +18,55 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
-#: extension.js:101
+#: extension.js:104
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:102 extension.js:374
+#: extension.js:105 extension.js:431
 msgid "Update now"
 msgstr "Mettre à jour maintenant"
 
-#: extension.js:105
+#: extension.js:106
+msgid "Open packager manager"
+msgstr ""
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Vérification en cours"
+
+#: extension.js:121
 msgid "Check now"
 msgstr "Vérifier maintenant"
 
-#: extension.js:126
+#: extension.js:147
 msgid "Waiting first check"
 msgstr "En attente du premier test"
 
-#: extension.js:245
+#: extension.js:283
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d mise à jour en attente"
 msgstr[1] "%d mises à jour en attente"
 
-#: extension.js:258 extension.js:263
+#: extension.js:298 extension.js:304
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nouvelle mise à jour"
 msgstr[1] "Nouvelles mises à jour"
 
-#: extension.js:264
+#: extension.js:305
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Il y a %d mise à jour en attente"
 msgstr[1] "Il y a %d mises à jour en attente"
 
-#: extension.js:280
+#: extension.js:321
 msgid "Error"
 msgstr "Erreur"
 
-#: extension.js:284
-msgid "Checking"
-msgstr "Vérification en cours"
-
-#: extension.js:288
+#: extension.js:325
 msgid "Up to date :)"
 msgstr "Tout est à jour :)"
 
@@ -149,11 +153,13 @@ msgstr ""
 "Dossier local de Pacman - Pour détecter quand des paquets sont installés"
 
 #: prefs.xml:363
+#, fuzzy
+msgid "Command to open package manager (optional)"
+msgstr "Commande pour ouvrir un terminal"
+
+#: prefs.xml:380
 msgid "Advanced settings"
 msgstr "Réglages avancés"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Minuteries</b>"
-
-#~ msgid "Command to open a terminal"
-#~ msgstr "Commande pour ouvrir un terminal"
