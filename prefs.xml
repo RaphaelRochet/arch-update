@@ -355,6 +355,23 @@
 				</object>
 			</child>
 
+			<child>
+				<object class="GtkVBox">
+					<property name="spacing">6</property>
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Command to open package manager (optional)</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkEntry" id="field_packagemanager">
+						</object>
+					</child>
+				</object>
+			</child>
+
 		</object>
 	</child>
 

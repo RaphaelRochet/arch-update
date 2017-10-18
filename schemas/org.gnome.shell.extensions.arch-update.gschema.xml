@@ -81,5 +81,11 @@
         <range min="0" max="100"/>
     </key>
 
+    <key name="package-manager" type="s">
+      <default>""</default>
+      <summary>Command to run to open package manager.</summary>
+      <description></description>
+    </key>
+
   </schema>
 </schemalist>

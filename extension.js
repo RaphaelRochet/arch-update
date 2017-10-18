@@ -51,6 +51,7 @@ let HOWMUCH            = 0;
 let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '";
 let CHECK_CMD          = "/usr/bin/checkupdates";
+let MANAGER_CMD        = "";
 let PACMAN_DIR         = "/var/lib/pacman/local";
 let STRIP_VERSIONS     = true;
 let AUTO_EXPAND_LIST   = 0;
@@ -102,6 +103,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		// Other standard menu items
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
 		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now'));
+		this.managerMenuItem = new PopupMenu.PopupMenuItem(_('Open packager manager'));
 
 		// A special "Checking" menu item with a stop button
 		this.checkingMenuItem = new PopupMenu.PopupBaseMenuItem( {reactive:false} );
@@ -126,6 +128,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menu.addMenuItem(this.updateNowMenuItem);
 		this.menu.addMenuItem(this.checkingMenuItem);
 		this.menu.addMenuItem(this.checkNowMenuContainer);
+		this.menu.addMenuItem(this.managerMenuItem);
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
@@ -134,6 +137,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		cancelButton.connect('clicked', Lang.bind(this, this._cancelCheck));
 		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
 		this.updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
+		this.managerMenuItem.connect('activate', Lang.bind(this, this._openManager));
 
 		// Load settings
 		this._settings = Utils.getSettings();
@@ -165,6 +169,10 @@ const ArchUpdateIndicator = new Lang.Class({
 		Util.spawn([ "gnome-shell-extension-prefs", Me.uuid ]);
 	},
 
+	_openManager: function () {
+		Util.spawnCommandLine(MANAGER_CMD);
+	},
+
 	_updateNow: function () {
 		Util.spawnCommandLine(UPDATE_CMD);
 	},
@@ -179,9 +187,11 @@ const ArchUpdateIndicator = new Lang.Class({
 		TRANSIENT = this._settings.get_boolean('transient');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
 		CHECK_CMD = this._settings.get_string('check-cmd');
+		MANAGER_CMD = this._settings.get_string('package-manager');
 		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		STRIP_VERSIONS = this._settings.get_boolean('strip-versions');
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
+		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
