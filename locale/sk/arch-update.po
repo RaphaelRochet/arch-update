@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-18 09:24+0200\n"
-"PO-Revision-Date: 2016-02-05 17:40+0100\n"
+"PO-Revision-Date: 2017-10-19 06:29+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: extension.js:104
 msgid "Settings"
@@ -28,7 +28,7 @@ msgstr "Aktualizovať teraz"
 
 #: extension.js:106
 msgid "Open packager manager"
-msgstr ""
+msgstr "Otvoriť správcu balíkov"
 
 #: extension.js:110
 msgid "Checking"
@@ -74,9 +74,8 @@ msgid "Up to date :)"
 msgstr "Všetko je aktuálne :)"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
-msgstr "<b>Kontrolujú sa aktualizácie</b>"
+msgstr "Kontrolujú sa aktualizácie"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -91,9 +90,8 @@ msgid "Strip out versions numbers"
 msgstr "Odstrániť čísla verzií"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>Indikátor</b>"
+msgstr "Indikátor"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -108,11 +106,12 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
+"Automaticky rozšíriť zoznam aktualizácií, ak je počet aktualizácií menší ako "
+"táto hodnota (0 na zakázanie)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
-msgstr "<b>Oznámenie</b>"
+msgstr "Oznámenie"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
@@ -139,9 +138,8 @@ msgid "All updates names"
 msgstr "Názvy všetkých aktualizácií"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
-msgstr "Nastavenia"
+msgstr "Základné nastavenia"
 
 #: prefs.xml:312
 msgid "Command to check for package updates"
@@ -158,11 +156,9 @@ msgstr ""
 "nainštalované nové balíky"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Príkaz na aktualizáciu balíkov"
+msgstr "Príkaz na otvorenie správcu balíkov (voliteľné)"
 
 #: prefs.xml:380
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Pokročilé nastavenia</b>"
+msgstr "Pokročilé nastavenia"
