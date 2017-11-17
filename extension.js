@@ -84,14 +84,14 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		this.updateIcon = new St.Icon({icon_name: "arch-unknown-symbolic", style_class: 'system-status-icon'});
 
-		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
+		this.box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
 		this.label = new St.Label({ text: '',
 			y_expand: true,
 			y_align: Clutter.ActorAlign.CENTER });
 
-		box.add_child(this.updateIcon);
-		box.add_child(this.label);
-		this.actor.add_child(box);
+		this.box.add_child(this.updateIcon);
+		this.box.add_child(this.label);
+		this.actor.add_child(this.box);
 
 		// Prepare the special menu : a submenu for updates list that will look like a regular menu item when disabled
 		// Scrollability will also be taken care of by the popupmenu
@@ -232,6 +232,15 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.label.visible = SHOW_COUNT;
 	},
 
+	_changeLabel: function(newText) {
+		this.box.remove_child(this.label);
+			this.label = new St.Label({ text: newText,
+				visible: SHOW_COUNT,
+				y_expand: true,
+				y_align: Clutter.ActorAlign.CENTER });
+		this.box.add_child(this.label);
+	},
+
 	_onMenuOpened: function() {
 		// This event is fired when menu is shown or hidden
 		// Only open the submenu if the menu is being opened and there is something to show
@@ -282,7 +291,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.updatesListMenuLabel.set_text( this._updateList.join("\n") );
-			this.label.set_text(updatesCount.toString());
+			this._changeLabel(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				if (HOWMUCH > 0) {
 					let updateList = [];
@@ -310,7 +319,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			UPDATES_LIST = this._updateList;
 		} else {
 			this.updatesListMenuLabel.set_text("");
-			this.label.set_text('');
+			this._changeLabel("");
 			if (updatesCount == -1) {
 				// Unknown
 				this.updateIcon.set_icon_name('arch-unknown-symbolic');
