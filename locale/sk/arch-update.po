@@ -1,14 +1,14 @@
 # Slovak translation for Arch-update.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Dušan Kazik <prescott66@gmail.com>, 2016.
+# Dušan Kazik <prescott66@gmail.com>, 2016, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-18 09:24+0200\n"
-"PO-Revision-Date: 2017-10-19 06:29+0200\n"
+"PO-Revision-Date: 2017-11-18 15:06+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -75,7 +75,7 @@ msgstr "Všetko je aktuálne :)"
 
 #: prefs.xml:57
 msgid "Checking for updates"
-msgstr "Kontrolujú sa aktualizácie"
+msgstr "Kontrola aktualizácií"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -99,7 +99,7 @@ msgstr "Vždy viditeľný"
 
 #: prefs.xml:175
 msgid "Show updates count on indicator"
-msgstr "Zobraziť počet aktualizácií na indikátore"
+msgstr "Zobraziť počet aktualizácií v indikátore"
 
 #: prefs.xml:195
 msgid ""
