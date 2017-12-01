@@ -28,7 +28,7 @@ msgstr "Aggiorna ora"
 
 #: extension.js:106
 msgid "Open packager manager"
-msgstr ""
+msgstr "Apri gestore dei pachetti"
 
 #: extension.js:110
 msgid "Checking"
@@ -86,7 +86,7 @@ msgstr "Intervallo tra il controllo degli aggiornamenti (minuti)"
 
 #: prefs.xml:119
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Estrai numero di versione"
 
 #: prefs.xml:141
 #, fuzzy
