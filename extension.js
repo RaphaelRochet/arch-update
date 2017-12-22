@@ -132,6 +132,8 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
+		this.connect('destroy', Lang.bind(this, this._onDestroy));
+		this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 		this.menu.connect('open-state-changed', Lang.bind(this, this._onMenuOpened));
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		cancelButton.connect('clicked', Lang.bind(this, this._cancelCheck));
@@ -201,7 +203,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		});
 	},
 
-	destroy: function() {
+	_onDestroy: function() {
 		if (this._updateProcess_sourceId) {
 			// We leave the checkupdate process end by itself but undef handles to avoid zombies
 			GLib.source_remove(this._updateProcess_sourceId);
@@ -216,7 +218,6 @@ const ArchUpdateIndicator = new Lang.Class({
 			GLib.source_remove(this._TimeoutId);
 			this._TimeoutId = null;
 		}
-		this.parent();
 	},
 
 	_checkShowHide: function() {
