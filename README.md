@@ -24,6 +24,13 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v25
+- Added optional package manager menu entry
+- Added requirements in readme
+- Updated Slovak translation
+- Updated Italian translation
+- Fixed a JS Warning
+
 ### v24
 - Gnome 3.26
 - Updated Romanian translation
