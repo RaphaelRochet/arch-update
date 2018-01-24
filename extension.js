@@ -202,10 +202,8 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	destroy: function() {
-		if (this.monitor && this.monitorId) {
+		if (this.monitor) {
 			// Stop spying on pacman local dir
-			this.monitor.disconnect(monitorId);
-			this.monitorId = null;
 			this.monitor.cancel();
 			this.monitor = null;
 		}
@@ -257,7 +255,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		if (PACMAN_DIR) {
 			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
 			this.monitor = this.pacman_dir.monitor_directory(0, null);
-			this.monitorId = this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
+			this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
 		}
 	},
 	_onFolderChanged: function() {
