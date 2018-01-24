@@ -202,6 +202,13 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	destroy: function() {
+		if (this.monitor && this.monitorId) {
+			// Stop spying on pacman local dir
+			this.monitor.disconnect(monitorId);
+			this.monitorId = null;
+			this.monitor.cancel();
+			this.monitor = null;
+		}
 		if (this._updateProcess_sourceId) {
 			// We leave the checkupdate process end by itself but undef handles to avoid zombies
 			GLib.source_remove(this._updateProcess_sourceId);
@@ -250,7 +257,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		if (PACMAN_DIR) {
 			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
 			this.monitor = this.pacman_dir.monitor_directory(0, null);
-			this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
+			this.monitorId = this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
 		}
 	},
 	_onFolderChanged: function() {
