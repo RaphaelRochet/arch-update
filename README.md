@@ -30,6 +30,7 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 - Updated Slovak translation
 - Updated Italian translation
 - Fixed a JS Warning
+- Fixed a bug that crashes Gnome-SHELL on update
 
 ### v24
 - Gnome 3.26
