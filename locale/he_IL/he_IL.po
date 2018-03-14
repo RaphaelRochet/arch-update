@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"PO-Revision-Date: 2018-03-14 23:01+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Language: he_IL\n"
+
+#: extension.js:104
+msgid "Settings"
+msgstr "הגדרות"
+
+#: extension.js:105 extension.js:431
+msgid "Update now"
+msgstr "עדכן כעת"
+
+#: extension.js:106
+msgid "Open packager manager"
+msgstr "פתח את מנהל החבילות"
+
+#: extension.js:110
+msgid "Checking"
+msgstr "בודק"
+
+#: extension.js:121
+msgid "Check now"
+msgstr "בדוק עדכונים"
+
+#: extension.js:147
+msgid "Waiting first check"
+msgstr "ממתין לבדיקה ראשונית"
+
+#: extension.js:283
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "קיים עדכון %d"
+msgstr[1] "קיימים %d עדכונים"
+
+#: extension.js:298 extension.js:304
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "עדכון חדש ל Arch Linux"
+msgstr[1] "עדכונים חדשים ל Arch Linux"
+
+#: extension.js:305
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "קיים עדכון %d"
+msgstr[1] "קיימים %d עדכונים"
+
+#: extension.js:321
+msgid "Error"
+msgstr "שגיאה"
+
+#: extension.js:325
+msgid "Up to date :)"
+msgstr "הכל מעודכן :)"
+
+#: prefs.xml:57
+msgid "Checking for updates"
+msgstr "חיפוש עדכונים"
+
+#: prefs.xml:81
+msgid "Time to wait before first check (seconds)"
+msgstr "זמן שיש להמתין לפני העדכון הראשוני (בשניות)"
+
+#: prefs.xml:100
+msgid "Interval between updates check (minutes)"
+msgstr "מרווח זמן עד העדכון הבא (בדקות)"
+
+#: prefs.xml:119
+msgid "Strip out versions numbers"
+msgstr "הסר מספרי גרסה"
+
+#: prefs.xml:141
+msgid "Indicator"
+msgstr "סמל"
+
+#: prefs.xml:156
+msgid "Always visible"
+msgstr "הצג תמיד"
+
+#: prefs.xml:175
+msgid "Show updates count on indicator"
+msgstr "הצג את כמות העדכונים לצד הסמל"
+
+#: prefs.xml:195
+msgid ""
+"Auto-expand updates list if updates count is less than this number (0 to "
+"disable)"
+msgstr "הרחב אוטומטית את הרשימה אם כמות העדכונים קטנה מהמספר הבא (0 לביטול)"
+
+#: prefs.xml:218
+msgid "Notification"
+msgstr "התראה"
+
+#: prefs.xml:233
+msgid "Send a notification when new updates are available"
+msgstr "הצג התראה כאשר קיימים עדכונים"
+
+#: prefs.xml:252
+msgid "Use transient notifications (auto dismiss)"
+msgstr "השתמש בהתראות זמניות (נעלמות לאחר כמה שניות)"
+
+#: prefs.xml:271
+msgid "How much information to show on notifications"
+msgstr "מידע שיוצג בהתראות"
+
+#: prefs.xml:279
+msgid "Count only"
+msgstr "כמות בלבד"
+
+#: prefs.xml:280
+msgid "New updates names"
+msgstr "שמות החבילות החדשות לעדכון"
+
+#: prefs.xml:281
+msgid "All updates names"
+msgstr "שמות כל החבילות לעדכון"
+
+#: prefs.xml:296
+msgid "Basic settings"
+msgstr "הגדרות"
+
+#: prefs.xml:312
+msgid "Command to check for package updates"
+msgstr "פקודה לבדיקת עדכונים"
+
+#: prefs.xml:329
+msgid "Command to update packages"
+msgstr "פקודה לעדכון חבילות"
+
+#: prefs.xml:346
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr "נתיב מקומי של Pacman - לזיהוי התקנה של חבילות חדשות"
+
+#: prefs.xml:363
+msgid "Command to open package manager (optional)"
+msgstr "פקודה לפתיחת מנהל חבילות (אופציונלי)"
+
+#: prefs.xml:380
+msgid "Advanced settings"
+msgstr "הגדרות מתקדמות"
