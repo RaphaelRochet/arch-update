@@ -154,9 +154,8 @@ msgstr ""
 "instalada"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Comando para actualizar los paquetes"
+msgstr "Comando para actualizar los paquetes (opcional)"
 
 #: prefs.xml:380
 msgid "Advanced settings"
