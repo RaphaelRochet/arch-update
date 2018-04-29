@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>, 2016, 2017.
+# Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>, 2016, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-18 09:24+0200\n"
-"PO-Revision-Date: 2017-07-19 06:49+0300\n"
+"PO-Revision-Date: 2018-04-29 20:23+0300\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
 "Language: ro_RO\n"
@@ -30,7 +30,7 @@ msgstr "Actualizează acum"
 
 #: extension.js:106
 msgid "Open packager manager"
-msgstr ""
+msgstr "Deschide managerul de pachete"
 
 #: extension.js:110
 msgid "Checking"
@@ -158,9 +158,8 @@ msgstr ""
 "pachete noi"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Comandă pentru actualizarea pachetelor"
+msgstr "Comandă pentru deschiderea managerului de pachete (opțional)"
 
 #: prefs.xml:380
 msgid "Advanced settings"
