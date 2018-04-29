@@ -24,6 +24,11 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v26
+- Gnome 3.28
+- New translation : Hebrew
+- Update translation : Spanish
+
 ### v25
 - Added optional package manager menu entry
 - Added requirements in readme
