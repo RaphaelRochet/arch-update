@@ -27,7 +27,7 @@ msgid "Update now"
 msgstr ""
 
 #: extension.js:106
-msgid "Open packager manager"
+msgid "Open package manager"
 msgstr ""
 
 #: extension.js:110
@@ -83,7 +83,7 @@ msgid "Interval between updates check (minutes)"
 msgstr ""
 
 #: prefs.xml:119
-msgid "Strip out versions numbers"
+msgid "Strip out version numbers"
 msgstr ""
 
 #: prefs.xml:141
@@ -95,12 +95,12 @@ msgid "Always visible"
 msgstr ""
 
 #: prefs.xml:175
-msgid "Show updates count on indicator"
+msgid "Show update count on indicator"
 msgstr ""
 
 #: prefs.xml:195
 msgid ""
-"Auto-expand updates list if updates count is less than this number (0 to "
+"Auto-expand updates list if update count is less than this number (0 to "
 "disable)"
 msgstr ""
 
@@ -125,11 +125,11 @@ msgid "Count only"
 msgstr ""
 
 #: prefs.xml:280
-msgid "New updates names"
+msgid "New updates\' names"
 msgstr ""
 
 #: prefs.xml:281
-msgid "All updates names"
+msgid "All updates\' names"
 msgstr ""
 
 #: prefs.xml:296
