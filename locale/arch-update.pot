@@ -125,11 +125,11 @@ msgid "Count only"
 msgstr ""
 
 #: prefs.xml:280
-msgid "New updates\' names"
+msgid "New updates' names"
 msgstr ""
 
 #: prefs.xml:281
-msgid "All updates\' names"
+msgid "All updates' names"
 msgstr ""
 
 #: prefs.xml:296
