@@ -117,19 +117,19 @@ msgid "Use transient notifications (auto dismiss)"
 msgstr ""
 
 #: prefs.xml:271
-msgid "How much information to show on notifications"
+msgid "What information to show on notifications"
 msgstr ""
 
 #: prefs.xml:279
-msgid "Count only"
+msgid "Amount of updatable packages"
 msgstr ""
 
 #: prefs.xml:280
-msgid "New updates' names"
+msgid "New updatable packages"
 msgstr ""
 
 #: prefs.xml:281
-msgid "All updates' names"
+msgid "All updatable packages"
 msgstr ""
 
 #: prefs.xml:296
