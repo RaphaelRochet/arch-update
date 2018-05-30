@@ -24,6 +24,11 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v27
+- Added info about pacman-contrib for checkupdates script
+- New translation : Estonian
+- Updated translation : Romanian
+
 ### v26
 - Gnome 3.28
 - New translation : Hebrew
