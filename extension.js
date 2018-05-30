@@ -323,7 +323,12 @@ const ArchUpdateIndicator = new Lang.Class({
 			} else if (updatesCount == -2) {
 				// Error
 				this.updateIcon.set_icon_name('arch-error-symbolic');
-				this._updateMenuExpander( false, _('Error') );
+				if ( this.lastUnknowErrorString.indexOf("/usr/bin/checkupdates") > 0 ) {
+					// We do a special change here due to checkupdates moved to pacman-contrib
+					this._updateMenuExpander( false, _("Note : you have to install pacman-contrib to use the 'checkupdates' script.") );
+				} else {
+					this._updateMenuExpander( false, _('Error') + "\n" + this.lastUnknowErrorString );
+				}
 			} else {
 				// Up to date
 				this.updateIcon.set_icon_name('arch-uptodate-symbolic');
@@ -373,7 +378,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this._updateProcess_pid = pid;
 		} catch (err) {
 			this._showChecking(false);
-			// TODO log err.message.toString() ?
+			this.lastUnknowErrorString = err.message.toString();
 			this._updateStatus(-2);
 		}
 	},
