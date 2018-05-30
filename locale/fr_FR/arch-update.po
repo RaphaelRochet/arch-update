@@ -7,22 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
-"PO-Revision-Date: 2017-10-18 09:26+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"PO-Revision-Date: 2018-05-30 15:35+0200\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #: extension.js:104
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Mettre à jour maintenant"
 
@@ -42,31 +42,38 @@ msgstr "Vérifier maintenant"
 msgid "Waiting first check"
 msgstr "En attente du premier test"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d mise à jour en attente"
 msgstr[1] "%d mises à jour en attente"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nouvelle mise à jour"
 msgstr[1] "Nouvelles mises à jour"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Il y a %d mise à jour en attente"
 msgstr[1] "Il y a %d mises à jour en attente"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+"Attention : vous devez installer pacman-contrib pour utiliser le script "
+"'checkupdates'"
+
+#: extension.js:330
 msgid "Error"
 msgstr "Erreur"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Tout est à jour :)"
 

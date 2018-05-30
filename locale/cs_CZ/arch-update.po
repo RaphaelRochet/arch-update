@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
 "PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Nastavení"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Aktualizovat"
 
@@ -41,31 +41,36 @@ msgstr "Zkontrolovat"
 msgid "Waiting first check"
 msgstr "Čekání na první kontrolu"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d čekající aktualizace"
 msgstr[1] "%d čekajících aktualizací"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nová aktualizace pro Arch Linux"
 msgstr[1] "Nové aktualizace pro Arch Linux"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Je dostupná %d čekající aktualizace"
 msgstr[1] "Je dostupných %d čekajících aktualizací"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+
+#: extension.js:330
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 

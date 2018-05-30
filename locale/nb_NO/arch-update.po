@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pk 101\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
 "PO-Revision-Date: 2016-04-26 23:25+0200\n"
 "Last-Translator:  <per.kristian.nordnes@gmail.com>\n"
 "Language-Team: Norwegian Bokmal\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Oppdater nå"
 
@@ -40,31 +40,36 @@ msgstr "Sjekk nå"
 msgid "Waiting first check"
 msgstr "Venter på første sjekk"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d oppdatering venter"
 msgstr[1] "%d oppdateringer venter"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Ny Arch Linux-oppdatering"
 msgstr[1] "Nye Arch Linux-oppdateringer"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Det venter %d oppdatering"
 msgstr[1] "Det venter %d oppdateringer"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+
+#: extension.js:330
 msgid "Error"
 msgstr "Feil"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Oppdatert :)"
 

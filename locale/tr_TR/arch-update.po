@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
 "PO-Revision-Date: 2017-05-14 14:38+0300\n"
 "Last-Translator: Taylan Tatlı <github.com/TaylanTatli>\n"
 "Language-Team: Turkish\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Güncelle"
 
@@ -42,31 +42,36 @@ msgstr "Kontrol Et"
 msgid "Waiting first check"
 msgstr "İlk kontrol bekleniyor"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d güncelleme bekliyor"
 msgstr[1] "%d güncelleme bekliyor"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Yeni Arch Linux Güncellemesi"
 msgstr[1] "Yeni Arch Linux Güncellemesi"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "%d bekleyen güncelleme var"
 msgstr[1] "%d bekleyen güncelleme var"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+
+#: extension.js:330
 msgid "Error"
 msgstr "Hata"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Güncel :)"
 

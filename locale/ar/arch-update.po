@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
 "PO-Revision-Date: 2017-05-21 22:02+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "حدّث الآن"
 
@@ -42,7 +42,7 @@ msgstr "التمس الآن"
 msgid "Waiting first check"
 msgstr "ينتظر أول تحديث"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -53,7 +53,7 @@ msgstr[3] "%d تحديثات منتظرة"
 msgstr[4] "%d تحديثا منتظرًا"
 msgstr[5] "%d تحديث منتظر"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "لا تحديثات أرتش لينكس جديدة"
@@ -63,7 +63,7 @@ msgstr[3] "تحديثات أرتش لينكس جديدة"
 msgstr[4] "تحديثات أرتش لينكس جديدة"
 msgstr[5] "تحديثات أرتش لينكس جديدة"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -74,11 +74,16 @@ msgstr[3] "يوجد %d تحديثات منتظرة"
 msgstr[4] "يوجد %d تحديثا منتظرًا"
 msgstr[5] "يوجد %d تحديث منتظر"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+
+#: extension.js:330
 msgid "Error"
 msgstr "عُطل"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "محَدَّث :)"
 

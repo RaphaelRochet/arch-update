@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
 "PO-Revision-Date: 2018-04-29 20:23+0300\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Setări"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Actualizează acum"
 
@@ -44,7 +44,7 @@ msgstr "Verifică acum"
 msgid "Waiting first check"
 msgstr "Se așteaptă prima verificare"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -52,14 +52,14 @@ msgstr[0] "%d actualizare în așteptare"
 msgstr[1] "%d actualizări în așteptare"
 msgstr[2] "%d de actualizări în așteptare"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Actualizare nouă pentru Arch Linux"
 msgstr[1] "Actualizări noi pentru Arch Linux"
 msgstr[2] "Actualizări noi pentru Arch Linux"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -67,11 +67,16 @@ msgstr[0] "Există %d actualizare în așteptare"
 msgstr[1] "Există %d actualizări în așteptare"
 msgstr[2] "Există %d de actualizări în așteptare"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+
+#: extension.js:330
 msgid "Error"
 msgstr "Eroare"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 

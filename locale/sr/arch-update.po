@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
 "PO-Revision-Date: 2017-05-10 20:15+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Поставке"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Надогради одмах"
 
@@ -43,7 +43,7 @@ msgstr "Провери одмах"
 msgid "Waiting first check"
 msgstr "Чекам прву проверу"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -51,14 +51,14 @@ msgstr[0] "%d надоградња на чекању"
 msgstr[1] "%d надоградње на чекању"
 msgstr[2] "%d надоградњи на чекању"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Нова надоградња Арчлинукса"
 msgstr[1] "Нове надоградње Арчлинукса"
 msgstr[2] "Нове надоградње Арчлинукса"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -66,11 +66,16 @@ msgstr[0] "На чекању је %d надоградња"
 msgstr[1] "На чекању су %d надоградње"
 msgstr[2] "На чекању је %d надоградњи"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+
+#: extension.js:330
 msgid "Error"
 msgstr "Грешка"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Ажурно :)"
 
