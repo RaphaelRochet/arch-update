@@ -1,28 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Fábio Nogueira <fnogueira@gnome.org>, 2015-2016.
+# Fábio Nogueira <fnogueira@gnome.org>, 2015-2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-18 09:24+0200\n"
-"PO-Revision-Date: 2017-10-18 11:14-0300\n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"PO-Revision-Date: 2018-06-04 14:19-0300\n"
 "Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: extension.js:104
 msgid "Settings"
 msgstr "Configurações"
 
-#: extension.js:105 extension.js:431
+#: extension.js:105 extension.js:441
 msgid "Update now"
 msgstr "Atualizar agora"
 
@@ -42,31 +42,38 @@ msgstr "Verificar agora"
 msgid "Waiting first check"
 msgstr "Aguardando pela primeira verificação"
 
-#: extension.js:283
+#: extension.js:288
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d atualização pendente"
 msgstr[1] "%d atualizações pendentes"
 
-#: extension.js:298 extension.js:304
+#: extension.js:303 extension.js:309
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nova atualização do Arch Linux"
 msgstr[1] "Novas atualizações do Arch Linux"
 
-#: extension.js:305
+#: extension.js:310
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Existe %d atualização pendente"
 msgstr[1] "Existem %d atualizações pendentes"
 
-#: extension.js:321
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+"Atenção: Você deve ter instalado o pacman-contrib para utilizar o script "
+"'checkupdates'."
+
+#: extension.js:330
 msgid "Error"
 msgstr "Erro"
 
-#: extension.js:325
+#: extension.js:335
 msgid "Up to date :)"
 msgstr "Atualizado :)"
 
