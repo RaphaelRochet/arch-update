@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Fábio Nogueira <fnogueira@gnome.org>, 2015-2016.
+# Fábio Nogueira <fnogueira@gnome.org>, 2015-2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 15:31+0200\n"
-"PO-Revision-Date: 2017-10-18 11:14-0300\n"
+"PO-Revision-Date: 2018-06-04 14:30-0300\n"
 "Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: extension.js:104
@@ -66,6 +66,8 @@ msgstr[1] "Existem %d atualizações pendentes"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Atenção: Você deve ter instalado o pacman-contrib para utilizar o script "
+"'checkupdate'."
 
 #: extension.js:330
 msgid "Error"
