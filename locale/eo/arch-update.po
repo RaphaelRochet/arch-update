@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 鈴木雪 <SuzukiYuki97@gmail.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"PO-Revision-Date: 2018-06-04 12:46+0900\n"
+"Last-Translator: 鈴木雪 <SuzukiYuki97@gmail.com>\n"
+"Language-Team: Esperanto <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
+
+#: extension.js:104
+msgid "Settings"
+msgstr "Agordoj"
+
+#: extension.js:105 extension.js:441
+msgid "Update now"
+msgstr "Ĝisdatigu nun"
+
+#: extension.js:106
+msgid "Open packager manager"
+msgstr "Malfermu pakaĵa administrilo"
+
+#: extension.js:110
+msgid "Checking"
+msgstr "Kontrolas"
+
+#: extension.js:121
+msgid "Check now"
+msgstr "Kontrolu nun"
+
+#: extension.js:147
+msgid "Waiting first check"
+msgstr "Atendas unuan kontrolon"
+
+#: extension.js:288
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "%d ĝisdatigo pritraktata"
+msgstr[1] "%d ĝisdatigoj pritraktataj"
+
+#: extension.js:303 extension.js:309
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Nova Arch Linux ĝisdatigo"
+msgstr[1] "Novaj Arch Linux ĝisdatigoj"
+
+#: extension.js:310
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "Estas %d ĝisdatigo pritraktata"
+msgstr[1] "Estas %d ĝisdatigoj pritraktataj"
+
+#: extension.js:328
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+"Noto: vi devas instali \"pacman-contrib\" uzi la \"checkupdates\" skripto"
+
+#: extension.js:330
+msgid "Error"
+msgstr "Eraro"
+
+#: extension.js:335
+msgid "Up to date :)"
+msgstr "Ĝisdata :)"
+
+#: prefs.xml:57
+msgid "Checking for updates"
+msgstr "Kontrolas por ĝisdatigoj"
+
+#: prefs.xml:81
+msgid "Time to wait before first check (seconds)"
+msgstr "Tempo atendi antaŭ unua kontrolo (sekundoj)"
+
+#: prefs.xml:100
+msgid "Interval between updates check (minutes)"
+msgstr "Intervalo inter ĝisdatiga kontrolo (minutoj)"
+
+#: prefs.xml:119
+msgid "Strip out versions numbers"
+msgstr "Fortiru versiaj numeroj"
+
+#: prefs.xml:141
+msgid "Indicator"
+msgstr "Indikilo"
+
+#: prefs.xml:156
+msgid "Always visible"
+msgstr "Ĉiam videbla"
+
+#: prefs.xml:175
+msgid "Show updates count on indicator"
+msgstr "Montru ĝisdatigaj grafoj sur la indikilo"
+
+#: prefs.xml:195
+msgid ""
+"Auto-expand updates list if updates count is less than this number (0 to "
+"disable)"
+msgstr ""
+"Aŭtomate etendu ĝisdatiga listo se ĝisdatigaj grafoj malplas ol ĉi tiu "
+"numbro (0 malebligi)"
+
+#: prefs.xml:218
+msgid "Notification"
+msgstr "Sciigo"
+
+#: prefs.xml:233
+msgid "Send a notification when new updates are available"
+msgstr "Sendu sciigo kiam novaj ĝisdatigoj haveblas"
+
+#: prefs.xml:252
+msgid "Use transient notifications (auto dismiss)"
+msgstr "Uzu pasemaj sciigoj (aŭtomate forsendas)"
+
+#: prefs.xml:271
+msgid "How much information to show on notifications"
+msgstr "Kiom da informo montri sur sciigoj"
+
+#: prefs.xml:279
+msgid "Count only"
+msgstr "Grafo nur"
+
+#: prefs.xml:280
+msgid "New updates names"
+msgstr "Novaj nomoj de ĝisdatigoj"
+
+#: prefs.xml:281
+msgid "All updates names"
+msgstr "Ĉiuj nomoj de ĝisdatigoj"
+
+#: prefs.xml:296
+msgid "Basic settings"
+msgstr "Bazaj agordoj"
+
+#: prefs.xml:312
+msgid "Command to check for package updates"
+msgstr "Komando kontroli por pakaĵaj ĝisdatigoj"
+
+#: prefs.xml:329
+msgid "Command to update packages"
+msgstr "Komando ĝisdatigi pakaĵoj"
+
+#: prefs.xml:346
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr "Pacman loka dosierujo - Eltrovi kiam novaj pakaĵoj instalis"
+
+#: prefs.xml:363
+msgid "Command to open package manager (optional)"
+msgstr "Komando malfermi pakaĵa administrilo (fakultativa)"
+
+#: prefs.xml:380
+msgid "Advanced settings"
+msgstr "Altnivelaj agordoj"
