@@ -234,7 +234,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		} else {
 			this.actor.visible = true;
 		}
-		this.label.visible = SHOW_COUNT;
+		this.label.visible = SHOW_COUNT && UPDATES_PENDING > 0;
 	},
 
 	_onMenuOpened: function() {
