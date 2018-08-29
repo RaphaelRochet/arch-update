@@ -202,6 +202,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	destroy: function() {
+		this._settings.disconnect( this._settingsChangedId );
 		if (this.monitor) {
 			// Stop spying on pacman local dir
 			this.monitor.cancel();
