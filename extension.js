@@ -203,10 +203,10 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	destroy: function() {
 		this._settings.disconnect( this._settingsChangedId );
-		if (this._notifSource.notifications.length > 0) {
-			// There's a notification, remove it
-			notification = this._notifSource.notifications[0];
-			notification.destroy();
+		if (this._notifSource) {
+			// Delete the notification source, which lay still have a notification shown
+			this._notifSource.destroy();
+			this._notifSource = null;
 		};
 		if (this.monitor) {
 			// Stop spying on pacman local dir
