@@ -6,7 +6,7 @@ Update indicator for Arch Linux and GNOME Shell
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
 - Launcher for your favorite update command
-- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Norwegian Bokmal, Russian, Persian, Turkish languages. (Thanks translators !)
+- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Norwegian Bokmal, Russian, Persian, Turkish, Esperanto, Finnish languages. (Thanks translators !)
 
 ## Requirements
 If you use the default "checkupdates" way (part of pacman), you will need to install "fakeroot".
@@ -23,6 +23,14 @@ https://aur.archlinux.org/packages/gnome-shell-extension-arch-update/
 To install, simply download as zip and unzip contents in ~/.local/share/gnome-shell/extensions/arch-update@RaphaelRochet
 
 ## Changes
+
+### v28
+- Gnome 3.30
+- New translation : Esperanto
+- New translation : Finnish
+- Updated translation : Brazilian
+- Fix indicator alignment
+- Fix some errors that could quickly fill log
 
 ### v27
 - Added info about pacman-contrib for checkupdates script

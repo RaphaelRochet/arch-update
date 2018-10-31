@@ -7,9 +7,10 @@
     "3.22",
     "3.24",
     "3.26",
-    "3.28"
+    "3.28",
+    "3.30"
   ], 
   "url": "https://github.com/RaphaelRochet/arch-update", 
   "uuid": "arch-update@RaphaelRochet", 
-  "version": 27
+  "version": 28
 }
