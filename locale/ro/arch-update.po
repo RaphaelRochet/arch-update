@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 15:31+0200\n"
-"PO-Revision-Date: 2018-04-29 20:23+0300\n"
+"PO-Revision-Date: 2018-12-23 06:16+0200\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
 "Language: ro_RO\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.2\n"
 
 #: extension.js:104
 msgid "Settings"
@@ -71,6 +71,8 @@ msgstr[2] "Există %d de actualizări în așteptare"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Notă: trebuie să instalați pacman-contrib pentru a folosi scriptul "
+"'checkupdates'"
 
 #: extension.js:330
 msgid "Error"
