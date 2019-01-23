@@ -24,6 +24,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v29
+- Update translation : Romanian
+- Applied French translation to all French
+
 ### v28
 - Gnome 3.30
 - New translation : Esperanto
