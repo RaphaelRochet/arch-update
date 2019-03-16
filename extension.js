@@ -23,7 +23,6 @@ const Lang = imports.lang;
 const St = imports.gi.St;
 const GObject = imports.gi.GObject;
 const GLib = imports.gi.GLib;
-const Gtk = imports.gi.Gtk;
 const Gio = imports.gi.Gio;
 
 const Main = imports.ui.main;
@@ -78,11 +77,15 @@ const ArchUpdateIndicator = new Lang.Class({
 	_updateProcess_pid: null,
 	_updateList: [],
 
+	_getCustIcon: function(icon_name) {
+		let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
+		return gicon;
+	},
+
 	_init: function() {
 		this.parent(0.0, "ArchUpdateIndicator");
-		Gtk.IconTheme.get_default().append_search_path(Me.dir.get_child('icons').get_path());
 
-		this.updateIcon = new St.Icon({icon_name: "arch-unknown-symbolic", style_class: 'system-status-icon'});
+		this.updateIcon = new St.Icon({gicon: this._getCustIcon('arch-unknown-symbolic'), style_class: 'system-status-icon'});
 
 		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
 		this.label = new St.Label({ text: '',
@@ -277,7 +280,7 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_showChecking: function(isChecking) {
 		if (isChecking == true) {
-			this.updateIcon.set_icon_name('arch-unknown-symbolic');
+			this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
 			this.checkNowMenuContainer.actor.visible = false;
 			this.checkingMenuItem.actor.visible = true;;
 		} else {
@@ -290,7 +293,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		updatesCount = typeof updatesCount === 'number' ? updatesCount : UPDATES_PENDING;
 		if (updatesCount > 0) {
 			// Updates pending
-			this.updateIcon.set_icon_name('arch-updates-symbolic');
+			this.updateIcon.set_gicon( this._getCustIcon('arch-updates-symbolic') );
 			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.updatesListMenuLabel.set_text( this._updateList.join("\n") );
 			this.label.set_text(updatesCount.toString());
@@ -324,11 +327,11 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.label.set_text('');
 			if (updatesCount == -1) {
 				// Unknown
-				this.updateIcon.set_icon_name('arch-unknown-symbolic');
+				this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
 				this._updateMenuExpander( false, '' );
 			} else if (updatesCount == -2) {
 				// Error
-				this.updateIcon.set_icon_name('arch-error-symbolic');
+				this.updateIcon.set_gicon( this._getCustIcon('arch-error-symbolic') );
 				if ( this.lastUnknowErrorString.indexOf("/usr/bin/checkupdates") > 0 ) {
 					// We do a special change here due to checkupdates moved to pacman-contrib
 					this._updateMenuExpander( false, _("Note : you have to install pacman-contrib to use the 'checkupdates' script.") );
@@ -337,7 +340,7 @@ const ArchUpdateIndicator = new Lang.Class({
 				}
 			} else {
 				// Up to date
-				this.updateIcon.set_icon_name('arch-uptodate-symbolic');
+				this.updateIcon.set_gicon( this._getCustIcon('arch-uptodate-symbolic') );
 				this._updateMenuExpander( false, _('Up to date :)') );
 				UPDATES_LIST = []; // Reset stored list
 			}
@@ -433,7 +436,8 @@ const ArchUpdateIndicator = new Lang.Class({
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
 			this._notifSource.createIcon = function() {
-				return new St.Icon({ icon_name: 'arch-lit-symbolic' });
+				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/arch-lit-symbolic.svg" );
+				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
 			this._notifSource.connect('destroy', Lang.bind(this, function() {this._notifSource = null;}));
