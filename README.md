@@ -24,6 +24,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v32
+- Gnome 3.34
+
 ### v31
 - Updated translation : Turkish
 
