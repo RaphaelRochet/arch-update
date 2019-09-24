@@ -94,7 +94,7 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		box.add_child(this.updateIcon);
 		box.add_child(this.label);
-		this.actor.add_child(box);
+		this.add_child(box);
 
 		// Prepare the special menu : a submenu for updates list that will look like a regular menu item when disabled
 		// Scrollability will also be taken care of by the popupmenu
@@ -239,9 +239,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			return;
 		}
 		if (!ALWAYS_VISIBLE && UPDATES_PENDING < 1) {
-			this.actor.visible = false;
+			this.visible = false;
 		} else {
-			this.actor.visible = true;
+			this.visible = true;
 		}
 		this.label.visible = SHOW_COUNT && UPDATES_PENDING > 0;
 	},
