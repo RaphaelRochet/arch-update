@@ -24,6 +24,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v33
+- Removed deprecated code
+- Removed support for older GS
+
 ### v32
 - Gnome 3.34
 
