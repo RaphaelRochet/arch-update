@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 15:31+0200\n"
-"PO-Revision-Date: 2015-12-19 17:51+0100\n"
+"PO-Revision-Date: 2019-10-21 00:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: extension.js:104
@@ -43,30 +43,31 @@ msgid "Waiting first check"
 msgstr "Attendi il primo controllo"
 
 #: extension.js:288
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "aggiornamenti disponibili"
-msgstr[1] "aggiornamenti disponibili"
+msgstr[0] "1 aggiornamento disponibile"
+msgstr[1] "%d aggiornamenti disponibili"
 
 #: extension.js:303 extension.js:309
-#, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nuovi aggiornamenti di Arch Linux"
+msgstr[0] "Nuovo aggiornamento di Arch Linux"
 msgstr[1] "Nuovi aggiornamenti di Arch Linux"
 
 #: extension.js:310
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
-msgstr[0] "aggiornamenti disponibili"
-msgstr[1] "aggiornamenti disponibili"
+msgstr[0] "C'è 1 aggiornamento disponibile"
+msgstr[1] "Ci sono %d aggiornamenti disponibili"
 
 #: extension.js:328
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Nota : occorre installare pacman-contrib per utilizzare lo script "
+"'checkupdates'."
 
 #: extension.js:330
 msgid "Error"
@@ -77,9 +78,8 @@ msgid "Up to date :)"
 msgstr "Aggiornato :)"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
-msgstr "Comando per aggiornare i pacchetti"
+msgstr "Verificando la presenza di aggiornamenti"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -94,9 +94,8 @@ msgid "Strip out versions numbers"
 msgstr "Estrai numero di versione"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>Indicatore</b>"
+msgstr "Indicatore"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -111,15 +110,16 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
+"Estendi automaticamente la lista degli aggiornamenti se il numero è minore "
+"di questo (0 per disattivare)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
-msgstr "<b>Notifiche</b>"
+msgstr "Notifica"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
-msgstr "Inviare una notifica quando sono disponibili nuovi aggiornamenti"
+msgstr "Invia una notifica quando sono disponibili nuovi aggiornamenti"
 
 #: prefs.xml:252
 msgid "Use transient notifications (auto dismiss)"
@@ -142,14 +142,12 @@ msgid "All updates names"
 msgstr "Nomi di tutti gli aggiornamenti"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
-msgstr "Impostazioni"
+msgstr "Impostazioni base"
 
 #: prefs.xml:312
-#, fuzzy
 msgid "Command to check for package updates"
-msgstr "Comando per aggiornare i pacchetti"
+msgstr "Comando per verificare la presenza di aggiornamenti"
 
 #: prefs.xml:329
 msgid "Command to update packages"
@@ -162,14 +160,12 @@ msgstr ""
 "pacchetti"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Comando per aggiornare i pacchetti"
+msgstr "Comando per aprire il gestore di pacchetti (opzionale)"
 
 #: prefs.xml:380
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Impostazioni avanzate</b>"
+msgstr "Impostazioni avanzate"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "Timers"
