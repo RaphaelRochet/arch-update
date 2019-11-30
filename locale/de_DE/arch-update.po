@@ -66,6 +66,7 @@ msgstr[1] "Es gibt %d ausstehende Aktualisierungen"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Hinweis : installiere erst pacman-contrib, um 'checkupdates' zu benutzen."
 
 #: extension.js:330
 msgid "Error"
@@ -141,15 +142,15 @@ msgstr "Namen aller Aktualisierungen"
 
 #: prefs.xml:296
 msgid "Basic settings"
-msgstr "Einstellungen"
+msgstr "Standardeinstellungen"
 
 #: prefs.xml:312
 msgid "Command to check for package updates"
-msgstr "Kommando, um auf Aktualisierungen zu prüfen"
+msgstr "Befehl, um auf Aktualisierungen zu prüfen"
 
 #: prefs.xml:329
 msgid "Command to update packages"
-msgstr "Kommando, um Pakete zu aktualisieren"
+msgstr "Befehl, um Pakete zu aktualisieren"
 
 #: prefs.xml:346
 msgid "Pacman local directory path - To detect when new packages are installed"
@@ -160,7 +161,7 @@ msgstr ""
 #: prefs.xml:363
 #, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Kommando, um Pakete zu aktualisieren"
+msgstr "Befehl, um Pakete zu aktualisieren"
 
 #: prefs.xml:380
 msgid "Advanced settings"
