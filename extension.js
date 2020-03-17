@@ -454,7 +454,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			notification.update( title, message, { clear: true });
 		}
 		notification.setTransient(TRANSIENT);
-		this._notifSource.notify(notification);
+		this._notifSource.showNotification(notification);
 	},
 
 
