@@ -172,6 +172,25 @@
 							<property name="margin-left">12</property>
 							<child>
 								<object class="GtkLabel">
+									<property name="label" translatable="yes">Use build-in icons</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_buildinicons">
+									<property name="active">true</property>
+								</object>
+							</child>
+						</object>
+					</child>
+					
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<child>
+								<object class="GtkLabel">
 									<property name="label" translatable="yes">Show updates count on indicator</property>
 									<property name="hexpand">true</property>
 									<property name="halign">1</property>

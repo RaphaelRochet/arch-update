@@ -42,8 +42,9 @@ const _ = Gettext.gettext;
 
 /* Options */
 let ALWAYS_VISIBLE     = true;
+let USE_BUILDIN_ICONS  = true;
 let SHOW_COUNT         = true;
-let BOOT_WAIT		   = 15;      // 15s
+let BOOT_WAIT	       = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
@@ -79,6 +80,9 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_getCustIcon: function(icon_name) {
 		let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
+		if (!USE_BUILDIN_ICONS) {
+			gicon = new St.Icon({ icon_name: icon_name }).get_gicon();
+		}
 		return gicon;
 	},
 
@@ -182,6 +186,7 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_applySettings: function() {
 		ALWAYS_VISIBLE = this._settings.get_boolean('always-visible');
+		USE_BUILDIN_ICONS = this._settings.get_boolean('use-buildin-icons');
 		SHOW_COUNT = this._settings.get_boolean('show-count');
 		BOOT_WAIT = this._settings.get_int('boot-wait');
 		CHECK_INTERVAL = 60 * this._settings.get_int('check-interval');
@@ -196,6 +201,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
+		this._updateStatus(0);
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
 		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
