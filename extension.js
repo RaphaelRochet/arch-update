@@ -33,6 +33,7 @@ const MessageTray = imports.ui.messageTray;
 
 const Util = imports.misc.util;
 const ExtensionUtils = imports.misc.extensionUtils;
+const ExtensionManager = imports.ui.main.extensionManager;
 const Me = ExtensionUtils.getCurrentExtension();
 const Utils = Me.imports.utils;
 
@@ -169,7 +170,16 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_openSettings: function () {
-		Util.spawn([ "gnome-shell-extension-prefs", Me.uuid ]);
+		Gio.DBus.session.call(
+			'org.gnome.Shell.Extensions',
+			'/org/gnome/Shell/Extensions',
+			'org.gnome.Shell.Extensions',
+			'OpenExtensionPrefs',
+			new GLib.Variant('(ssa{sv})', [Me.uuid, '', {}]),
+			null,
+			Gio.DBusCallFlags.NONE,
+			-1,
+			null);
 	},
 
 	_openManager: function () {
