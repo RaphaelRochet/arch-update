@@ -24,6 +24,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v36
+- Gnome 3.36.1 only
+- Fixed open prefs from menu
+
 ### v35
 - Gnome 3.36 only
 - Fixed a warning about absolete call
