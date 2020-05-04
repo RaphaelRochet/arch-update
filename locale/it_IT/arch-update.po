@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"POT-Creation-Date: 2020-05-04 11:54+0200\n"
 "PO-Revision-Date: 2019-10-21 00:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,62 +18,62 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:104
+#: extension.js:108
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: extension.js:105 extension.js:441
+#: extension.js:109 extension.js:461
 msgid "Update now"
 msgstr "Aggiorna ora"
 
-#: extension.js:106
-msgid "Open packager manager"
+#: extension.js:110
+msgid "Open package manager"
 msgstr "Apri gestore dei pachetti"
 
-#: extension.js:110
+#: extension.js:114
 msgid "Checking"
 msgstr "Verificando"
 
-#: extension.js:121
+#: extension.js:125
 msgid "Check now"
 msgstr "Verifica ora"
 
-#: extension.js:147
+#: extension.js:151
 msgid "Waiting first check"
 msgstr "Attendi il primo controllo"
 
-#: extension.js:288
+#: extension.js:307
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "1 aggiornamento disponibile"
 msgstr[1] "%d aggiornamenti disponibili"
 
-#: extension.js:303 extension.js:309
+#: extension.js:322 extension.js:328
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nuovo aggiornamento di Arch Linux"
 msgstr[1] "Nuovi aggiornamenti di Arch Linux"
 
-#: extension.js:310
+#: extension.js:329
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "C'è 1 aggiornamento disponibile"
 msgstr[1] "Ci sono %d aggiornamenti disponibili"
 
-#: extension.js:328
+#: extension.js:347
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Nota : occorre installare pacman-contrib per utilizzare lo script "
 "'checkupdates'."
 
-#: extension.js:330
+#: extension.js:349
 msgid "Error"
 msgstr "Errore"
 
-#: extension.js:335
+#: extension.js:354
 msgid "Up to date :)"
 msgstr "Aggiornato :)"
 

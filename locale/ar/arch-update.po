@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"POT-Creation-Date: 2020-05-04 11:54+0200\n"
 "PO-Revision-Date: 2017-05-21 22:02+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Virtaal 1.0.0-beta1\n"
 
-#: extension.js:104
+#: extension.js:108
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: extension.js:105 extension.js:441
+#: extension.js:109 extension.js:461
 msgid "Update now"
 msgstr "حدّث الآن"
 
-#: extension.js:106
-msgid "Open packager manager"
+#: extension.js:110
+msgid "Open package manager"
 msgstr ""
 
-#: extension.js:110
+#: extension.js:114
 msgid "Checking"
 msgstr "يلتمس"
 
-#: extension.js:121
+#: extension.js:125
 msgid "Check now"
 msgstr "التمس الآن"
 
-#: extension.js:147
+#: extension.js:151
 msgid "Waiting first check"
 msgstr "ينتظر أول تحديث"
 
-#: extension.js:288
+#: extension.js:307
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -53,7 +53,7 @@ msgstr[3] "%d تحديثات منتظرة"
 msgstr[4] "%d تحديثا منتظرًا"
 msgstr[5] "%d تحديث منتظر"
 
-#: extension.js:303 extension.js:309
+#: extension.js:322 extension.js:328
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "لا تحديثات أرتش لينكس جديدة"
@@ -63,7 +63,7 @@ msgstr[3] "تحديثات أرتش لينكس جديدة"
 msgstr[4] "تحديثات أرتش لينكس جديدة"
 msgstr[5] "تحديثات أرتش لينكس جديدة"
 
-#: extension.js:310
+#: extension.js:329
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -74,16 +74,16 @@ msgstr[3] "يوجد %d تحديثات منتظرة"
 msgstr[4] "يوجد %d تحديثا منتظرًا"
 msgstr[5] "يوجد %d تحديث منتظر"
 
-#: extension.js:328
+#: extension.js:347
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:330
+#: extension.js:349
 msgid "Error"
 msgstr "عُطل"
 
-#: extension.js:335
+#: extension.js:354
 msgid "Up to date :)"
 msgstr "محَدَّث :)"
 

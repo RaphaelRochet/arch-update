@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"POT-Creation-Date: 2020-05-04 11:54+0200\n"
 "PO-Revision-Date: 2016-10-30 14:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,60 +18,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.9\n"
 
-#: extension.js:104
+#: extension.js:108
 msgid "Settings"
 msgstr "Opcions"
 
-#: extension.js:105 extension.js:441
+#: extension.js:109 extension.js:461
 msgid "Update now"
 msgstr "Actualitza ara"
 
-#: extension.js:106
-msgid "Open packager manager"
+#: extension.js:110
+msgid "Open package manager"
 msgstr ""
 
-#: extension.js:110
+#: extension.js:114
 msgid "Checking"
 msgstr "Comprovant"
 
-#: extension.js:121
+#: extension.js:125
 msgid "Check now"
 msgstr "Comprova ara"
 
-#: extension.js:147
+#: extension.js:151
 msgid "Waiting first check"
 msgstr "Esperant la primera comprovació"
 
-#: extension.js:288
+#: extension.js:307
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d actualització pendent"
 msgstr[1] "%d actualitzacions pendents"
 
-#: extension.js:303 extension.js:309
+#: extension.js:322 extension.js:328
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nova actualització d'Arch Linux"
 msgstr[1] "Noves actualitzacions d'Arch Linux"
 
-#: extension.js:310
+#: extension.js:329
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Hi ha %d nova actualització pendent"
 msgstr[1] "Hi ha %d noves actualitzacions pendents"
 
-#: extension.js:328
+#: extension.js:347
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:330
+#: extension.js:349
 msgid "Error"
 msgstr "Error"
 
-#: extension.js:335
+#: extension.js:354
 msgid "Up to date :)"
 msgstr "Actualitzat :)"
 

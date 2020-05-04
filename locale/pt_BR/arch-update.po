@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"POT-Creation-Date: 2020-05-04 11:54+0200\n"
 "PO-Revision-Date: 2018-06-04 22:32-0300\n"
 "Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: \n"
@@ -18,62 +18,62 @@ msgstr ""
 "X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: extension.js:104
+#: extension.js:108
 msgid "Settings"
 msgstr "Configurações"
 
-#: extension.js:105 extension.js:441
+#: extension.js:109 extension.js:461
 msgid "Update now"
 msgstr "Atualizar agora"
 
-#: extension.js:106
-msgid "Open packager manager"
+#: extension.js:110
+msgid "Open package manager"
 msgstr "Abrir o gerenciador de pacotes"
 
-#: extension.js:110
+#: extension.js:114
 msgid "Checking"
 msgstr "Verificando"
 
-#: extension.js:121
+#: extension.js:125
 msgid "Check now"
 msgstr "Verificar agora"
 
-#: extension.js:147
+#: extension.js:151
 msgid "Waiting first check"
 msgstr "Aguardando pela primeira verificação"
 
-#: extension.js:288
+#: extension.js:307
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d atualização pendente"
 msgstr[1] "%d atualizações pendentes"
 
-#: extension.js:303 extension.js:309
+#: extension.js:322 extension.js:328
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nova atualização do Arch Linux"
 msgstr[1] "Novas atualizações do Arch Linux"
 
-#: extension.js:310
+#: extension.js:329
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Existe %d atualização pendente"
 msgstr[1] "Existem %d atualizações pendentes"
 
-#: extension.js:328
+#: extension.js:347
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Atenção: Você deve ter instalado o pacman-contrib para utilizar o script "
 "'checkupdate'."
 
-#: extension.js:330
+#: extension.js:349
 msgid "Error"
 msgstr "Erro"
 
-#: extension.js:335
+#: extension.js:354
 msgid "Up to date :)"
 msgstr "Atualizado :)"
 

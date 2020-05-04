@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"POT-Creation-Date: 2020-05-04 11:54+0200\n"
 "PO-Revision-Date: 2016-01-31 12:00+0100\n"
 "Last-Translator: Artur \"artur9010\" Motyka <arturmotyka99@gmail.com>\n"
 "Language-Team: polski <>\n"
@@ -19,61 +19,61 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
-#: extension.js:104
+#: extension.js:108
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: extension.js:105 extension.js:441
+#: extension.js:109 extension.js:461
 msgid "Update now"
 msgstr "Aktualizuj teraz"
 
-#: extension.js:106
-msgid "Open packager manager"
+#: extension.js:110
+msgid "Open package manager"
 msgstr ""
 
-#: extension.js:110
+#: extension.js:114
 msgid "Checking"
 msgstr "Sprawdzam"
 
-#: extension.js:121
+#: extension.js:125
 msgid "Check now"
 msgstr "Sprawdź teraz"
 
-#: extension.js:147
+#: extension.js:151
 msgid "Waiting first check"
 msgstr "Oczekuje na pierwsze sprawdzenie"
 
-#: extension.js:288
+#: extension.js:307
 #, fuzzy, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "dostępnych aktualizacji"
 msgstr[1] "dostępnych aktualizacji"
 
-#: extension.js:303 extension.js:309
+#: extension.js:322 extension.js:328
 #, fuzzy
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nowe aktualizacje"
 msgstr[1] "Nowe aktualizacje"
 
-#: extension.js:310
+#: extension.js:329
 #, fuzzy, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "dostępnych aktualizacji"
 msgstr[1] "dostępnych aktualizacji"
 
-#: extension.js:328
+#: extension.js:347
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:330
+#: extension.js:349
 msgid "Error"
 msgstr "Błąd"
 
-#: extension.js:335
+#: extension.js:354
 msgid "Up to date :)"
 msgstr "Wszystko jest aktualne"
 

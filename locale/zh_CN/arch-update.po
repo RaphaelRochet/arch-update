@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 15:31+0200\n"
+"POT-Creation-Date: 2020-05-04 11:54+0200\n"
 "PO-Revision-Date: 2016-02-23 21:09+0800\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: \n"
@@ -18,57 +18,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#: extension.js:104
+#: extension.js:108
 msgid "Settings"
 msgstr "设置"
 
-#: extension.js:105 extension.js:441
+#: extension.js:109 extension.js:461
 msgid "Update now"
 msgstr "立即更新"
 
-#: extension.js:106
-msgid "Open packager manager"
+#: extension.js:110
+msgid "Open package manager"
 msgstr ""
 
-#: extension.js:110
+#: extension.js:114
 msgid "Checking"
 msgstr "正在检查"
 
-#: extension.js:121
+#: extension.js:125
 msgid "Check now"
 msgstr "立即检查"
 
-#: extension.js:147
+#: extension.js:151
 msgid "Waiting first check"
 msgstr "正在等待首次检查"
 
-#: extension.js:288
+#: extension.js:307
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d 个更新正等待操作"
 
-#: extension.js:303 extension.js:309
+#: extension.js:322 extension.js:328
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Arch Linux 有新的更新"
 
-#: extension.js:310
+#: extension.js:329
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "有 %d 个更新正在等待操作"
 
-#: extension.js:328
+#: extension.js:347
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:330
+#: extension.js:349
 msgid "Error"
 msgstr "错误"
 
-#: extension.js:335
+#: extension.js:354
 msgid "Up to date :)"
 msgstr "已是最新 ^_^"
 
