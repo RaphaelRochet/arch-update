@@ -107,7 +107,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		// Other standard menu items
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
 		this.updateNowMenuItem = new PopupMenu.PopupMenuItem(_('Update now'));
-		this.managerMenuItem = new PopupMenu.PopupMenuItem(_('Open packager manager'));
+		this.managerMenuItem = new PopupMenu.PopupMenuItem(_('Open package manager'));
 
 		// A special "Checking" menu item with a stop button
 		this.checkingMenuItem = new PopupMenu.PopupBaseMenuItem( {reactive:false} );

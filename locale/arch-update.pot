@@ -27,7 +27,7 @@ msgid "Update now"
 msgstr ""
 
 #: extension.js:106
-msgid "Open packager manager"
+msgid "Open package manager"
 msgstr ""
 
 #: extension.js:110
