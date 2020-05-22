@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translators:
+# Karol Babioch <karol@babioch.de>, 2016
+# Onno Giesmann <nutzer3105@gmail.com>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-04 11:54+0200\n"
-"PO-Revision-Date: 2016-02-08 12:26+0100\n"
-"Last-Translator: Karol Babioch <karol@babioch.de>\n"
+"PO-Revision-Date: 2020-05-22 21:01+0200\n"
+"Last-Translator: Onno Giesmann <nutzer3105@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: extension.js:108
@@ -28,7 +30,7 @@ msgstr "Jetzt aktualisieren"
 
 #: extension.js:110
 msgid "Open package manager"
-msgstr ""
+msgstr "Paketverwaltung öffnen"
 
 #: extension.js:114
 msgid "Checking"
@@ -159,9 +161,8 @@ msgstr ""
 "Pakete installiert werden"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Befehl, um Pakete zu aktualisieren"
+msgstr "Befehl zum Öffnen der Paketverwaltung (optional)"
 
 #: prefs.xml:380
 msgid "Advanced settings"
