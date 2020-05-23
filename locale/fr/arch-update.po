@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-23 19:11+0200\n"
-"PO-Revision-Date: 2019-01-12 21:40+0100\n"
+"PO-Revision-Date: 2020-05-23 19:14+0200\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: extension.js:115
@@ -67,7 +67,7 @@ msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Attention : vous devez installer pacman-contrib pour utiliser le script "
-"'checkupdates'"
+"'checkupdates'."
 
 #: extension.js:358
 msgid "Error"
@@ -103,7 +103,7 @@ msgstr "Toujours visible"
 
 #: prefs.xml:175
 msgid "Use build-in icons"
-msgstr ""
+msgstr "Utiliser les icônes fournies"
 
 #: prefs.xml:194
 msgid "Show updates count on indicator"
