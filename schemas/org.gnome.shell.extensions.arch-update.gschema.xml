@@ -23,7 +23,7 @@
             If true, the indicator is always visible, even when non updates are pending
         </description>
     </key>
-    
+
     <key name="use-buildin-icons" type="b">
       <default>true</default>
         <summary>Use build-in icons</summary>

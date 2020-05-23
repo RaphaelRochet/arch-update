@@ -184,7 +184,7 @@
 							</child>
 						</object>
 					</child>
-					
+
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
