@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2017-03-05 00:04+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,57 +18,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.11\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "هم‌اکنون بروزرسانی کنید"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "در حال بررسی"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "هم‌اکنون بررسی کنید"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "انتظار برای اولین بررسی"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d بروزرسانی موجود است"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "بروزرسانی جدید آرچ لینوکس"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "%d بروزرسانی در انتظار است"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "خطا"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "به روز :)"
 
@@ -97,10 +97,14 @@ msgid "Always visible"
 msgstr "همواره قابل رؤیت"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "نمایش تعداد بروزرسانی‌ها در نمایه"
 
-#: prefs.xml:195
+#: prefs.xml:214
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -108,55 +112,55 @@ msgstr ""
 "در صورتی که تعداد بروز‌رسانی‌ها کمتر از این عدد بود، لیست بروزرسانی‌ها به صورت "
 "خودکار، باز شود (۰ برای غیر فعال کردن)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 msgid "Notification"
 msgstr "اعلان"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "ارسال اعلان، هنگامی که بروزرسانی وجود دارد"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "استفاده از اعلان گذرا (به صورت خودکار بسته می‌شود)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "چه مقدار اطلاعات در اعلان نمایش داده شود"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "فقط عداد"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "اسم بروزرسانی‌های جدید"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "اسم تمام بروزرسانی‌ها"
 
-#: prefs.xml:296
+#: prefs.xml:315
 msgid "Basic settings"
 msgstr "تنظیمات اولیه"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "دستور برای بررسی بروزرسانی بسته‌ها"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "دستور برای بروزرسانی بسته‌ها"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "مسیر پوشه محلی پک‌من - برای تشخیص آنکه بسته‌های جدید نصب شده است"
 
-#: prefs.xml:363
+#: prefs.xml:382
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "دستور برای بروزرسانی بسته‌ها"
 
-#: prefs.xml:380
+#: prefs.xml:399
 msgid "Advanced settings"
 msgstr "تنظیمات پیشرفته"

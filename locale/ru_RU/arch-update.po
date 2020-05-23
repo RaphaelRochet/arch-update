@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2016-09-10 16:43+0300\n"
 "Last-Translator: snql <me@snql.by>\n"
 "Language-Team: \n"
@@ -19,31 +19,31 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.8.8\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "Настройки"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "Обновить сейчас"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "Проверка"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "Проверить сейчас"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "Ожидаем первой проверки"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -51,14 +51,14 @@ msgstr[0] "%d обновление в ожидании"
 msgstr[1] "%d обновления в ожидании"
 msgstr[2] "%d обновлений в ожидании"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Новое обновление Arch Linux"
 msgstr[1] "Новые обновления Arch Linux"
 msgstr[2] "Новые обновления Arch Linux"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -66,16 +66,16 @@ msgstr[0] "Обнаружено %d обновление"
 msgstr[1] "Обнаружено %d обновления"
 msgstr[2] "Обнаружено %d обновлений"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "Ошибка"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "В актуальном состоянии :)"
 
@@ -106,10 +106,14 @@ msgid "Always visible"
 msgstr "Всегда отображать"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "Показывать количество обновлений на индикаторе"
 
-#: prefs.xml:195
+#: prefs.xml:214
 #, fuzzy
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
@@ -118,59 +122,59 @@ msgstr ""
 "Авторасширение списка обновлений, если количество меньше указанного числа (0 "
 "- выключено)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 #, fuzzy
 msgid "Notification"
 msgstr "<b>Уведомление</b>"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "Отправить уведомление, когда новые обновления доступны"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Использовать вcплывающие уведомления"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "Как много информации отображать в уведомлениях"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "Только количество"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "Имена обновляемых пакетов"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "Все имена обновляемых пакетов"
 
-#: prefs.xml:296
+#: prefs.xml:315
 #, fuzzy
 msgid "Basic settings"
 msgstr "Настройки"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "Команда для проверки обновлений пакетов"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "Команда для обновления пакетов"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Локальная директория pacman - для определения новых пакетов для установки"
 
-#: prefs.xml:363
+#: prefs.xml:382
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "Команда для обновления пакетов"
 
-#: prefs.xml:380
+#: prefs.xml:399
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>Расширенные настройки</b>"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2017-05-10 20:15+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -19,31 +19,31 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.1\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "Поставке"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "Надогради одмах"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "Проверавам"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "Провери одмах"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "Чекам прву проверу"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -51,14 +51,14 @@ msgstr[0] "%d надоградња на чекању"
 msgstr[1] "%d надоградње на чекању"
 msgstr[2] "%d надоградњи на чекању"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Нова надоградња Арчлинукса"
 msgstr[1] "Нове надоградње Арчлинукса"
 msgstr[2] "Нове надоградње Арчлинукса"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -66,16 +66,16 @@ msgstr[0] "На чекању је %d надоградња"
 msgstr[1] "На чекању су %d надоградње"
 msgstr[2] "На чекању је %d надоградњи"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "Грешка"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "Ажурно :)"
 
@@ -104,67 +104,71 @@ msgid "Always visible"
 msgstr "Увек видљив"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "Приказ броја надоградњи на индикатору"
 
-#: prefs.xml:195
+#: prefs.xml:214
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 "Аутоматски рашири списак уколико број надоградњи није већи од (0 онемогућује)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 msgid "Notification"
 msgstr "Обавештења"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "Приказ обавештења о доступним надоградњама"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Пролазна обавештења (аутоматско одбацивање)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "Колико се података приказује у обавештењима"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "само број"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "имена нових надоградњи"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "имена свих надоградњи"
 
-#: prefs.xml:296
+#: prefs.xml:315
 msgid "Basic settings"
 msgstr "Основне поставке"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "Команда за тражење надоградњи"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "Команда за надоградњу пакета"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Путања Пакменове локалне фасцикле — за откривање када су нови пакети "
 "инсталирани"
 
-#: prefs.xml:363
+#: prefs.xml:382
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "Команда за надоградњу пакета"
 
-#: prefs.xml:380
+#: prefs.xml:399
 msgid "Advanced settings"
 msgstr "Напредне поставке"

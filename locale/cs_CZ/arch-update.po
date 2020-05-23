@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "Nastavení"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "Aktualizovat"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "Kontroluji"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "Zkontrolovat"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "Čekání na první kontrolu"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d čekající aktualizace"
 msgstr[1] "%d čekajících aktualizací"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nová aktualizace pro Arch Linux"
 msgstr[1] "Nové aktualizace pro Arch Linux"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Je dostupná %d čekající aktualizace"
 msgstr[1] "Je dostupných %d čekajících aktualizací"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 
@@ -101,10 +101,14 @@ msgid "Always visible"
 msgstr "Vždy viditelný"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "Zobrazovat u indikátoru počet aktualizací"
 
-#: prefs.xml:195
+#: prefs.xml:214
 #, fuzzy
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
@@ -113,59 +117,59 @@ msgstr ""
 " Automaticky otevírat seznam aktualizací pokud je počet nižší než toto číslo "
 "(0 vypne)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 #, fuzzy
 msgid "Notification"
 msgstr "<b>Upozornění</b>"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "Zobrazit upozornění při dostupných aktualizacích"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Používat dočasná upozornění (samozavírací)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "Množství zobrazovaných informací"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "Pouze počet"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "Jména nových aktualizací"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "Jména všech aktualizací"
 
-#: prefs.xml:296
+#: prefs.xml:315
 #, fuzzy
 msgid "Basic settings"
 msgstr "Nastavení"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "Příkaz pro kontrolu aktuálnosti balíčků"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "Příkaz pro aktualizaci balíčků"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
 
-#: prefs.xml:363
+#: prefs.xml:382
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "Příkaz pro aktualizaci balíčků"
 
-#: prefs.xml:380
+#: prefs.xml:399
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>Další možnosti</b>"

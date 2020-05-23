@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2016-02-23 21:09+0800\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: \n"
@@ -18,57 +18,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "设置"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "立即更新"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "正在检查"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "立即检查"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "正在等待首次检查"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d 个更新正等待操作"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Arch Linux 有新的更新"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "有 %d 个更新正在等待操作"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "错误"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "已是最新 ^_^"
 
@@ -99,67 +99,71 @@ msgid "Always visible"
 msgstr "始终显示"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "在指示器上显示更新数目"
 
-#: prefs.xml:195
+#: prefs.xml:214
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 
-#: prefs.xml:218
+#: prefs.xml:237
 #, fuzzy
 msgid "Notification"
 msgstr "<b>通知</b>"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "当有新的更新可用时发送通知"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "使用暂时性通知(自动消除)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "在通知上显示多少信息"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "仅数目"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "新更新名称"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "所有更新名称"
 
-#: prefs.xml:296
+#: prefs.xml:315
 #, fuzzy
 msgid "Basic settings"
 msgstr "设置"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "检查软件包更新的命令"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "更新软件包的命令"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman 本地目录路径 - 用于检测新软件包被安装的时间"
 
-#: prefs.xml:363
+#: prefs.xml:382
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "更新软件包的命令"
 
-#: prefs.xml:380
+#: prefs.xml:399
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>高级设置</b>"

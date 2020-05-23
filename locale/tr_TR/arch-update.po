@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2019-03-21 07:26+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@yandex.com>\n"
 "Language-Team: Turkish\n"
@@ -19,62 +19,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "Güncelle"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr "Paketleme yöneticisini aç"
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "Kontrol ediliyor"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "Kontrol Et"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "İlk kontrol bekleniyor"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d güncelleme bekliyor"
 msgstr[1] "%d güncelleme bekliyor"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Yeni Arch Linux Güncellemesi"
 msgstr[1] "Yeni Arch Linux Güncellemesi"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "%d bekleyen güncelleme var"
 msgstr[1] "%d bekleyen güncelleme var"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Not: ' checkupdates ' betiğini kullanmak için pacman-contrib yüklemeniz "
 "gerekir."
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "Hata"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "Güncel :)"
 
@@ -103,10 +103,14 @@ msgid "Always visible"
 msgstr "Her zaman görünür"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "Güncelleme sayısını göstergede göster"
 
-#: prefs.xml:195
+#: prefs.xml:214
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -114,55 +118,55 @@ msgstr ""
 "Güncelleme sayısı bu sayıdan küçükse listeyi otomatik olarak genişlet (iptal "
 "etmek için 0)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 msgid "Notification"
 msgstr "Bildirim"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "Yeni güncelleme mevcut olduğunda bildirim gönder"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Geçici bildirimler kullan (otomatik sonlanır)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "Bildirimlerde gösterilecek bilgi miktarı"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "Sadece sayı"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "Yeni güncellemelerin isimleri"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "Tüm güncellemelerin isimleri"
 
-#: prefs.xml:296
+#: prefs.xml:315
 msgid "Basic settings"
 msgstr "Basit Ayarlar"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "Güncellemeleri kontrol etmek için kullanılacak komut"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "Paketleri güncellemek için kullanılacak komut"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Pacman yerel dizin yolu - Yeni paketlerin ne zaman yüklendiğini saptamak için"
 
-#: prefs.xml:363
+#: prefs.xml:382
 msgid "Command to open package manager (optional)"
 msgstr "Paket yöneticisini açma komutu (isteğe bağlı)"
 
-#: prefs.xml:380
+#: prefs.xml:399
 msgid "Advanced settings"
 msgstr "Gelişmiş Ayarlar"

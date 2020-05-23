@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2017-05-21 22:02+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Virtaal 1.0.0-beta1\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "حدّث الآن"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "يلتمس"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "التمس الآن"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "ينتظر أول تحديث"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -53,7 +53,7 @@ msgstr[3] "%d تحديثات منتظرة"
 msgstr[4] "%d تحديثا منتظرًا"
 msgstr[5] "%d تحديث منتظر"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "لا تحديثات أرتش لينكس جديدة"
@@ -63,7 +63,7 @@ msgstr[3] "تحديثات أرتش لينكس جديدة"
 msgstr[4] "تحديثات أرتش لينكس جديدة"
 msgstr[5] "تحديثات أرتش لينكس جديدة"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -74,16 +74,16 @@ msgstr[3] "يوجد %d تحديثات منتظرة"
 msgstr[4] "يوجد %d تحديثا منتظرًا"
 msgstr[5] "يوجد %d تحديث منتظر"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "عُطل"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "محَدَّث :)"
 
@@ -112,65 +112,69 @@ msgid "Always visible"
 msgstr "ظاهر دائما"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "اعرض عدد التحديثات في المؤشر"
 
-#: prefs.xml:195
+#: prefs.xml:214
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 "ابسط قائمة التحديثات تلقائيًا إن كان عددهم أقل من هذا الرقم (0 يعطل هذا)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 msgid "Notification"
 msgstr "التنبيهات"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "أرسل تنبيهًا عند توفر تحديثات جديدة"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "أستخدم تنبيهات عابرة (تختفي تلقائيًا)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "ما مقدار المعلومات المعروضة في التنبيهات"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "العدد فقط"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "أسماء التحديثات الجديدة"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "كل أسماء التحديثات"
 
-#: prefs.xml:296
+#: prefs.xml:315
 msgid "Basic settings"
 msgstr "الإعدادات الأساسيّة"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "أمر التماس التحديثات"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "أمر تحديث الحزم"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "مسار دليل Pacman المحلي - لمعرفة أن التحديثات الجديدة ثُبتت"
 
-#: prefs.xml:363
+#: prefs.xml:382
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "أمر تحديث الحزم"
 
-#: prefs.xml:380
+#: prefs.xml:399
 msgid "Advanced settings"
 msgstr "الإعدادات المتقدمة"

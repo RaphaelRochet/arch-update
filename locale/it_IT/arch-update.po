@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 11:54+0200\n"
+"POT-Creation-Date: 2020-05-23 19:11+0200\n"
 "PO-Revision-Date: 2019-10-21 00:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,62 +18,62 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: extension.js:109 extension.js:461
+#: extension.js:116 extension.js:470
 msgid "Update now"
 msgstr "Aggiorna ora"
 
-#: extension.js:110
+#: extension.js:117
 msgid "Open package manager"
 msgstr "Apri gestore dei pachetti"
 
-#: extension.js:114
+#: extension.js:121
 msgid "Checking"
 msgstr "Verificando"
 
-#: extension.js:125
+#: extension.js:132
 msgid "Check now"
 msgstr "Verifica ora"
 
-#: extension.js:151
+#: extension.js:158
 msgid "Waiting first check"
 msgstr "Attendi il primo controllo"
 
-#: extension.js:307
+#: extension.js:316
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "1 aggiornamento disponibile"
 msgstr[1] "%d aggiornamenti disponibili"
 
-#: extension.js:322 extension.js:328
+#: extension.js:331 extension.js:337
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nuovo aggiornamento di Arch Linux"
 msgstr[1] "Nuovi aggiornamenti di Arch Linux"
 
-#: extension.js:329
+#: extension.js:338
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "C'è 1 aggiornamento disponibile"
 msgstr[1] "Ci sono %d aggiornamenti disponibili"
 
-#: extension.js:347
+#: extension.js:356
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Nota : occorre installare pacman-contrib per utilizzare lo script "
 "'checkupdates'."
 
-#: extension.js:349
+#: extension.js:358
 msgid "Error"
 msgstr "Errore"
 
-#: extension.js:354
+#: extension.js:363
 msgid "Up to date :)"
 msgstr "Aggiornato :)"
 
@@ -102,10 +102,14 @@ msgid "Always visible"
 msgstr "Sempre visibile"
 
 #: prefs.xml:175
+msgid "Use build-in icons"
+msgstr ""
+
+#: prefs.xml:194
 msgid "Show updates count on indicator"
 msgstr "Mostra il numero degli aggiornamenti sull'indicatore"
 
-#: prefs.xml:195
+#: prefs.xml:214
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -113,57 +117,57 @@ msgstr ""
 "Estendi automaticamente la lista degli aggiornamenti se il numero è minore "
 "di questo (0 per disattivare)"
 
-#: prefs.xml:218
+#: prefs.xml:237
 msgid "Notification"
 msgstr "Notifica"
 
-#: prefs.xml:233
+#: prefs.xml:252
 msgid "Send a notification when new updates are available"
 msgstr "Invia una notifica quando sono disponibili nuovi aggiornamenti"
 
-#: prefs.xml:252
+#: prefs.xml:271
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Utilizzare notifiche transitorie (chiusura automatica)"
 
-#: prefs.xml:271
+#: prefs.xml:290
 msgid "How much information to show on notifications"
 msgstr "Quante informazioni mostrare nelle notifiche"
 
-#: prefs.xml:279
+#: prefs.xml:298
 msgid "Count only"
 msgstr "Solo il numero"
 
-#: prefs.xml:280
+#: prefs.xml:299
 msgid "New updates names"
 msgstr "Nomi dei nuovi aggiornamenti"
 
-#: prefs.xml:281
+#: prefs.xml:300
 msgid "All updates names"
 msgstr "Nomi di tutti gli aggiornamenti"
 
-#: prefs.xml:296
+#: prefs.xml:315
 msgid "Basic settings"
 msgstr "Impostazioni base"
 
-#: prefs.xml:312
+#: prefs.xml:331
 msgid "Command to check for package updates"
 msgstr "Comando per verificare la presenza di aggiornamenti"
 
-#: prefs.xml:329
+#: prefs.xml:348
 msgid "Command to update packages"
 msgstr "Comando per aggiornare i pacchetti"
 
-#: prefs.xml:346
+#: prefs.xml:365
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Percorso locale di pacman - Per rilevare quando vengono installati nuovi "
 "pacchetti"
 
-#: prefs.xml:363
+#: prefs.xml:382
 msgid "Command to open package manager (optional)"
 msgstr "Comando per aprire il gestore di pacchetti (opzionale)"
 
-#: prefs.xml:380
+#: prefs.xml:399
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
 
