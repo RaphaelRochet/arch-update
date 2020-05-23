@@ -25,7 +25,7 @@
     </key>
 
     <key name="use-buildin-icons" type="b">
-      <default>true</default>
+      <default>false</default>
         <summary>Use build-in icons</summary>
         <description>
             If true, the build-in status icons are used instead of theme icons

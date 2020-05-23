@@ -24,6 +24,7 @@ const St = imports.gi.St;
 const GObject = imports.gi.GObject;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
+const Gtk = imports.gi.Gtk;
 
 const Main = imports.ui.main;
 const Panel = imports.ui.panel;
@@ -80,11 +81,13 @@ const ArchUpdateIndicator = new Lang.Class({
 	_updateList: [],
 
 	_getCustIcon: function(icon_name) {
-		let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
-		if (!USE_BUILDIN_ICONS) {
-			gicon = new St.Icon({ icon_name: icon_name }).get_gicon();
+		// I did not find a way to lookup icon via Gio, so use Gtk
+		if (!USE_BUILDIN_ICONS && Gtk.IconTheme.get_default().has_icon(icon_name)) {
+			return Gio.icon_new_for_string( icon_name );
+		} else {
+			// Icon not available in theme, or user prefers built in icon
+			return Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
 		}
-		return gicon;
 	},
 
 	_init: function() {
@@ -211,7 +214,7 @@ const ArchUpdateIndicator = new Lang.Class({
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
-		this._updateStatus(0);
+		this._updateStatus();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
 		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
