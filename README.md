@@ -24,6 +24,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v37
+- Theme support is back ! Also an option to force built-in icons if needed.
+
 ### v36
 - Gnome 3.36.1 only
 - Fixed open prefs from menu
