@@ -82,12 +82,14 @@ const ArchUpdateIndicator = new Lang.Class({
 
 	_getCustIcon: function(icon_name) {
 		// I did not find a way to lookup icon via Gio, so use Gtk
-		if (!USE_BUILDIN_ICONS && Gtk.IconTheme.get_default().has_icon(icon_name)) {
-			return Gio.icon_new_for_string( icon_name );
-		} else {
-			// Icon not available in theme, or user prefers built in icon
-			return Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
+		// I couldn't find why, but get_default is sometimes null, hence this additional test
+		if (!USE_BUILDIN_ICONS && Gtk.IconTheme.get_default()) {
+			if (Gtk.IconTheme.get_default().has_icon(icon_name)) {
+				return Gio.icon_new_for_string( icon_name );
+			}
 		}
+		// Icon not available in theme, or user prefers built in icon
+		return Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
 	},
 
 	_init: function() {
