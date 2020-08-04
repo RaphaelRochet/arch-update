@@ -34,6 +34,11 @@
 	<property name="upper">99</property>
 	<property name="step_increment">1</property>
 </object>
+<object class="GtkAdjustment" id="Adjust_4">
+	<property name="lower">0</property>
+	<property name="upper">99</property>
+	<property name="step_increment">1</property>
+</object>
 
 <object class="GtkNotebook" id="prefs_widget">
 	<property name="expand">true</property>
@@ -221,6 +226,42 @@
 								<object class="GtkSpinButton" id="field_autoexpandlist">
 									<property name="adjustment">Adjust_3</property>
 								</object>
+							</child>
+						</object>
+					</child>
+					<child>
+						<object class="GtkBox">
+							<property name="spacing">12</property>
+							<property name="margin-left">12</property>
+							<property name="hexpand">true</property>
+							<child>
+								<object class="GtkLabel">
+									<property name="label" translatable="yes">Position in Panel</property>
+									<property name="hexpand">true</property>
+									<property name="xalign">0</property>
+									<property name="wrap">1</property>
+								</object>
+							</child>
+							<child>
+							    <object class="GtkBox">
+							        <property name="spacing">12</property>
+							        <property name="margin-left">12</property>
+							        <property name="hexpand">false</property>
+							        <child>
+								        <object class="GtkComboBoxText" id="field_position">
+									        <items>
+										        <item translatable="yes" id="0">Left</item>
+										        <item translatable="yes" id="1">Center</item>
+										        <item translatable="yes" id="2">Right</item>
+									        </items>
+								        </object>
+							        </child>
+							        <child>
+								        <object class="GtkSpinButton" id="field_positionnumber">
+									        <property name="adjustment">Adjust_4</property>
+								        </object>
+								    </child>
+						        </object>
 							</child>
 						</object>
 					</child>

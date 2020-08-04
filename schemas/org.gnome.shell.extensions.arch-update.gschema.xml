@@ -95,5 +95,17 @@
       <description></description>
     </key>
 
+    <key name="position" type="i">
+      <default>2</default>
+      <summary>Position in the panel</summary>
+      <description>Position where the arch update will be displayed (left/center/right)</description>
+    </key>
+
+    <key name="position-number" type="i">
+      <default>-0</default>
+      <summary>Position of the arch update inside the box</summary>
+      <description></description>
+    </key>
+
   </schema>
 </schemalist>
