@@ -154,6 +154,7 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		// Load settings
 		this._settings = Utils.getSettings();
+		this._settings.connect('changed', Lang.bind(this, this._positionChanged));
 		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
 		this._applySettings();
 		this._showChecking(false);
@@ -177,6 +178,21 @@ const ArchUpdateIndicator = new Lang.Class({
 			this._startFolderMonitor();
 		}
 	},
+
+	_positionChanged(){
+        this.container.get_parent().remove_actor(this.container);
+
+        let boxes = {
+            0: Main.panel._leftBox,
+            1: Main.panel._centerBox,
+            2: Main.panel._rightBox
+        };
+
+        let p = this._settings.get_int('position');
+        let i = this._settings.get_int('position-number');
+
+        boxes[p].insert_child_at_index(this.container, i);
+    },
 
 	_openSettings: function () {
 		Gio.DBus.session.call(
@@ -486,6 +502,7 @@ let archupdateindicator;
 function enable() {
 	archupdateindicator = new ArchUpdateIndicator();
 	Main.panel.addToStatusArea('ArchUpdateIndicator', archupdateindicator);
+	archupdateindicator._positionChanged();
 }
 
 function disable() {
