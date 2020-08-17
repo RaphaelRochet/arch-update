@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 19:11+0200\n"
+"POT-Creation-Date: 2020-08-17 09:53+0200\n"
 "PO-Revision-Date: 2016-02-23 21:09+0800\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: \n"
@@ -18,152 +18,168 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#: extension.js:115
+#: extension.js:117
 msgid "Settings"
 msgstr "设置"
 
-#: extension.js:116 extension.js:470
+#: extension.js:118 extension.js:488
 msgid "Update now"
 msgstr "立即更新"
 
-#: extension.js:117
+#: extension.js:119
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:121
+#: extension.js:123
 msgid "Checking"
 msgstr "正在检查"
 
-#: extension.js:132
+#: extension.js:134
 msgid "Check now"
 msgstr "立即检查"
 
-#: extension.js:158
+#: extension.js:161
 msgid "Waiting first check"
 msgstr "正在等待首次检查"
 
-#: extension.js:316
+#: extension.js:334
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d 个更新正等待操作"
 
-#: extension.js:331 extension.js:337
+#: extension.js:349 extension.js:355
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Arch Linux 有新的更新"
 
-#: extension.js:338
+#: extension.js:356
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "有 %d 个更新正在等待操作"
 
-#: extension.js:356
+#: extension.js:374
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:358
+#: extension.js:376
 msgid "Error"
 msgstr "错误"
 
-#: extension.js:363
+#: extension.js:381
 msgid "Up to date :)"
 msgstr "已是最新 ^_^"
 
-#: prefs.xml:57
+#: prefs.xml:62
 #, fuzzy
 msgid "Checking for updates"
 msgstr "<b>正在检查更新</b>"
 
-#: prefs.xml:81
+#: prefs.xml:86
 msgid "Time to wait before first check (seconds)"
 msgstr "首次检查前等待时间(秒)"
 
-#: prefs.xml:100
+#: prefs.xml:105
 msgid "Interval between updates check (minutes)"
 msgstr "更新检查间隔(秒)"
 
-#: prefs.xml:119
+#: prefs.xml:124
 msgid "Strip out versions numbers"
 msgstr "剔除版本号"
 
-#: prefs.xml:141
+#: prefs.xml:146
 #, fuzzy
 msgid "Indicator"
 msgstr "<b>指示器</b>"
 
-#: prefs.xml:156
+#: prefs.xml:161
 msgid "Always visible"
 msgstr "始终显示"
 
-#: prefs.xml:175
+#: prefs.xml:180
 msgid "Use build-in icons"
 msgstr ""
 
-#: prefs.xml:194
+#: prefs.xml:199
 msgid "Show updates count on indicator"
 msgstr "在指示器上显示更新数目"
 
-#: prefs.xml:214
+#: prefs.xml:219
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 
-#: prefs.xml:237
+#: prefs.xml:239
+msgid "Position in Panel"
+msgstr ""
+
+#: prefs.xml:253
+msgid "Left"
+msgstr ""
+
+#: prefs.xml:254
+msgid "Center"
+msgstr ""
+
+#: prefs.xml:255
+msgid "Right"
+msgstr ""
+
+#: prefs.xml:278
 #, fuzzy
 msgid "Notification"
 msgstr "<b>通知</b>"
 
-#: prefs.xml:252
+#: prefs.xml:293
 msgid "Send a notification when new updates are available"
 msgstr "当有新的更新可用时发送通知"
 
-#: prefs.xml:271
+#: prefs.xml:312
 msgid "Use transient notifications (auto dismiss)"
 msgstr "使用暂时性通知(自动消除)"
 
-#: prefs.xml:290
+#: prefs.xml:331
 msgid "How much information to show on notifications"
 msgstr "在通知上显示多少信息"
 
-#: prefs.xml:298
+#: prefs.xml:339
 msgid "Count only"
 msgstr "仅数目"
 
-#: prefs.xml:299
+#: prefs.xml:340
 msgid "New updates names"
 msgstr "新更新名称"
 
-#: prefs.xml:300
+#: prefs.xml:341
 msgid "All updates names"
 msgstr "所有更新名称"
 
-#: prefs.xml:315
+#: prefs.xml:356
 #, fuzzy
 msgid "Basic settings"
 msgstr "设置"
 
-#: prefs.xml:331
+#: prefs.xml:372
 msgid "Command to check for package updates"
 msgstr "检查软件包更新的命令"
 
-#: prefs.xml:348
+#: prefs.xml:389
 msgid "Command to update packages"
 msgstr "更新软件包的命令"
 
-#: prefs.xml:365
+#: prefs.xml:406
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman 本地目录路径 - 用于检测新软件包被安装的时间"
 
-#: prefs.xml:382
+#: prefs.xml:423
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "更新软件包的命令"
 
-#: prefs.xml:399
+#: prefs.xml:440
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>高级设置</b>"

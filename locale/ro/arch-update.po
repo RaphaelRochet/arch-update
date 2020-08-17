@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 19:11+0200\n"
+"POT-Creation-Date: 2020-08-17 09:53+0200\n"
 "PO-Revision-Date: 2018-12-23 06:16+0200\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
@@ -20,31 +20,31 @@ msgstr ""
 "20)) ? 1 : 2);\n"
 "X-Generator: Poedit 2.2\n"
 
-#: extension.js:115
+#: extension.js:117
 msgid "Settings"
 msgstr "Setări"
 
-#: extension.js:116 extension.js:470
+#: extension.js:118 extension.js:488
 msgid "Update now"
 msgstr "Actualizează acum"
 
-#: extension.js:117
+#: extension.js:119
 msgid "Open package manager"
 msgstr "Deschide managerul de pachete"
 
-#: extension.js:121
+#: extension.js:123
 msgid "Checking"
 msgstr "Se verifică"
 
-#: extension.js:132
+#: extension.js:134
 msgid "Check now"
 msgstr "Verifică acum"
 
-#: extension.js:158
+#: extension.js:161
 msgid "Waiting first check"
 msgstr "Se așteaptă prima verificare"
 
-#: extension.js:316
+#: extension.js:334
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -52,14 +52,14 @@ msgstr[0] "%d actualizare în așteptare"
 msgstr[1] "%d actualizări în așteptare"
 msgstr[2] "%d de actualizări în așteptare"
 
-#: extension.js:331 extension.js:337
+#: extension.js:349 extension.js:355
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Actualizare nouă pentru Arch Linux"
 msgstr[1] "Actualizări noi pentru Arch Linux"
 msgstr[2] "Actualizări noi pentru Arch Linux"
 
-#: extension.js:338
+#: extension.js:356
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -67,54 +67,54 @@ msgstr[0] "Există %d actualizare în așteptare"
 msgstr[1] "Există %d actualizări în așteptare"
 msgstr[2] "Există %d de actualizări în așteptare"
 
-#: extension.js:356
+#: extension.js:374
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Notă: trebuie să instalați pacman-contrib pentru a folosi scriptul "
 "'checkupdates'"
 
-#: extension.js:358
+#: extension.js:376
 msgid "Error"
 msgstr "Eroare"
 
-#: extension.js:363
+#: extension.js:381
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 
-#: prefs.xml:57
+#: prefs.xml:62
 msgid "Checking for updates"
 msgstr "Se caută actualizări"
 
-#: prefs.xml:81
+#: prefs.xml:86
 msgid "Time to wait before first check (seconds)"
 msgstr "Timp de așteptare înainte de prima verificare (secunde)"
 
-#: prefs.xml:100
+#: prefs.xml:105
 msgid "Interval between updates check (minutes)"
 msgstr "Interval între verificările de actualizare (minute)"
 
-#: prefs.xml:119
+#: prefs.xml:124
 msgid "Strip out versions numbers"
 msgstr "Înlătură numerele versiunilor"
 
-#: prefs.xml:141
+#: prefs.xml:146
 msgid "Indicator"
 msgstr "Indicator"
 
-#: prefs.xml:156
+#: prefs.xml:161
 msgid "Always visible"
 msgstr "Întotdeauna vizibil"
 
-#: prefs.xml:175
+#: prefs.xml:180
 msgid "Use build-in icons"
 msgstr ""
 
-#: prefs.xml:194
+#: prefs.xml:199
 msgid "Show updates count on indicator"
 msgstr "Arată numărul actualizărilor în indicator"
 
-#: prefs.xml:214
+#: prefs.xml:219
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -122,57 +122,73 @@ msgstr ""
 "Auto-extinde lista de actualizări dacă sunt mai puține decât acest număr (0 "
 "pentru a dezactiva)"
 
-#: prefs.xml:237
+#: prefs.xml:239
+msgid "Position in Panel"
+msgstr ""
+
+#: prefs.xml:253
+msgid "Left"
+msgstr ""
+
+#: prefs.xml:254
+msgid "Center"
+msgstr ""
+
+#: prefs.xml:255
+msgid "Right"
+msgstr ""
+
+#: prefs.xml:278
 msgid "Notification"
 msgstr "Notificare"
 
-#: prefs.xml:252
+#: prefs.xml:293
 msgid "Send a notification when new updates are available"
 msgstr "Trimite o notificare când sunt disponibile actualizări noi"
 
-#: prefs.xml:271
+#: prefs.xml:312
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Folosește notificări tranzitorii (se închid automat)"
 
-#: prefs.xml:290
+#: prefs.xml:331
 msgid "How much information to show on notifications"
 msgstr "Cât de multă informație să fie arătată în notificări"
 
-#: prefs.xml:298
+#: prefs.xml:339
 msgid "Count only"
 msgstr "Doar număr"
 
-#: prefs.xml:299
+#: prefs.xml:340
 msgid "New updates names"
 msgstr "Numele noilor actualizări"
 
-#: prefs.xml:300
+#: prefs.xml:341
 msgid "All updates names"
 msgstr "Numele tuturor actualizărilor"
 
-#: prefs.xml:315
+#: prefs.xml:356
 msgid "Basic settings"
 msgstr "Setări de bază"
 
-#: prefs.xml:331
+#: prefs.xml:372
 msgid "Command to check for package updates"
 msgstr "Comandă pentru verificarea pachetelor ce pot fi actualizate"
 
-#: prefs.xml:348
+#: prefs.xml:389
 msgid "Command to update packages"
 msgstr "Comandă pentru actualizarea pachetelor"
 
-#: prefs.xml:365
+#: prefs.xml:406
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Calea locală a dosarului Pacman - Pentru a detecta când sunt instalate "
 "pachete noi"
 
-#: prefs.xml:382
+#: prefs.xml:423
 msgid "Command to open package manager (optional)"
 msgstr "Comandă pentru deschiderea managerului de pachete (opțional)"
 
-#: prefs.xml:399
+#: prefs.xml:440
 msgid "Advanced settings"
 msgstr "Setări avansate"
 

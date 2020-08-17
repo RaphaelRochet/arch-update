@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 19:11+0200\n"
+"POT-Creation-Date: 2020-08-17 09:53+0200\n"
 "PO-Revision-Date: 2020-03-03 19:26+0100\n"
 "Last-Translator: Josef Gottlander <josef.gottlander@gmail.com>\n"
 "Language-Team: Swedish\n"
@@ -19,98 +19,98 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Gtranslator 3.34.0\n"
 
-#: extension.js:115
+#: extension.js:117
 msgid "Settings"
 msgstr "Inställningar"
 
-#: extension.js:116 extension.js:470
+#: extension.js:118 extension.js:488
 msgid "Update now"
 msgstr "Uppdatera nu"
 
-#: extension.js:117
+#: extension.js:119
 msgid "Open package manager"
 msgstr "Öppna pakethanterare"
 
-#: extension.js:121
+#: extension.js:123
 msgid "Checking"
 msgstr "Kollar"
 
-#: extension.js:132
+#: extension.js:134
 msgid "Check now"
 msgstr "Kolla nu"
 
-#: extension.js:158
+#: extension.js:161
 msgid "Waiting first check"
 msgstr "Väntar på första koll"
 
-#: extension.js:316
+#: extension.js:334
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d uppdatering väntar"
 msgstr[1] "%d uppdateringar väntar"
 
-#: extension.js:331 extension.js:337
+#: extension.js:349 extension.js:355
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Ny Arch Linux-uppdatering"
 msgstr[1] "Nya Arch Linux-uppdateringar§"
 
-#: extension.js:338
+#: extension.js:356
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Det finns %d uppdatering som väntar"
 msgstr[1] "Det finns %d uppdateringar som väntar"
 
-#: extension.js:356
+#: extension.js:374
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "OBS: du måste ha installerat pacman-contrib för att kunna använda "
 "'checkupdates'-skriptet"
 
-#: extension.js:358
+#: extension.js:376
 msgid "Error"
 msgstr "Fel"
 
-#: extension.js:363
+#: extension.js:381
 msgid "Up to date :)"
 msgstr "Uppdaterad :)"
 
-#: prefs.xml:57
+#: prefs.xml:62
 msgid "Checking for updates"
 msgstr "Kolla efter uppdateringar"
 
-#: prefs.xml:81
+#: prefs.xml:86
 msgid "Time to wait before first check (seconds)"
 msgstr "Sekunder att vänta innan första koll"
 
-#: prefs.xml:100
+#: prefs.xml:105
 msgid "Interval between updates check (minutes)"
 msgstr "Minuter mellan uppdateringskollar"
 
-#: prefs.xml:119
+#: prefs.xml:124
 msgid "Strip out versions numbers"
 msgstr "Ta bort versionnummer"
 
-#: prefs.xml:141
+#: prefs.xml:146
 msgid "Indicator"
 msgstr "Indikator"
 
-#: prefs.xml:156
+#: prefs.xml:161
 msgid "Always visible"
 msgstr "Alltid synlig"
 
-#: prefs.xml:175
+#: prefs.xml:180
 msgid "Use build-in icons"
 msgstr ""
 
-#: prefs.xml:194
+#: prefs.xml:199
 msgid "Show updates count on indicator"
 msgstr "Visa antalet uppdateringar i indikatorn"
 
-#: prefs.xml:214
+#: prefs.xml:219
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -118,56 +118,72 @@ msgstr ""
 "Expandera listan automatiskt om antalet uppdateringar är färre än detta "
 "nummer (0 för att inaktivera)"
 
-#: prefs.xml:237
+#: prefs.xml:239
+msgid "Position in Panel"
+msgstr ""
+
+#: prefs.xml:253
+msgid "Left"
+msgstr ""
+
+#: prefs.xml:254
+msgid "Center"
+msgstr ""
+
+#: prefs.xml:255
+msgid "Right"
+msgstr ""
+
+#: prefs.xml:278
 msgid "Notification"
 msgstr "Aviseringar"
 
-#: prefs.xml:252
+#: prefs.xml:293
 msgid "Send a notification when new updates are available"
 msgstr "Avisera när det finns nya uppdateringar"
 
-#: prefs.xml:271
+#: prefs.xml:312
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Avisera kortvarigt (autoavfärdas)"
 
-#: prefs.xml:290
+#: prefs.xml:331
 msgid "How much information to show on notifications"
 msgstr "Vad skall visas i aviseringar"
 
-#: prefs.xml:298
+#: prefs.xml:339
 msgid "Count only"
 msgstr "Endast antal"
 
-#: prefs.xml:299
+#: prefs.xml:340
 msgid "New updates names"
 msgstr "Namn på nya uppdateringar"
 
-#: prefs.xml:300
+#: prefs.xml:341
 msgid "All updates names"
 msgstr "Namn på alla uppdateringar"
 
-#: prefs.xml:315
+#: prefs.xml:356
 msgid "Basic settings"
 msgstr "Grundinställningar"
 
-#: prefs.xml:331
+#: prefs.xml:372
 msgid "Command to check for package updates"
 msgstr "Kommando för att kolla efter uppdateringar"
 
-#: prefs.xml:348
+#: prefs.xml:389
 msgid "Command to update packages"
 msgstr "Kommando för att uppdatera paket"
 
-#: prefs.xml:365
+#: prefs.xml:406
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Sökväg till lokal Pacman-katalog - För att upptäcka när nya paket är "
 "installerade"
 
-#: prefs.xml:382
+#: prefs.xml:423
 msgid "Command to open package manager (optional)"
 msgstr "Kommando för att öppna pakethanteraren (valfritt)"
 
-#: prefs.xml:399
+#: prefs.xml:440
 msgid "Advanced settings"
 msgstr "Avancerade inställningar"
