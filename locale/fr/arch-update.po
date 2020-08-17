@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 09:53+0200\n"
-"PO-Revision-Date: 2020-05-23 19:14+0200\n"
+"PO-Revision-Date: 2020-08-17 09:55+0200\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: extension.js:117
@@ -119,19 +119,19 @@ msgstr ""
 
 #: prefs.xml:239
 msgid "Position in Panel"
-msgstr ""
+msgstr "Positionnement"
 
 #: prefs.xml:253
 msgid "Left"
-msgstr ""
+msgstr "Gauche"
 
 #: prefs.xml:254
 msgid "Center"
-msgstr ""
+msgstr "Centre"
 
 #: prefs.xml:255
 msgid "Right"
-msgstr ""
+msgstr "Droite"
 
 #: prefs.xml:278
 msgid "Notification"
