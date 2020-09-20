@@ -24,6 +24,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v38
+- Fixed crash about Gtk.IconTheme.get_defaults
+- Added indicator position setting
+
 ### v37
 - Theme support is back ! Also an option to force built-in icons if needed.
 
