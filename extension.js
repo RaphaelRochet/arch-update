@@ -180,19 +180,16 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_positionChanged(){
-        this.container.get_parent().remove_actor(this.container);
-
-        let boxes = {
-            0: Main.panel._leftBox,
-            1: Main.panel._centerBox,
-            2: Main.panel._rightBox
-        };
-
-        let p = this._settings.get_int('position');
-        let i = this._settings.get_int('position-number');
-
-        boxes[p].insert_child_at_index(this.container, i);
-    },
+		this.container.get_parent().remove_actor(this.container);
+		let boxes = {
+			0: Main.panel._leftBox,
+			1: Main.panel._centerBox,
+			2: Main.panel._rightBox
+		};
+		let p = this._settings.get_int('position');
+		let i = this._settings.get_int('position-number');
+		boxes[p].insert_child_at_index(this.container, i);
+	},
 
 	_openSettings: function () {
 		Gio.DBus.session.call(

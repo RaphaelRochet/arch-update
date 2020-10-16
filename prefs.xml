@@ -243,25 +243,25 @@
 								</object>
 							</child>
 							<child>
-							    <object class="GtkBox">
-							        <property name="spacing">12</property>
-							        <property name="margin-left">12</property>
-							        <property name="hexpand">false</property>
-							        <child>
-								        <object class="GtkComboBoxText" id="field_position">
-									        <items>
-										        <item translatable="yes" id="0">Left</item>
-										        <item translatable="yes" id="1">Center</item>
-										        <item translatable="yes" id="2">Right</item>
-									        </items>
-								        </object>
-							        </child>
-							        <child>
-								        <object class="GtkSpinButton" id="field_positionnumber">
-									        <property name="adjustment">Adjust_4</property>
-								        </object>
-								    </child>
-						        </object>
+								<object class="GtkBox">
+									<property name="spacing">12</property>
+									<property name="margin-left">12</property>
+									<property name="hexpand">false</property>
+									<child>
+										<object class="GtkComboBoxText" id="field_position">
+											<items>
+												<item translatable="yes" id="0">Left</item>
+												<item translatable="yes" id="1">Center</item>
+												<item translatable="yes" id="2">Right</item>
+											</items>
+										</object>
+									</child>
+									<child>
+										<object class="GtkSpinButton" id="field_positionnumber">
+											<property name="adjustment">Adjust_4</property>
+										</object>
+									</child>
+								</object>
 							</child>
 						</object>
 					</child>
