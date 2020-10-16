@@ -152,13 +152,21 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
 		this.managerMenuItem.connect('activate', Lang.bind(this, this._openManager));
 
+		// Some initial status display
+		this._showChecking(false);
+		this._updateMenuExpander(false, _('Waiting first check'));
+
+		// Restore previous updates list if any
+		this._updateList = UPDATES_LIST;
+
 		// Load settings
 		this._settings = Utils.getSettings();
 		this._settings.connect('changed', Lang.bind(this, this._positionChanged));
 		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
 		this._applySettings();
-		this._showChecking(false);
-		this._updateMenuExpander(false, _('Waiting first check'));
+
+		// Start monitoring external changes
+		this._startFolderMonitor();
 
 		if (FIRST_BOOT) {
 			// Schedule first check only if this is the first extension load
@@ -168,15 +176,10 @@ const ArchUpdateIndicator = new Lang.Class({
 				that._checkUpdates();
 				that._FirstTimeoutId = null;
 				FIRST_BOOT = 0;
-				that._startFolderMonitor();
 				return false; // Run once
 			});
-		} else {
-			// Restore previous state
-			this._updateList = UPDATES_LIST;
-			this._updateStatus(UPDATES_PENDING);
-			this._startFolderMonitor();
 		}
+
 	},
 
 	_positionChanged(){
