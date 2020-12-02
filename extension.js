@@ -109,8 +109,6 @@ const ArchUpdateIndicator = new Lang.Class({
 		// Prepare the special menu : a submenu for updates list that will look like a regular menu item when disabled
 		// Scrollability will also be taken care of by the popupmenu
 		this.menuExpander = new PopupMenu.PopupSubMenuMenuItem('');
-		this.updatesListMenuLabel = new St.Label();
-		this.menuExpander.menu.box.add(this.updatesListMenuLabel);
 		this.menuExpander.menu.box.style_class = 'arch-updates-list';
 
 		// Other standard menu items
@@ -332,7 +330,6 @@ const ArchUpdateIndicator = new Lang.Class({
 			// Updates pending
 			this.updateIcon.set_gicon( this._getCustIcon('arch-updates-symbolic') );
 			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
-			this.updatesListMenuLabel.set_text( this._updateList.join("\n") );
 			this.label.set_text(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				if (HOWMUCH > 0) {
@@ -360,7 +357,6 @@ const ArchUpdateIndicator = new Lang.Class({
 			// Store the new list
 			UPDATES_LIST = this._updateList;
 		} else {
-			this.updatesListMenuLabel.set_text("");
 			this.label.set_text('');
 			if (updatesCount == -1) {
 				// Unknown
@@ -388,6 +384,7 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	_updateMenuExpander: function(enabled, label) {
+		this.menuExpander.menu.box.destroy_all_children();
 		if (label == "") {
 			// No text, hide the menuitem
 			this.menuExpander.actor.visible = false;
@@ -397,6 +394,11 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.menuExpander._triangle.visible = enabled;
 			this.menuExpander.label.set_text(label);
 			this.menuExpander.actor.visible = true;
+			if (enabled && this._updateList.length > 0) {
+				this._updateList.forEach( item => {
+					this.menuExpander.menu.box.add( new St.Label({ text: item }) );
+				} );
+			}
 		}
 
 		// 'Update now' visibility is linked so let's save a few lines and set it here
