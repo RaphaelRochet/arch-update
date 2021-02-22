@@ -1,8 +1,8 @@
 {
   "description": "Update indicator for Arch Linux and GNOME Shell.\n** Note : you now need to install the package pacman-contrib to use the checkupdates script. **\n  Can support AUR or other distros by changing command used to check for and apply updates.",
   "name": "Arch Linux Updates Indicator",
-  "shell-version": [ "3.36.1" ],
+  "shell-version": [ "3.36.1", "3.38" ],
   "url": "https://github.com/RaphaelRochet/arch-update", 
   "uuid": "arch-update@RaphaelRochet", 
-  "version": 38
+  "version": 39
 }

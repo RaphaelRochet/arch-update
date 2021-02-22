@@ -24,6 +24,11 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v39
+- Fixed update list empty after suspend
+- Fixed update list not fully visible when lots of updates
+- Updated translations : Chinese and Spanish
+
 ### v38
 - Fixed crash about Gtk.IconTheme.get_defaults
 - Added indicator position setting
