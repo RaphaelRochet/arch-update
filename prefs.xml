@@ -41,21 +41,25 @@
 </object>
 
 <object class="GtkNotebook" id="prefs_widget">
-	<property name="expand">true</property>
 
 	<child>
 		<object class="GtkGrid">
-			<property name="margin">18</property>
+			<property name="margin-top">18</property>
+			<property name="margin-start">18</property>
+			<property name="margin-end">18</property>
+			<property name="margin-bottom">18</property>
 			<property name="row-spacing">18</property>
 			<property name="row-homogeneous">false</property>
 			<property name="orientation">vertical</property>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+				<property name="orientation">vertical</property>
 				<property name="spacing">6</property>
 
 					<child>
 						<object class="GtkBox">
+							<property name="orientation">horizontal</property>
 							<property name="spacing">12</property>
 							<child>
 								<object class="GtkLabel">
@@ -79,7 +83,7 @@
 
 					<child>
 						<object class="GtkBox">
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<property name="spacing">12</property>
 							<child>
 								<object class="GtkLabel">
@@ -98,7 +102,7 @@
 
 					<child>
 						<object class="GtkBox">
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<property name="spacing">12</property>
 							<child>
 								<object class="GtkLabel">
@@ -117,7 +121,7 @@
 
 					<child>
 						<object class="GtkBox">
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<property name="spacing">12</property>
 							<child>
 								<object class="GtkLabel">
@@ -138,7 +142,8 @@
 			</child>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+				<property name="orientation">vertical</property>
 				<property name="spacing">6</property>
 
 					<child>
@@ -155,7 +160,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
 									<property name="label" translatable="yes">Always visible</property>
@@ -174,7 +179,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
 									<property name="label" translatable="yes">Use build-in icons</property>
@@ -193,7 +198,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
 									<property name="label" translatable="yes">Show updates count on indicator</property>
@@ -212,7 +217,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<property name="hexpand">true</property>
 							<child>
 								<object class="GtkLabel">
@@ -232,7 +237,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<property name="hexpand">true</property>
 							<child>
 								<object class="GtkLabel">
@@ -245,7 +250,7 @@
 							<child>
 								<object class="GtkBox">
 									<property name="spacing">12</property>
-									<property name="margin-left">12</property>
+									<property name="margin-start">12</property>
 									<property name="hexpand">false</property>
 									<child>
 										<object class="GtkComboBoxText" id="field_position">
@@ -270,7 +275,8 @@
 			</child>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+					<property name="orientation">vertical</property>
 					<property name="spacing">6</property>
 
 					<child>
@@ -287,7 +293,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
 									<property name="label" translatable="yes">Send a notification when new updates are available</property>
@@ -306,7 +312,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
 									<property translatable="yes" name="label">Use transient notifications (auto dismiss)</property>
@@ -325,7 +331,7 @@
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
-							<property name="margin-left">12</property>
+							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
 									<property translatable="yes" name="label">How much information to show on notifications</property>
@@ -359,13 +365,17 @@
 
 	<child>
 		<object class="GtkGrid">
-			<property name="margin">18</property>
+			<property name="margin-top">18</property>
+			<property name="margin-start">18</property>
+			<property name="margin-end">18</property>
+			<property name="margin-bottom">18</property>
 			<property name="row-spacing">18</property>
 			<property name="row-homogeneous">false</property>
 			<property name="orientation">vertical</property>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+					<property name="orientation">vertical</property>
 					<property name="spacing">6</property>
 					<child>
 						<object class="GtkLabel">
@@ -382,7 +392,8 @@
 			</child>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+					<property name="orientation">vertical</property>
 					<property name="spacing">6</property>
 					<child>
 						<object class="GtkLabel">
@@ -399,7 +410,8 @@
 			</child>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+					<property name="orientation">vertical</property>
 					<property name="spacing">6</property>
 					<child>
 						<object class="GtkLabel">
@@ -416,7 +428,8 @@
 			</child>
 
 			<child>
-				<object class="GtkVBox">
+				<object class="GtkBox">
+					<property name="orientation">vertical</property>
 					<property name="spacing">6</property>
 					<child>
 						<object class="GtkLabel">

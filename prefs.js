@@ -62,7 +62,6 @@ function buildPrefsWidget(){
 	settings.bind('position' , buildable.get_object('field_position') , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position-number' , buildable.get_object('field_positionnumber') , 'value' , Gio.SettingsBindFlags.DEFAULT);
 
-	box.show_all();
 	return box;
 };
 
