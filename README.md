@@ -24,6 +24,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v40
+- Gnome 40 only
+
 ### v39
 - Fixed update list empty after suspend
 - Fixed update list not fully visible when lots of updates
