@@ -24,8 +24,12 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v41
+- Fixed metadata for extensions website
+
 ### v40
 - Gnome 40 only
+- Updated translation : Russian
 
 ### v39
 - Fixed update list empty after suspend
