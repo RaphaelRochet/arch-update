@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Translators:
 # Karol Babioch <karol@babioch.de>, 2016
-# Onno Giesmann <nutzer3105@gmail.com>, 2020
+# Onno Giesmann <nutzer3105@gmail.com>, 2020-2021
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 09:53+0200\n"
-"PO-Revision-Date: 2020-05-22 21:01+0200\n"
+"PO-Revision-Date: 2021-04-09 07:38+0200\n"
 "Last-Translator: Onno Giesmann <nutzer3105@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: extension.js:117
@@ -68,7 +68,7 @@ msgstr[1] "Es gibt %d ausstehende Aktualisierungen"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
-"Hinweis : installiere erst pacman-contrib, um 'checkupdates' zu benutzen."
+"Hinweis : Zuerst pacman-contrib installieren, um 'checkupdates' zu benutzen."
 
 #: extension.js:376
 msgid "Error"
@@ -104,7 +104,7 @@ msgstr "Immer sichtbar"
 
 #: prefs.xml:180
 msgid "Use build-in icons"
-msgstr ""
+msgstr "Eingebaute Symbole verwenden"
 
 #: prefs.xml:199
 msgid "Show updates count on indicator"
@@ -120,19 +120,19 @@ msgstr ""
 
 #: prefs.xml:239
 msgid "Position in Panel"
-msgstr ""
+msgstr "Position in der Leiste"
 
 #: prefs.xml:253
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: prefs.xml:254
 msgid "Center"
-msgstr ""
+msgstr "Mitte"
 
 #: prefs.xml:255
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: prefs.xml:278
 msgid "Notification"
@@ -148,7 +148,7 @@ msgstr "Verwende kurzlebige Benachrichtigung (automatische Ausblendung)"
 
 #: prefs.xml:331
 msgid "How much information to show on notifications"
-msgstr "Informationen, welche in der Benachrichtigung angezeigt werden"
+msgstr "Informationen, die in der Benachrichtigung angezeigt werden"
 
 #: prefs.xml:339
 msgid "Count only"
