@@ -24,6 +24,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v42
+- Updated translation : German
+
 ### v41
 - Fixed metadata for extensions website
 
