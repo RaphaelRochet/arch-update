@@ -9,7 +9,7 @@ Update indicator for Arch Linux and GNOME Shell
 - Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Swedish, Norwegian Bokmal, Russian, Persian, Turkish, Esperanto, Finnish languages. (Thanks translators !)
 
 ## Requirements
-If you use the default "checkupdates" way (part of pacman), you will need to install "fakeroot".
+If you use the default "checkupdates" way you will need to install "pacman-contrib".
 
 ## One-click install
 It's on extensions.gnome.org :
