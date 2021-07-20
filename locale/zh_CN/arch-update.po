@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 09:53+0200\n"
-"PO-Revision-Date: 2016-02-23 21:09+0800\n"
-"Last-Translator:Meng Yin <dr.bart@live.com>\n"
+"PO-Revision-Date: 2021-07-20 16:14+0800\n"
+"Last-Translator: zhmars <18466397+zhmars@users.noreply.github.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 3.0\n"
 
 #: extension.js:117
 msgid "Settings"
@@ -62,7 +62,7 @@ msgstr[0] "有 %d 个更新正在等待操作"
 #: extension.js:374
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
-msgstr "注意：使用“检查更新”脚本需要安装pacman-contrib"
+msgstr "注意：使用“检查更新”脚本需要安装 pacman-contrib。"
 
 #: extension.js:376
 msgid "Error"
@@ -73,26 +73,24 @@ msgid "Up to date :)"
 msgstr "已是最新 ^_^"
 
 #: prefs.xml:62
-#, fuzzy
 msgid "Checking for updates"
-msgstr "更新设置"
+msgstr "检查"
 
 #: prefs.xml:86
 msgid "Time to wait before first check (seconds)"
-msgstr "首次检查前等待时间(秒)"
+msgstr "首次检查前等待时间（秒）"
 
 #: prefs.xml:105
 msgid "Interval between updates check (minutes)"
-msgstr "更新检查间隔(秒)"
+msgstr "更新检查间隔（秒）"
 
 #: prefs.xml:124
 msgid "Strip out versions numbers"
 msgstr "剔除版本号"
 
 #: prefs.xml:146
-#, fuzzy
 msgid "Indicator"
-msgstr "图标设置"
+msgstr "图标"
 
 #: prefs.xml:161
 msgid "Always visible"
@@ -100,7 +98,7 @@ msgstr "始终显示"
 
 #: prefs.xml:180
 msgid "Use build-in icons"
-msgstr "使用软件内置图标"
+msgstr "使用内置图标"
 
 #: prefs.xml:199
 msgid "Show updates count on indicator"
@@ -110,7 +108,7 @@ msgstr "图标上显示更新数目"
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
-msgstr "如果更新数低于此数值则自动展开更新列表(0表示“禁用”)"
+msgstr "如果更新数低于此数值则自动展开更新列表（0 表示禁用）"
 
 #: prefs.xml:239
 msgid "Position in Panel"
@@ -122,14 +120,13 @@ msgstr "左"
 
 #: prefs.xml:254
 msgid "Center"
-msgstr "中央"
+msgstr "中间"
 
 #: prefs.xml:255
 msgid "Right"
 msgstr "右"
 
 #: prefs.xml:278
-#, fuzzy
 msgid "Notification"
 msgstr "通知"
 
@@ -139,7 +136,7 @@ msgstr "当有新的更新可用时发送通知"
 
 #: prefs.xml:312
 msgid "Use transient notifications (auto dismiss)"
-msgstr "使用暂时性通知(自动消除)"
+msgstr "使用暂时性通知（自动消除）"
 
 #: prefs.xml:331
 msgid "How much information to show on notifications"
@@ -158,7 +155,6 @@ msgid "All updates names"
 msgstr "所有更新名称"
 
 #: prefs.xml:356
-#, fuzzy
 msgid "Basic settings"
 msgstr "基本设置"
 
@@ -175,11 +171,9 @@ msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman 本地目录路径 - 用于检测新软件包被安装的时间"
 
 #: prefs.xml:423
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "更新软件包的命令(可选)"
+msgstr "打开包管理器的命令（可选）"
 
 #: prefs.xml:440
-#, fuzzy
 msgid "Advanced settings"
 msgstr "高级设置"
