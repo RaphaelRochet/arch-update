@@ -46,7 +46,7 @@ msgstr "첫 확인을 기다리는 중..."
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
-msgstr[0] "업데이트 %d개 남음"
+msgstr[0] "업데이트 %d개 대기 중"
 
 #: extension.js:349 extension.js:355
 msgid "New Arch Linux Update"
