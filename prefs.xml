@@ -182,7 +182,7 @@
 							<property name="margin-start">12</property>
 							<child>
 								<object class="GtkLabel">
-									<property name="label" translatable="yes">Use build-in icons</property>
+									<property name="label" translatable="yes">Use built-in icons</property>
 									<property name="hexpand">true</property>
 									<property name="halign">1</property>
 								</object>
