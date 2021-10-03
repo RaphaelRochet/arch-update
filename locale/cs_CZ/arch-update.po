@@ -101,7 +101,7 @@ msgid "Always visible"
 msgstr "Vždy viditelný"
 
 #: prefs.xml:180
-msgid "Use build-in icons"
+msgid "Use built-in icons"
 msgstr ""
 
 #: prefs.xml:199

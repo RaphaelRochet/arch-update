@@ -103,7 +103,7 @@ msgid "Always visible"
 msgstr "Siempre visible"
 
 #: prefs.xml:180
-msgid "Use build-in icons"
+msgid "Use built-in icons"
 msgstr "Usar iconos internos"
 
 #: prefs.xml:199

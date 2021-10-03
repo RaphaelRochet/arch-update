@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 09:53+0200\n"
-"PO-Revision-Date: 2021-06-24 22:21+0300\n"
+"PO-Revision-Date: 2021-10-03 16:20+0200\n"
 "Last-Translator: Eugene <eugene@nxdomain.tld>\n"
 "Language-Team: \n"
 "Language: uk_UA\n"
@@ -106,7 +106,7 @@ msgid "Always visible"
 msgstr "Видимий завжди"
 
 #: prefs.xml:180
-msgid "Use build-in icons"
+msgid "Use built-in icons"
 msgstr "Використовувати вбудовані піктограми"
 
 #: prefs.xml:199

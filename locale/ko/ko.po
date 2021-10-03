@@ -97,7 +97,7 @@ msgid "Always visible"
 msgstr "항상 보이기"
 
 #: prefs.xml:180
-msgid "Use build-in icons"
+msgid "Use built-in icons"
 msgstr "내장된 아이콘 사용"
 
 #: prefs.xml:199
