@@ -97,7 +97,6 @@ msgid "Always visible"
 msgstr "始终显示"
 
 #: prefs.xml:185
-#, fuzzy
 msgid "Use built-in icons"
 msgstr "使用内置图标"
 

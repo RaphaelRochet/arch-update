@@ -102,7 +102,6 @@ msgid "Always visible"
 msgstr "Altijd tonen"
 
 #: prefs.xml:185
-#, fuzzy
 msgid "Use built-in icons"
 msgstr "Meegeleverde pictogrammen gebruiken"
 
