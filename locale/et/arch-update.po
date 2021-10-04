@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 09:53+0200\n"
+"POT-Creation-Date: 2021-10-04 09:50+0200\n"
 "PO-Revision-Date: 2018-05-21 19:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,96 +18,96 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: extension.js:117
+#: extension.js:115
 msgid "Settings"
 msgstr "Seaded"
 
-#: extension.js:118 extension.js:488
+#: extension.js:116 extension.js:490
 msgid "Update now"
 msgstr "Uuenda kohe"
 
-#: extension.js:119
+#: extension.js:117
 msgid "Open package manager"
 msgstr "Ava paketihaldur"
 
-#: extension.js:123
+#: extension.js:121
 msgid "Checking"
 msgstr "Kontrollimine"
 
-#: extension.js:134
+#: extension.js:132
 msgid "Check now"
 msgstr "Kontrolli kohe"
 
-#: extension.js:161
+#: extension.js:155
 msgid "Waiting first check"
 msgstr "Ootan esimest kontrolli"
 
-#: extension.js:334
+#: extension.js:332
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d uuendus ootel"
 msgstr[1] "%d uuendust ootel"
 
-#: extension.js:349 extension.js:355
+#: extension.js:346 extension.js:352
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Uus Arch Linux'i uuendus"
 msgstr[1] "Uued Arch Linux'i uuendused"
 
-#: extension.js:356
+#: extension.js:353
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "%d uuendus on ootel"
 msgstr[1] "%d uuendust on ootel"
 
-#: extension.js:374
+#: extension.js:370
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:376
+#: extension.js:372
 msgid "Error"
 msgstr "Viga"
 
-#: extension.js:381
+#: extension.js:377
 msgid "Up to date :)"
 msgstr "Süsteem on ajakohane :)"
 
-#: prefs.xml:62
+#: prefs.xml:66
 msgid "Checking for updates"
 msgstr "Uuenduste kontrollimine"
 
-#: prefs.xml:86
+#: prefs.xml:90
 msgid "Time to wait before first check (seconds)"
 msgstr "Oodatav aeg enne esimest kontrolli (sekundites)"
 
-#: prefs.xml:105
+#: prefs.xml:109
 msgid "Interval between updates check (minutes)"
 msgstr "Intervall uuenduste kontrollimise vahel (minutites)"
 
-#: prefs.xml:124
+#: prefs.xml:128
 msgid "Strip out versions numbers"
 msgstr "Jäta välja versiooninumbrid"
 
-#: prefs.xml:146
+#: prefs.xml:151
 msgid "Indicator"
 msgstr "Indikaator"
 
-#: prefs.xml:161
+#: prefs.xml:166
 msgid "Always visible"
 msgstr "Alati nähtav"
 
-#: prefs.xml:180
-msgid "Use build-in icons"
+#: prefs.xml:185
+msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:199
+#: prefs.xml:204
 msgid "Show updates count on indicator"
 msgstr "Näita uuenduste arvu indikaatoril"
 
-#: prefs.xml:219
+#: prefs.xml:224
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -115,70 +115,70 @@ msgstr ""
 "Laienda uuenduste nimekirja automaatselt, kui uuenduste arv on vähem kui see "
 "number (keelamiseks kirjuta 0)"
 
-#: prefs.xml:239
+#: prefs.xml:244
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:253
+#: prefs.xml:258
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:254
+#: prefs.xml:259
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:255
+#: prefs.xml:260
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:278
+#: prefs.xml:284
 msgid "Notification"
 msgstr "Teade"
 
-#: prefs.xml:293
+#: prefs.xml:299
 msgid "Send a notification when new updates are available"
 msgstr "Saada teade, kui uued uuendused on saadaval"
 
-#: prefs.xml:312
+#: prefs.xml:318
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Kasuta lühiaegseid teateid (automaatselt sulguv)"
 
-#: prefs.xml:331
+#: prefs.xml:337
 msgid "How much information to show on notifications"
 msgstr "Millist infot teadetes kuvada"
 
-#: prefs.xml:339
+#: prefs.xml:345
 msgid "Count only"
 msgstr "Uuendatavate pakettide arv"
 
-#: prefs.xml:340
+#: prefs.xml:346
 msgid "New updates names"
 msgstr "Uued uuendatavad paketid"
 
-#: prefs.xml:341
+#: prefs.xml:347
 msgid "All updates names"
 msgstr "Kõik uuendatavad paketid"
 
-#: prefs.xml:356
+#: prefs.xml:362
 msgid "Basic settings"
 msgstr "Põhiseaded"
 
-#: prefs.xml:372
+#: prefs.xml:382
 msgid "Command to check for package updates"
 msgstr "Paketiuuenduste kontrollimise käsklus"
 
-#: prefs.xml:389
+#: prefs.xml:400
 msgid "Command to update packages"
 msgstr "Pakettide uuendamise käsklus"
 
-#: prefs.xml:406
+#: prefs.xml:418
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman'i kohalik kaustatee - et tuvastada uute pakettide installimine"
 
-#: prefs.xml:423
+#: prefs.xml:436
 msgid "Command to open package manager (optional)"
 msgstr "Paketihalduri avamise käsklus (valikuline)"
 
-#: prefs.xml:440
+#: prefs.xml:453
 msgid "Advanced settings"
 msgstr "Täpsemad seaded"

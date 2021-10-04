@@ -7,173 +7,174 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 09:53+0200\n"
+"POT-Creation-Date: 2021-10-04 09:50+0200\n"
 "PO-Revision-Date: 2021-08-30 17:30+0900\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.0\n"
-"Last-Translator: \n"
-"Language: ko\n"
 
-#: extension.js:117
+#: extension.js:115
 msgid "Settings"
 msgstr "설정"
 
-#: extension.js:118 extension.js:488
+#: extension.js:116 extension.js:490
 msgid "Update now"
 msgstr "지금 업데이트"
 
-#: extension.js:119
+#: extension.js:117
 msgid "Open package manager"
 msgstr "패키지 관리자 열기"
 
-#: extension.js:123
+#: extension.js:121
 msgid "Checking"
 msgstr "확인 중..."
 
-#: extension.js:134
+#: extension.js:132
 msgid "Check now"
 msgstr "업데이트 확인"
 
-#: extension.js:161
+#: extension.js:155
 msgid "Waiting first check"
 msgstr "첫 확인을 기다리는 중..."
 
-#: extension.js:334
+#: extension.js:332
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "업데이트 %d개 대기 중"
 
-#: extension.js:349 extension.js:355
+#: extension.js:346 extension.js:352
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "새로운 업데이트가 있습니다."
 
-#: extension.js:356
+#: extension.js:353
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "업데이트 %d개가 있습니다."
 
-#: extension.js:374
+#: extension.js:370
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr "'checkupdates' 스크립트를 사용하려면 pacman-contrib가 필요합니다."
 
-#: extension.js:376
+#: extension.js:372
 msgid "Error"
 msgstr "오류"
 
-#: extension.js:381
+#: extension.js:377
 msgid "Up to date :)"
 msgstr "시스템이 최신 상태입니다."
 
-#: prefs.xml:62
+#: prefs.xml:66
 msgid "Checking for updates"
 msgstr "업데이트 확인"
 
-#: prefs.xml:86
+#: prefs.xml:90
 msgid "Time to wait before first check (seconds)"
 msgstr "업데이트를 처음 확인하기 전까지의 대기 시간 (초)"
 
-#: prefs.xml:105
+#: prefs.xml:109
 msgid "Interval between updates check (minutes)"
 msgstr "업데이트를 확인할 간격 (분)"
 
-#: prefs.xml:124
+#: prefs.xml:128
 msgid "Strip out versions numbers"
 msgstr "버전 표시"
 
-#: prefs.xml:146
+#: prefs.xml:151
 msgid "Indicator"
 msgstr "인디케이터"
 
-#: prefs.xml:161
+#: prefs.xml:166
 msgid "Always visible"
 msgstr "항상 보이기"
 
-#: prefs.xml:180
-msgid "Use build-in icons"
+#: prefs.xml:185
+#, fuzzy
+msgid "Use built-in icons"
 msgstr "내장된 아이콘 사용"
 
-#: prefs.xml:199
+#: prefs.xml:204
 msgid "Show updates count on indicator"
 msgstr "표시기에 업데이트 수 표시"
 
-#: prefs.xml:219
+#: prefs.xml:224
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr "(사용 안 함 = 0)"
 
-#: prefs.xml:239
+#: prefs.xml:244
 msgid "Position in Panel"
 msgstr "패널 내 위치"
 
-#: prefs.xml:253
+#: prefs.xml:258
 msgid "Left"
 msgstr "왼쪽"
 
-#: prefs.xml:254
+#: prefs.xml:259
 msgid "Center"
 msgstr "가운데"
 
-#: prefs.xml:255
+#: prefs.xml:260
 msgid "Right"
 msgstr "오른쪽"
 
-#: prefs.xml:278
+#: prefs.xml:284
 msgid "Notification"
 msgstr "알림"
 
-#: prefs.xml:293
+#: prefs.xml:299
 msgid "Send a notification when new updates are available"
 msgstr "새로운 업데이트가 있으면 알림 표시"
 
-#: prefs.xml:312
+#: prefs.xml:318
 msgid "Use transient notifications (auto dismiss)"
 msgstr "일정 시간 후 자동으로 사라지는 알림"
 
-#: prefs.xml:331
+#: prefs.xml:337
 msgid "How much information to show on notifications"
 msgstr "알림에 표시할 내용"
 
-#: prefs.xml:339
+#: prefs.xml:345
 msgid "Count only"
 msgstr "업데이트 수만 표시"
 
-#: prefs.xml:340
+#: prefs.xml:346
 msgid "New updates names"
 msgstr "새 업데이트 이름"
 
-#: prefs.xml:341
+#: prefs.xml:347
 msgid "All updates names"
 msgstr "모든 업데이트 이름"
 
-#: prefs.xml:356
+#: prefs.xml:362
 msgid "Basic settings"
 msgstr "일반"
 
-#: prefs.xml:372
+#: prefs.xml:382
 msgid "Command to check for package updates"
 msgstr "패키지 업데이트를 확인할 명령어"
 
-#: prefs.xml:389
+#: prefs.xml:400
 msgid "Command to update packages"
 msgstr "패키지를 업데이트할 명령어"
 
-#: prefs.xml:406
+#: prefs.xml:418
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman 경로 - 새로운 패키지가 설치되었는지 확인"
 
-#: prefs.xml:423
+#: prefs.xml:436
 msgid "Command to open package manager (optional)"
 msgstr "패키지 관리자를 열 때 사용할 명령어"
 
-#: prefs.xml:440
+#: prefs.xml:453
 msgid "Advanced settings"
 msgstr "고급"

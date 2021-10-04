@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 09:53+0200\n"
+"POT-Creation-Date: 2021-10-04 09:50+0200\n"
 "PO-Revision-Date: 2017-05-10 20:15+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -19,31 +19,31 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.1\n"
 
-#: extension.js:117
+#: extension.js:115
 msgid "Settings"
 msgstr "Поставке"
 
-#: extension.js:118 extension.js:488
+#: extension.js:116 extension.js:490
 msgid "Update now"
 msgstr "Надогради одмах"
 
-#: extension.js:119
+#: extension.js:117
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:123
+#: extension.js:121
 msgid "Checking"
 msgstr "Проверавам"
 
-#: extension.js:134
+#: extension.js:132
 msgid "Check now"
 msgstr "Провери одмах"
 
-#: extension.js:161
+#: extension.js:155
 msgid "Waiting first check"
 msgstr "Чекам прву проверу"
 
-#: extension.js:334
+#: extension.js:332
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -51,14 +51,14 @@ msgstr[0] "%d надоградња на чекању"
 msgstr[1] "%d надоградње на чекању"
 msgstr[2] "%d надоградњи на чекању"
 
-#: extension.js:349 extension.js:355
+#: extension.js:346 extension.js:352
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Нова надоградња Арчлинукса"
 msgstr[1] "Нове надоградње Арчлинукса"
 msgstr[2] "Нове надоградње Арчлинукса"
 
-#: extension.js:356
+#: extension.js:353
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -66,125 +66,125 @@ msgstr[0] "На чекању је %d надоградња"
 msgstr[1] "На чекању су %d надоградње"
 msgstr[2] "На чекању је %d надоградњи"
 
-#: extension.js:374
+#: extension.js:370
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:376
+#: extension.js:372
 msgid "Error"
 msgstr "Грешка"
 
-#: extension.js:381
+#: extension.js:377
 msgid "Up to date :)"
 msgstr "Ажурно :)"
 
-#: prefs.xml:62
+#: prefs.xml:66
 msgid "Checking for updates"
 msgstr "Провера надоградњи"
 
-#: prefs.xml:86
+#: prefs.xml:90
 msgid "Time to wait before first check (seconds)"
 msgstr "Време чекања пре прве провере (секунде)"
 
-#: prefs.xml:105
+#: prefs.xml:109
 msgid "Interval between updates check (minutes)"
 msgstr "Интервал између провера ажурности (минути)"
 
-#: prefs.xml:124
+#: prefs.xml:128
 msgid "Strip out versions numbers"
 msgstr "Без бројева верзија"
 
-#: prefs.xml:146
+#: prefs.xml:151
 msgid "Indicator"
 msgstr "Индикатор"
 
-#: prefs.xml:161
+#: prefs.xml:166
 msgid "Always visible"
 msgstr "Увек видљив"
 
-#: prefs.xml:180
-msgid "Use build-in icons"
+#: prefs.xml:185
+msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:199
+#: prefs.xml:204
 msgid "Show updates count on indicator"
 msgstr "Приказ броја надоградњи на индикатору"
 
-#: prefs.xml:219
+#: prefs.xml:224
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 "Аутоматски рашири списак уколико број надоградњи није већи од (0 онемогућује)"
 
-#: prefs.xml:239
+#: prefs.xml:244
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:253
+#: prefs.xml:258
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:254
+#: prefs.xml:259
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:255
+#: prefs.xml:260
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:278
+#: prefs.xml:284
 msgid "Notification"
 msgstr "Обавештења"
 
-#: prefs.xml:293
+#: prefs.xml:299
 msgid "Send a notification when new updates are available"
 msgstr "Приказ обавештења о доступним надоградњама"
 
-#: prefs.xml:312
+#: prefs.xml:318
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Пролазна обавештења (аутоматско одбацивање)"
 
-#: prefs.xml:331
+#: prefs.xml:337
 msgid "How much information to show on notifications"
 msgstr "Колико се података приказује у обавештењима"
 
-#: prefs.xml:339
+#: prefs.xml:345
 msgid "Count only"
 msgstr "само број"
 
-#: prefs.xml:340
+#: prefs.xml:346
 msgid "New updates names"
 msgstr "имена нових надоградњи"
 
-#: prefs.xml:341
+#: prefs.xml:347
 msgid "All updates names"
 msgstr "имена свих надоградњи"
 
-#: prefs.xml:356
+#: prefs.xml:362
 msgid "Basic settings"
 msgstr "Основне поставке"
 
-#: prefs.xml:372
+#: prefs.xml:382
 msgid "Command to check for package updates"
 msgstr "Команда за тражење надоградњи"
 
-#: prefs.xml:389
+#: prefs.xml:400
 msgid "Command to update packages"
 msgstr "Команда за надоградњу пакета"
 
-#: prefs.xml:406
+#: prefs.xml:418
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Путања Пакменове локалне фасцикле — за откривање када су нови пакети "
 "инсталирани"
 
-#: prefs.xml:423
+#: prefs.xml:436
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "Команда за надоградњу пакета"
 
-#: prefs.xml:440
+#: prefs.xml:453
 msgid "Advanced settings"
 msgstr "Напредне поставке"

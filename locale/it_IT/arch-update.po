@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 09:53+0200\n"
+"POT-Creation-Date: 2021-10-04 09:50+0200\n"
 "PO-Revision-Date: 2019-10-21 00:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,98 +18,98 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:117
+#: extension.js:115
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: extension.js:118 extension.js:488
+#: extension.js:116 extension.js:490
 msgid "Update now"
 msgstr "Aggiorna ora"
 
-#: extension.js:119
+#: extension.js:117
 msgid "Open package manager"
 msgstr "Apri gestore dei pachetti"
 
-#: extension.js:123
+#: extension.js:121
 msgid "Checking"
 msgstr "Verificando"
 
-#: extension.js:134
+#: extension.js:132
 msgid "Check now"
 msgstr "Verifica ora"
 
-#: extension.js:161
+#: extension.js:155
 msgid "Waiting first check"
 msgstr "Attendi il primo controllo"
 
-#: extension.js:334
+#: extension.js:332
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "1 aggiornamento disponibile"
 msgstr[1] "%d aggiornamenti disponibili"
 
-#: extension.js:349 extension.js:355
+#: extension.js:346 extension.js:352
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nuovo aggiornamento di Arch Linux"
 msgstr[1] "Nuovi aggiornamenti di Arch Linux"
 
-#: extension.js:356
+#: extension.js:353
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "C'è 1 aggiornamento disponibile"
 msgstr[1] "Ci sono %d aggiornamenti disponibili"
 
-#: extension.js:374
+#: extension.js:370
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Nota : occorre installare pacman-contrib per utilizzare lo script "
 "'checkupdates'."
 
-#: extension.js:376
+#: extension.js:372
 msgid "Error"
 msgstr "Errore"
 
-#: extension.js:381
+#: extension.js:377
 msgid "Up to date :)"
 msgstr "Aggiornato :)"
 
-#: prefs.xml:62
+#: prefs.xml:66
 msgid "Checking for updates"
 msgstr "Verificando la presenza di aggiornamenti"
 
-#: prefs.xml:86
+#: prefs.xml:90
 msgid "Time to wait before first check (seconds)"
 msgstr "Tempo di attesa prima del primo controllo (secondi)"
 
-#: prefs.xml:105
+#: prefs.xml:109
 msgid "Interval between updates check (minutes)"
 msgstr "Intervallo tra il controllo degli aggiornamenti (minuti)"
 
-#: prefs.xml:124
+#: prefs.xml:128
 msgid "Strip out versions numbers"
 msgstr "Estrai numero di versione"
 
-#: prefs.xml:146
+#: prefs.xml:151
 msgid "Indicator"
 msgstr "Indicatore"
 
-#: prefs.xml:161
+#: prefs.xml:166
 msgid "Always visible"
 msgstr "Sempre visibile"
 
-#: prefs.xml:180
-msgid "Use build-in icons"
+#: prefs.xml:185
+msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:199
+#: prefs.xml:204
 msgid "Show updates count on indicator"
 msgstr "Mostra il numero degli aggiornamenti sull'indicatore"
 
-#: prefs.xml:219
+#: prefs.xml:224
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -117,73 +117,73 @@ msgstr ""
 "Estendi automaticamente la lista degli aggiornamenti se il numero è minore "
 "di questo (0 per disattivare)"
 
-#: prefs.xml:239
+#: prefs.xml:244
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:253
+#: prefs.xml:258
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:254
+#: prefs.xml:259
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:255
+#: prefs.xml:260
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:278
+#: prefs.xml:284
 msgid "Notification"
 msgstr "Notifica"
 
-#: prefs.xml:293
+#: prefs.xml:299
 msgid "Send a notification when new updates are available"
 msgstr "Invia una notifica quando sono disponibili nuovi aggiornamenti"
 
-#: prefs.xml:312
+#: prefs.xml:318
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Utilizzare notifiche transitorie (chiusura automatica)"
 
-#: prefs.xml:331
+#: prefs.xml:337
 msgid "How much information to show on notifications"
 msgstr "Quante informazioni mostrare nelle notifiche"
 
-#: prefs.xml:339
+#: prefs.xml:345
 msgid "Count only"
 msgstr "Solo il numero"
 
-#: prefs.xml:340
+#: prefs.xml:346
 msgid "New updates names"
 msgstr "Nomi dei nuovi aggiornamenti"
 
-#: prefs.xml:341
+#: prefs.xml:347
 msgid "All updates names"
 msgstr "Nomi di tutti gli aggiornamenti"
 
-#: prefs.xml:356
+#: prefs.xml:362
 msgid "Basic settings"
 msgstr "Impostazioni base"
 
-#: prefs.xml:372
+#: prefs.xml:382
 msgid "Command to check for package updates"
 msgstr "Comando per verificare la presenza di aggiornamenti"
 
-#: prefs.xml:389
+#: prefs.xml:400
 msgid "Command to update packages"
 msgstr "Comando per aggiornare i pacchetti"
 
-#: prefs.xml:406
+#: prefs.xml:418
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Percorso locale di pacman - Per rilevare quando vengono installati nuovi "
 "pacchetti"
 
-#: prefs.xml:423
+#: prefs.xml:436
 msgid "Command to open package manager (optional)"
 msgstr "Comando per aprire il gestore di pacchetti (opzionale)"
 
-#: prefs.xml:440
+#: prefs.xml:453
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
 
