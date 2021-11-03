@@ -24,6 +24,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v45
+- Fixed an error on unloading introduced in v44
+
 ### v44
 - Minor refactoring
 
