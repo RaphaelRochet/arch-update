@@ -1,0 +1,2 @@
+*.po export-ignore
+*.pot export-ignore
