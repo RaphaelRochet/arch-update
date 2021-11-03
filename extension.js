@@ -262,7 +262,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			GLib.source_remove(this._TimeoutId);
 			this._TimeoutId = null;
 		}
-		this.parent();
+		super.destroy();
 	}
 
 	_checkShowHide() {
