@@ -24,6 +24,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v44
+- Minor refactoring
+
 ### v43
 - Gnome 41
 - New translations : Dutch, Korean, Ukrainian
