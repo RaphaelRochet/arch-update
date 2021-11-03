@@ -35,7 +35,6 @@ const Util = imports.misc.util;
 const ExtensionUtils = imports.misc.extensionUtils;
 const ExtensionManager = imports.ui.main.extensionManager;
 const Me = ExtensionUtils.getCurrentExtension();
-const Utils = Me.imports.utils;
 
 const Format = imports.format;
 const Gettext = imports.gettext.domain('arch-update');
@@ -65,7 +64,7 @@ let UPDATES_LIST       = [];
 
 function init() {
 	String.prototype.format = Format.format;
-	Utils.initTranslations("arch-update");
+	ExtensionUtils.initTranslations("arch-update");
 }
 
 const ArchUpdateIndicator = GObject.registerClass(
@@ -144,7 +143,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		this._updateList = UPDATES_LIST;
 
 		// Load settings
-		this._settings = Utils.getSettings();
+		this._settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.arch-update');
 		this._settings.connect('changed', this._positionChanged.bind(this));
 		this._settingsChangedId = this._settings.connect('changed', this._applySettings.bind(this));
 		this._applySettings();
