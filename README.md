@@ -6,7 +6,7 @@ Update indicator for Arch Linux and GNOME Shell
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
 - Launcher for your favorite update command
-- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Swedish, Norwegian Bokmal, Russian, Persian, Turkish, Esperanto, Finnish languages. (Thanks translators !)
+- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Swedish, Norwegian Bokmal, Russian, Persian, Turkish, Esperanto, Finnish, Dutch, Ukrainian, Korean languages. (Thanks translators !)
 
 ## Requirements
 If you use the default "checkupdates" way you will need to install "pacman-contrib".
@@ -23,6 +23,11 @@ https://aur.archlinux.org/packages/gnome-shell-extension-arch-update/
 To install, simply download as zip and unzip contents in ~/.local/share/gnome-shell/extensions/arch-update@RaphaelRochet
 
 ## Changes
+
+### v43
+- Gnome 41
+- New translations : Dutch, Korean, Ukrainian
+- Updated translations : Simplified Chinese, Russian
 
 ### v42
 - Updated translation : German
