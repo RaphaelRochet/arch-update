@@ -18,7 +18,6 @@
 */
 
 const Clutter = imports.gi.Clutter;
-const Lang = imports.lang;
 
 const St = imports.gi.St;
 const GObject = imports.gi.GObject;
@@ -69,32 +68,19 @@ function init() {
 	Utils.initTranslations("arch-update");
 }
 
-const ArchUpdateIndicator = new Lang.Class({
-	Name: 'ArchUpdateIndicator',
-	Extends: PanelMenu.Button,
-
-	_TimeoutId: null,
-	_FirstTimeoutId: null,
-	_updateProcess_sourceId: null,
-	_updateProcess_stream: null,
-	_updateProcess_pid: null,
-	_updateList: [],
-
-	_getCustIcon: function(icon_name) {
-		// I did not find a way to lookup icon via Gio, so use Gtk
-		// I couldn't find why, but get_default is sometimes null, hence this additional test
-		if (!USE_BUILDIN_ICONS && Gtk.IconTheme.get_default()) {
-			if (Gtk.IconTheme.get_default().has_icon(icon_name)) {
-				return Gio.icon_new_for_string( icon_name );
-			}
-		}
-		// Icon not available in theme, or user prefers built in icon
-		return Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
+const ArchUpdateIndicator = GObject.registerClass(
+	{
+		_TimeoutId: null,
+		_FirstTimeoutId: null,
+		_updateProcess_sourceId: null,
+		_updateProcess_stream: null,
+		_updateProcess_pid: null,
+		_updateList: [],
 	},
+class ArchUpdateIndicator extends PanelMenu.Button {
 
-	_init: function() {
-		this.parent(0.0, "ArchUpdateIndicator");
-
+	_init() {
+		super._init(0);
 		this.updateIcon = new St.Icon({gicon: this._getCustIcon('arch-unknown-symbolic'), style_class: 'system-status-icon'});
 
 		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
@@ -143,12 +129,12 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
-		this.menu.connect('open-state-changed', Lang.bind(this, this._onMenuOpened));
-		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
-		cancelButton.connect('clicked', Lang.bind(this, this._cancelCheck));
-		settingsMenuItem.connect('activate', Lang.bind(this, this._openSettings));
-		this.updateNowMenuItem.connect('activate', Lang.bind(this, this._updateNow));
-		this.managerMenuItem.connect('activate', Lang.bind(this, this._openManager));
+		this.menu.connect('open-state-changed', this._onMenuOpened.bind(this));
+		this.checkNowMenuItem.connect('activate', this._checkUpdates.bind(this));
+		cancelButton.connect('clicked', this._cancelCheck.bind(this));
+		settingsMenuItem.connect('activate', this._openSettings.bind(this));
+		this.updateNowMenuItem.connect('activate', this._updateNow.bind(this));
+		this.managerMenuItem.connect('activate', this._openManager.bind(this));
 
 		// Some initial status display
 		this._showChecking(false);
@@ -159,8 +145,8 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		// Load settings
 		this._settings = Utils.getSettings();
-		this._settings.connect('changed', Lang.bind(this, this._positionChanged));
-		this._settingsChangedId = this._settings.connect('changed', Lang.bind(this, this._applySettings));
+		this._settings.connect('changed', this._positionChanged.bind(this));
+		this._settingsChangedId = this._settings.connect('changed', this._applySettings.bind(this));
 		this._applySettings();
 
 		// Start monitoring external changes
@@ -178,7 +164,19 @@ const ArchUpdateIndicator = new Lang.Class({
 			});
 		}
 
-	},
+	}
+
+	_getCustIcon(icon_name) {
+		// I did not find a way to lookup icon via Gio, so use Gtk
+		// I couldn't find why, but get_default is sometimes null, hence this additional test
+		if (!USE_BUILDIN_ICONS && Gtk.IconTheme.get_default()) {
+			if (Gtk.IconTheme.get_default().has_icon(icon_name)) {
+				return Gio.icon_new_for_string( icon_name );
+			}
+		}
+		// Icon not available in theme, or user prefers built in icon
+		return Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
+	}
 
 	_positionChanged(){
 		this.container.get_parent().remove_actor(this.container);
@@ -190,9 +188,9 @@ const ArchUpdateIndicator = new Lang.Class({
 		let p = this._settings.get_int('position');
 		let i = this._settings.get_int('position-number');
 		boxes[p].insert_child_at_index(this.container, i);
-	},
+	}
 
-	_openSettings: function () {
+	_openSettings() {
 		Gio.DBus.session.call(
 			'org.gnome.Shell.Extensions',
 			'/org/gnome/Shell/Extensions',
@@ -203,17 +201,17 @@ const ArchUpdateIndicator = new Lang.Class({
 			Gio.DBusCallFlags.NONE,
 			-1,
 			null);
-	},
+	}
 
-	_openManager: function () {
+	_openManager() {
 		Util.spawnCommandLine(MANAGER_CMD);
-	},
+	}
 
-	_updateNow: function () {
+	_updateNow() {
 		Util.spawnCommandLine(UPDATE_CMD);
-	},
+	}
 
-	_applySettings: function() {
+	_applySettings() {
 		ALWAYS_VISIBLE = this._settings.get_boolean('always-visible');
 		USE_BUILDIN_ICONS = this._settings.get_boolean('use-buildin-icons');
 		SHOW_COUNT = this._settings.get_boolean('show-count');
@@ -237,9 +235,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			that._checkUpdates();
 			return true;
 		});
-	},
+	}
 
-	destroy: function() {
+	destroy() {
 		this._settings.disconnect( this._settingsChangedId );
 		if (this._notifSource) {
 			// Delete the notification source, which lay still have a notification shown
@@ -266,9 +264,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			this._TimeoutId = null;
 		}
 		this.parent();
-	},
+	}
 
-	_checkShowHide: function() {
+	_checkShowHide() {
 		if ( UPDATES_PENDING == -3 ) {
 			// Do not apply visibility change while checking for updates
 			return;
@@ -279,30 +277,31 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.visible = true;
 		}
 		this.label.visible = SHOW_COUNT && UPDATES_PENDING > 0;
-	},
+	}
 
-	_onMenuOpened: function() {
+	_onMenuOpened() {
 		// This event is fired when menu is shown or hidden
 		// Only open the submenu if the menu is being opened and there is something to show
 		this._checkAutoExpandList();
-	},
+	}
 
-	_checkAutoExpandList: function() {
+	_checkAutoExpandList() {
 		if (this.menu.isOpen && UPDATES_PENDING > 0 && UPDATES_PENDING <= AUTO_EXPAND_LIST) {
 			this.menuExpander.setSubmenuShown(true);
 		} else {
 			this.menuExpander.setSubmenuShown(false);
 		}
-	},
+	}
 
-	_startFolderMonitor: function() {
+	_startFolderMonitor() {
 		if (PACMAN_DIR) {
 			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
 			this.monitor = this.pacman_dir.monitor_directory(0, null);
-			this.monitor.connect('changed', Lang.bind(this, this._onFolderChanged));
+			this.monitor.connect('changed', this._onFolderChanged.bind(this));
 		}
-	},
-	_onFolderChanged: function() {
+	}
+
+	_onFolderChanged() {
 		// Folder have changed ! Let's schedule a check in a few seconds
 		let that = this;
 		if (this._FirstTimeoutId) GLib.source_remove(this._FirstTimeoutId);
@@ -311,9 +310,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			that._FirstTimeoutId = null;
 			return false;
 		});
-	},
+	}
 
-	_showChecking: function(isChecking) {
+	_showChecking(isChecking) {
 		if (isChecking == true) {
 			this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
 			this.checkNowMenuContainer.actor.visible = false;
@@ -322,9 +321,9 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.checkNowMenuContainer.actor.visible = true;;
 			this.checkingMenuItem.actor.visible = false;;
 		}
-	},
+	}
 
-	_updateStatus: function(updatesCount) {
+	_updateStatus(updatesCount) {
 		updatesCount = typeof updatesCount === 'number' ? updatesCount : UPDATES_PENDING;
 		if (updatesCount > 0) {
 			// Updates pending
@@ -381,9 +380,9 @@ const ArchUpdateIndicator = new Lang.Class({
 		UPDATES_PENDING = updatesCount;
 		this._checkAutoExpandList();
 		this._checkShowHide();
-	},
+	}
 
-	_updateMenuExpander: function(enabled, label) {
+	_updateMenuExpander(enabled, label) {
 		this.menuExpander.menu.box.destroy_all_children();
 		if (label == "") {
 			// No text, hide the menuitem
@@ -403,9 +402,9 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		// 'Update now' visibility is linked so let's save a few lines and set it here
 		this.updateNowMenuItem.actor.reactive = enabled;
-	},
+	}
 
-	_checkUpdates: function() {
+	_checkUpdates() {
 		if(this._updateProcess_sourceId) {
 			// A check is already running ! Maybe we should kill it and run another one ?
 			return;
@@ -422,23 +421,23 @@ const ArchUpdateIndicator = new Lang.Class({
 				base_stream: new Gio.UnixInputStream({fd: out_fd})
 			});
 			// We will process the output at once when it's done
-			this._updateProcess_sourceId = GLib.child_watch_add(0, pid, Lang.bind(this, function() {this._checkUpdatesRead()}));
+			this._updateProcess_sourceId = GLib.child_watch_add(0, pid, () => {this._checkUpdatesRead()} );
 			this._updateProcess_pid = pid;
 		} catch (err) {
 			this._showChecking(false);
 			this.lastUnknowErrorString = err.message.toString();
 			this._updateStatus(-2);
 		}
-	},
+	}
 
-	_cancelCheck: function() {
+	_cancelCheck() {
 		if (this._updateProcess_pid == null) { return; };
 		Util.spawnCommandLine( "kill " + this._updateProcess_pid );
 		this._updateProcess_pid = null; // Prevent double kill
 		this._checkUpdatesEnd();
-	},
+	}
 
-	_checkUpdatesRead: function() {
+	_checkUpdatesRead() {
 		// Read the buffered output
 		let updateList = [];
 		let out, size;
@@ -456,9 +455,9 @@ const ArchUpdateIndicator = new Lang.Class({
 		}
 		this._updateList = updateList;
 		this._checkUpdatesEnd();
-	},
+	}
 
-	_checkUpdatesEnd: function() {
+	_checkUpdatesEnd() {
 		// Free resources
 		this._updateProcess_stream.close(null);
 		this._updateProcess_stream = null;
@@ -468,9 +467,9 @@ const ArchUpdateIndicator = new Lang.Class({
 		// Update indicator
 		this._showChecking(false);
 		this._updateStatus(this._updateList.length);
-	},
+	}
 
-	_showNotification: function(title, message) {
+	_showNotification(title, message) {
 		if (this._notifSource == null) {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
@@ -479,7 +478,7 @@ const ArchUpdateIndicator = new Lang.Class({
 				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
-			this._notifSource.connect('destroy', Lang.bind(this, function() {this._notifSource = null;}));
+			this._notifSource.connect('destroy', ()=>{this._notifSource = null;});
 			Main.messageTray.add(this._notifSource);
 		}
 		let notification = null;
@@ -487,15 +486,14 @@ const ArchUpdateIndicator = new Lang.Class({
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
 			notification = new MessageTray.Notification(this._notifSource, title, message);
-			notification.addAction( _('Update now') , Lang.bind(this, function() {this._updateNow()}) );
+			notification.addAction( _('Update now') , ()=>{this._updateNow();} );
 		} else {
 			notification = this._notifSource.notifications[0];
 			notification.update( title, message, { clear: true });
 		}
 		notification.setTransient(TRANSIENT);
 		this._notifSource.showNotification(notification);
-	},
-
+	}
 
 });
 
