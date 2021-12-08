@@ -269,8 +269,10 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		if ( UPDATES_PENDING == -3 ) {
 			// Do not apply visibility change while checking for updates
 			return;
-		}
-		if (!ALWAYS_VISIBLE && UPDATES_PENDING < 1) {
+		} else if ( UPDATES_PENDING == -2 ) {
+			// Always show indicator if there is an error
+			this.visible = true;
+		} else if (!ALWAYS_VISIBLE && UPDATES_PENDING < 1) {
 			this.visible = false;
 		} else {
 			this.visible = true;
