@@ -2,8 +2,8 @@
 Update indicator for Arch Linux and GNOME Shell
 
 ## Warning for Gnome 42
-Default update command tries to run "gnome-terminal". I can't (yet?) manage to run the new Console app.
-You need to either install gnome-terminal or another terminal app and edit update command in advanced options.
+Default update command tries to run "gnome-terminal".
+You need to either install gnome-terminal or edit update command in advanced options to run Console. See wiki for examples.
 
 ## Features
 - Uses pacman's «checkupdates» by default and thus does not need root access
