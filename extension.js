@@ -40,6 +40,10 @@ const Format = imports.format;
 const Gettext = imports.gettext.domain('arch-update');
 const _ = Gettext.gettext;
 
+/* RegExp to tell what's an update */
+/* I am very loose on this, may make it easier to port to other distros */
+const RE_UpdateLine = /^(\S+)\s+(\S+)\s+->\s+(\S+)$/;
+
 /* Options */
 let ALWAYS_VISIBLE     = true;
 let USE_BUILDIN_ICONS  = true;
@@ -344,6 +348,16 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 						// Keep only packets that was not in the previous notification
 						updateList = this._updateList.filter(function(pkg) { return UPDATES_LIST.indexOf(pkg) < 0 });
 					}
+					// Filter out titles and whatnot
+					updateList = updateList.filter(function(line) { return RE_UpdateLine.test(line) });
+					// If version numbers should be stripped, do it
+					if (STRIP_VERSIONS == true) {
+						updateList = updateList.map(function(p) {
+							// Try to keep only what's before the first space
+							var chunks = p.split(" ",2);
+							return chunks[0];
+						});
+					}
 					if (updateList.length > 0) {
 						// Show notification only if there's new updates
 						this._showNotification(
@@ -400,11 +414,29 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			this.menuExpander.actor.visible = true;
 			if (enabled && this._updateList.length > 0) {
 				this._updateList.forEach( item => {
-					this.menuExpander.menu.box.add( new St.Label({ text: item }) );
+					let matches = item.match(RE_UpdateLine);
+					if (matches == null) {
+						// Not an update
+						this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
+					} else {
+						let hBox = new St.BoxLayout({ vertical: false });
+						hBox.add_child( new St.Label({
+							text: matches[1],
+							x_expand: true,
+							style_class: 'arch-updates-update-name' }) );
+						hBox.add_child( new St.Label({
+							text: matches[2] + " → ",
+							y_expand: true,
+							y_align: Clutter.ActorAlign.CENTER,
+							style_class: 'arch-updates-update-version-from' }) );
+						hBox.add_child( new St.Label({
+							text: matches[3],
+							style_class: 'arch-updates-update-version-to' }) );
+						this.menuExpander.menu.box.add_child( hBox );
+					}
 				} );
 			}
 		}
-
 		// 'Update now' visibility is linked so let's save a few lines and set it here
 		this.updateNowMenuItem.actor.reactive = enabled;
 	}
@@ -471,7 +503,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		this._updateProcess_pid = null;
 		// Update indicator
 		this._showChecking(false);
-		this._updateStatus(this._updateList.length);
+		this._updateStatus(this._updateList.filter(function(line) { return RE_UpdateLine.test(line) }).length);
 	}
 
 	_showNotification(title, message) {

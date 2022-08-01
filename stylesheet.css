@@ -34,3 +34,17 @@
 .arch-updates-menubutton > StIcon {
 	icon-size: 16px;
 }
+.arch-updates-update-title {
+	font-weight: bold;
+}
+.arch-updates-update-name {
+	padding-right: 1em;
+}
+.arch-updates-update-version-from {
+	font-size: 75%;
+	vertical-align: baseline;
+}
+.arch-updates-update-version-to {
+	vertical-align: baseline;
+}
+
