@@ -57,8 +57,10 @@ let UPDATE_CMD         = "gnome-terminal -- /bin/sh -c \"sudo pacman -Syu ; echo
 let CHECK_CMD          = "/usr/bin/checkupdates";
 let MANAGER_CMD        = "";
 let PACMAN_DIR         = "/var/lib/pacman/local";
-let STRIP_VERSIONS     = true;
+let STRIP_VERSIONS     = false;
+let STRIP_VERSIONS_N   = true;
 let AUTO_EXPAND_LIST   = 0;
+let DISABLE_PARSING    = false;
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
@@ -229,9 +231,11 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		TRANSIENT = this._settings.get_boolean('transient');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
 		CHECK_CMD = this._settings.get_string('check-cmd');
+		DISABLE_PARSING = this._settings.get_boolean('disable-parsing');
 		MANAGER_CMD = this._settings.get_string('package-manager');
 		PACMAN_DIR = this._settings.get_string('pacman-dir');
 		STRIP_VERSIONS = this._settings.get_boolean('strip-versions');
+		STRIP_VERSIONS_N = this._settings.get_boolean('strip-versions-in-notification');
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
@@ -349,9 +353,11 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 						updateList = this._updateList.filter(function(pkg) { return UPDATES_LIST.indexOf(pkg) < 0 });
 					}
 					// Filter out titles and whatnot
-					updateList = updateList.filter(function(line) { return RE_UpdateLine.test(line) });
+					if (!DISABLE_PARSING) {
+						updateList = updateList.filter(function(line) { return RE_UpdateLine.test(line) });
+					}
 					// If version numbers should be stripped, do it
-					if (STRIP_VERSIONS == true) {
+					if (STRIP_VERSIONS_N == true) {
 						updateList = updateList.map(function(p) {
 							// Try to keep only what's before the first space
 							var chunks = p.split(" ",2);
@@ -414,25 +420,31 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			this.menuExpander.actor.visible = true;
 			if (enabled && this._updateList.length > 0) {
 				this._updateList.forEach( item => {
-					let matches = item.match(RE_UpdateLine);
-					if (matches == null) {
-						// Not an update
-						this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
+					if(DISABLE_PARSING) {
+						this.menuExpander.menu.box.add( new St.Label({ text: item }) );
 					} else {
-						let hBox = new St.BoxLayout({ vertical: false });
-						hBox.add_child( new St.Label({
-							text: matches[1],
-							x_expand: true,
-							style_class: 'arch-updates-update-name' }) );
-						hBox.add_child( new St.Label({
-							text: matches[2] + " → ",
-							y_expand: true,
-							y_align: Clutter.ActorAlign.CENTER,
-							style_class: 'arch-updates-update-version-from' }) );
-						hBox.add_child( new St.Label({
-							text: matches[3],
-							style_class: 'arch-updates-update-version-to' }) );
-						this.menuExpander.menu.box.add_child( hBox );
+						let matches = item.match(RE_UpdateLine);
+						if (matches == null) {
+							// Not an update
+							this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
+						} else {
+							let hBox = new St.BoxLayout({ vertical: false });
+							hBox.add_child( new St.Label({
+								text: matches[1],
+								x_expand: true,
+								style_class: 'arch-updates-update-name' }) );
+							if (!STRIP_VERSIONS) {
+								hBox.add_child( new St.Label({
+									text: matches[2] + " → ",
+									y_expand: true,
+									y_align: Clutter.ActorAlign.CENTER,
+									style_class: 'arch-updates-update-version-from' }) );
+								hBox.add_child( new St.Label({
+									text: matches[3],
+									style_class: 'arch-updates-update-version-to' }) );
+							}
+							this.menuExpander.menu.box.add_child( hBox );
+						}
 					}
 				} );
 			}
@@ -482,14 +494,6 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			[out, size] = this._updateProcess_stream.read_line_utf8(null);
 			if (out) updateList.push(out);
 		} while (out);
-		// If version numbers should be stripped, do it
-		if (STRIP_VERSIONS == true) {
-			updateList = updateList.map(function(p) {
-				// Try to keep only what's before the first space
-				var chunks = p.split(" ",2);
-				return chunks[0];
-			});
-		}
 		this._updateList = updateList;
 		this._checkUpdatesEnd();
 	}
@@ -503,7 +507,11 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		this._updateProcess_pid = null;
 		// Update indicator
 		this._showChecking(false);
-		this._updateStatus(this._updateList.filter(function(line) { return RE_UpdateLine.test(line) }).length);
+		if (DISABLE_PARSING) {
+			this._updateStatus(this._updateList.length);
+		} else {
+			this._updateStatus(this._updateList.filter(function(line) { return RE_UpdateLine.test(line) }).length);
+		}
 	}
 
 	_showNotification(title, message) {

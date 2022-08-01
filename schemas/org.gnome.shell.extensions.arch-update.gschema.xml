@@ -77,8 +77,20 @@
     </key>
 
     <key name="strip-versions" type="b">
-      <default>true</default>
+      <default>false</default>
         <summary>Remove version numbers from checkupdates output</summary>
+        <description></description>
+    </key>
+
+    <key name="strip-versions-in-notification" type="b">
+      <default>true</default>
+        <summary>Remove version numbers in notifications</summary>
+        <description></description>
+    </key>
+
+    <key name="disable-parsing" type="b">
+      <default>false</default>
+        <summary>Disable output parsing to tell updates from titles and pretty display</summary>
         <description></description>
     </key>
 

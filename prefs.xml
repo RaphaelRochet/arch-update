@@ -119,25 +119,6 @@
 						</object>
 					</child>
 
-					<child>
-						<object class="GtkBox">
-							<property name="margin-start">12</property>
-							<property name="spacing">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property translatable="yes" name="label">Strip out versions numbers</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_stripversions">
-									<property name="active">true</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
 				</object>
 			</child>
 
@@ -234,6 +215,26 @@
 							</child>
 						</object>
 					</child>
+
+					<child>
+						<object class="GtkBox">
+							<property name="margin-start">12</property>
+							<property name="spacing">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property translatable="yes" name="label">Strip out versions numbers</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_stripversions">
+									<property name="active">false</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
@@ -351,6 +352,25 @@
 						</object>
 					</child>
 
+					<child>
+						<object class="GtkBox">
+							<property name="margin-start">12</property>
+							<property name="spacing">12</property>
+							<child>
+								<object class="GtkLabel">
+									<property translatable="yes" name="label">Strip out versions numbers</property>
+									<property name="hexpand">true</property>
+									<property name="halign">1</property>
+								</object>
+							</child>
+							<child>
+								<object class="GtkSwitch" id="field_stripversionsnotifications">
+									<property name="active">false</property>
+								</object>
+							</child>
+						</object>
+					</child>
+
 				</object>
 			</child>
 
@@ -386,6 +406,25 @@
 					</child>
 					<child>
 						<object class="GtkEntry" id="field_checkcmd">
+						</object>
+					</child>
+				</object>
+			</child>
+
+			<child>
+				<object class="GtkBox">
+					<property name="spacing">12</property>
+					<property name="margin-start">12</property>
+					<child>
+						<object class="GtkLabel">
+							<property name="label" translatable="yes">Disable output parsing, count every line as an update. This is the old behavior.</property>
+							<property name="hexpand">true</property>
+							<property name="halign">1</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkSwitch" id="field_disableparsing">
+							<property name="active">false</property>
 						</object>
 					</child>
 				</object>

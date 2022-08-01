@@ -54,7 +54,9 @@ function buildPrefsWidget(){
 	settings.bind('howmuch', buildable.get_object('field_howmuch'), 'active', Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('transient', buildable.get_object('field_transient'), 'active', Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('strip-versions' , buildable.get_object('field_stripversions') , 'active' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('strip-versions-in-notification' , buildable.get_object('field_stripversionsnotifications') , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('check-cmd' , buildable.get_object('field_checkcmd') , 'text' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('disable-parsing', buildable.get_object('field_disableparsing'), 'active', Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('update-cmd' , buildable.get_object('field_updatecmd') , 'text' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('pacman-dir' , buildable.get_object('field_pacmandir') , 'text' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('auto-expand-list', buildable.get_object('field_autoexpandlist'), 'value', Gio.SettingsBindFlags.DEFAULT);
