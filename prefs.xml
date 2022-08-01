@@ -420,11 +420,14 @@
 							<property name="label" translatable="yes">Disable output parsing, count every line as an update. This is the old behavior.</property>
 							<property name="hexpand">true</property>
 							<property name="halign">1</property>
+							<property name="wrap">1</property>
 						</object>
 					</child>
 					<child>
 						<object class="GtkSwitch" id="field_disableparsing">
 							<property name="active">false</property>
+							<property name="vexpand">false</property>
+							<property name="valign">2</property>
 						</object>
 					</child>
 				</object>
