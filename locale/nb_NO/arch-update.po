@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pk 101\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 09:50+0200\n"
+"POT-Creation-Date: 2022-08-01 14:43+0200\n"
 "PO-Revision-Date: 2016-04-26 23:25+0200\n"
 "Last-Translator:  <per.kristian.nordnes@gmail.com>\n"
 "Language-Team: Norwegian Bokmal\n"
@@ -16,60 +16,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:115
+#: extension.js:106
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: extension.js:116 extension.js:490
+#: extension.js:107 extension.js:534
 msgid "Update now"
 msgstr "Oppdater nå"
 
-#: extension.js:117
+#: extension.js:108
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:121
+#: extension.js:112
 msgid "Checking"
 msgstr "Sjekker"
 
-#: extension.js:132
+#: extension.js:123
 msgid "Check now"
 msgstr "Sjekk nå"
 
-#: extension.js:155
+#: extension.js:146
 msgid "Waiting first check"
 msgstr "Venter på første sjekk"
 
-#: extension.js:332
+#: extension.js:344
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d oppdatering venter"
 msgstr[1] "%d oppdateringer venter"
 
-#: extension.js:346 extension.js:352
+#: extension.js:370 extension.js:376
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Ny Arch Linux-oppdatering"
 msgstr[1] "Nye Arch Linux-oppdateringer"
 
-#: extension.js:353
+#: extension.js:377
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Det venter %d oppdatering"
 msgstr[1] "Det venter %d oppdateringer"
 
-#: extension.js:370
+#: extension.js:394
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:372
+#: extension.js:396
 msgid "Error"
 msgstr "Feil"
 
-#: extension.js:377
+#: extension.js:401
 msgid "Up to date :)"
 msgstr "Oppdatert :)"
 
@@ -86,28 +86,24 @@ msgstr "Sekunder å vente før første sjekk"
 msgid "Interval between updates check (minutes)"
 msgstr "Minutter mellom hver oppdatering"
 
-#: prefs.xml:128
-msgid "Strip out versions numbers"
-msgstr "Ikke vis versjonsnummer"
-
-#: prefs.xml:151
+#: prefs.xml:132
 #, fuzzy
 msgid "Indicator"
 msgstr "<b>Indikator</b>"
 
-#: prefs.xml:166
+#: prefs.xml:147
 msgid "Always visible"
 msgstr "Alltid synlig"
 
-#: prefs.xml:185
+#: prefs.xml:166
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:204
+#: prefs.xml:185
 msgid "Show updates count on indicator"
 msgstr "Vis antall oppdateringer i indikator"
 
-#: prefs.xml:224
+#: prefs.xml:205
 #, fuzzy
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
@@ -116,74 +112,84 @@ msgstr ""
 "Vis hele listen automatisk hvis antallet er mindre enn dette nummeret (0 for "
 "å skru av)"
 
-#: prefs.xml:244
+#: prefs.xml:225 prefs.xml:361
+msgid "Strip out versions numbers"
+msgstr "Ikke vis versjonsnummer"
+
+#: prefs.xml:245
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:258
+#: prefs.xml:259
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:259
+#: prefs.xml:260
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:260
+#: prefs.xml:261
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:284
+#: prefs.xml:285
 #, fuzzy
 msgid "Notification"
 msgstr "<b>Systemvarslinger</b>"
 
-#: prefs.xml:299
+#: prefs.xml:300
 msgid "Send a notification when new updates are available"
 msgstr "Vis en systemvarsling når nye oppdateringer er tilgjengelige"
 
-#: prefs.xml:318
+#: prefs.xml:319
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Bruk kortvarige systemvarslinger (går bort av seg selv)"
 
-#: prefs.xml:337
+#: prefs.xml:338
 msgid "How much information to show on notifications"
 msgstr "Hvor mye informasjon skal vises i systemvarslingene"
 
-#: prefs.xml:345
+#: prefs.xml:346
 msgid "Count only"
 msgstr "Bare antall"
 
-#: prefs.xml:346
+#: prefs.xml:347
 msgid "New updates names"
 msgstr "Navnet til nye oppdateringer"
 
-#: prefs.xml:347
+#: prefs.xml:348
 msgid "All updates names"
 msgstr "Navnet til alle oppdateringene"
 
-#: prefs.xml:362
+#: prefs.xml:382
 #, fuzzy
 msgid "Basic settings"
 msgstr "Innstillinger"
 
-#: prefs.xml:382
+#: prefs.xml:402
 msgid "Command to check for package updates"
 msgstr "Kommando for å sjekke etter nye pakkeoppdateringer"
 
-#: prefs.xml:400
+#: prefs.xml:420
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+
+#: prefs.xml:439
 msgid "Command to update packages"
 msgstr "Kommando for å oppdatere pakker"
 
-#: prefs.xml:418
+#: prefs.xml:457
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Lokal Pacman-mappe - for å oppdage når nye pakker installeres"
 
-#: prefs.xml:436
+#: prefs.xml:475
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "Kommando for å oppdatere pakker"
 
-#: prefs.xml:453
+#: prefs.xml:492
 #, fuzzy
 msgid "Advanced settings"
 msgstr "<b>Avanserte innstillinger</b>"

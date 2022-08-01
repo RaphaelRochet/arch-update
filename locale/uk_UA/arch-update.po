@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 09:50+0200\n"
+"POT-Creation-Date: 2022-08-01 14:43+0200\n"
 "PO-Revision-Date: 2021-06-24 22:21+0300\n"
 "Last-Translator: Eugene <eugene@nxdomain.tld>\n"
 "Language-Team: \n"
@@ -15,35 +15,35 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: extension.js:115
+#: extension.js:106
 msgid "Settings"
 msgstr "Параметри"
 
-#: extension.js:116 extension.js:490
+#: extension.js:107 extension.js:534
 msgid "Update now"
 msgstr "Оновити"
 
-#: extension.js:117
+#: extension.js:108
 msgid "Open package manager"
 msgstr "Керування пакунками"
 
-#: extension.js:121
+#: extension.js:112
 msgid "Checking"
 msgstr "Перевірка"
 
-#: extension.js:132
+#: extension.js:123
 msgid "Check now"
 msgstr "Перевірити"
 
-#: extension.js:155
+#: extension.js:146
 msgid "Waiting first check"
 msgstr "Очікування на перевірку"
 
-#: extension.js:332
+#: extension.js:344
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -51,14 +51,14 @@ msgstr[0] "%d оновлення очікує"
 msgstr[1] "%d оновлення очікують"
 msgstr[2] "%d оновлень очікують"
 
-#: extension.js:346 extension.js:352
+#: extension.js:370 extension.js:376
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Доступне оновлення Arch Linux"
 msgstr[1] "Доступні оновлення Arch Linux"
 msgstr[2] "Доступні оновлення Arch Linux"
 
-#: extension.js:353
+#: extension.js:377
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -66,18 +66,18 @@ msgstr[0] "Є %d оновлення, що очікує на встановлен
 msgstr[1] "Є %d оновлення, що очікують на встановлення"
 msgstr[2] "Є %d оновлень, що очікують на встановлення"
 
-#: extension.js:370
+#: extension.js:394
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Примітка: для використання скрипту 'checkupdates' ви маєте встановити "
 "пакунок pacman-contrib."
 
-#: extension.js:372
+#: extension.js:396
 msgid "Error"
 msgstr "Помилка"
 
-#: extension.js:377
+#: extension.js:401
 msgid "Up to date :)"
 msgstr "Оновлено :)"
 
@@ -93,27 +93,23 @@ msgstr "Час очікування на першу перевірку (у се�
 msgid "Interval between updates check (minutes)"
 msgstr "Інтервал між перевірками оновлень (у хвилинах)"
 
-#: prefs.xml:128
-msgid "Strip out versions numbers"
-msgstr "Приховати номери версій"
-
-#: prefs.xml:151
+#: prefs.xml:132
 msgid "Indicator"
 msgstr "Індикатор"
 
-#: prefs.xml:166
+#: prefs.xml:147
 msgid "Always visible"
 msgstr "Видимий завжди"
 
-#: prefs.xml:185
+#: prefs.xml:166
 msgid "Use built-in icons"
 msgstr "Використовувати вбудовані піктограми"
 
-#: prefs.xml:204
+#: prefs.xml:185
 msgid "Show updates count on indicator"
 msgstr "Показувати кількість оновлень на індикаторі"
 
-#: prefs.xml:224
+#: prefs.xml:205
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -121,71 +117,81 @@ msgstr ""
 "Авторозгортання переліку оновлень, якщо їх кількість менша за це число (0 "
 "щоб вимкнути)"
 
-#: prefs.xml:244
+#: prefs.xml:225 prefs.xml:361
+msgid "Strip out versions numbers"
+msgstr "Приховати номери версій"
+
+#: prefs.xml:245
 msgid "Position in Panel"
 msgstr "Позиція на панелі"
 
-#: prefs.xml:258
+#: prefs.xml:259
 msgid "Left"
 msgstr "Зліва"
 
-#: prefs.xml:259
+#: prefs.xml:260
 msgid "Center"
 msgstr "По центру"
 
-#: prefs.xml:260
+#: prefs.xml:261
 msgid "Right"
 msgstr "Зправа"
 
-#: prefs.xml:284
+#: prefs.xml:285
 msgid "Notification"
 msgstr "Cповіщення"
 
-#: prefs.xml:299
+#: prefs.xml:300
 msgid "Send a notification when new updates are available"
 msgstr "Надіслати сповіщення, коли є нові оновлення"
 
-#: prefs.xml:318
+#: prefs.xml:319
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Використовувати тимчасові сповіщення (автоматично закривати)"
 
-#: prefs.xml:337
+#: prefs.xml:338
 msgid "How much information to show on notifications"
 msgstr "Який обсяг відомостей відображати у сповіщеннях"
 
-#: prefs.xml:345
+#: prefs.xml:346
 msgid "Count only"
 msgstr "Тільки кількість"
 
-#: prefs.xml:346
+#: prefs.xml:347
 msgid "New updates names"
 msgstr "Назви нових оновлень"
 
-#: prefs.xml:347
+#: prefs.xml:348
 msgid "All updates names"
 msgstr "Назви всіх оновлень"
 
-#: prefs.xml:362
+#: prefs.xml:382
 msgid "Basic settings"
 msgstr "Основні параметри"
 
-#: prefs.xml:382
+#: prefs.xml:402
 msgid "Command to check for package updates"
 msgstr "Команда перевірки оновлення пакунків"
 
-#: prefs.xml:400
+#: prefs.xml:420
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+
+#: prefs.xml:439
 msgid "Command to update packages"
 msgstr "Команда оновлення пакунків"
 
-#: prefs.xml:418
+#: prefs.xml:457
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Шлях до локальної теки pacman - для визначення, коли встановлено нові пакунки"
 
-#: prefs.xml:436
+#: prefs.xml:475
 msgid "Command to open package manager (optional)"
 msgstr "Команда відкриття керування пакунками (необов’язково)"
 
-#: prefs.xml:453
+#: prefs.xml:492
 msgid "Advanced settings"
 msgstr "Додаткові параметри"

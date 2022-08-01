@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 09:50+0200\n"
+"POT-Creation-Date: 2022-08-01 14:43+0200\n"
 "PO-Revision-Date: 2017-11-18 15:06+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: \n"
@@ -18,31 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Poedit 2.0.4\n"
 
-#: extension.js:115
+#: extension.js:106
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: extension.js:116 extension.js:490
+#: extension.js:107 extension.js:534
 msgid "Update now"
 msgstr "Aktualizovať teraz"
 
-#: extension.js:117
+#: extension.js:108
 msgid "Open package manager"
 msgstr "Otvoriť správcu balíkov"
 
-#: extension.js:121
+#: extension.js:112
 msgid "Checking"
 msgstr "Kontroluje sa"
 
-#: extension.js:132
+#: extension.js:123
 msgid "Check now"
 msgstr "Skontrolovať teraz"
 
-#: extension.js:155
+#: extension.js:146
 msgid "Waiting first check"
 msgstr "Čaká sa na prvú kontrolu"
 
-#: extension.js:332
+#: extension.js:344
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
@@ -50,14 +50,14 @@ msgstr[0] "%d dostupná aktualizácia"
 msgstr[1] "%d dostupné aktualizácie"
 msgstr[2] "%d dostupných aktualizácií"
 
-#: extension.js:346 extension.js:352
+#: extension.js:370 extension.js:376
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nová aktualizácia systému Arch"
 msgstr[1] "Nové aktualizácie systému Arch"
 msgstr[2] "Nové aktualizácie systému Arch"
 
-#: extension.js:353
+#: extension.js:377
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
@@ -65,16 +65,16 @@ msgstr[0] "Je dostupná %d aktualizácia"
 msgstr[1] "Sú dostupné %d aktualizácie"
 msgstr[2] "Je dostupných %d aktualizácií"
 
-#: extension.js:370
+#: extension.js:394
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:372
+#: extension.js:396
 msgid "Error"
 msgstr "Chyba"
 
-#: extension.js:377
+#: extension.js:401
 msgid "Up to date :)"
 msgstr "Všetko je aktuálne :)"
 
@@ -90,27 +90,23 @@ msgstr "Čas čakania pred prvou kontrolou (v sekundách)"
 msgid "Interval between updates check (minutes)"
 msgstr "Interval medzi kontrolami aktualizácií (v minútach)"
 
-#: prefs.xml:128
-msgid "Strip out versions numbers"
-msgstr "Odstrániť čísla verzií"
-
-#: prefs.xml:151
+#: prefs.xml:132
 msgid "Indicator"
 msgstr "Indikátor"
 
-#: prefs.xml:166
+#: prefs.xml:147
 msgid "Always visible"
 msgstr "Vždy viditeľný"
 
-#: prefs.xml:185
+#: prefs.xml:166
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:204
+#: prefs.xml:185
 msgid "Show updates count on indicator"
 msgstr "Zobraziť počet aktualizácií v indikátore"
 
-#: prefs.xml:224
+#: prefs.xml:205
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -118,72 +114,82 @@ msgstr ""
 "Automaticky rozšíriť zoznam aktualizácií, ak je počet aktualizácií menší ako "
 "táto hodnota (0 na zakázanie)"
 
-#: prefs.xml:244
+#: prefs.xml:225 prefs.xml:361
+msgid "Strip out versions numbers"
+msgstr "Odstrániť čísla verzií"
+
+#: prefs.xml:245
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:258
+#: prefs.xml:259
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:259
+#: prefs.xml:260
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:260
+#: prefs.xml:261
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:284
+#: prefs.xml:285
 msgid "Notification"
 msgstr "Oznámenie"
 
-#: prefs.xml:299
+#: prefs.xml:300
 msgid "Send a notification when new updates are available"
 msgstr "Odoslať oznámenie, keď sú dostupné nové aktualizácie"
 
-#: prefs.xml:318
+#: prefs.xml:319
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Použiť prechodné oznámenia (automatické zahodenie)"
 
-#: prefs.xml:337
+#: prefs.xml:338
 msgid "How much information to show on notifications"
 msgstr "Koľko informácií zobraziť v oznámeniach"
 
-#: prefs.xml:345
+#: prefs.xml:346
 msgid "Count only"
 msgstr "Iba počet"
 
-#: prefs.xml:346
+#: prefs.xml:347
 msgid "New updates names"
 msgstr "Názvy nových aktualizácií"
 
-#: prefs.xml:347
+#: prefs.xml:348
 msgid "All updates names"
 msgstr "Názvy všetkých aktualizácií"
 
-#: prefs.xml:362
+#: prefs.xml:382
 msgid "Basic settings"
 msgstr "Základné nastavenia"
 
-#: prefs.xml:382
+#: prefs.xml:402
 msgid "Command to check for package updates"
 msgstr "Príkaz na kontrolu aktualizácií balíkov"
 
-#: prefs.xml:400
+#: prefs.xml:420
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+
+#: prefs.xml:439
 msgid "Command to update packages"
 msgstr "Príkaz na aktualizáciu balíkov"
 
-#: prefs.xml:418
+#: prefs.xml:457
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Cesta k miestnemu adresáru nástroja Pacman - na zistenie, kedy sú "
 "nainštalované nové balíky"
 
-#: prefs.xml:436
+#: prefs.xml:475
 msgid "Command to open package manager (optional)"
 msgstr "Príkaz na otvorenie správcu balíkov (voliteľné)"
 
-#: prefs.xml:453
+#: prefs.xml:492
 msgid "Advanced settings"
 msgstr "Pokročilé nastavenia"

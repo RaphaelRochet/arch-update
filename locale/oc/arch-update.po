@@ -7,73 +7,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 09:50+0200\n"
+"POT-Creation-Date: 2022-08-01 14:43+0200\n"
 "PO-Revision-Date: 2021-12-07 16:36+0100\n"
+"Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.0\n"
-"Last-Translator: Quentin PAGÈS\n"
-"Language: oc\n"
 
-#: extension.js:115
+#: extension.js:106
 msgid "Settings"
 msgstr "Paramètres"
 
-#: extension.js:116 extension.js:490
+#: extension.js:107 extension.js:534
 msgid "Update now"
 msgstr "Metre a jorn ara"
 
-#: extension.js:117
+#: extension.js:108
 msgid "Open package manager"
 msgstr "Dobrir lo gestionari de paquets"
 
-#: extension.js:121
+#: extension.js:112
 msgid "Checking"
 msgstr "Verificacion"
 
-#: extension.js:132
+#: extension.js:123
 msgid "Check now"
 msgstr "Verificar ara"
 
-#: extension.js:155
+#: extension.js:146
 msgid "Waiting first check"
 msgstr "En espèra de la primièra verificacion"
 
-#: extension.js:332
+#: extension.js:344
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d mesa a jorn en espèra"
 msgstr[1] "%d mesas a jorn en espèra"
 
-#: extension.js:346 extension.js:352
+#: extension.js:370 extension.js:376
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Mesa a jorn Linux Arch"
 msgstr[1] "Mesas a jorn Linux Arch"
 
-#: extension.js:353
+#: extension.js:377
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "I a %d mesa a jorn en espèra"
 msgstr[1] "I a %d mesas a jorn en espèra"
 
-#: extension.js:370
+#: extension.js:394
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Nòta : devètz installar pacman-contrib per utilizar lo script "
 "« checkupdates »."
 
-#: extension.js:372
+#: extension.js:396
 msgid "Error"
 msgstr "Error"
 
-#: extension.js:377
+#: extension.js:401
 msgid "Up to date :)"
 msgstr "A jorn :)"
 
@@ -89,27 +89,23 @@ msgstr "Temps a esperar abans primièra verificacion (segondas)"
 msgid "Interval between updates check (minutes)"
 msgstr "L'interval en segondas entre doas verificacions (minutas)"
 
-#: prefs.xml:128
-msgid "Strip out versions numbers"
-msgstr "Tirar los numèros de version"
-
-#: prefs.xml:151
+#: prefs.xml:132
 msgid "Indicator"
 msgstr "Indicator"
 
-#: prefs.xml:166
+#: prefs.xml:147
 msgid "Always visible"
 msgstr "Totjorn visible"
 
-#: prefs.xml:185
+#: prefs.xml:166
 msgid "Use built-in icons"
 msgstr "Utilizar las icònas inclusas"
 
-#: prefs.xml:204
+#: prefs.xml:185
 msgid "Show updates count on indicator"
 msgstr "Afichar lo comptador de mesas a jorn sus l'indicator"
 
-#: prefs.xml:224
+#: prefs.xml:205
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -117,72 +113,82 @@ msgstr ""
 "Espandir automaticament la lista de mesas a jorn se lo total de mesas a jorn "
 "es inferior a aqueste nombre (0 per desactivar)"
 
-#: prefs.xml:244
+#: prefs.xml:225 prefs.xml:361
+msgid "Strip out versions numbers"
+msgstr "Tirar los numèros de version"
+
+#: prefs.xml:245
 msgid "Position in Panel"
 msgstr "Posicion sul panèl"
 
-#: prefs.xml:258
+#: prefs.xml:259
 msgid "Left"
 msgstr "Esquèrra"
 
-#: prefs.xml:259
+#: prefs.xml:260
 msgid "Center"
 msgstr "Centre"
 
-#: prefs.xml:260
+#: prefs.xml:261
 msgid "Right"
 msgstr "Drecha"
 
-#: prefs.xml:284
+#: prefs.xml:285
 msgid "Notification"
 msgstr "Notificacion"
 
-#: prefs.xml:299
+#: prefs.xml:300
 msgid "Send a notification when new updates are available"
 msgstr "Enviar una notificacion quand de mesas a jorn novèlas son disponiblas"
 
-#: prefs.xml:318
+#: prefs.xml:319
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Utilizar de notificacions temporàrias (s'escafan soletas)"
 
-#: prefs.xml:337
+#: prefs.xml:338
 msgid "How much information to show on notifications"
 msgstr "Quanta informacion mostrar per las notificacions"
 
-#: prefs.xml:345
+#: prefs.xml:346
 msgid "Count only"
 msgstr "Comptador sonque"
 
-#: prefs.xml:346
+#: prefs.xml:347
 msgid "New updates names"
 msgstr "Nom de las mesas a jorn"
 
-#: prefs.xml:347
+#: prefs.xml:348
 msgid "All updates names"
 msgstr "Totes los noms de mesas a jorn"
 
-#: prefs.xml:362
+#: prefs.xml:382
 msgid "Basic settings"
 msgstr "Paramètres basics"
 
-#: prefs.xml:382
+#: prefs.xml:402
 msgid "Command to check for package updates"
 msgstr "Comanda per verificar las mesas a jorn de paquets"
 
-#: prefs.xml:400
+#: prefs.xml:420
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+
+#: prefs.xml:439
 msgid "Command to update packages"
 msgstr "Comanda per metre a jorn los paquets"
 
-#: prefs.xml:418
+#: prefs.xml:457
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Camin local pel repertòri Pacman - Per detectar quand de paquets novèls son "
 "installats"
 
-#: prefs.xml:436
+#: prefs.xml:475
 msgid "Command to open package manager (optional)"
 msgstr "Comanda per dobrir lo gestionari de paquets (opcional)"
 
-#: prefs.xml:453
+#: prefs.xml:492
 msgid "Advanced settings"
 msgstr "Paramètres avançats"
