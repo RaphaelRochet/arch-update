@@ -42,7 +42,7 @@ const _ = Gettext.gettext;
 
 /* RegExp to tell what's an update */
 /* I am very loose on this, may make it easier to port to other distros */
-const RE_UpdateLine = /^(\S+)\s+(\S+)\s+->\s+(\S+)$/;
+const RE_UpdateLine = /^(.+)\s+(\S+)\s+->\s+(.+)$/;
 
 /* Options */
 let ALWAYS_VISIBLE     = true;
