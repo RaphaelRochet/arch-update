@@ -14,7 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with Arch Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2016 Raphaël Rochet
+    Copyright 2016-2022 Raphaël Rochet
 */
 
 const Clutter = imports.gi.Clutter;
