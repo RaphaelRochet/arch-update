@@ -10,7 +10,7 @@ You need to either install gnome-terminal or edit update command in advanced opt
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
 - Launcher for your favorite update command
-- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Swedish, Norwegian Bokmal, Russian, Persian, Turkish, Esperanto, Finnish, Dutch, Ukrainian, Korean, Occitan languages. (Thanks translators !)
+- Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Swedish, Norwegian Bokmal, Russian, Persian, Turkish, Esperanto, Finnish, Dutch, Ukrainian, Korean, Occitan, hungarian languages. (Thanks translators !)
 
 ## Requirements
 If you use the default "checkupdates" way you will need to install "pacman-contrib".
@@ -27,6 +27,12 @@ https://aur.archlinux.org/packages/gnome-shell-extension-arch-update/
 To install, simply download as zip and unzip contents in ~/.local/share/gnome-shell/extensions/arch-update@RaphaelRochet
 
 ## Changes
+
+### v48
+- Added translation : hungarian
+- Fix Inconsistent icon theme
+- Add basic parsing to tell updates and titles apart; also increase readibility in menu
+- Now "strip version number" can be applied to indicator menu or notifications
 
 ### v47
 - Gnome 42
