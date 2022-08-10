@@ -28,6 +28,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v49
+- "Fix 'Strip version numbers' nor working with old behavior
+
 ### v48
 - Added translation : hungarian
 - Fix Inconsistent icon theme
