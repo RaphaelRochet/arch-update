@@ -421,7 +421,12 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			if (enabled && this._updateList.length > 0) {
 				this._updateList.forEach( item => {
 					if(DISABLE_PARSING) {
-						this.menuExpander.menu.box.add( new St.Label({ text: item }) );
+						var menutext = item;
+						if (STRIP_VERSIONS) {
+							var chunks = menutext.split(" ",2);
+							menutext = chunks[0];
+						}
+						this.menuExpander.menu.box.add( new St.Label({ text: menutext }) );
 					} else {
 						let matches = item.match(RE_UpdateLine);
 						if (matches == null) {
