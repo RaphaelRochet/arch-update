@@ -1,4 +1,4 @@
-# arch-update
+# crystal-update
 Update indicator for Crystal Linux and GNOME Shell
 
 ## Warning for Gnome 42
@@ -226,9 +226,7 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 - Notification option
 - Czech and German languages added
 
-## Credits
-All icons are based on Thayer Williams' Crystaler logo, winner of Crystal Linux logo contest.
-
+## Credit
 Some portions of the extension were inspired from Touchad Indicator and Lock keys. 
 https://github.com/orangeshirt/gnome-shell-extension-touchpad-indicator
 https://github.com/kazysmaster/gnome-shell-extension-lockkeys
