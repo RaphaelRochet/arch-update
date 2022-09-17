@@ -1,18 +1,18 @@
 /*
-    This file is part of Arch Linux Updates Indicator
+    This file is part of Crystal Linux Updates Indicator
 
-    Arch Linux Updates Indicator is free software: you can redistribute it and/or modify
+    Crystal Linux Updates Indicator is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Arch Linux Updates Indicator is distributed in the hope that it will be useful,
+    Crystal Linux Updates Indicator is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Arch Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
+    along with Crystal Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2016-2022 Raphaël Rochet
 */
@@ -42,7 +42,7 @@ function buildPrefsWidget(){
 	let box = buildable.get_object('prefs_widget');
 
 	let version_label = buildable.get_object('version_info');
-	version_label.set_text('[Arch-update v' + Me.metadata.version.toString() + ']');
+	version_label.set_text('[Crystal-update v' + Me.metadata.version.toString() + ']');
 
 	// Bind fields to settings
 	settings.bind('boot-wait' , buildable.get_object('field_wait') , 'value' , Gio.SettingsBindFlags.DEFAULT);

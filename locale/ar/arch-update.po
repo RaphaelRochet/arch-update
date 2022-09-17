@@ -54,8 +54,8 @@ msgstr[4] "%d تحديثا منتظرًا"
 msgstr[5] "%d تحديث منتظر"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
 msgstr[0] "لا تحديثات أرتش لينكس جديدة"
 msgstr[1] "تحديث أرتش لينكس جديد"
 msgstr[2] "تحديثا أرتش لينكس جديدان"

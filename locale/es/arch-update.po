@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Arch-Update\n"
+"Project-Id-Version: Crystal-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-01 14:43+0200\n"
 "PO-Revision-Date: 2021-02-12 11:13+0100\n"
@@ -51,8 +51,8 @@ msgstr[0] "%d actualización pendiente"
 msgstr[1] "%d actualizaciones pendientes"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
 msgstr[0] "Nueva actualización del sistema"
 msgstr[1] "Nuevas actualizaciones del sistema"
 

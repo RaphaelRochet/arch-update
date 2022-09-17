@@ -50,10 +50,10 @@ msgstr[0] "%d uuendus ootel"
 msgstr[1] "%d uuendust ootel"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Uus Arch Linux'i uuendus"
-msgstr[1] "Uued Arch Linux'i uuendused"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Uus Crystal Linux'i uuendus"
+msgstr[1] "Uued Crystal Linux'i uuendused"
 
 #: extension.js:377
 #, javascript-format

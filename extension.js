@@ -1,18 +1,18 @@
 /*
-    This file is part of Arch Linux Updates Indicator
+    This file is part of Crystal Linux Updates Indicator
 
-    Arch Linux Updates Indicator is free software: you can redistribute it and/or modify
+    Crystal Linux Updates Indicator is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Arch Linux Updates Indicator is distributed in the hope that it will be useful,
+    Crystal Linux Updates Indicator is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Arch Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
+    along with Crystal Linux Updates Indicator.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2016-2022 Raphaël Rochet
 */
@@ -53,7 +53,7 @@ let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
 let TRANSIENT          = true;
-let UPDATE_CMD         = "gnome-terminal -- /bin/sh -c \"sudo pacman -Syu ; echo Done - Press enter to exit; read _\" ";
+let UPDATE_CMD         = "gnome-terminal -- /bin/sh -c \"ame upg ; echo Done - Press enter to exit; read _\" ";
 let CHECK_CMD          = "/usr/bin/checkupdates";
 let MANAGER_CMD        = "";
 let PACMAN_DIR         = "/var/lib/pacman/local";
@@ -73,7 +73,7 @@ function init() {
 	ExtensionUtils.initTranslations("arch-update");
 }
 
-const ArchUpdateIndicator = GObject.registerClass(
+const CrystalUpdateIndicator = GObject.registerClass(
 	{
 		_TimeoutId: null,
 		_FirstTimeoutId: null,
@@ -82,11 +82,11 @@ const ArchUpdateIndicator = GObject.registerClass(
 		_updateProcess_pid: null,
 		_updateList: [],
 	},
-class ArchUpdateIndicator extends PanelMenu.Button {
+class CrystalUpdateIndicator extends PanelMenu.Button {
 
 	_init() {
 		super._init(0);
-		this.updateIcon = new St.Icon({gicon: this._getCustIcon('arch-unknown-symbolic'), style_class: 'system-status-icon'});
+		this.updateIcon = new St.Icon({gicon: this._getCustIcon('crystal-unknown-symbolic'), style_class: 'system-status-icon'});
 
 		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
 		this.label = new St.Label({ text: '',
@@ -327,7 +327,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 
 	_showChecking(isChecking) {
 		if (isChecking == true) {
-			this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
+			this.updateIcon.set_gicon( this._getCustIcon('crystal-unknown-symbolic') );
 			this.checkNowMenuContainer.actor.visible = false;
 			this.checkingMenuItem.actor.visible = true;;
 		} else {
@@ -340,7 +340,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		updatesCount = typeof updatesCount === 'number' ? updatesCount : UPDATES_PENDING;
 		if (updatesCount > 0) {
 			// Updates pending
-			this.updateIcon.set_gicon( this._getCustIcon('arch-updates-symbolic') );
+			this.updateIcon.set_gicon( this._getCustIcon('crystal-updates-symbolic') );
 			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.label.set_text(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
@@ -367,13 +367,13 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 					if (updateList.length > 0) {
 						// Show notification only if there's new updates
 						this._showNotification(
-							Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updateList.length ),
+							Gettext.ngettext( "New Crystal Linux Update", "New Crystal Linux Updates", updateList.length ),
 							updateList.join(', ')
 						);
 					}
 				} else {
 					this._showNotification(
-						Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updatesCount ),
+						Gettext.ngettext( "New Crystal Linux Update", "New Crystal Linux Updates", updatesCount ),
 						Gettext.ngettext( "There is %d update pending", "There are %d updates pending", updatesCount ).format(updatesCount)
 					);
 				}
@@ -384,20 +384,20 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			this.label.set_text('');
 			if (updatesCount == -1) {
 				// Unknown
-				this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
+				this.updateIcon.set_gicon( this._getCustIcon('crystal-unknown-symbolic') );
 				this._updateMenuExpander( false, '' );
 			} else if (updatesCount == -2) {
 				// Error
-				this.updateIcon.set_gicon( this._getCustIcon('arch-error-symbolic') );
-				if ( this.lastUnknowErrorString.indexOf("/usr/bin/checkupdates") > 0 ) {
+				this.updateIcon.set_gicon( this._getCustIcon('crystal-error-symbolic') );
+				if ( this.lastUnknowErrorString.indexOf("/usr/bin/ame checkupdates") > 0 ) {
 					// We do a special change here due to checkupdates moved to pacman-contrib
-					this._updateMenuExpander( false, _("Note : you have to install pacman-contrib to use the 'checkupdates' script.") );
+					this._updateMenuExpander( false, _("Note : you have to install ame to use the 'ame checkupdates' command.") );
 				} else {
 					this._updateMenuExpander( false, _('Error') + "\n" + this.lastUnknowErrorString );
 				}
 			} else {
 				// Up to date
-				this.updateIcon.set_gicon( this._getCustIcon('arch-uptodate-symbolic') );
+				this.updateIcon.set_gicon( this._getCustIcon('crystal-uptodate-symbolic') );
 				this._updateMenuExpander( false, _('Up to date :)') );
 				UPDATES_LIST = []; // Reset stored list
 			}
@@ -524,7 +524,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
 			this._notifSource.createIcon = function() {
-				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/arch-lit-symbolic.svg" );
+				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/crystal-lit-symbolic.svg" );
 				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
@@ -550,8 +550,8 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 let archupdateindicator;
 
 function enable() {
-	archupdateindicator = new ArchUpdateIndicator();
-	Main.panel.addToStatusArea('ArchUpdateIndicator', archupdateindicator);
+	archupdateindicator = new CrystalUpdateIndicator();
+	Main.panel.addToStatusArea('CrystalUpdateIndicator', archupdateindicator);
 	archupdateindicator._positionChanged();
 }
 

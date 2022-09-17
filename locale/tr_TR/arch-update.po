@@ -51,10 +51,10 @@ msgstr[0] "%d güncelleme bekliyor"
 msgstr[1] "%d güncelleme bekliyor"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Yeni Arch Linux Güncellemesi"
-msgstr[1] "Yeni Arch Linux Güncellemesi"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Yeni Crystal Linux Güncellemesi"
+msgstr[1] "Yeni Crystal Linux Güncellemesi"
 
 #: extension.js:377
 #, javascript-format

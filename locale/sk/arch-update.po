@@ -1,4 +1,4 @@
-# Slovak translation for Arch-update.
+# Slovak translation for Crystal-update.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Dušan Kazik <prescott66@gmail.com>, 2016, 2017.
@@ -51,11 +51,11 @@ msgstr[1] "%d dostupné aktualizácie"
 msgstr[2] "%d dostupných aktualizácií"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nová aktualizácia systému Arch"
-msgstr[1] "Nové aktualizácie systému Arch"
-msgstr[2] "Nové aktualizácie systému Arch"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Nová aktualizácia systému Crystal"
+msgstr[1] "Nové aktualizácie systému Crystal"
+msgstr[2] "Nové aktualizácie systému Crystal"
 
 #: extension.js:377
 #, javascript-format

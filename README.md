@@ -1,5 +1,5 @@
-# arch-update
-Update indicator for Arch Linux and GNOME Shell
+# crystal-update
+Update indicator for Crystal Linux and GNOME Shell
 
 ## Warning for Gnome 42
 Default update command tries to run "gnome-terminal".
@@ -20,7 +20,7 @@ It's on extensions.gnome.org :
 https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/
 
 ## Install from AUR
-Thanks to michiwend you can install it from Arch Linux User Repository : gnome-shell-extension-arch-update
+Thanks to michiwend you can install it from Crystal Linux User Repository : gnome-shell-extension-arch-update
 https://aur.archlinux.org/packages/gnome-shell-extension-arch-update/
 
 ## Manual install
@@ -234,7 +234,6 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 - Czech and German languages added
 
 ## Credits
-All icons are based on Thayer Williams' Archer logo, winner of Arch Linux logo contest.
 
 Some portions of the extension were inspired from Touchad Indicator and Lock keys. 
 https://github.com/orangeshirt/gnome-shell-extension-touchpad-indicator

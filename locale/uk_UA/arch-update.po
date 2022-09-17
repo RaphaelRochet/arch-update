@@ -52,11 +52,11 @@ msgstr[1] "%d оновлення очікують"
 msgstr[2] "%d оновлень очікують"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Доступне оновлення Arch Linux"
-msgstr[1] "Доступні оновлення Arch Linux"
-msgstr[2] "Доступні оновлення Arch Linux"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Доступне оновлення Crystal Linux"
+msgstr[1] "Доступні оновлення Crystal Linux"
+msgstr[2] "Доступні оновлення Crystal Linux"
 
 #: extension.js:377
 #, javascript-format

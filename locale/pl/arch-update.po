@@ -52,8 +52,8 @@ msgstr[1] "dostępnych aktualizacji"
 
 #: extension.js:370 extension.js:376
 #, fuzzy
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
 msgstr[0] "Nowe aktualizacje"
 msgstr[1] "Nowe aktualizacje"
 
