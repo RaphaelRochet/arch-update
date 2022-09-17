@@ -50,10 +50,10 @@ msgstr[0] "%d update in de wachtrij"
 msgstr[1] "%d updates in de wachtrij"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nieuwe Arch Linux-update"
-msgstr[1] "Nieuwe Arch Linux-updates"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Nieuwe Crystal Linux-update"
+msgstr[1] "Nieuwe Crystal Linux-updates"
 
 #: extension.js:377
 #, javascript-format

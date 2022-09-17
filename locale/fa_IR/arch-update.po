@@ -49,8 +49,8 @@ msgid_plural "%d updates pending"
 msgstr[0] "%d بروزرسانی موجود است"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
 msgstr[0] "بروزرسانی جدید آرچ لینوکس"
 
 #: extension.js:377

@@ -49,10 +49,10 @@ msgstr[0] "%d čekající aktualizace"
 msgstr[1] "%d čekajících aktualizací"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nová aktualizace pro Arch Linux"
-msgstr[1] "Nové aktualizace pro Arch Linux"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Nová aktualizace pro Crystal Linux"
+msgstr[1] "Nové aktualizace pro Crystal Linux"
 
 #: extension.js:377
 #, javascript-format

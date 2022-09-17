@@ -52,8 +52,8 @@ msgstr[1] "%d надоградње на чекању"
 msgstr[2] "%d надоградњи на чекању"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
 msgstr[0] "Нова надоградња Арчлинукса"
 msgstr[1] "Нове надоградње Арчлинукса"
 msgstr[2] "Нове надоградње Арчлинукса"

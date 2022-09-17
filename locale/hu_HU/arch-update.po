@@ -51,10 +51,10 @@ msgstr[0] "%d frissítés függőben"
 msgstr[1] "%d frissítés függőben"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Új Arch Linux frissítés"
-msgstr[1] "Új Arch Linux frissítések"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Új Crystal Linux frissítés"
+msgstr[1] "Új Crystal Linux frissítések"
 
 #: extension.js:377
 #, javascript-format

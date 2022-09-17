@@ -50,10 +50,10 @@ msgstr[0] "%d mesa a jorn en espèra"
 msgstr[1] "%d mesas a jorn en espèra"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Mesa a jorn Linux Arch"
-msgstr[1] "Mesas a jorn Linux Arch"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Mesa a jorn Linux Crystal"
+msgstr[1] "Mesas a jorn Linux Crystal"
 
 #: extension.js:377
 #, javascript-format

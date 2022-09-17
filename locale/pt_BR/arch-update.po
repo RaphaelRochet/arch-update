@@ -50,10 +50,10 @@ msgstr[0] "%d atualização pendente"
 msgstr[1] "%d atualizações pendentes"
 
 #: extension.js:370 extension.js:376
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nova atualização do Arch Linux"
-msgstr[1] "Novas atualizações do Arch Linux"
+msgid "New Crystal Linux Update"
+msgid_plural "New Crystal Linux Updates"
+msgstr[0] "Nova atualização do Crystal Linux"
+msgstr[1] "Novas atualizações do Crystal Linux"
 
 #: extension.js:377
 #, javascript-format
