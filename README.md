@@ -28,6 +28,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v50
+- Gnome 43
+- Updated translation : Dutch
+
 ### v49
 - "Fix 'Strip version numbers' nor working with old behavior
 
