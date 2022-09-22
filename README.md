@@ -28,6 +28,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v51
+- Minor fix
+
 ### v50
 - Gnome 43
 - Updated translation : Dutch
