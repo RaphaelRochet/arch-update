@@ -557,4 +557,5 @@ function enable() {
 
 function disable() {
 	archupdateindicator.destroy();
+	archupdateindicator = null;
 }
