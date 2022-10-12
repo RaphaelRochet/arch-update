@@ -86,7 +86,7 @@ class CrystalUpdateIndicator extends PanelMenu.Button {
 
 	_init() {
 		super._init(0);
-		this.updateIcon = new St.Icon({gicon: this._getCustIcon('arch-unknown-symbolic'), style_class: 'system-status-icon'});
+		this.updateIcon = new St.Icon({gicon: this._getCustIcon('crystal-unknown-symbolic'), style_class: 'system-status-icon'});
 
 		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
 		this.label = new St.Label({ text: '',
@@ -327,7 +327,7 @@ class CrystalUpdateIndicator extends PanelMenu.Button {
 
 	_showChecking(isChecking) {
 		if (isChecking == true) {
-			this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
+			this.updateIcon.set_gicon( this._getCustIcon('crystal-unknown-symbolic') );
 			this.checkNowMenuContainer.actor.visible = false;
 			this.checkingMenuItem.actor.visible = true;;
 		} else {
@@ -340,7 +340,7 @@ class CrystalUpdateIndicator extends PanelMenu.Button {
 		updatesCount = typeof updatesCount === 'number' ? updatesCount : UPDATES_PENDING;
 		if (updatesCount > 0) {
 			// Updates pending
-			this.updateIcon.set_gicon( this._getCustIcon('arch-updates-symbolic') );
+			this.updateIcon.set_gicon( this._getCustIcon('crystal-updates-symbolic') );
 			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.label.set_text(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
@@ -384,20 +384,20 @@ class CrystalUpdateIndicator extends PanelMenu.Button {
 			this.label.set_text('');
 			if (updatesCount == -1) {
 				// Unknown
-				this.updateIcon.set_gicon( this._getCustIcon('arch-unknown-symbolic') );
+				this.updateIcon.set_gicon( this._getCustIcon('crystal-unknown-symbolic') );
 				this._updateMenuExpander( false, '' );
 			} else if (updatesCount == -2) {
 				// Error
-				this.updateIcon.set_gicon( this._getCustIcon('arch-error-symbolic') );
-				if ( this.lastUnknowErrorString.indexOf("/usr/bin/checkupdates") > 0 ) {
+				this.updateIcon.set_gicon( this._getCustIcon('crystal-error-symbolic') );
+				if ( this.lastUnknowErrorString.indexOf("/usr/bin/ame checkupdates") > 0 ) {
 					// We do a special change here due to checkupdates moved to pacman-contrib
-					this._updateMenuExpander( false, _("Note : you have to install pacman-contrib to use the 'checkupdates' script.") );
+					this._updateMenuExpander( false, _("Note : you have to install ame to use the 'ame checkupdates' command.") );
 				} else {
 					this._updateMenuExpander( false, _('Error') + "\n" + this.lastUnknowErrorString );
 				}
 			} else {
 				// Up to date
-				this.updateIcon.set_gicon( this._getCustIcon('arch-uptodate-symbolic') );
+				this.updateIcon.set_gicon( this._getCustIcon('crystal-uptodate-symbolic') );
 				this._updateMenuExpander( false, _('Up to date :)') );
 				UPDATES_LIST = []; // Reset stored list
 			}
@@ -524,7 +524,7 @@ class CrystalUpdateIndicator extends PanelMenu.Button {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
 			this._notifSource.createIcon = function() {
-				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/arch-lit-symbolic.svg" );
+				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/crystal-lit-symbolic.svg" );
 				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
