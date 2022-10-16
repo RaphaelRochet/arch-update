@@ -59,13 +59,13 @@
     </key>
 
     <key name="check-cmd" type="s">
-      <default>"/usr/bin/checkupdates"</default>
+      <default>"/usr/bin/ame checkupdates"</default>
       <summary>Command to run to check for updated packages.</summary>
       <description>Command to run to check for updated packages.</description>
     </key>
 
     <key name="update-cmd" type="s">
-      <default>"gnome-terminal -- /bin/sh -c \"sudo pacman -Syu ; echo Done - Press enter to exit; read _\" "</default>
+      <default>"gnome-terminal -- /bin/sh -c \"ame upg ; echo Done - Press enter to exit; read _\" "</default>
       <summary>Command to run to update packages.</summary>
       <description>Command to run to update packages.</description>
     </key>
