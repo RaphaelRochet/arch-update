@@ -389,9 +389,9 @@ class CrystalUpdateIndicator extends PanelMenu.Button {
 			} else if (updatesCount == -2) {
 				// Error
 				this.updateIcon.set_gicon( this._getCustIcon('crystal-error-symbolic') );
-				if ( this.lastUnknowErrorString.indexOf("/usr/bin/ame checkupdates") > 0 ) {
+				if ( this.lastUnknowErrorString.indexOf("/usr/bin/checkupdates") > 0 ) {
 					// We do a special change here due to checkupdates moved to pacman-contrib
-					this._updateMenuExpander( false, _("Note : you have to install ame to use the 'ame checkupdates' command.") );
+					this._updateMenuExpander( false, _("Note : you have to install pacman-contrib to use the 'checkupdates' command.") );
 				} else {
 					this._updateMenuExpander( false, _('Error') + "\n" + this.lastUnknowErrorString );
 				}
