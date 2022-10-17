@@ -59,7 +59,7 @@
     </key>
 
     <key name="check-cmd" type="s">
-      <default>"/usr/bin/ame checkupdates"</default>
+      <default>"/usr/bin/checkupdates"</default>
       <summary>Command to run to check for updated packages.</summary>
       <description>Command to run to check for updated packages.</description>
     </key>
