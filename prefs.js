@@ -34,12 +34,10 @@ function init() {
 	ExtensionUtils.initTranslations("arch-update");
 }
 
-function buildPrefsWidget(){
-
+function fillPreferencesWindow(window) {
 	// Prepare labels and controls
 	let buildable = new Gtk.Builder();
 	buildable.add_from_file( Me.dir.get_path() + '/prefs.xml' );
-	let box = buildable.get_object('prefs_widget');
 
 	let version_label = buildable.get_object('version_info');
 	version_label.set_text('[Arch-update v' + Me.metadata.version.toString() + ']');
@@ -64,6 +62,7 @@ function buildPrefsWidget(){
 	settings.bind('position' , buildable.get_object('field_position') , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position-number' , buildable.get_object('field_positionnumber') , 'value' , Gio.SettingsBindFlags.DEFAULT);
 
-	return box;
-};
-
+	window.add( buildable.get_object('page_basic') );
+	window.add( buildable.get_object('page_advanced') );
+	window.add( buildable.get_object('page_about') );
+}

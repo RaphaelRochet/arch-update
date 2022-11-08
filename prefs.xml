@@ -40,459 +40,288 @@
 	<property name="step_increment">1</property>
 </object>
 
-<object class="GtkNotebook" id="prefs_widget">
+<object class="AdwPreferencesPage" id="page_basic">
+	<property name="title" translatable="yes">Basic settings</property>
+	<property name="icon-name">preferences-system-symbolic</property>
 
 	<child>
-		<object class="GtkGrid">
-			<property name="margin-top">18</property>
-			<property name="margin-start">18</property>
-			<property name="margin-end">18</property>
-			<property name="margin-bottom">18</property>
-			<property name="row-spacing">18</property>
-			<property name="row-homogeneous">false</property>
-			<property name="orientation">vertical</property>
-
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Checking for updates</property>
 			<child>
-				<object class="GtkBox">
-				<property name="orientation">vertical</property>
-				<property name="spacing">6</property>
-
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Time to wait before first check (seconds)</property>
+					<property name="activatable-widget">field_wait</property>
 					<child>
-						<object class="GtkBox">
-							<property name="orientation">horizontal</property>
-							<property name="spacing">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Checking for updates</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-									<attributes>
-										<attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
-									</attributes>
-								</object>
-							</child>
-							<child>
-								<object class="GtkLabel" id="version_info">
-									<property name="label">Version info placeholder</property>
-									<property name="hexpand">false</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
+						<object class="GtkSpinButton" id="field_wait">
+							<property name="valign">3</property>
+							<property name="adjustment">Adjust_1</property>
 						</object>
 					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="margin-start">12</property>
-							<property name="spacing">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Time to wait before first check (seconds)</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSpinButton" id="field_wait">
-									<property name="adjustment">Adjust_1</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="margin-start">12</property>
-							<property name="spacing">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Interval between updates check (minutes)</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSpinButton" id="field_interval">
-									<property name="adjustment">Adjust_2</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
 				</object>
 			</child>
-
 			<child>
-				<object class="GtkBox">
-				<property name="orientation">vertical</property>
-				<property name="spacing">6</property>
-
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Interval between updates check (minutes)</property>
+					<property name="activatable-widget">field_interval</property>
 					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Indicator</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-							<attributes>
-								<attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
-							</attributes>
+						<object class="GtkSpinButton" id="field_interval">
+							<property name="valign">3</property>
+							<property name="adjustment">Adjust_2</property>
 						</object>
 					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Always visible</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_visible">
-									<property name="active">true</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Use built-in icons</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_buildinicons">
-									<property name="active">true</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Show updates count on indicator</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_count">
-									<property name="active">true</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<property name="hexpand">true</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Auto-expand updates list if updates count is less than this number (0 to disable)</property>
-									<property name="hexpand">true</property>
-									<property name="xalign">0</property>
-									<property name="wrap">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSpinButton" id="field_autoexpandlist">
-									<property name="adjustment">Adjust_3</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="margin-start">12</property>
-							<property name="spacing">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property translatable="yes" name="label">Strip out versions numbers</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_stripversions">
-									<property name="active">false</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<property name="hexpand">true</property>
-							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Position in Panel</property>
-									<property name="hexpand">true</property>
-									<property name="xalign">0</property>
-									<property name="wrap">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkBox">
-									<property name="spacing">12</property>
-									<property name="margin-start">12</property>
-									<property name="hexpand">false</property>
-									<child>
-										<object class="GtkComboBoxText" id="field_position">
-											<items>
-												<item translatable="yes" id="0">Left</item>
-												<item translatable="yes" id="1">Center</item>
-												<item translatable="yes" id="2">Right</item>
-											</items>
-										</object>
-									</child>
-									<child>
-										<object class="GtkSpinButton" id="field_positionnumber">
-											<property name="adjustment">Adjust_4</property>
-										</object>
-									</child>
-								</object>
-							</child>
-						</object>
-					</child>
-
 				</object>
 			</child>
+		</object>
+	</child>
 
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Indicator</property>
 			<child>
-				<object class="GtkBox">
-					<property name="orientation">vertical</property>
-					<property name="spacing">6</property>
-
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Always visible</property>
+					<property name="activatable-widget">field_visible</property>
 					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Notification</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-							<attributes>
-								<attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
-							</attributes>
+						<object class="GtkSwitch" id="field_visible">
+							<property name="valign">3</property>
+							<property name="active">true</property>
 						</object>
 					</child>
-
+				</object>
+			</child>
+			<child>
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Use built-in icons</property>
+					<property name="activatable-widget">field_buildinicons</property>
+					<child>
+						<object class="GtkSwitch" id="field_buildinicons">
+							<property name="valign">3</property>
+							<property name="active">true</property>
+						</object>
+					</child>
+				</object>
+			</child>
+			<child>
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Show updates count on indicator</property>
+					<property name="activatable-widget">field_count</property>
+					<child>
+						<object class="GtkSwitch" id="field_count">
+							<property name="valign">3</property>
+							<property name="active">true</property>
+						</object>
+					</child>
+				</object>
+			</child>
+			<child>
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Position in Panel</property>
+					<property name="activatable-widget">field_position</property>
 					<child>
 						<object class="GtkBox">
 							<property name="spacing">12</property>
 							<property name="margin-start">12</property>
+							<property name="hexpand">false</property>
 							<child>
-								<object class="GtkLabel">
-									<property name="label" translatable="yes">Send a notification when new updates are available</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_notify">
-									<property name="active">true</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property translatable="yes" name="label">Use transient notifications (auto dismiss)</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_transient">
-									<property name="active">true</property>
-								</object>
-							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="spacing">12</property>
-							<property name="margin-start">12</property>
-							<child>
-								<object class="GtkLabel">
-									<property translatable="yes" name="label">How much information to show on notifications</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkComboBoxText" id="field_howmuch">
+								<object class="GtkComboBoxText" id="field_position">
+									<property name="valign">3</property>
 									<items>
-										<item translatable="yes" id="0">Count only</item>
-										<item translatable="yes" id="1">New updates names</item>
-										<item translatable="yes" id="2">All updates names</item>
+										<item translatable="yes" id="0">Left</item>
+										<item translatable="yes" id="1">Center</item>
+										<item translatable="yes" id="2">Right</item>
 									</items>
 								</object>
 							</child>
-						</object>
-					</child>
-
-					<child>
-						<object class="GtkBox">
-							<property name="margin-start">12</property>
-							<property name="spacing">12</property>
 							<child>
-								<object class="GtkLabel">
-									<property translatable="yes" name="label">Strip out versions numbers</property>
-									<property name="hexpand">true</property>
-									<property name="halign">1</property>
-								</object>
-							</child>
-							<child>
-								<object class="GtkSwitch" id="field_stripversionsnotifications">
-									<property name="active">false</property>
+								<object class="GtkSpinButton" id="field_positionnumber">
+									<property name="valign">3</property>
+									<property name="adjustment">Adjust_4</property>
 								</object>
 							</child>
 						</object>
 					</child>
-
 				</object>
 			</child>
-
-		</object>
-	</child>
-
-	<child type="tab">
-		<object class="GtkLabel">
-			<property name="label" translatable="yes">Basic settings</property>
 		</object>
 	</child>
 
 	<child>
-		<object class="GtkGrid">
-			<property name="margin-top">18</property>
-			<property name="margin-start">18</property>
-			<property name="margin-end">18</property>
-			<property name="margin-bottom">18</property>
-			<property name="row-spacing">18</property>
-			<property name="row-homogeneous">false</property>
-			<property name="orientation">vertical</property>
-
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Menu</property>
 			<child>
-				<object class="GtkBox">
-					<property name="orientation">vertical</property>
-					<property name="spacing">6</property>
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Auto-expand updates list if updates count is less than this number (0 to disable)</property>
+					<property name="activatable-widget">field_autoexpandlist</property>
 					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Command to check for package updates</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkEntry" id="field_checkcmd">
+						<object class="GtkSpinButton" id="field_autoexpandlist">
+							<property name="valign">3</property>
+							<property name="adjustment">Adjust_3</property>
 						</object>
 					</child>
 				</object>
 			</child>
-
 			<child>
-				<object class="GtkBox">
-					<property name="spacing">12</property>
-					<property name="margin-start">12</property>
+				<object class="AdwActionRow">
+					<property translatable="yes" name="title">Strip out versions numbers</property>
+					<property name="activatable-widget">field_stripversions</property>
 					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Disable output parsing, count every line as an update. This is the old behavior.</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-							<property name="wrap">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkSwitch" id="field_disableparsing">
+						<object class="GtkSwitch" id="field_stripversions">
+							<property name="valign">3</property>
 							<property name="active">false</property>
-							<property name="vexpand">false</property>
-							<property name="valign">2</property>
 						</object>
 					</child>
 				</object>
 			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="orientation">vertical</property>
-					<property name="spacing">6</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Command to update packages</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkEntry" id="field_updatecmd">
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="orientation">vertical</property>
-					<property name="spacing">6</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Pacman local directory path - To detect when new packages are installed</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkEntry" id="field_pacmandir">
-						</object>
-					</child>
-				</object>
-			</child>
-
-			<child>
-				<object class="GtkBox">
-					<property name="orientation">vertical</property>
-					<property name="spacing">6</property>
-					<child>
-						<object class="GtkLabel">
-							<property name="label" translatable="yes">Command to open package manager (optional)</property>
-							<property name="hexpand">true</property>
-							<property name="halign">1</property>
-						</object>
-					</child>
-					<child>
-						<object class="GtkEntry" id="field_packagemanager">
-						</object>
-					</child>
-				</object>
-			</child>
-
 		</object>
 	</child>
 
-	<child type="tab">
-		<object class="GtkLabel">
-			<property name="label" translatable="yes">Advanced settings</property>
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Notification</property>
+				<child>
+					<object class="AdwActionRow">
+						<property name="title" translatable="yes">Send a notification when new updates are available</property>
+						<property name="activatable-widget">field_notify</property>
+						<child>
+							<object class="GtkSwitch" id="field_notify">
+								<property name="valign">3</property>
+								<property name="active">true</property>
+							</object>
+						</child>
+					</object>
+				</child>
+				<child>
+					<object class="AdwActionRow">
+						<property translatable="yes" name="title">Use transient notifications (auto dismiss)</property>
+						<property name="activatable-widget">field_transient</property>
+						<child>
+							<object class="GtkSwitch" id="field_transient">
+								<property name="valign">3</property>
+								<property name="active">true</property>
+							</object>
+						</child>
+					</object>
+				</child>
+				<child>
+					<object class="AdwActionRow">
+						<property translatable="yes" name="title">How much information to show on notifications</property>
+						<property name="activatable-widget">field_howmuch</property>
+						<child>
+							<object class="GtkComboBoxText" id="field_howmuch">
+								<property name="valign">3</property>
+								<items>
+									<item translatable="yes" id="0">Count only</item>
+									<item translatable="yes" id="1">New updates names</item>
+									<item translatable="yes" id="2">All updates names</item>
+								</items>
+							</object>
+						</child>
+					</object>
+				</child>
+				<child>
+					<object class="AdwActionRow">
+						<property translatable="yes" name="title">Strip out versions numbers</property>
+						<property name="activatable-widget">field_stripversionsnotifications</property>
+						<child>
+							<object class="GtkSwitch" id="field_stripversionsnotifications">
+								<property name="valign">3</property>
+								<property name="active">false</property>
+							</object>
+						</child>
+					</object>
+				</child>
+		</object>
+	</child>
+
+</object>
+<object class="AdwPreferencesPage" id="page_advanced">
+	<property name="title" translatable="yes">Advanced settings</property>
+	<property name="icon-name">preferences-other-symbolic</property>
+
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Command to check for package updates</property>
+			<child>
+				<object class="AdwActionRow">
+					<property name="activatable-widget">field_checkcmd</property>
+					<property name="child">
+						<object class="GtkEntry" id="field_checkcmd">
+						</object>
+					</property>
+				</object>
+			</child>
+			<child>
+				<object class="AdwActionRow">
+					<property name="title" translatable="yes">Disable output parsing, count every line as an update. This is the old behavior.</property>
+					<property name="activatable-widget">field_disableparsing</property>
+					<child type="prefix">
+						<object class="GtkSwitch" id="field_disableparsing">
+							<property name="valign">3</property>
+						</object>
+					</child>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Command to update packages</property>
+			<child>
+				<object class="AdwActionRow">
+					<property name="activatable-widget">field_updatecmd</property>
+					<property name="child">
+						<object class="GtkEntry" id="field_updatecmd">
+						</object>
+					</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Pacman local directory path - To detect when new packages are installed</property>
+			<child>
+				<object class="AdwActionRow">
+					<property name="activatable-widget">field_pacmandir</property>
+					<property name="child">
+						<object class="GtkEntry" id="field_pacmandir">
+						</object>
+					</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Command to open package manager (optional)</property>
+			<child>
+				<object class="AdwActionRow">
+					<property name="activatable-widget">field_packagemanager</property>
+					<property name="child">
+						<object class="GtkEntry" id="field_packagemanager">
+						</object>
+					</property>
+				</object>
+			</child>
+		</object>
+	</child>
+
+</object>
+<object class="AdwPreferencesPage" id="page_about">
+	<property name="title" translatable="yes">About</property>
+	<property name="icon-name">help-about-symbolic</property>
+
+	<child>
+		<object class="AdwPreferencesGroup">
+			<property name="title" translatable="yes">Version info</property>
+			<child>
+				<object class="GtkLabel" id="version_info">
+					<property name="label">Version info placeholder</property>
+				</object>
+			</child>
 		</object>
 	</child>
 
