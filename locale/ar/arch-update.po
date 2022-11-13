@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 14:43+0200\n"
+"POT-Creation-Date: 2022-11-13 09:25+0100\n"
 "PO-Revision-Date: 2017-05-21 22:02+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: extension.js:107 extension.js:534
+#: extension.js:107 extension.js:539
 msgid "Update now"
 msgstr "حدّث الآن"
 
@@ -87,116 +87,124 @@ msgstr "عُطل"
 msgid "Up to date :)"
 msgstr "محَدَّث :)"
 
-#: prefs.xml:66
+#: prefs.xml:44
+msgid "Basic settings"
+msgstr "الإعدادات الأساسيّة"
+
+#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "يلتمس التحديثات"
 
-#: prefs.xml:90
+#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "الوقت المنتظر قبل التماس أول تحديث (بالثواني)"
 
-#: prefs.xml:109
+#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "المدة بين التماس التحديثات (بالدقائق)"
 
-#: prefs.xml:132
+#: prefs.xml:79
 msgid "Indicator"
 msgstr "المؤشر"
 
-#: prefs.xml:147
+#: prefs.xml:82
 msgid "Always visible"
 msgstr "ظاهر دائما"
 
-#: prefs.xml:166
+#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:185
+#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "اعرض عدد التحديثات في المؤشر"
 
-#: prefs.xml:205
+#: prefs.xml:118
+msgid "Position in Panel"
+msgstr ""
+
+#: prefs.xml:129
+msgid "Left"
+msgstr ""
+
+#: prefs.xml:130
+msgid "Center"
+msgstr ""
+
+#: prefs.xml:131
+msgid "Right"
+msgstr ""
+
+#: prefs.xml:150
+msgid "Menu"
+msgstr ""
+
+#: prefs.xml:153
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 "ابسط قائمة التحديثات تلقائيًا إن كان عددهم أقل من هذا الرقم (0 يعطل هذا)"
 
-#: prefs.xml:225 prefs.xml:361
+#: prefs.xml:165 prefs.xml:223
 msgid "Strip out versions numbers"
 msgstr "أزل أرقام الإصدارات"
 
-#: prefs.xml:245
-msgid "Position in Panel"
-msgstr ""
-
-#: prefs.xml:259
-msgid "Left"
-msgstr ""
-
-#: prefs.xml:260
-msgid "Center"
-msgstr ""
-
-#: prefs.xml:261
-msgid "Right"
-msgstr ""
-
-#: prefs.xml:285
+#: prefs.xml:180
 msgid "Notification"
 msgstr "التنبيهات"
 
-#: prefs.xml:300
+#: prefs.xml:183
 msgid "Send a notification when new updates are available"
 msgstr "أرسل تنبيهًا عند توفر تحديثات جديدة"
 
-#: prefs.xml:319
+#: prefs.xml:195
 msgid "Use transient notifications (auto dismiss)"
 msgstr "أستخدم تنبيهات عابرة (تختفي تلقائيًا)"
 
-#: prefs.xml:338
+#: prefs.xml:207
 msgid "How much information to show on notifications"
 msgstr "ما مقدار المعلومات المعروضة في التنبيهات"
 
-#: prefs.xml:346
+#: prefs.xml:213
 msgid "Count only"
 msgstr "العدد فقط"
 
-#: prefs.xml:347
+#: prefs.xml:214
 msgid "New updates names"
 msgstr "أسماء التحديثات الجديدة"
 
-#: prefs.xml:348
+#: prefs.xml:215
 msgid "All updates names"
 msgstr "كل أسماء التحديثات"
 
-#: prefs.xml:382
-msgid "Basic settings"
-msgstr "الإعدادات الأساسيّة"
+#: prefs.xml:238
+msgid "Advanced settings"
+msgstr "الإعدادات المتقدمة"
 
-#: prefs.xml:402
+#: prefs.xml:243
 msgid "Command to check for package updates"
 msgstr "أمر التماس التحديثات"
 
-#: prefs.xml:420
+#: prefs.xml:255
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:439
+#: prefs.xml:269
 msgid "Command to update packages"
 msgstr "أمر تحديث الحزم"
 
-#: prefs.xml:457
+#: prefs.xml:284
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "مسار دليل Pacman المحلي - لمعرفة أن التحديثات الجديدة ثُبتت"
 
-#: prefs.xml:475
+#: prefs.xml:299
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "أمر تحديث الحزم"
 
-#: prefs.xml:492
-msgid "Advanced settings"
-msgstr "الإعدادات المتقدمة"
+#: prefs.xml:314
+msgid "About"
+msgstr ""

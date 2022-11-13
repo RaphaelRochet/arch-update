@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 14:43+0200\n"
+"POT-Creation-Date: 2022-11-13 09:25+0100\n"
 "PO-Revision-Date: 2018-12-23 06:16+0200\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Setări"
 
-#: extension.js:107 extension.js:534
+#: extension.js:107 extension.js:539
 msgid "Update now"
 msgstr "Actualizează acum"
 
@@ -82,35 +82,59 @@ msgstr "Eroare"
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 
-#: prefs.xml:66
+#: prefs.xml:44
+msgid "Basic settings"
+msgstr "Setări de bază"
+
+#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Se caută actualizări"
 
-#: prefs.xml:90
+#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Timp de așteptare înainte de prima verificare (secunde)"
 
-#: prefs.xml:109
+#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Interval între verificările de actualizare (minute)"
 
-#: prefs.xml:132
+#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indicator"
 
-#: prefs.xml:147
+#: prefs.xml:82
 msgid "Always visible"
 msgstr "Întotdeauna vizibil"
 
-#: prefs.xml:166
+#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:185
+#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Arată numărul actualizărilor în indicator"
 
-#: prefs.xml:205
+#: prefs.xml:118
+msgid "Position in Panel"
+msgstr ""
+
+#: prefs.xml:129
+msgid "Left"
+msgstr ""
+
+#: prefs.xml:130
+msgid "Center"
+msgstr ""
+
+#: prefs.xml:131
+msgid "Right"
+msgstr ""
+
+#: prefs.xml:150
+msgid "Menu"
+msgstr ""
+
+#: prefs.xml:153
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -118,85 +142,69 @@ msgstr ""
 "Auto-extinde lista de actualizări dacă sunt mai puține decât acest număr (0 "
 "pentru a dezactiva)"
 
-#: prefs.xml:225 prefs.xml:361
+#: prefs.xml:165 prefs.xml:223
 msgid "Strip out versions numbers"
 msgstr "Înlătură numerele versiunilor"
 
-#: prefs.xml:245
-msgid "Position in Panel"
-msgstr ""
-
-#: prefs.xml:259
-msgid "Left"
-msgstr ""
-
-#: prefs.xml:260
-msgid "Center"
-msgstr ""
-
-#: prefs.xml:261
-msgid "Right"
-msgstr ""
-
-#: prefs.xml:285
+#: prefs.xml:180
 msgid "Notification"
 msgstr "Notificare"
 
-#: prefs.xml:300
+#: prefs.xml:183
 msgid "Send a notification when new updates are available"
 msgstr "Trimite o notificare când sunt disponibile actualizări noi"
 
-#: prefs.xml:319
+#: prefs.xml:195
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Folosește notificări tranzitorii (se închid automat)"
 
-#: prefs.xml:338
+#: prefs.xml:207
 msgid "How much information to show on notifications"
 msgstr "Cât de multă informație să fie arătată în notificări"
 
-#: prefs.xml:346
+#: prefs.xml:213
 msgid "Count only"
 msgstr "Doar număr"
 
-#: prefs.xml:347
+#: prefs.xml:214
 msgid "New updates names"
 msgstr "Numele noilor actualizări"
 
-#: prefs.xml:348
+#: prefs.xml:215
 msgid "All updates names"
 msgstr "Numele tuturor actualizărilor"
 
-#: prefs.xml:382
-msgid "Basic settings"
-msgstr "Setări de bază"
+#: prefs.xml:238
+msgid "Advanced settings"
+msgstr "Setări avansate"
 
-#: prefs.xml:402
+#: prefs.xml:243
 msgid "Command to check for package updates"
 msgstr "Comandă pentru verificarea pachetelor ce pot fi actualizate"
 
-#: prefs.xml:420
+#: prefs.xml:255
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:439
+#: prefs.xml:269
 msgid "Command to update packages"
 msgstr "Comandă pentru actualizarea pachetelor"
 
-#: prefs.xml:457
+#: prefs.xml:284
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Calea locală a dosarului Pacman - Pentru a detecta când sunt instalate "
 "pachete noi"
 
-#: prefs.xml:475
+#: prefs.xml:299
 msgid "Command to open package manager (optional)"
 msgstr "Comandă pentru deschiderea managerului de pachete (opțional)"
 
-#: prefs.xml:492
-msgid "Advanced settings"
-msgstr "Setări avansate"
+#: prefs.xml:314
+msgid "About"
+msgstr ""
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Cronometre</b>"

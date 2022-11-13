@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 14:43+0200\n"
+"POT-Creation-Date: 2022-11-13 09:25+0100\n"
 "PO-Revision-Date: 2021-02-12 11:13+0100\n"
 "Last-Translator: Xoán Sampaíño <xoansampainho@gmail.com>\n"
 "Language-Team: \n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Ajustes"
 
-#: extension.js:107 extension.js:534
+#: extension.js:107 extension.js:539
 msgid "Update now"
 msgstr "Actualizar"
 
@@ -78,35 +78,59 @@ msgstr "Error"
 msgid "Up to date :)"
 msgstr "El sistema está actualizado"
 
-#: prefs.xml:66
+#: prefs.xml:44
+msgid "Basic settings"
+msgstr "Ajustes básicos"
+
+#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Comprobando actualizaciones"
 
-#: prefs.xml:90
+#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Tiempo de espera antes de la primera comprobación (segundos)"
 
-#: prefs.xml:109
+#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Intervalo entre comprobaciones de actualización (minutos)"
 
-#: prefs.xml:132
+#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indicador"
 
-#: prefs.xml:147
+#: prefs.xml:82
 msgid "Always visible"
 msgstr "Siempre visible"
 
-#: prefs.xml:166
+#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr "Usar iconos internos"
 
-#: prefs.xml:185
+#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Mostrar contador de actualizaciones en el indicador"
 
-#: prefs.xml:205
+#: prefs.xml:118
+msgid "Position in Panel"
+msgstr "Posición en el panel"
+
+#: prefs.xml:129
+msgid "Left"
+msgstr "Izquierda"
+
+#: prefs.xml:130
+msgid "Center"
+msgstr "Centro"
+
+#: prefs.xml:131
+msgid "Right"
+msgstr "Derecha"
+
+#: prefs.xml:150
+msgid "Menu"
+msgstr ""
+
+#: prefs.xml:153
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -114,82 +138,66 @@ msgstr ""
 "Expandir automáticamente la lista de actualizaciones cuando su número es "
 "menor que (0 para deshabilitar)"
 
-#: prefs.xml:225 prefs.xml:361
+#: prefs.xml:165 prefs.xml:223
 msgid "Strip out versions numbers"
 msgstr "Quitar números de versión"
 
-#: prefs.xml:245
-msgid "Position in Panel"
-msgstr "Posición en el panel"
-
-#: prefs.xml:259
-msgid "Left"
-msgstr "Izquierda"
-
-#: prefs.xml:260
-msgid "Center"
-msgstr "Centro"
-
-#: prefs.xml:261
-msgid "Right"
-msgstr "Derecha"
-
-#: prefs.xml:285
+#: prefs.xml:180
 msgid "Notification"
 msgstr "Notificaciones"
 
-#: prefs.xml:300
+#: prefs.xml:183
 msgid "Send a notification when new updates are available"
 msgstr "Enviar una notificación cuando una nueva actualización esté disponible"
 
-#: prefs.xml:319
+#: prefs.xml:195
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Usar notificaciones transitorias (cierre automático)"
 
-#: prefs.xml:338
+#: prefs.xml:207
 msgid "How much information to show on notifications"
 msgstr "Información mostrada en la notificación"
 
-#: prefs.xml:346
+#: prefs.xml:213
 msgid "Count only"
 msgstr "Contador solamente"
 
-#: prefs.xml:347
+#: prefs.xml:214
 msgid "New updates names"
 msgstr "Nombres de las nuevas actualizaciones"
 
-#: prefs.xml:348
+#: prefs.xml:215
 msgid "All updates names"
 msgstr "Nombres de todas las actualizaciones"
 
-#: prefs.xml:382
-msgid "Basic settings"
-msgstr "Ajustes básicos"
+#: prefs.xml:238
+msgid "Advanced settings"
+msgstr "Ajustes avanzados"
 
-#: prefs.xml:402
+#: prefs.xml:243
 msgid "Command to check for package updates"
 msgstr "Orden para comprobar actualizaciones de los paquetes"
 
-#: prefs.xml:420
+#: prefs.xml:255
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:439
+#: prefs.xml:269
 msgid "Command to update packages"
 msgstr "Orden para actualizar los paquetes"
 
-#: prefs.xml:457
+#: prefs.xml:284
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Directorio local de pacman - Para detectar cuando una nueva actualización es "
 "instalada"
 
-#: prefs.xml:475
+#: prefs.xml:299
 msgid "Command to open package manager (optional)"
 msgstr "Orden para abrir el gestor de paquetes (opcional)"
 
-#: prefs.xml:492
-msgid "Advanced settings"
-msgstr "Ajustes avanzados"
+#: prefs.xml:314
+msgid "About"
+msgstr ""

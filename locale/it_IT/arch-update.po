@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 14:43+0200\n"
+"POT-Creation-Date: 2022-11-13 09:25+0100\n"
 "PO-Revision-Date: 2019-10-21 00:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: extension.js:107 extension.js:534
+#: extension.js:107 extension.js:539
 msgid "Update now"
 msgstr "Aggiorna ora"
 
@@ -77,35 +77,59 @@ msgstr "Errore"
 msgid "Up to date :)"
 msgstr "Aggiornato :)"
 
-#: prefs.xml:66
+#: prefs.xml:44
+msgid "Basic settings"
+msgstr "Impostazioni base"
+
+#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Verificando la presenza di aggiornamenti"
 
-#: prefs.xml:90
+#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Tempo di attesa prima del primo controllo (secondi)"
 
-#: prefs.xml:109
+#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Intervallo tra il controllo degli aggiornamenti (minuti)"
 
-#: prefs.xml:132
+#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indicatore"
 
-#: prefs.xml:147
+#: prefs.xml:82
 msgid "Always visible"
 msgstr "Sempre visibile"
 
-#: prefs.xml:166
+#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:185
+#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Mostra il numero degli aggiornamenti sull'indicatore"
 
-#: prefs.xml:205
+#: prefs.xml:118
+msgid "Position in Panel"
+msgstr ""
+
+#: prefs.xml:129
+msgid "Left"
+msgstr ""
+
+#: prefs.xml:130
+msgid "Center"
+msgstr ""
+
+#: prefs.xml:131
+msgid "Right"
+msgstr ""
+
+#: prefs.xml:150
+msgid "Menu"
+msgstr ""
+
+#: prefs.xml:153
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -113,85 +137,69 @@ msgstr ""
 "Estendi automaticamente la lista degli aggiornamenti se il numero è minore "
 "di questo (0 per disattivare)"
 
-#: prefs.xml:225 prefs.xml:361
+#: prefs.xml:165 prefs.xml:223
 msgid "Strip out versions numbers"
 msgstr "Estrai numero di versione"
 
-#: prefs.xml:245
-msgid "Position in Panel"
-msgstr ""
-
-#: prefs.xml:259
-msgid "Left"
-msgstr ""
-
-#: prefs.xml:260
-msgid "Center"
-msgstr ""
-
-#: prefs.xml:261
-msgid "Right"
-msgstr ""
-
-#: prefs.xml:285
+#: prefs.xml:180
 msgid "Notification"
 msgstr "Notifica"
 
-#: prefs.xml:300
+#: prefs.xml:183
 msgid "Send a notification when new updates are available"
 msgstr "Invia una notifica quando sono disponibili nuovi aggiornamenti"
 
-#: prefs.xml:319
+#: prefs.xml:195
 msgid "Use transient notifications (auto dismiss)"
 msgstr "Utilizzare notifiche transitorie (chiusura automatica)"
 
-#: prefs.xml:338
+#: prefs.xml:207
 msgid "How much information to show on notifications"
 msgstr "Quante informazioni mostrare nelle notifiche"
 
-#: prefs.xml:346
+#: prefs.xml:213
 msgid "Count only"
 msgstr "Solo il numero"
 
-#: prefs.xml:347
+#: prefs.xml:214
 msgid "New updates names"
 msgstr "Nomi dei nuovi aggiornamenti"
 
-#: prefs.xml:348
+#: prefs.xml:215
 msgid "All updates names"
 msgstr "Nomi di tutti gli aggiornamenti"
 
-#: prefs.xml:382
-msgid "Basic settings"
-msgstr "Impostazioni base"
+#: prefs.xml:238
+msgid "Advanced settings"
+msgstr "Impostazioni avanzate"
 
-#: prefs.xml:402
+#: prefs.xml:243
 msgid "Command to check for package updates"
 msgstr "Comando per verificare la presenza di aggiornamenti"
 
-#: prefs.xml:420
+#: prefs.xml:255
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:439
+#: prefs.xml:269
 msgid "Command to update packages"
 msgstr "Comando per aggiornare i pacchetti"
 
-#: prefs.xml:457
+#: prefs.xml:284
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Percorso locale di pacman - Per rilevare quando vengono installati nuovi "
 "pacchetti"
 
-#: prefs.xml:475
+#: prefs.xml:299
 msgid "Command to open package manager (optional)"
 msgstr "Comando per aprire il gestore di pacchetti (opzionale)"
 
-#: prefs.xml:492
-msgid "Advanced settings"
-msgstr "Impostazioni avanzate"
+#: prefs.xml:314
+msgid "About"
+msgstr ""
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "Timers"
