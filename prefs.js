@@ -39,8 +39,12 @@ function fillPreferencesWindow(window) {
 	let buildable = new Gtk.Builder();
 	buildable.add_from_file( Me.dir.get_path() + '/prefs.xml' );
 
-	let version_label = buildable.get_object('version_info');
-	version_label.set_text('[Arch-update v' + Me.metadata.version.toString() + ']');
+	// Fill in about page from metadata
+	buildable.get_object('about_logo').set_from_file( Me.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
+	buildable.get_object('about_name').set_text(Me.metadata.name.toString());
+	buildable.get_object('about_version').set_text(Me.metadata.version.toString());
+	buildable.get_object('about_description').set_text(Me.metadata.description.toString());
+	buildable.get_object('about_url').set_markup("<a href=\"" + Me.metadata.url.toString() + "\">" + Me.metadata.url.toString() + "</a>");
 
 	// Bind fields to settings
 	settings.bind('boot-wait' , buildable.get_object('field_wait') , 'value' , Gio.SettingsBindFlags.DEFAULT);
@@ -62,6 +66,8 @@ function fillPreferencesWindow(window) {
 	settings.bind('position' , buildable.get_object('field_position') , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position-number' , buildable.get_object('field_positionnumber') , 'value' , Gio.SettingsBindFlags.DEFAULT);
 
+	// Pref window layout
+	window.search_enabled = true;
 	window.add( buildable.get_object('page_basic') );
 	window.add( buildable.get_object('page_advanced') );
 	window.add( buildable.get_object('page_about') );

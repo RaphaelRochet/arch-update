@@ -316,10 +316,42 @@
 
 	<child>
 		<object class="AdwPreferencesGroup">
-			<property name="title" translatable="yes">Version info</property>
 			<child>
-				<object class="GtkLabel" id="version_info">
-					<property name="label">Version info placeholder</property>
+				<object class="GtkBox">
+					<property name="orientation">vertical</property>
+					<property name="margin-top">12</property>
+					<property name="margin-bottom">12</property>
+					<property name="spacing">32</property>
+					<child>
+						<object class="GtkImage" id="about_logo">
+							<property name="height-request">128</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkBox">
+							<property name="orientation">horizontal</property>
+							<property name="halign">3</property>
+							<property name="spacing">12</property>
+							<child>
+								<object class="GtkLabel" id="about_name">
+								</object>
+							</child>
+							<child>
+								<object class="GtkLabel" id="about_version">
+								</object>
+							</child>
+						</object>
+					</child>
+					<child>
+						<object class="GtkLabel" id="about_description">
+							<property name="wrap">true</property>
+							<property name="justify">GTK_JUSTIFY_CENTER</property>
+						</object>
+					</child>
+					<child>
+						<object class="GtkLabel" id="about_url">
+						</object>
+					</child>
 				</object>
 			</child>
 		</object>
