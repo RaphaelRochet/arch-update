@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-13 09:25+0100\n"
-"PO-Revision-Date: 2022-08-01 14:46+0200\n"
+"PO-Revision-Date: 2022-11-13 09:30+0100\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: extension.js:106
 msgid "Settings"
@@ -79,7 +79,7 @@ msgstr "Tout est à jour :)"
 
 #: prefs.xml:44
 msgid "Basic settings"
-msgstr "Paramètres simples"
+msgstr "Paramètres communs"
 
 #: prefs.xml:49
 msgid "Checking for updates"
@@ -127,7 +127,7 @@ msgstr "Droite"
 
 #: prefs.xml:150
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: prefs.xml:153
 msgid ""
@@ -201,7 +201,7 @@ msgstr "Commande pour ouvrir le gestionnaire de paquets (optionnel)"
 
 #: prefs.xml:314
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Minuteries</b>"
