@@ -107,6 +107,12 @@
       <description></description>
     </key>
 
+    <key name="enable-positioning" type="b">
+      <default>false</default>
+      <summary>Enable setting position in the panel</summary>
+      <description>True to enable</description>
+    </key>
+
     <key name="position" type="i">
       <default>2</default>
       <summary>Position in the panel</summary>

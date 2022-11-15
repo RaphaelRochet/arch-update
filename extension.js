@@ -188,15 +188,17 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 	}
 
 	_positionChanged(){
-		this.container.get_parent().remove_actor(this.container);
-		let boxes = {
-			0: Main.panel._leftBox,
-			1: Main.panel._centerBox,
-			2: Main.panel._rightBox
-		};
-		let p = this._settings.get_int('position');
-		let i = this._settings.get_int('position-number');
-		boxes[p].insert_child_at_index(this.container, i);
+		if (this._settings.get_boolean('enable-positioning')) {
+			this.container.get_parent().remove_actor(this.container);
+			let boxes = {
+				0: Main.panel._leftBox,
+				1: Main.panel._centerBox,
+				2: Main.panel._rightBox
+			};
+			let p = this._settings.get_int('position');
+			let i = this._settings.get_int('position-number');
+			boxes[p].insert_child_at_index(this.container, i);
+		}
 	}
 
 	_openSettings() {

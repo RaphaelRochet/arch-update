@@ -63,6 +63,8 @@ function fillPreferencesWindow(window) {
 	settings.bind('pacman-dir' , buildable.get_object('field_pacmandir') , 'text' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('auto-expand-list', buildable.get_object('field_autoexpandlist'), 'value', Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('package-manager' , buildable.get_object('field_packagemanager') , 'text' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('enable-positioning' , buildable.get_object('field_enablepositioning') , 'active' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('enable-positioning' , buildable.get_object('box_position') , 'sensitive' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position' , buildable.get_object('field_position') , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position-number' , buildable.get_object('field_positionnumber') , 'value' , Gio.SettingsBindFlags.DEFAULT);
 
