@@ -86,7 +86,7 @@ msgstr "首次检查前等待时间（秒）"
 
 #: prefs.xml:64
 msgid "Interval between updates check (minutes)"
-msgstr "更新检查间隔（秒）"
+msgstr "更新检查间隔（分）"
 
 #: prefs.xml:79
 msgid "Indicator"
