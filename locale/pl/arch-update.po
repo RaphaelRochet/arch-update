@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-13 09:25+0100\n"
 "PO-Revision-Date: 2016-01-31 12:00+0100\n"
-"Last-Translator: Artur \"artur9010\" Motyka <arturmotyka99@gmail.com>\n"
+"Last-Translator: "Andus" <anduse@andus.dev>\n"
 "Language-Team: polski <>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "Aktualizuj teraz"
 
 #: extension.js:108
 msgid "Open package manager"
-msgstr ""
+msgstr "Otwórz menedżer pakietów"
 
 #: extension.js:112
 msgid "Checking"
@@ -68,6 +68,7 @@ msgstr[1] "dostępnych aktualizacji"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Uwaga: musisz zainstalować pacman-contrib aby używać skryptu 'checkupdates'."
 
 #: extension.js:396
 msgid "Error"
@@ -75,7 +76,7 @@ msgstr "Błąd"
 
 #: extension.js:401
 msgid "Up to date :)"
-msgstr "Wszystko jest aktualne"
+msgstr "Wszystko jest aktualne :)"
 
 #: prefs.xml:44
 #, fuzzy
@@ -106,7 +107,7 @@ msgstr "Zawsze widoczny"
 
 #: prefs.xml:94
 msgid "Use built-in icons"
-msgstr ""
+msgstr "Użyj wbudowanych ikon"
 
 #: prefs.xml:106
 msgid "Show updates count on indicator"
@@ -114,33 +115,35 @@ msgstr "Pokazuj ilość aktualizacji na indykatorze"
 
 #: prefs.xml:118
 msgid "Position in Panel"
-msgstr ""
+msgstr "Pozycja w panelu"
 
 #: prefs.xml:129
 msgid "Left"
-msgstr ""
+msgstr "Lewo"
 
 #: prefs.xml:130
 msgid "Center"
-msgstr ""
+msgstr "Środek"
 
 #: prefs.xml:131
 msgid "Right"
-msgstr ""
+msgstr "Prawo"
 
 #: prefs.xml:150
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: prefs.xml:153
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
+"Automatycznie rozwiwaj listę jeśli liczba aktualizacji jest mniejsza niż ten numer (0 aby"
+"wyłączyć)"
 
 #: prefs.xml:165 prefs.xml:223
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Usuń numery wersji"
 
 #: prefs.xml:180
 #, fuzzy
@@ -185,6 +188,8 @@ msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
+"Wyłącz parsowanie danych wyjściowych, licz każdą linijkę jako aktualizację. To jest stare "
+"zachowanie."
 
 #: prefs.xml:269
 msgid "Command to update packages"
@@ -201,7 +206,7 @@ msgstr "Polecenie służące do aktualizacji"
 
 #: prefs.xml:314
 msgid "About"
-msgstr ""
+msgstr "O"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Czasomierze</b>"
