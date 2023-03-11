@@ -44,6 +44,8 @@ const _ = Gettext.gettext;
 /* I am very loose on this, may make it easier to port to other distros */
 const RE_UpdateLine = /^(.+)\s+(\S+)\s+->\s+(.+)$/;
 
+const gtkVersion = Gtk.get_major_version();
+
 /* Options */
 let ALWAYS_VISIBLE     = true;
 let USE_BUILDIN_ICONS  = true;
@@ -177,7 +179,12 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 
 		if (!USE_BUILDIN_ICONS && St.Settings.get().gtk_icon_theme) {
 			let theme = new Gtk.IconTheme();
-			theme.set_custom_theme( St.Settings.get().gtk_icon_theme );
+
+			if (gtkVersion >= 4) {
+				theme.set_theme_name( St.Settings.get().gtk_icon_theme );
+			} else {
+				theme.set_custom_theme( St.Settings.get().gtk_icon_theme );
+			}
 
 			if (theme.has_icon(icon_name)) {
 				return Gio.icon_new_for_string( icon_name );
