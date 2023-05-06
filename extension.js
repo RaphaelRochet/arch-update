@@ -177,7 +177,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 
 		if (!USE_BUILDIN_ICONS && St.Settings.get().gtk_icon_theme) {
 			let theme = new Gtk.IconTheme();
-			theme.set_custom_theme( St.Settings.get().gtk_icon_theme );
+			theme.set_theme_name( St.Settings.get().gtk_icon_theme );
 
 			if (theme.has_icon(icon_name)) {
 				return Gio.icon_new_for_string( icon_name );
