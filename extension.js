@@ -526,7 +526,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
 			this._notifSource.createIcon = function() {
-				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/arch-lit-symbolic.svg" );
+				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
 				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
