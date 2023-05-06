@@ -28,6 +28,11 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v52
+- Gnome 44
+- Move to GTK4
+- Updated translations : Brazilian Portuguese, Chinese
+
 ### v51
 - Minor fix
 
