@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-13 09:25+0100\n"
+"POT-Creation-Date: 2023-07-09 23:48+0200\n"
 "PO-Revision-Date: 2021-07-20 16:14+0800\n"
 "Last-Translator: zhmars <18466397+zhmars@users.noreply.github.com>\n"
 "Language-Team: \n"
@@ -18,57 +18,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.0\n"
 
-#: extension.js:106
+#: extension.js:113
 msgid "Settings"
 msgstr "设置"
 
-#: extension.js:107 extension.js:539
+#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "立即更新"
 
-#: extension.js:108
+#: extension.js:115
 msgid "Open package manager"
 msgstr "打开包管理器"
 
-#: extension.js:112
+#: extension.js:119
 msgid "Checking"
 msgstr "正在检查"
 
-#: extension.js:123
+#: extension.js:130
 msgid "Check now"
 msgstr "立即检查"
 
-#: extension.js:146
+#: extension.js:153
 msgid "Waiting first check"
 msgstr "正在等待首次检查"
 
-#: extension.js:344
+#: extension.js:347
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d 个更新正等待操作"
 
-#: extension.js:370 extension.js:376
+#: extension.js:373 extension.js:379
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Arch Linux 有新的更新"
 
-#: extension.js:377
+#: extension.js:380
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "有 %d 个更新正在等待操作"
 
-#: extension.js:394
+#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr "注意：使用“检查更新”脚本需要安装 pacman-contrib。"
 
-#: extension.js:396
+#: extension.js:399
 msgid "Error"
 msgstr "错误"
 
-#: extension.js:401
+#: extension.js:404
 msgid "Up to date :)"
 msgstr "已是最新 ^_^"
 
@@ -108,86 +108,91 @@ msgstr "图标上显示更新数目"
 msgid "Position in Panel"
 msgstr "图标位置"
 
-#: prefs.xml:129
+#: prefs.xml:136
 msgid "Left"
 msgstr "左"
 
-#: prefs.xml:130
+#: prefs.xml:137
 msgid "Center"
 msgstr "中间"
 
-#: prefs.xml:131
+#: prefs.xml:138
 msgid "Right"
 msgstr "右"
 
-#: prefs.xml:150
+#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
-#: prefs.xml:153
+#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr "如果更新数低于此数值则自动展开更新列表（0 表示禁用）"
 
-#: prefs.xml:165 prefs.xml:223
+#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "剔除版本号"
 
-#: prefs.xml:180
+#: prefs.xml:187
 msgid "Notification"
 msgstr "通知"
 
-#: prefs.xml:183
+#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "当有新的更新可用时发送通知"
 
-#: prefs.xml:195
+#: prefs.xml:202
 msgid "Use transient notifications (auto dismiss)"
 msgstr "使用暂时性通知（自动消除）"
 
-#: prefs.xml:207
+#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "在通知上显示多少信息"
 
-#: prefs.xml:213
+#: prefs.xml:220
 msgid "Count only"
 msgstr "仅数目"
 
-#: prefs.xml:214
+#: prefs.xml:221
 msgid "New updates names"
 msgstr "新更新名称"
 
-#: prefs.xml:215
+#: prefs.xml:222
 msgid "All updates names"
 msgstr "所有更新名称"
 
-#: prefs.xml:238
+#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "高级设置"
 
-#: prefs.xml:243
+#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "检查软件包更新的命令"
 
-#: prefs.xml:255
+#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:269
+#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "更新软件包的命令"
 
-#: prefs.xml:284
+#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman 本地目录路径 - 用于检测新软件包被安装的时间"
 
-#: prefs.xml:299
+#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "打开包管理器的命令（可选）"
 
-#: prefs.xml:314
+#: prefs.xml:321
+#, fuzzy
+msgid "Command to show info for a package (optional)"
+msgstr "打开包管理器的命令（可选）"
+
+#: prefs.xml:336
 msgid "About"
 msgstr ""
