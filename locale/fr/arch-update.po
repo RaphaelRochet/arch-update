@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-09 23:48+0200\n"
-"PO-Revision-Date: 2022-11-13 09:30+0100\n"
+"PO-Revision-Date: 2023-07-09 23:52+0200\n"
 "Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: extension.js:113
 msgid "Settings"
@@ -200,9 +200,8 @@ msgid "Command to open package manager (optional)"
 msgstr "Commande pour ouvrir le gestionnaire de paquets (optionnel)"
 
 #: prefs.xml:321
-#, fuzzy
 msgid "Command to show info for a package (optional)"
-msgstr "Commande pour ouvrir le gestionnaire de paquets (optionnel)"
+msgstr "Commande pour afficher les infos du paquet (optionnel)"
 
 #: prefs.xml:336
 msgid "About"
