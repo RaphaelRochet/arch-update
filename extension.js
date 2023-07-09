@@ -61,12 +61,19 @@ let STRIP_VERSIONS     = false;
 let STRIP_VERSIONS_N   = true;
 let AUTO_EXPAND_LIST   = 0;
 let DISABLE_PARSING    = false;
+let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.org/packages/%2$s/%3$s/%1$s";
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
 let UPDATES_LIST       = [];
 
+/* A process builder without i10n for reproducible processing. */
+const launcher = new Gio.SubprocessLauncher({
+    flags: (Gio.SubprocessFlags.STDOUT_PIPE |
+            Gio.SubprocessFlags.STDERR_PIPE)
+});
+launcher.setenv("LANG", "C", true);
 
 function init() {
 	String.prototype.format = Format.format;
@@ -232,6 +239,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		STRIP_VERSIONS = this._settings.get_boolean('strip-versions');
 		STRIP_VERSIONS_N = this._settings.get_boolean('strip-versions-in-notification');
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
+		PACKAGE_INFO_CMD = this._settings.get_string('package-info-cmd');
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
 		this._updateStatus();
@@ -421,7 +429,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 							var chunks = menutext.split(" ",2);
 							menutext = chunks[0];
 						}
-						this.menuExpander.menu.box.add( new St.Label({ text: menutext }) );
+						this.menuExpander.menu.box.add( this._createPackageLabel(menutext) );
 					} else {
 						let matches = item.match(RE_UpdateLine);
 						if (matches == null) {
@@ -429,10 +437,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 							this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
 						} else {
 							let hBox = new St.BoxLayout({ vertical: false });
-							hBox.add_child( new St.Label({
-								text: matches[1],
-								x_expand: true,
-								style_class: 'arch-updates-update-name' }) );
+							hBox.add_child( this._createPackageLabel(matches[1]) );
 							if (!STRIP_VERSIONS) {
 								hBox.add_child( new St.Label({
 									text: matches[2] + " → ",
@@ -451,6 +456,45 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		}
 		// 'Update now' visibility is linked so let's save a few lines and set it here
 		this.updateNowMenuItem.actor.reactive = enabled;
+	}
+
+	_createPackageLabel(name) {
+		if (PACKAGE_INFO_CMD) {
+			let label = new St.Label({
+				text: name,
+				style_class: 'arch-updates-update-name-link'
+			});
+			let button = new St.Button({
+				child: label,
+				x_expand: true
+			});
+			button.connect('clicked', this._packageInfo.bind(this, name));
+			return button;
+		} else {
+			return new St.Label({
+				text: name,
+				x_expand: true,
+				style_class: 'arch-updates-update-name'
+			});
+		}
+	}
+
+	_packageInfo(item) {
+		let proc = launcher.spawnv(['pacman', '-Si', item]);
+		proc.communicate_utf8_async(null, null, (proc, res) => {
+			let repo = "REPO";
+			let arch = "ARCH";
+			let [,stdout,] = proc.communicate_utf8_finish(res);
+			if (proc.get_successful()) {
+				let m = stdout.match(/^Repository\s+:\s+(\w+).*?^Architecture\s+:\s+(\w+)/ms);
+				if (m !== null) {
+					repo = m[1];
+					arch = m[2];
+				}
+			}
+			let command = PACKAGE_INFO_CMD.format(item, repo, arch);
+			Util.spawnCommandLine(command);
+		});
 	}
 
 	_checkUpdates() {
