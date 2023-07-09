@@ -61,6 +61,7 @@ let STRIP_VERSIONS     = false;
 let STRIP_VERSIONS_N   = true;
 let AUTO_EXPAND_LIST   = 0;
 let DISABLE_PARSING    = false;
+let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.de/packages/repo/x86_64/%s";
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
@@ -421,7 +422,12 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 							var chunks = menutext.split(" ",2);
 							menutext = chunks[0];
 						}
-						this.menuExpander.menu.box.add( new St.Label({ text: menutext }) );
+						let label = new St.Label({ text: menutext });
+						let button = new St.Button({
+							child: label,
+							x_expand: true });
+						button.connect('clicked', this._packageInfo.bind(this, menutext));
+						this.menuExpander.menu.box.add( button );
 					} else {
 						let matches = item.match(RE_UpdateLine);
 						if (matches == null) {
@@ -429,10 +435,14 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 							this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
 						} else {
 							let hBox = new St.BoxLayout({ vertical: false });
-							hBox.add_child( new St.Label({
+							let label = new St.Label({
 								text: matches[1],
-								x_expand: true,
-								style_class: 'arch-updates-update-name' }) );
+								style_class: 'arch-updates-update-name' });
+							let button = new St.Button({
+								child: label,
+								x_expand: true });
+							button.connect('clicked', this._packageInfo.bind(this, matches[1]));
+							hBox.add_child( button );
 							if (!STRIP_VERSIONS) {
 								hBox.add_child( new St.Label({
 									text: matches[2] + " → ",
@@ -451,6 +461,11 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		}
 		// 'Update now' visibility is linked so let's save a few lines and set it here
 		this.updateNowMenuItem.actor.reactive = enabled;
+	}
+
+	_packageInfo(item) {
+		let command = PACKAGE_INFO_CMD.format(item);
+		Util.spawnCommandLine(command);
 	}
 
 	_checkUpdates() {
