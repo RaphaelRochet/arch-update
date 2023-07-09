@@ -318,7 +318,7 @@
 
 	<child>
 		<object class="AdwPreferencesGroup">
-			<property name="title" translatable="yes">Command to show info for a package</property>
+			<property name="title" translatable="yes">Command to show info for a package (optional)</property>
 			<child>
 				<object class="AdwActionRow">
 					<property name="activatable-widget">field_packageinfocmd</property>
