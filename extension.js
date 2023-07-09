@@ -61,13 +61,19 @@ let STRIP_VERSIONS     = false;
 let STRIP_VERSIONS_N   = true;
 let AUTO_EXPAND_LIST   = 0;
 let DISABLE_PARSING    = false;
-let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.de/packages/repo/x86_64/%s";
+let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.org/packages/%2$s/%3$s/%1$s";
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
 let UPDATES_LIST       = [];
 
+/* A process builder without i10n for reproducible processing. */
+const launcher = new Gio.SubprocessLauncher({
+    flags: (Gio.SubprocessFlags.STDOUT_PIPE |
+            Gio.SubprocessFlags.STDERR_PIPE)
+});
+launcher.setenv("LANG", "C", true);
 
 function init() {
 	String.prototype.format = Format.format;
@@ -464,8 +470,21 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 	}
 
 	_packageInfo(item) {
-		let command = PACKAGE_INFO_CMD.format(item);
-		Util.spawnCommandLine(command);
+		let proc = launcher.spawnv(['pacman', '-Si', item]);
+		proc.communicate_utf8_async(null, null, (proc, res) => {
+			let repo = "REPO";
+			let arch = "ARCH";
+			let [,stdout,] = proc.communicate_utf8_finish(res);
+			if (proc.get_successful()) {
+				let m = stdout.match(/^Repository\s+:\s+(\w+).*?^Architecture\s+:\s+(\w+)/ms);
+				if (m !== null) {
+					repo = m[1];
+					arch = m[2];
+				}
+			}
+			let command = PACKAGE_INFO_CMD.format(item, repo, arch);
+			Util.spawnCommandLine(command);
+		});
 	}
 
 	_checkUpdates() {
