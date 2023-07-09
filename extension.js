@@ -239,6 +239,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		STRIP_VERSIONS = this._settings.get_boolean('strip-versions');
 		STRIP_VERSIONS_N = this._settings.get_boolean('strip-versions-in-notification');
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
+		PACKAGE_INFO_CMD = this._settings.get_string('package-info-cmd');
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
 		this._updateStatus();

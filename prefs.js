@@ -67,6 +67,7 @@ function fillPreferencesWindow(window) {
 	settings.bind('enable-positioning' , buildable.get_object('box_position') , 'sensitive' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position' , buildable.get_object('field_position') , 'active' , Gio.SettingsBindFlags.DEFAULT);
 	settings.bind('position-number' , buildable.get_object('field_positionnumber') , 'value' , Gio.SettingsBindFlags.DEFAULT);
+	settings.bind('package-info-cmd' , buildable.get_object('field_packageinfocmd') , 'text' , Gio.SettingsBindFlags.DEFAULT);
 
 	// Pref window layout
 	window.search_enabled = true;
