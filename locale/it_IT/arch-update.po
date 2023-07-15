@@ -77,6 +77,22 @@ msgstr "Errore"
 msgid "Up to date :)"
 msgstr "Aggiornato :)"
 
+#: prefs.js:44
+msgid "<!-- name -->%s"
+msgstr ""
+
+#: prefs.js:45
+msgid "<!-- version -->%s"
+msgstr ""
+
+#: prefs.js:46
+msgid "<!-- description -->%s"
+msgstr ""
+
+#: prefs.js:47
+msgid "<!-- url --><a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
 #: prefs.xml:44
 msgid "Basic settings"
 msgstr "Impostazioni base"
@@ -188,7 +204,7 @@ msgid "Command to update packages"
 msgstr "Comando per aggiornare i pacchetti"
 
 #: prefs.xml:291
-msgid "Pacman local directory path - To detect when new packages are installed"
+msgid "Directory of installed packages to confirm updates"
 msgstr ""
 "Percorso locale di pacman - Per rilevare quando vengono installati nuovi "
 "pacchetti"
@@ -199,7 +215,7 @@ msgstr "Comando per aprire il gestore di pacchetti (opzionale)"
 
 #: prefs.xml:321
 #, fuzzy
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr "Comando per aprire il gestore di pacchetti (opzionale)"
 
 #: prefs.xml:336

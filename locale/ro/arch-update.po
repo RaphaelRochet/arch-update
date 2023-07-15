@@ -82,6 +82,22 @@ msgstr "Eroare"
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 
+#: prefs.js:44
+msgid "<!-- name -->%s"
+msgstr ""
+
+#: prefs.js:45
+msgid "<!-- version -->%s"
+msgstr ""
+
+#: prefs.js:46
+msgid "<!-- description -->%s"
+msgstr ""
+
+#: prefs.js:47
+msgid "<!-- url --><a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
 #: prefs.xml:44
 msgid "Basic settings"
 msgstr "Setări de bază"
@@ -193,7 +209,7 @@ msgid "Command to update packages"
 msgstr "Comandă pentru actualizarea pachetelor"
 
 #: prefs.xml:291
-msgid "Pacman local directory path - To detect when new packages are installed"
+msgid "Directory of installed packages to confirm updates"
 msgstr ""
 "Calea locală a dosarului Pacman - Pentru a detecta când sunt instalate "
 "pachete noi"
@@ -204,7 +220,7 @@ msgstr "Comandă pentru deschiderea managerului de pachete (opțional)"
 
 #: prefs.xml:321
 #, fuzzy
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr "Comandă pentru deschiderea managerului de pachete (opțional)"
 
 #: prefs.xml:336

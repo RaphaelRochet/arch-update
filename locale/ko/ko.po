@@ -72,6 +72,22 @@ msgstr "오류"
 msgid "Up to date :)"
 msgstr "시스템이 최신 상태입니다."
 
+#: prefs.js:44
+msgid "<!-- name -->%s"
+msgstr ""
+
+#: prefs.js:45
+msgid "<!-- version -->%s"
+msgstr ""
+
+#: prefs.js:46
+msgid "<!-- description -->%s"
+msgstr ""
+
+#: prefs.js:47
+msgid "<!-- url --><a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
 #: prefs.xml:44
 msgid "Basic settings"
 msgstr "일반"
@@ -182,7 +198,7 @@ msgid "Command to update packages"
 msgstr "패키지를 업데이트할 명령어"
 
 #: prefs.xml:291
-msgid "Pacman local directory path - To detect when new packages are installed"
+msgid "Directory of installed packages to confirm updates"
 msgstr "Pacman 경로 - 새로운 패키지가 설치되었는지 확인"
 
 #: prefs.xml:306
@@ -191,7 +207,7 @@ msgstr "패키지 관리자를 열 때 사용할 명령어"
 
 #: prefs.xml:321
 #, fuzzy
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr "패키지 관리자를 열 때 사용할 명령어"
 
 #: prefs.xml:336

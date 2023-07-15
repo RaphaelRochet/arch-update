@@ -78,6 +78,22 @@ msgstr "Fel"
 msgid "Up to date :)"
 msgstr "Uppdaterad :)"
 
+#: prefs.js:44
+msgid "<!-- name -->%s"
+msgstr ""
+
+#: prefs.js:45
+msgid "<!-- version -->%s"
+msgstr ""
+
+#: prefs.js:46
+msgid "<!-- description -->%s"
+msgstr ""
+
+#: prefs.js:47
+msgid "<!-- url --><a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
 #: prefs.xml:44
 msgid "Basic settings"
 msgstr "Grundinställningar"
@@ -189,7 +205,7 @@ msgid "Command to update packages"
 msgstr "Kommando för att uppdatera paket"
 
 #: prefs.xml:291
-msgid "Pacman local directory path - To detect when new packages are installed"
+msgid "Directory of installed packages to confirm updates"
 msgstr ""
 "Sökväg till lokal Pacman-katalog - För att upptäcka när nya paket är "
 "installerade"
@@ -200,7 +216,7 @@ msgstr "Kommando för att öppna pakethanteraren (valfritt)"
 
 #: prefs.xml:321
 #, fuzzy
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr "Kommando för att öppna pakethanteraren (valfritt)"
 
 #: prefs.xml:336

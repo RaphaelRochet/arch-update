@@ -76,6 +76,21 @@ msgstr "Eraro"
 #: extension.js:404
 msgid "Up to date :)"
 msgstr "Ĝisdata :)"
+#: prefs.js:44
+msgid "<!-- name -->%s"
+msgstr ""
+
+#: prefs.js:45
+msgid "<!-- version -->%s"
+msgstr ""
+
+#: prefs.js:46
+msgid "<!-- description -->%s"
+msgstr ""
+
+#: prefs.js:47
+msgid "<!-- url --><a href=\"%1$s\">%1$s</a>"
+msgstr ""
 
 #: prefs.xml:44
 msgid "Basic settings"
@@ -188,7 +203,7 @@ msgid "Command to update packages"
 msgstr "Komando ĝisdatigi pakaĵoj"
 
 #: prefs.xml:291
-msgid "Pacman local directory path - To detect when new packages are installed"
+msgid "Directory of installed packages to confirm updates"
 msgstr "Pacman loka dosierujo - Eltrovi kiam novaj pakaĵoj instalis"
 
 #: prefs.xml:306
@@ -197,7 +212,7 @@ msgstr "Komando malfermi pakaĵa administrilo (fakultativa)"
 
 #: prefs.xml:321
 #, fuzzy
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr "Komando malfermi pakaĵa administrilo (fakultativa)"
 
 #: prefs.xml:336
