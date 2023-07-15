@@ -75,6 +75,22 @@ msgstr ""
 msgid "Up to date :)"
 msgstr ""
 
+#: prefs.js:44
+msgid "<!-- name -->%s"
+msgstr ""
+
+#: prefs.js:45
+msgid "<!-- version -->%s"
+msgstr ""
+
+#: prefs.js:46
+msgid "<!-- description -->%s"
+msgstr ""
+
+#: prefs.js:47
+msgid "<!-- url --><a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
 #: prefs.xml:44
 msgid "Basic settings"
 msgstr ""
