@@ -68,7 +68,7 @@ let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
 let UPDATES_LIST       = [];
 
-/* A process builder without i10n for reproducible processing. */
+/* A process builder without i18n for reproducible processing. */
 const launcher = new Gio.SubprocessLauncher({
     flags: (Gio.SubprocessFlags.STDOUT_PIPE |
             Gio.SubprocessFlags.STDERR_PIPE)
