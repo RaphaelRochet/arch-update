@@ -288,7 +288,7 @@
 
 	<child>
 		<object class="AdwPreferencesGroup">
-			<property name="title" translatable="yes">Pacman local directory path - To detect when new packages are installed</property>
+			<property name="title" translatable="yes">Directory of installed packages to confirm updates</property>
 			<child>
 				<object class="AdwActionRow">
 					<property name="activatable-widget">field_pacmandir</property>
@@ -318,7 +318,7 @@
 
 	<child>
 		<object class="AdwPreferencesGroup">
-			<property name="title" translatable="yes">Command to show info for a package (optional)</property>
+			<property name="title" translatable="yes">Command to show info for package, repo and arch (optional)</property>
 			<child>
 				<object class="AdwActionRow">
 					<property name="activatable-widget">field_packageinfocmd</property>
