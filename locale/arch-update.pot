@@ -192,7 +192,7 @@ msgid "Command to open package manager (optional)"
 msgstr ""
 
 #: prefs.xml:321
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr ""
 
 #: prefs.xml:336
