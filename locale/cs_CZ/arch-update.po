@@ -151,7 +151,7 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
-" Automaticky otevírat seznam aktualizací pokud je počet nižší než toto číslo "
+"Automaticky otevírat seznam aktualizací pokud je počet nižší než toto číslo "
 "(0 vypne)"
 
 #: prefs.xml:172 prefs.xml:230
