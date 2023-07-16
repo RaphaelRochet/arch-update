@@ -1,0 +1,11 @@
+# ignore local developer settings
+/.vscode/
+
+# ignore temporary build artifacts
+_build
+*~
+
+# ignore built binaries
+/schemas/gschemas.compiled
+*.mo
+*.zip
