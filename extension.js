@@ -16,7 +16,7 @@
 
     Copyright 2016-2022 Raphaël Rochet
 */
-
+/*
 const Clutter = imports.gi.Clutter;
 
 const St = imports.gi.St;
@@ -28,17 +28,32 @@ const Gtk = imports.gi.Gtk;
 const Main = imports.ui.main;
 const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
-const PopupMenu = imports.ui.popupMenu;
-const MessageTray = imports.ui.messageTray;
+*/
 
-const Util = imports.misc.util;
-const ExtensionUtils = imports.misc.extensionUtils;
-const ExtensionManager = imports.ui.main.extensionManager;
-const Me = ExtensionUtils.getCurrentExtension();
 
+//const Util = imports.misc.util;
+//const ExtensionUtils = imports.misc.extensionUtils;
+//const ExtensionManager = imports.ui.main.extensionManager;
+
+import St from 'gi://St';
+import { main as Main, panel, wm } from 'resource:///org/gnome/shell/ui/main.js';
+import Lang from 'gi://Lang'; // Note: Lang might not be directly available in G45. You might need to replace or remove it.
+import PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
+import Clutter from 'gi://Clutter';
+import GLib from 'gi://GLib';
+import Gio from 'gi://Gio';
+import PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
+import { getCurrentExtension as Me } from 'resource:///org/gnome/shell/misc/extensionUtils.js';
+import * as Util from 'resource:///org/gnome/shell/misc/util.js';
+
+import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
+
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+
+/*
 const Format = imports.format;
 const Gettext = imports.gettext.domain('arch-update');
-const _ = Gettext.gettext;
+*/
 
 /* RegExp to tell what's an update */
 /* I am very loose on this, may make it easier to port to other distros */
