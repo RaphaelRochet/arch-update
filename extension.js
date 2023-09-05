@@ -616,7 +616,6 @@ export default class ArchUpdateIndicatorExtension extends Extension {
                 s = s.replace(new RegExp(`\\{${i}\\}`, 'gm'), arguments[i]);
             return s;/* www .  j  a va 2 s . c  o m*/
         };
-        this.initTranslations();
     }
 
     enable() {
