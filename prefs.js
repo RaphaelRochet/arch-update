@@ -16,30 +16,28 @@
 
     Copyright 2016-2022 Raphaël Rochet
 */
-import Gio from 'gi://Gio';
+import Gio from "gi://Gio";
 import Gtk from 'gi://Gtk';
 
-
-import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+import {ExtensionPreferences} from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js"
 
 let settings;
 export default class ArchUpdatePreferences extends ExtensionPreferences {
     init() {
         settings = this.getSettings();
-        this.initTranslations();
     }
 
     fillPreferencesWindow(window) {
         // Prepare labels and controls
         let buildable = new Gtk.Builder();
-        buildable.add_from_file(`${this.dir.get_path()}/prefs.xml`);
+        buildable.add_from_file(this.dir.get_path() + '/prefs.xml');
 
         // Fill in about page from metadata
-        buildable.get_object('about_logo').set_from_file(`${this.dir.get_child('icons').get_path()}/arch-updates-logo.svg`);
+        buildable.get_object('about_logo').set_from_file(this.dir.get_child('icons').get_path() + "/arch-updates-logo.svg");
         buildable.get_object('about_name').set_text(this.metadata.name.toString());
         buildable.get_object('about_version').set_text(this.metadata.version.toString());
         buildable.get_object('about_description').set_text(this.metadata.description.toString());
-        buildable.get_object('about_url').set_markup(`<a href="${this.metadata.url.toString()}">${this.metadata.url.toString()}</a>`);
+        buildable.get_object('about_url').set_markup("<a href=\"" + this.metadata.url.toString() + "\">" + this.metadata.url.toString() + "</a>");
 
         // Bind fields to settings
         settings.bind('boot-wait', buildable.get_object('field_wait'), 'value', Gio.SettingsBindFlags.DEFAULT);
