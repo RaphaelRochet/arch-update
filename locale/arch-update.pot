@@ -75,6 +75,10 @@ msgstr ""
 msgid "Up to date :)"
 msgstr ""
 
+#: prefs.js:46
+msgid "<!-- about description -->%s"
+msgstr ""
+
 #: prefs.xml:44
 msgid "Basic settings"
 msgstr ""
@@ -192,7 +196,7 @@ msgid "Command to open package manager (optional)"
 msgstr ""
 
 #: prefs.xml:321
-msgid "Command to show info for a package (optional)"
+msgid "Command to show info for package, repo and arch (optional)"
 msgstr ""
 
 #: prefs.xml:336

@@ -43,8 +43,8 @@ function fillPreferencesWindow(window) {
 	buildable.get_object('about_logo').set_from_file( Me.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
 	buildable.get_object('about_name').set_text(Me.metadata.name.toString());
 	buildable.get_object('about_version').set_text(Me.metadata.version.toString());
-	buildable.get_object('about_description').set_text(Me.metadata.description.toString());
-	buildable.get_object('about_url').set_markup("<a href=\"" + Me.metadata.url.toString() + "\">" + Me.metadata.url.toString() + "</a>");
+	buildable.get_object('about_description').set_markup(_("<!-- about description -->%s").format(Me.metadata.description));
+	buildable.get_object('about_url').set_markup("<a href=\"%1$s\">%1$s</a>".format(Me.metadata.url));
 
 	// Bind fields to settings
 	settings.bind('boot-wait' , buildable.get_object('field_wait') , 'value' , Gio.SettingsBindFlags.DEFAULT);
