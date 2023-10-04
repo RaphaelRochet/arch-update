@@ -4,5 +4,7 @@
   "shell-version": [ "45" ],
   "url": "https://github.com/RaphaelRochet/arch-update", 
   "uuid": "arch-update@RaphaelRochet", 
+  "gettext-domain": "arch-update",
+  "settings-schema": "org.gnome.shell.extensions.arch-update",
   "version": 53
 }
