@@ -17,28 +17,21 @@
     Copyright 2016-2022 Raphaël Rochet
 */
 
-const Clutter = imports.gi.Clutter;
+import Clutter from 'gi://Clutter';
+import St from 'gi://St';
+import GObject from 'gi://GObject';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import * as Gettext from 'gettext';
+import Gtk from 'gi://Gtk';
 
-const St = imports.gi.St;
-const GObject = imports.gi.GObject;
-const GLib = imports.gi.GLib;
-const Gio = imports.gi.Gio;
-const Gtk = imports.gi.Gtk;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import {Button} from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
-const Main = imports.ui.main;
-const Panel = imports.ui.panel;
-const PanelMenu = imports.ui.panelMenu;
-const PopupMenu = imports.ui.popupMenu;
-const MessageTray = imports.ui.messageTray;
-
-const Util = imports.misc.util;
-const ExtensionUtils = imports.misc.extensionUtils;
-const ExtensionManager = imports.ui.main.extensionManager;
-const Me = ExtensionUtils.getCurrentExtension();
-
-const Format = imports.format;
-const Gettext = imports.gettext.domain('arch-update');
-const _ = Gettext.gettext;
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
+import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
+import * as Util from 'resource:///org/gnome/shell/misc/util.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /* RegExp to tell what's an update */
 /* I am very loose on this, may make it easier to port to other distros */
@@ -75,9 +68,23 @@ const launcher = new Gio.SubprocessLauncher({
 });
 launcher.setenv("LANG", "C", true);
 
-function init() {
-	String.prototype.format = Format.format;
-	ExtensionUtils.initTranslations("arch-update");
+
+export default class ArchUpdateIndicatorExtension extends Extension {
+	constructor(metadata) {
+		super(metadata);
+	}
+	init() {
+		String.prototype.format = Format.format;
+	}
+	enable() {
+		this.archupdateindicator = new ArchUpdateIndicator(this);
+		Main.panel.addToStatusArea('ArchUpdateIndicator', this.archupdateindicator);
+		this.archupdateindicator._positionChanged();
+	}
+	disable() {
+		this.archupdateindicator.destroy();
+		this.archupdateindicator = null;
+	}
 }
 
 const ArchUpdateIndicator = GObject.registerClass(
@@ -89,10 +96,12 @@ const ArchUpdateIndicator = GObject.registerClass(
 		_updateProcess_pid: null,
 		_updateList: [],
 	},
-class ArchUpdateIndicator extends PanelMenu.Button {
+class ArchUpdateIndicator extends Button {
 
-	_init() {
+	_init(ext) {
 		super._init(0);
+		this._extension = ext;
+
 		this.updateIcon = new St.Icon({gicon: this._getCustIcon('arch-unknown-symbolic'), style_class: 'system-status-icon'});
 
 		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
@@ -156,7 +165,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 		this._updateList = UPDATES_LIST;
 
 		// Load settings
-		this._settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.arch-update');
+		this._settings = this._extension.getSettings();
 		this._settings.connect('changed', this._positionChanged.bind(this));
 		this._settingsChangedId = this._settings.connect('changed', this._applySettings.bind(this));
 		this._applySettings();
@@ -193,7 +202,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			}
 		}
 		// Icon not available in theme, or user prefers built in icon
-		return Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
+		return Gio.icon_new_for_string( this._extension.dir.get_child('icons').get_path() + "/" + icon_name + ".svg" );
 	}
 
 	_positionChanged(){
@@ -211,7 +220,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 	}
 
 	_openSettings() {
-		ExtensionUtils.openPrefs();
+		this._extension.openPreferences();
 	}
 
 	_openManager() {
@@ -563,7 +572,7 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
 			this._notifSource.createIcon = function() {
-				let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
+				let gicon = Gio.icon_new_for_string( this._extension.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
 				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
@@ -586,15 +595,3 @@ class ArchUpdateIndicator extends PanelMenu.Button {
 
 });
 
-let archupdateindicator;
-
-function enable() {
-	archupdateindicator = new ArchUpdateIndicator();
-	Main.panel.addToStatusArea('ArchUpdateIndicator', archupdateindicator);
-	archupdateindicator._positionChanged();
-}
-
-function disable() {
-	archupdateindicator.destroy();
-	archupdateindicator = null;
-}
