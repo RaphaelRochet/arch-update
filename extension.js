@@ -22,7 +22,6 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
-import * as Gettext from 'gettext';
 import Gtk from 'gi://Gtk';
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -31,7 +30,7 @@ import {Button} from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
 import * as Util from 'resource:///org/gnome/shell/misc/util.js';
-import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _, ngettext as __} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /* RegExp to tell what's an update */
 /* I am very loose on this, may make it easier to port to other distros */
@@ -353,7 +352,7 @@ class ArchUpdateIndicator extends Button {
 		if (updatesCount > 0) {
 			// Updates pending
 			this.updateIcon.set_gicon( this._getCustIcon('arch-updates-symbolic') );
-			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
+			this._updateMenuExpander( true, __( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.label.set_text(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				if (HOWMUCH > 0) {
@@ -379,14 +378,14 @@ class ArchUpdateIndicator extends Button {
 					if (updateList.length > 0) {
 						// Show notification only if there's new updates
 						this._showNotification(
-							Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updateList.length ),
+							__( "New Arch Linux Update", "New Arch Linux Updates", updateList.length ),
 							updateList.join(', ')
 						);
 					}
 				} else {
 					this._showNotification(
-						Gettext.ngettext( "New Arch Linux Update", "New Arch Linux Updates", updatesCount ),
-						Gettext.ngettext( "There is %d update pending", "There are %d updates pending", updatesCount ).format(updatesCount)
+						__( "New Arch Linux Update", "New Arch Linux Updates", updatesCount ),
+						__( "There is %d update pending", "There are %d updates pending", updatesCount ).format(updatesCount)
 					);
 				}
 			}
