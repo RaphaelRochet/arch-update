@@ -60,14 +60,6 @@ let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
 let UPDATES_LIST       = [];
 
-/* A process builder without i10n for reproducible processing. */
-const launcher = new Gio.SubprocessLauncher({
-    flags: (Gio.SubprocessFlags.STDOUT_PIPE |
-            Gio.SubprocessFlags.STDERR_PIPE)
-});
-launcher.setenv("LANG", "C", true);
-
-
 export default class ArchUpdateIndicatorExtension extends Extension {
 	constructor(metadata) {
 		super(metadata);
@@ -100,6 +92,12 @@ class ArchUpdateIndicator extends Button {
 	_init(ext) {
 		super._init(0);
 		this._extension = ext;
+		/* A process builder without i10n for reproducible processing. */
+		this.launcher = new Gio.SubprocessLauncher({
+			flags: (Gio.SubprocessFlags.STDOUT_PIPE |
+				    Gio.SubprocessFlags.STDERR_PIPE)
+		});
+		this.launcher.setenv("LANG", "C", true);
 
 		this.updateIcon = new St.Icon({gicon: this._getCustIcon('arch-unknown-symbolic'), style_class: 'system-status-icon'});
 
@@ -488,7 +486,7 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_packageInfo(item) {
-		let proc = launcher.spawnv(['pacman', '-Si', item]);
+		let proc = this.launcher.spawnv(['pacman', '-Si', item]);
 		proc.communicate_utf8_async(null, null, (proc, res) => {
 			let repo = "REPO";
 			let arch = "ARCH";
