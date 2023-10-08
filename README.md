@@ -28,7 +28,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
-### v54
+### v56
+- Code changes to commply with Gnome Guidelines
+
+### v55
 - Gnome 45
 - New feature : Show package info
 
