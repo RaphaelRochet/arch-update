@@ -22,7 +22,6 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
-import Gtk from 'gi://Gtk';
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import {Button} from 'resource:///org/gnome/shell/ui/panelMenu.js';
@@ -185,15 +184,8 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_getCustIcon(icon_name) {
-		// I did not find a way to lookup icon via Gio, so use Gtk
-		// I couldn't find why, but get_default is sometimes null, hence this additional test
-		// TODO : Maybe switch to St.IconTheme
-		// https://gjs.guide/extensions/upgrading/gnome-shell-44.html#gtk-icontheme
-		// https://gjs-docs.gnome.org/st12~12/st.icontheme
-		if (!USE_BUILDIN_ICONS && St.Settings.get().gtk_icon_theme) {
-			let theme = new Gtk.IconTheme();
-			theme.set_theme_name( St.Settings.get().gtk_icon_theme );
-
+		if (!USE_BUILDIN_ICONS) {
+			let theme = new St.IconTheme();
 			if (theme.has_icon(icon_name)) {
 				return Gio.icon_new_for_string( icon_name );
 			}
