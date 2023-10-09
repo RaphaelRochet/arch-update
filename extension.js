@@ -560,8 +560,8 @@ class ArchUpdateIndicator extends Button {
 		if (this._notifSource == null) {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.SystemNotificationSource();
+			let gicon = Gio.icon_new_for_string( this._extension.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
 			this._notifSource.createIcon = function() {
-				let gicon = Gio.icon_new_for_string( this._extension.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
 				return new St.Icon({ gicon: gicon });
 			};
 			// Take care of note leaving unneeded sources
