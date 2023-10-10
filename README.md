@@ -28,6 +28,11 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v57
+- Fix pacman dir change needing restart
+- Fix notifications not working
+- Updated translation : Dutch
+
 ### v56
 - Code changes to commply with Gnome Guidelines
 
