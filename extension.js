@@ -166,9 +166,6 @@ class ArchUpdateIndicator extends Button {
 		this._settingsChangedId = this._settings.connect('changed', this._applySettings.bind(this));
 		this._applySettings();
 
-		// Start monitoring external changes
-		this._startFolderMonitor();
-
 		if (FIRST_BOOT) {
 			// Schedule first check only if this is the first extension load
 			// This won't be run again if extension is disabled/enabled (like when screen is locked)
@@ -241,6 +238,7 @@ class ArchUpdateIndicator extends Button {
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
 		this._updateStatus();
+		this._startFolderMonitor();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
 		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
@@ -308,7 +306,15 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_startFolderMonitor() {
-		if (PACMAN_DIR) {
+		if (this.monitoring && this.monitoring != PACMAN_DIR) {
+			// The path to be monitored has been changed
+			this.monitor.cancel();
+			this.monitor = null;
+			this.monitoring = null;
+		}
+		if (PACMAN_DIR && !this.monitoring) {
+			// If there's a path to monitor and we're not already monitoring
+			this.monitoring = PACMAN_DIR;
 			this.pacman_dir = Gio.file_new_for_path(PACMAN_DIR);
 			this.monitor = this.pacman_dir.monitor_directory(0, null);
 			this.monitor.connect('changed', this._onFolderChanged.bind(this));
