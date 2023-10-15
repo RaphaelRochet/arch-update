@@ -66,8 +66,8 @@ msgstr[1] "Il y a %d mises à jour en attente"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
-"Attention : vous devez installer pacman-contrib pour utiliser le script "
-"'checkupdates'."
+"Attention : vous devez installer pacman-contrib pour utiliser le script "
+"« checkupdates »."
 
 #: extension.js:399
 msgid "Error"
@@ -79,7 +79,7 @@ msgstr "Tout est à jour :)"
 
 #: prefs.xml:44
 msgid "Basic settings"
-msgstr "Paramètres communs"
+msgstr "Paramètres généraux"
 
 #: prefs.xml:49
 msgid "Checking for updates"
@@ -87,7 +87,7 @@ msgstr "Vérification des mises à jour"
 
 #: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
-msgstr "Temps d'attente avant le premier test (secondes)"
+msgstr "Temps d’attente avant le premier test (secondes)"
 
 #: prefs.xml:64
 msgid "Interval between updates check (minutes)"
@@ -103,7 +103,7 @@ msgstr "Toujours visible"
 
 #: prefs.xml:94
 msgid "Use built-in icons"
-msgstr "Utiliser les icônes fournies"
+msgstr "Utiliser les icônes prédéfinies"
 
 #: prefs.xml:106
 msgid "Show updates count on indicator"
@@ -134,7 +134,7 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
-"Étendre automatiquement la liste des mises à jour s'il y en a moins que ce "
+"Étendre automatiquement la liste des mises à jour s’il y en a moins que ce "
 "nombre (0 pour désactiver)"
 
 #: prefs.xml:172 prefs.xml:230
@@ -152,15 +152,15 @@ msgstr ""
 
 #: prefs.xml:202
 msgid "Use transient notifications (auto dismiss)"
-msgstr "Utiliser des notifications transitoires (s'auto-effacent)"
+msgstr "Utiliser des notifications transitoires (s’auto-effacent)"
 
 #: prefs.xml:214
 msgid "How much information to show on notifications"
-msgstr "Quantité d'information dans les notifications"
+msgstr "Quantité d’information dans les notifications"
 
 #: prefs.xml:220
 msgid "Count only"
-msgstr "Juste le nombre"
+msgstr "Le nombre uniquement"
 
 #: prefs.xml:221
 msgid "New updates names"
@@ -184,7 +184,7 @@ msgid ""
 "behavior."
 msgstr ""
 "Désactiver le traitement de la sortie, compter chaque ligne comme une mise à "
-"jour. C'est l'ancien comportement."
+"jour. Ceci est l’ancien comportement."
 
 #: prefs.xml:276
 msgid "Command to update packages"
