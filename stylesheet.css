@@ -19,7 +19,7 @@
 
 .arch-updates-list {
 	margin: 10px;
-	padding-left: 20px;
+	padding-left: 0px;
 }
 
 .arch-updates-menubutton {
@@ -36,13 +36,16 @@
 }
 .arch-updates-update-title {
 	font-weight: bold;
+	padding-left: 8px;
 }
 .arch-updates-update-name {
 	padding-right: 1em;
+	padding-left: 8px;
 }
 .arch-updates-update-name-link {
 	padding-right: 1em;
 	text-decoration: underline;
+	padding-left: 8px;
 }
 .arch-updates-update-version-from {
 	font-size: 75%;

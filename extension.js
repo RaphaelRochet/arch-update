@@ -46,6 +46,8 @@ let HOWMUCH            = 0;
 let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -- /bin/sh -c \"sudo pacman -Syu ; echo Done - Press enter to exit; read _\" ";
 let CHECK_CMD          = "/usr/bin/checkupdates";
+let AUDIT_CMD          = "/usr/bin/arch-audit -u";
+let AUDIT_FULL_CMD     = "/usr/bin/arch-audit";
 let MANAGER_CMD        = "";
 let PACMAN_DIR         = "/var/lib/pacman/local";
 let STRIP_VERSIONS     = false;
@@ -53,11 +55,14 @@ let STRIP_VERSIONS_N   = true;
 let AUTO_EXPAND_LIST   = 0;
 let DISABLE_PARSING    = false;
 let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.org/packages/%2$s/%3$s/%1$s";
+let AUDIT_INFO_CMD     = "xdg-open https://security.archlinux.org/package/%1$s";
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
 let UPDATES_LIST       = [];
+let AUDIT_UPDATES_LIST = [];
+let AUDIT_FULL_LIST    = [];
 
 export default class ArchUpdateIndicatorExtension extends Extension {
 	constructor(metadata) {
@@ -84,7 +89,15 @@ const ArchUpdateIndicator = GObject.registerClass(
 		_updateProcess_sourceId: null,
 		_updateProcess_stream: null,
 		_updateProcess_pid: null,
+		_auditUpdateProcess_sourceId: null,
+		_auditUpdateProcess_stream: null,
+		_auditUpdateProcess_pid: null,
+		_auditFullProcess_sourceId: null,
+		_auditFullProcess_stream: null,
+		_auditFullProcess_pid: null,
 		_updateList: [],
+		_auditUpdateList: [],
+		_auditFullList: [],
 	},
 class ArchUpdateIndicator extends Button {
 
@@ -113,6 +126,7 @@ class ArchUpdateIndicator extends Button {
 		// Scrollability will also be taken care of by the popupmenu
 		this.menuExpander = new PopupMenu.PopupSubMenuMenuItem('');
 		this.menuExpander.menu.box.style_class = 'arch-updates-list';
+		this.securityMenuExpander = new PopupMenu.PopupSubMenuMenuItem('');
 
 		// Other standard menu items
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
@@ -138,6 +152,7 @@ class ArchUpdateIndicator extends Button {
 
 		// Assemble all menu items into the popup menu
 		this.menu.addMenuItem(this.menuExpander);
+		this.menu.addMenuItem(this.securityMenuExpander);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.updateNowMenuItem);
 		this.menu.addMenuItem(this.checkingMenuItem);
@@ -148,7 +163,11 @@ class ArchUpdateIndicator extends Button {
 		// Bind some events
 		this.menu.connect('open-state-changed', this._onMenuOpened.bind(this));
 		this.checkNowMenuItem.connect('activate', this._checkUpdates.bind(this));
+		this.checkNowMenuItem.connect('activate', this._checkAuditUpdates.bind(this));
+		this.checkNowMenuItem.connect('activate', this._checkAuditFull.bind(this));
 		cancelButton.connect('clicked', this._cancelCheck.bind(this));
+		cancelButton.connect('clicked', this._cancelAuditCheck.bind(this));
+		cancelButton.connect('clicked', this._cancelAuditFullCheck.bind(this));
 		settingsMenuItem.connect('activate', this._openSettings.bind(this));
 		this.updateNowMenuItem.connect('activate', this._updateNow.bind(this));
 		this.managerMenuItem.connect('activate', this._openManager.bind(this));
@@ -156,9 +175,12 @@ class ArchUpdateIndicator extends Button {
 		// Some initial status display
 		this._showChecking(false);
 		this._updateMenuExpander(false, _('Waiting first check'));
+		this._updateSecurityMenuExpander(false, _('Waiting first audit'));
 
 		// Restore previous updates list if any
 		this._updateList = UPDATES_LIST;
+		this._auditUpdateList = AUDIT_UPDATES_LIST;
+		this._auditFullList = AUDIT_FULL_LIST;
 
 		// Load settings
 		this._settings = this._extension.getSettings();
@@ -172,6 +194,8 @@ class ArchUpdateIndicator extends Button {
 			let that = this;
 			this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, BOOT_WAIT, function () {
 				that._checkUpdates();
+				that._checkAuditUpdates();
+				that._checkAuditFull();
 				that._FirstTimeoutId = null;
 				FIRST_BOOT = 0;
 				return false; // Run once
@@ -238,11 +262,13 @@ class ArchUpdateIndicator extends Button {
 		this.managerMenuItem.actor.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
 		this._updateStatus();
+		this._updateAuditStatus();
 		this._startFolderMonitor();
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
 		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
 			that._checkUpdates();
+			that._checkAuditUpdates();
 			return true;
 		});
 	}
@@ -264,6 +290,12 @@ class ArchUpdateIndicator extends Button {
 			GLib.source_remove(this._updateProcess_sourceId);
 			this._updateProcess_sourceId = null;
 			this._updateProcess_stream = null;
+			GLib.source_remove(this._auditUpdateProcess_sourceId);
+			this._auditUpdateProcess_sourceId = null;
+			this._auditUupdateProcess_stream = null;
+			GLib.source_remove(this._auditFullProcess_sourceId);
+			this._auditFullProcess_sourceId = null;
+			this._auditFullProcess_stream = null;
 		}
 		if (this._FirstTimeoutId) {
 			GLib.source_remove(this._FirstTimeoutId);
@@ -327,6 +359,8 @@ class ArchUpdateIndicator extends Button {
 		if (this._FirstTimeoutId) GLib.source_remove(this._FirstTimeoutId);
 		this._FirstTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 5, function () {
 			that._checkUpdates();
+			that._checkAuditUpdates();
+			that._checkAuditFull();
 			that._FirstTimeoutId = null;
 			return false;
 		});
@@ -387,6 +421,7 @@ class ArchUpdateIndicator extends Button {
 			}
 			// Store the new list
 			UPDATES_LIST = this._updateList;
+			AUDIT_UPDATES_LIST = this._auditUpdatesList;
 		} else {
 			this.label.set_text('');
 			if (updatesCount == -1) {
@@ -412,6 +447,16 @@ class ArchUpdateIndicator extends Button {
 		UPDATES_PENDING = updatesCount;
 		this._checkAutoExpandList();
 		this._checkShowHide();
+	}
+
+	_updateAuditStatus(auditCount) {
+		auditCount = typeof auditCount === 'number' ? auditCount : -1;
+	  if (auditCount > 0) {
+	    this._updateSecurityMenuExpander( true, __( "%d vulnerable package", "%d vulnerable packages", auditCount ).format(auditCount) );
+	    AUDIT_FULL_LIST = this._auditFullList;
+	  } else if (auditCount == -1) {
+	    this._updateSecurityMenuExpander( false, '' );
+	  }
 	}
 
 	_updateMenuExpander(enabled, label) {
@@ -441,7 +486,13 @@ class ArchUpdateIndicator extends Button {
 							this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
 						} else {
 							let hBox = new St.BoxLayout({ vertical: false });
-							hBox.add_child( this._createPackageLabel(matches[1]) );
+    						let __label = this._createPackageLabel(matches[1]);
+							if (this._auditUpdateList.includes(matches[1])) {
+							  hBox.add_child(new St.Icon({gicon: Gio.icon_new_for_string('warning-symbolic'), icon_size: 12}));
+							} else {
+    							__label.style = 'padding-left: 12px';
+    						}
+							hBox.add_child(__label);
 							if (!STRIP_VERSIONS) {
 								hBox.add_child( new St.Label({
 									text: matches[2] + " → ",
@@ -462,6 +513,33 @@ class ArchUpdateIndicator extends Button {
 		this.updateNowMenuItem.actor.reactive = enabled;
 	}
 
+	_updateSecurityMenuExpander(enabled, label) {
+	  this.securityMenuExpander.menu.box.destroy_all_children();
+		if (label == "") {
+			// No text, hide the menuitem
+			this.securityMenuExpander.actor.visible = false;
+		} else {
+		// We make our expander look like a regular menu label if disabled
+			this.securityMenuExpander.actor.reactive = enabled;
+			this.securityMenuExpander._triangle.visible = enabled;
+			this.securityMenuExpander.label.set_text(label);
+			this.securityMenuExpander.actor.visible = true;
+			if (enabled && this._auditFullList.length > 0) {
+			  this._auditFullList.forEach( item => {
+					var menutext = item;
+					var chunks = menutext.split(" ");
+					menutext = chunks[0];
+					let hBox = new St.BoxLayout({ vertical: false });
+					hBox.add_child( this._createAuditLabel(menutext) );
+					hBox.add_child( new St.Label({
+									text: chunks[chunks.length - 2] + " risk!",
+									style_class: 'arch-updates-update-version-to' }) );
+					this.securityMenuExpander.menu.box.add_child( hBox );
+				} );
+			}
+		}
+	}
+
 	_createPackageLabel(name) {
 		if (PACKAGE_INFO_CMD) {
 			let label = new St.Label({
@@ -473,6 +551,27 @@ class ArchUpdateIndicator extends Button {
 				x_expand: true
 			});
 			button.connect('clicked', this._packageInfo.bind(this, name));
+			return button;
+		} else {
+			return new St.Label({
+				text: name,
+				x_expand: true,
+				style_class: 'arch-updates-update-name'
+			});
+		}
+	}
+
+	_createAuditLabel(name) {
+		if (AUDIT_INFO_CMD) {
+			let label = new St.Label({
+				text: name,
+				style_class: 'arch-updates-update-name-link'
+			});
+			let button = new St.Button({
+				child: label,
+				x_expand: true
+			});
+			button.connect('clicked', this._auditInfo.bind(this, name));
 			return button;
 		} else {
 			return new St.Label({
@@ -501,6 +600,11 @@ class ArchUpdateIndicator extends Button {
 		});
 	}
 
+	_auditInfo(item) {
+    let command = AUDIT_INFO_CMD.format(item);
+		Util.spawnCommandLine(command);
+	}
+
 	_checkUpdates() {
 		if(this._updateProcess_sourceId) {
 			// A check is already running ! Maybe we should kill it and run another one ?
@@ -527,11 +631,71 @@ class ArchUpdateIndicator extends Button {
 		}
 	}
 
+	_checkAuditUpdates() {
+		if(this._auditUpdateProcess_sourceId) {
+			// A check is already running ! Maybe we should kill it and run another one ?
+			return;
+		}
+		// Run asynchronously, to avoid  shell freeze - even for a 1s check
+		try {
+			// Parse check command line
+			let [parseok, argvp] = GLib.shell_parse_argv( AUDIT_CMD );
+			if (!parseok) { throw 'Parse error' };
+			let [res, pid, in_fd, out_fd, err_fd]  = GLib.spawn_async_with_pipes(null, argvp, null, GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
+			// Let's buffer the command's output - that's a input for us !
+			this._auditUpdateProcess_stream = new Gio.DataInputStream({
+				base_stream: new Gio.UnixInputStream({fd: out_fd})
+			});
+			// We will process the output at once when it's done
+			this._auditUpdateProcess_sourceId = GLib.child_watch_add(0, pid, () => {this._checkAuditUpdatesRead()} );
+			this._auditUpdateProcess_pid = pid;
+		} catch (err) {
+			this.lastUnknowAuditErrorString = err.message.toString();
+		}
+	}
+
+	_checkAuditFull() {
+		if(this._auditFullProcess_sourceId) {
+			// A check is already running ! Maybe we should kill it and run another one ?
+			return;
+		}
+		// Run asynchronously, to avoid  shell freeze - even for a 1s check
+		try {
+			// Parse check command line
+			let [parseok, argvp] = GLib.shell_parse_argv( AUDIT_FULL_CMD );
+			if (!parseok) { throw 'Parse error' };
+			let [res, pid, in_fd, out_fd, err_fd]  = GLib.spawn_async_with_pipes(null, argvp, null, GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
+			// Let's buffer the command's output - that's a input for us !
+			this._auditFullProcess_stream = new Gio.DataInputStream({
+				base_stream: new Gio.UnixInputStream({fd: out_fd})
+			});
+			// We will process the output at once when it's done
+			this._auditFullProcess_sourceId = GLib.child_watch_add(0, pid, () => {this._checkAuditFullRead()} );
+			this._auditFullProcess_pid = pid;
+		} catch (err) {
+			this.lastUnknowAuditFullErrorString = err.message.toString();
+		}
+	}
+
 	_cancelCheck() {
 		if (this._updateProcess_pid == null) { return; };
 		Util.spawnCommandLine( "kill " + this._updateProcess_pid );
 		this._updateProcess_pid = null; // Prevent double kill
 		this._checkUpdatesEnd();
+	}
+
+	_cancelAuditCheck() {
+		if (this._auditUpdateProcess_pid == null) { return; };
+		Util.spawnCommandLine( "kill " + this._auditUpdateProcess_pid );
+		this._auditUpdateProcess_pid = null; // Prevent double kill
+		this._checkAuditUpdatesEnd();
+	}
+
+	_cancelAuditFullCheck() {
+		if (this._auditFullProcess_pid == null) { return; };
+		Util.spawnCommandLine( "kill " + this._auditFullProcess_pid );
+		this._auditFullProcess_pid = null; // Prevent double kill
+		this._checkAuditFullEnd();
 	}
 
 	_checkUpdatesRead() {
@@ -546,6 +710,30 @@ class ArchUpdateIndicator extends Button {
 		this._checkUpdatesEnd();
 	}
 
+	_checkAuditUpdatesRead() {
+		// Read the buffered output
+		let auditUpdateList = [];
+		let out, size;
+		do {
+			[out, size] = this._auditUpdateProcess_stream.read_line_utf8(null);
+			if (out) auditUpdateList.push(out.split(' ')[0]);
+		} while (out);
+		this._auditUpdateList = auditUpdateList;
+		this._checkAuditUpdatesEnd();
+	}
+
+	_checkAuditFullRead() {
+		// Read the buffered output
+		let auditFullList = [];
+		let out, size;
+		do {
+			[out, size] = this._auditFullProcess_stream.read_line_utf8(null);
+			if (out) auditFullList.push(out);
+		} while (out);
+		this._auditFullList = auditFullList;
+		this._checkAuditFullEnd();
+	}
+
 	_checkUpdatesEnd() {
 		// Free resources
 		this._updateProcess_stream.close(null);
@@ -555,7 +743,31 @@ class ArchUpdateIndicator extends Button {
 		this._updateProcess_pid = null;
 		// Update indicator
 		this._showChecking(false);
-		if (DISABLE_PARSING) {
+		this._end();
+	}
+
+	_checkAuditUpdatesEnd() {
+		// Free resources
+		this._auditUpdateProcess_stream.close(null);
+		this._auditUpdateProcess_stream = null;
+		GLib.source_remove(this._auditUpdateProcess_sourceId);
+		this._auditUpdateProcess_sourceId = null;
+		this._auditUpdateProcess_pid = null;
+		this._end();
+	}
+
+	_checkAuditFullEnd() {
+		// Free resources
+		this._auditFullProcess_stream.close(null);
+		this._auditFullProcess_stream = null;
+		GLib.source_remove(this._auditFullProcess_sourceId);
+		this._auditFullProcess_sourceId = null;
+		this._auditFullProcess_pid = null;
+		this._updateAuditStatus(this._auditFullList.length);
+	}
+
+	_end() {
+	  if (DISABLE_PARSING) {
 			this._updateStatus(this._updateList.length);
 		} else {
 			this._updateStatus(this._updateList.filter(function(line) { return RE_UpdateLine.test(line) }).length);
