@@ -89,7 +89,7 @@ const ArchUpdateIndicator = GObject.registerClass(
 class ArchUpdateIndicator extends Button {
 
 	_init(ext) {
-		super._init(0);
+		super._init(0.5);
 		this._extension = ext;
 		/* A process builder without i10n for reproducible processing. */
 		this.launcher = new Gio.SubprocessLauncher({
