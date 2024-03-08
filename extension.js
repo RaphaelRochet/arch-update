@@ -128,13 +128,13 @@ class ArchUpdateIndicator extends Button {
 			x_expand: true
 		});
 		cancelButton.set_x_align(Clutter.ActorAlign.END);
-		this.checkingMenuItem.actor.add_actor( checkingLabel );
-		this.checkingMenuItem.actor.add_actor( cancelButton  );
+		this.checkingMenuItem.add_child( checkingLabel );
+		this.checkingMenuItem.add_child( cancelButton  );
 
 		// A little trick on "check now" menuitem to keep menu opened
 		this.checkNowMenuItem = new PopupMenu.PopupMenuItem( _('Check now') );
 		this.checkNowMenuContainer = new PopupMenu.PopupMenuSection();
-		this.checkNowMenuContainer.actor.add_actor(this.checkNowMenuItem.actor);
+		this.checkNowMenuContainer.box.add_child(this.checkNowMenuItem);
 
 		// Assemble all menu items into the popup menu
 		this.menu.addMenuItem(this.menuExpander);
