@@ -565,11 +565,10 @@ class ArchUpdateIndicator extends Button {
 	_showNotification(title, message) {
 		if (this._notifSource == null) {
 			// We have to prepare this only once
-			this._notifSource = new MessageTray.SystemNotificationSource();
-			let gicon = Gio.icon_new_for_string( this._extension.dir.get_child('icons').get_path() + "/arch-updates-logo.svg" );
-			this._notifSource.createIcon = function() {
-				return new St.Icon({ gicon: gicon });
-			};
+			this._notifSource = new MessageTray.Source({
+				title: this._extension.metadata.name.toString(),
+				icon: this._getCustIcon("arch-lit-symbolic"),
+			});
 			// Take care of note leaving unneeded sources
 			this._notifSource.connect('destroy', ()=>{this._notifSource = null;});
 			Main.messageTray.add(this._notifSource);
@@ -579,6 +578,7 @@ class ArchUpdateIndicator extends Button {
 		// instead we will update previous
 		if (this._notifSource.notifications.length == 0) {
 			notification = new MessageTray.Notification(this._notifSource, title, message);
+			notification.gicon = this._getCustIcon("arch-updates-symbolic");
 			notification.addAction( _('Update now') , ()=>{this._updateNow();} );
 		} else {
 			notification = this._notifSource.notifications[0];
