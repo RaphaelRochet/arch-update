@@ -418,13 +418,13 @@ class ArchUpdateIndicator extends Button {
 		this.menuExpander.menu.box.destroy_all_children();
 		if (label == "") {
 			// No text, hide the menuitem
-			this.menuExpander.actor.visible = false;
+			this.menuExpander.visible = false;
 		} else {
 		// We make our expander look like a regular menu label if disabled
-			this.menuExpander.actor.reactive = enabled;
+			this.menuExpander.reactive = enabled;
 			this.menuExpander._triangle.visible = enabled;
 			this.menuExpander.label.set_text(label);
-			this.menuExpander.actor.visible = true;
+			this.menuExpander.visible = true;
 			if (enabled && this._updateList.length > 0) {
 				this._updateList.forEach( item => {
 					if(DISABLE_PARSING) {
@@ -459,7 +459,18 @@ class ArchUpdateIndicator extends Button {
 			}
 		}
 		// 'Update now' visibility is linked so let's save a few lines and set it here
-		this.updateNowMenuItem.actor.reactive = enabled;
+		this.updateNowMenuItem.reactive = enabled;
+		// Seems that's not done anymore by PopupBaseMenuItem after init, so let's update inactive styling
+		if ( this.updateNowMenuItem.reactive ) {
+			this.updateNowMenuItem.remove_style_class_name('popup-inactive-menu-item');
+		} else {
+			this.updateNowMenuItem.add_style_class_name('popup-inactive-menu-item');
+		}
+		if ( this.menuExpander.reactive ) {
+			this.menuExpander.remove_style_class_name('popup-inactive-menu-item');
+		} else {
+			this.menuExpander.add_style_class_name('popup-inactive-menu-item');
+		}
 	}
 
 	_createPackageLabel(name) {
