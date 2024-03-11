@@ -43,7 +43,6 @@ let BOOT_WAIT          = 15;      // 15s
 let CHECK_INTERVAL     = 60*60;   // 1h
 let NOTIFY             = false;
 let HOWMUCH            = 0;
-let TRANSIENT          = true;
 let UPDATE_CMD         = "gnome-terminal -- /bin/sh -c \"sudo pacman -Syu ; echo Done - Press enter to exit; read _\" ";
 let CHECK_CMD          = "/usr/bin/checkupdates";
 let MANAGER_CMD        = "";
@@ -225,7 +224,6 @@ class ArchUpdateIndicator extends Button {
 		CHECK_INTERVAL = 60 * this._settings.get_int('check-interval');
 		NOTIFY = this._settings.get_boolean('notify');
 		HOWMUCH = this._settings.get_int('howmuch');
-		TRANSIENT = this._settings.get_boolean('transient');
 		UPDATE_CMD = this._settings.get_string('update-cmd');
 		CHECK_CMD = this._settings.get_string('check-cmd');
 		DISABLE_PARSING = this._settings.get_boolean('disable-parsing');
@@ -574,29 +572,32 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_showNotification(title, message) {
+		// Destroy previous notification if still there
+		if (this._notification) {
+			this._notification.destroy(MessageTray.NotificationDestroyedReason.REPLACED);
+		}
+		// Prepare a notification Source with our name and icon
+		// It looks like notification Sources are destroyed when empty so we check every time
 		if (this._notifSource == null) {
 			// We have to prepare this only once
 			this._notifSource = new MessageTray.Source({
 				title: this._extension.metadata.name.toString(),
 				icon: this._getCustIcon("arch-lit-symbolic"),
 			});
-			// Take care of note leaving unneeded sources
+			// Take care of not leaving unneeded sources
 			this._notifSource.connect('destroy', ()=>{this._notifSource = null;});
 			Main.messageTray.add(this._notifSource);
 		}
-		let notification = null;
-		// We do not want to have multiple notifications stacked
-		// instead we will update previous
-		if (this._notifSource.notifications.length == 0) {
-			notification = new MessageTray.Notification(this._notifSource, title, message);
-			notification.gicon = this._getCustIcon("arch-updates-symbolic");
-			notification.addAction( _('Update now') , ()=>{this._updateNow();} );
-		} else {
-			notification = this._notifSource.notifications[0];
-			notification.update( title, message, { clear: true });
-		}
-		notification.setTransient(TRANSIENT);
-		this._notifSource.showNotification(notification);
+		// Creates a new notification
+		this._notification = new MessageTray.Notification({
+			source: this._notifSource,
+			title: title,
+			body: message
+		});
+		this._notification.gicon = this._getCustIcon("arch-updates-symbolic");
+		this._notification.addAction( _('Update now') , ()=>{this._updateNow();} );
+		this._notification.connect('destroy', ()=>{this._notification = null;});
+		this._notifSource.addNotification(this._notification);
 	}
 
 });
