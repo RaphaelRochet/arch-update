@@ -475,6 +475,7 @@ class ArchUpdateIndicator extends Button {
 		if (PACKAGE_INFO_CMD) {
 			let label = new St.Label({
 				text: name,
+				x_expand: true,
 				style_class: 'arch-updates-update-name-link'
 			});
 			let button = new St.Button({
@@ -493,6 +494,7 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_packageInfo(item) {
+		this.menu.close();
 		let proc = this.launcher.spawnv(['pacman', '-Si', item]);
 		proc.communicate_utf8_async(null, null, (proc, res) => {
 			let repo = "REPO";
