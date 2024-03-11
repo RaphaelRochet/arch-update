@@ -193,7 +193,7 @@ class ArchUpdateIndicator extends Button {
 
 	_positionChanged(){
 		if (this._settings.get_boolean('enable-positioning')) {
-			this.container.get_parent().remove_actor(this.container);
+			this.container.get_parent().remove_child(this.container);
 			let boxes = {
 				0: Main.panel._leftBox,
 				1: Main.panel._centerBox,
