@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 07:48+0100\n"
+"POT-Creation-Date: 2023-07-09 23:48+0200\n"
 "PO-Revision-Date: 2019-03-21 07:26+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@yandex.com>\n"
 "Language-Team: Turkish\n"
@@ -19,75 +19,118 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.1\n"
 
+#: extension.js:113
 msgid "Settings"
 msgstr "Ayarlar"
 
+#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "Güncelle"
 
+#: extension.js:115
 msgid "Open package manager"
 msgstr "Paketleme yöneticisini aç"
 
+#: extension.js:119
 msgid "Checking"
 msgstr "Kontrol ediliyor"
 
+#: extension.js:130
 msgid "Check now"
 msgstr "Kontrol Et"
 
+#: extension.js:153
 msgid "Waiting first check"
 msgstr "İlk kontrol bekleniyor"
 
+#: extension.js:347
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "%d güncelleme bekliyor"
+msgstr[1] "%d güncelleme bekliyor"
+
+#: extension.js:373 extension.js:379
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "Yeni Arch Linux Güncellemesi"
+msgstr[1] "Yeni Arch Linux Güncellemesi"
+
+#: extension.js:380
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "%d bekleyen güncelleme var"
+msgstr[1] "%d bekleyen güncelleme var"
+
+#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Not: ' checkupdates ' betiğini kullanmak için pacman-contrib yüklemeniz "
 "gerekir."
 
+#: extension.js:399
 msgid "Error"
 msgstr "Hata"
 
+#: extension.js:404
 msgid "Up to date :)"
 msgstr "Güncel :)"
 
+#: prefs.xml:44
 msgid "Basic settings"
 msgstr "Basit Ayarlar"
 
+#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Güncelleme kontrolü"
 
+#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "İlk kontrol öncesi beklenecek süre (saniye)"
 
+#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Güncelleme kontrolleri arası bekleme süresi (dakika)"
 
+#: prefs.xml:79
 msgid "Indicator"
 msgstr "Gösterge"
 
+#: prefs.xml:82
 msgid "Always visible"
 msgstr "Her zaman görünür"
 
+#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
+#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Güncelleme sayısını göstergede göster"
 
+#: prefs.xml:118
 msgid "Position in Panel"
 msgstr ""
 
+#: prefs.xml:136
 msgid "Left"
 msgstr ""
 
+#: prefs.xml:137
 msgid "Center"
 msgstr ""
 
+#: prefs.xml:138
 msgid "Right"
 msgstr ""
 
+#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
+#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -95,71 +138,70 @@ msgstr ""
 "Güncelleme sayısı bu sayıdan küçükse listeyi otomatik olarak genişlet (iptal "
 "etmek için 0)"
 
+#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "Sürüm numaralarını gösterme"
 
+#: prefs.xml:187
 msgid "Notification"
 msgstr "Bildirim"
 
+#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "Yeni güncelleme mevcut olduğunda bildirim gönder"
 
+#: prefs.xml:202
+msgid "Use transient notifications (auto dismiss)"
+msgstr "Geçici bildirimler kullan (otomatik sonlanır)"
+
+#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "Bildirimlerde gösterilecek bilgi miktarı"
 
+#: prefs.xml:220
 msgid "Count only"
 msgstr "Sadece sayı"
 
+#: prefs.xml:221
 msgid "New updates names"
 msgstr "Yeni güncellemelerin isimleri"
 
+#: prefs.xml:222
 msgid "All updates names"
 msgstr "Tüm güncellemelerin isimleri"
 
+#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "Gelişmiş Ayarlar"
 
+#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "Güncellemeleri kontrol etmek için kullanılacak komut"
 
+#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
+#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "Paketleri güncellemek için kullanılacak komut"
 
+#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Pacman yerel dizin yolu - Yeni paketlerin ne zaman yüklendiğini saptamak için"
 
+#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "Paket yöneticisini açma komutu (isteğe bağlı)"
 
+#: prefs.xml:321
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Paket yöneticisini açma komutu (isteğe bağlı)"
 
+#: prefs.xml:336
 msgid "About"
 msgstr ""
-
-#, javascript-format
-#~ msgid "%d update pending"
-#~ msgid_plural "%d updates pending"
-#~ msgstr[0] "%d güncelleme bekliyor"
-#~ msgstr[1] "%d güncelleme bekliyor"
-
-#~ msgid "New Arch Linux Update"
-#~ msgid_plural "New Arch Linux Updates"
-#~ msgstr[0] "Yeni Arch Linux Güncellemesi"
-#~ msgstr[1] "Yeni Arch Linux Güncellemesi"
-
-#, javascript-format
-#~ msgid "There is %d update pending"
-#~ msgid_plural "There are %d updates pending"
-#~ msgstr[0] "%d bekleyen güncelleme var"
-#~ msgstr[1] "%d bekleyen güncelleme var"
-
-#~ msgid "Use transient notifications (auto dismiss)"
-#~ msgstr "Geçici bildirimler kullan (otomatik sonlanır)"
