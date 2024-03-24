@@ -431,12 +431,12 @@ class ArchUpdateIndicator extends Button {
 							var chunks = menutext.split(" ",2);
 							menutext = chunks[0];
 						}
-						this.menuExpander.menu.box.add( this._createPackageLabel(menutext) );
+						this.menuExpander.menu.box.add_child( this._createPackageLabel(menutext) );
 					} else {
 						let matches = item.match(RE_UpdateLine);
 						if (matches == null) {
 							// Not an update
-							this.menuExpander.menu.box.add( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
+							this.menuExpander.menu.box.add_child( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
 						} else {
 							let hBox = new St.BoxLayout({ vertical: false });
 							hBox.add_child( this._createPackageLabel(matches[1]) );
