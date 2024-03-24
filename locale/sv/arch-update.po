@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 11:25+0100\n"
 "PO-Revision-Date: 2020-03-03 19:26+0100\n"
 "Last-Translator: Josef Gottlander <josef.gottlander@gmail.com>\n"
 "Language-Team: Swedish\n"
@@ -19,118 +19,92 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Gtranslator 3.34.0\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "Inställningar"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "Uppdatera nu"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr "Öppna pakethanterare"
 
-#: extension.js:119
 msgid "Checking"
 msgstr "Kollar"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "Kolla nu"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "Väntar på första koll"
 
-#: extension.js:347
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d uppdatering väntar"
 msgstr[1] "%d uppdateringar väntar"
 
-#: extension.js:373 extension.js:379
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Ny Arch Linux-uppdatering"
 msgstr[1] "Nya Arch Linux-uppdateringar§"
 
-#: extension.js:380
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Det finns %d uppdatering som väntar"
 msgstr[1] "Det finns %d uppdateringar som väntar"
 
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "OBS: du måste ha installerat pacman-contrib för att kunna använda "
 "'checkupdates'-skriptet"
 
-#: extension.js:399
 msgid "Error"
 msgstr "Fel"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "Uppdaterad :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "Grundinställningar"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Kolla efter uppdateringar"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Sekunder att vänta innan första koll"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Minuter mellan uppdateringskollar"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indikator"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "Alltid synlig"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Visa antalet uppdateringar i indikatorn"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:136
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:137
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:138
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -138,71 +112,55 @@ msgstr ""
 "Expandera listan automatiskt om antalet uppdateringar är färre än detta "
 "nummer (0 för att inaktivera)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "Ta bort versionnummer"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "Aviseringar"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "Avisera när det finns nya uppdateringar"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "Avisera kortvarigt (autoavfärdas)"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "Vad skall visas i aviseringar"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "Endast antal"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "Namn på nya uppdateringar"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "Namn på alla uppdateringar"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "Avancerade inställningar"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "Kommando för att kolla efter uppdateringar"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "Kommando för att uppdatera paket"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Sökväg till lokal Pacman-katalog - För att upptäcka när nya paket är "
 "installerade"
 
-#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "Kommando för att öppna pakethanteraren (valfritt)"
 
-#: prefs.xml:321
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Kommando för att öppna pakethanteraren (valfritt)"
 
-#: prefs.xml:336
 msgid "About"
 msgstr ""
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "Avisera kortvarigt (autoavfärdas)"

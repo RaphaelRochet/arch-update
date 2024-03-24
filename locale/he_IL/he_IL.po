@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 11:25+0100\n"
 "PO-Revision-Date: 2018-03-14 23:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,184 +18,142 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "הגדרות"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "עדכן כעת"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr "פתח את מנהל החבילות"
 
-#: extension.js:119
 msgid "Checking"
 msgstr "בודק"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "בדוק עדכונים"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "ממתין לבדיקה ראשונית"
 
-#: extension.js:347
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "קיים עדכון %d"
 msgstr[1] "קיימים %d עדכונים"
 
-#: extension.js:373 extension.js:379
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "עדכון חדש ל Arch Linux"
 msgstr[1] "עדכונים חדשים ל Arch Linux"
 
-#: extension.js:380
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "קיים עדכון %d"
 msgstr[1] "קיימים %d עדכונים"
 
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:399
 msgid "Error"
 msgstr "שגיאה"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "הכל מעודכן :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "הגדרות"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "חיפוש עדכונים"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "זמן שיש להמתין לפני העדכון הראשוני (בשניות)"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "מרווח זמן עד העדכון הבא (בדקות)"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "סמל"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "הצג תמיד"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "הצג את כמות העדכונים לצד הסמל"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:136
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:137
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:138
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr "הרחב אוטומטית את הרשימה אם כמות העדכונים קטנה מהמספר הבא (0 לביטול)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "הסר מספרי גרסה"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "התראה"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "הצג התראה כאשר קיימים עדכונים"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "השתמש בהתראות זמניות (נעלמות לאחר כמה שניות)"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "מידע שיוצג בהתראות"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "כמות בלבד"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "שמות החבילות החדשות לעדכון"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "שמות כל החבילות לעדכון"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "הגדרות מתקדמות"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "פקודה לבדיקת עדכונים"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "פקודה לעדכון חבילות"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "נתיב מקומי של Pacman - לזיהוי התקנה של חבילות חדשות"
 
-#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "פקודה לפתיחת מנהל חבילות (אופציונלי)"
 
-#: prefs.xml:321
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "פקודה לפתיחת מנהל חבילות (אופציונלי)"
 
-#: prefs.xml:336
 msgid "About"
 msgstr ""
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "השתמש בהתראות זמניות (נעלמות לאחר כמה שניות)"

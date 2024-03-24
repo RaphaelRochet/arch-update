@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 11:25+0100\n"
 "PO-Revision-Date: 2017-03-05 00:04+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,113 +18,87 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.11\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "هم‌اکنون بروزرسانی کنید"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr ""
 
-#: extension.js:119
 msgid "Checking"
 msgstr "در حال بررسی"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "هم‌اکنون بررسی کنید"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "انتظار برای اولین بررسی"
 
-#: extension.js:347
 #, javascript-format
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d بروزرسانی موجود است"
 
-#: extension.js:373 extension.js:379
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "بروزرسانی جدید آرچ لینوکس"
 
-#: extension.js:380
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "%d بروزرسانی در انتظار است"
 
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:399
 msgid "Error"
 msgstr "خطا"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "به روز :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "تنظیمات اولیه"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "بررسی برای بروزرسانی"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "زمان تعلل قبل از اولین بررسی (ثانیه)"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "وقفه‌ی بین بررسی بروزرسانی‌ها (دقیقه)"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "نمایه"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "همواره قابل رؤیت"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "نمایش تعداد بروزرسانی‌ها در نمایه"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:136
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:137
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:138
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -132,70 +106,54 @@ msgstr ""
 "در صورتی که تعداد بروز‌رسانی‌ها کمتر از این عدد بود، لیست بروزرسانی‌ها به صورت "
 "خودکار، باز شود (۰ برای غیر فعال کردن)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "حذف کردن شماره‌های نسخه"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "اعلان"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "ارسال اعلان، هنگامی که بروزرسانی وجود دارد"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "استفاده از اعلان گذرا (به صورت خودکار بسته می‌شود)"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "چه مقدار اطلاعات در اعلان نمایش داده شود"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "فقط عداد"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "اسم بروزرسانی‌های جدید"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "اسم تمام بروزرسانی‌ها"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "تنظیمات پیشرفته"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "دستور برای بررسی بروزرسانی بسته‌ها"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "دستور برای بروزرسانی بسته‌ها"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "مسیر پوشه محلی پک‌من - برای تشخیص آنکه بسته‌های جدید نصب شده است"
 
-#: prefs.xml:306
 #, fuzzy
 msgid "Command to open package manager (optional)"
 msgstr "دستور برای بروزرسانی بسته‌ها"
 
-#: prefs.xml:321
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "دستور برای بروزرسانی بسته‌ها"
 
-#: prefs.xml:336
 msgid "About"
 msgstr ""
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "استفاده از اعلان گذرا (به صورت خودکار بسته می‌شود)"
