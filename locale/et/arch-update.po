@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 07:48+0100\n"
 "PO-Revision-Date: 2018-05-21 19:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,116 +18,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "Seaded"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "Uuenda kohe"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr "Ava paketihaldur"
 
-#: extension.js:119
 msgid "Checking"
 msgstr "Kontrollimine"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "Kontrolli kohe"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "Ootan esimest kontrolli"
 
-#: extension.js:347
-#, javascript-format
-msgid "%d update pending"
-msgid_plural "%d updates pending"
-msgstr[0] "%d uuendus ootel"
-msgstr[1] "%d uuendust ootel"
-
-#: extension.js:373 extension.js:379
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Uus Arch Linux'i uuendus"
-msgstr[1] "Uued Arch Linux'i uuendused"
-
-#: extension.js:380
-#, javascript-format
-msgid "There is %d update pending"
-msgid_plural "There are %d updates pending"
-msgstr[0] "%d uuendus on ootel"
-msgstr[1] "%d uuendust on ootel"
-
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 
-#: extension.js:399
 msgid "Error"
 msgstr "Viga"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "Süsteem on ajakohane :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "Põhiseaded"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Uuenduste kontrollimine"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Oodatav aeg enne esimest kontrolli (sekundites)"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Intervall uuenduste kontrollimise vahel (minutites)"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indikaator"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "Alati nähtav"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr ""
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Näita uuenduste arvu indikaatoril"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr ""
 
-#: prefs.xml:136
 msgid "Left"
 msgstr ""
 
-#: prefs.xml:137
 msgid "Center"
 msgstr ""
 
-#: prefs.xml:138
 msgid "Right"
 msgstr ""
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -135,69 +92,70 @@ msgstr ""
 "Laienda uuenduste nimekirja automaatselt, kui uuenduste arv on vähem kui see "
 "number (keelamiseks kirjuta 0)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "Jäta välja versiooninumbrid"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "Teade"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "Saada teade, kui uued uuendused on saadaval"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "Kasuta lühiaegseid teateid (automaatselt sulguv)"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "Millist infot teadetes kuvada"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "Uuendatavate pakettide arv"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "Uued uuendatavad paketid"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "Kõik uuendatavad paketid"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "Täpsemad seaded"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "Paketiuuenduste kontrollimise käsklus"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "Pakettide uuendamise käsklus"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman'i kohalik kaustatee - et tuvastada uute pakettide installimine"
 
-#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "Paketihalduri avamise käsklus (valikuline)"
 
-#: prefs.xml:321
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Paketihalduri avamise käsklus (valikuline)"
 
-#: prefs.xml:336
 msgid "About"
 msgstr ""
+
+#, javascript-format
+#~ msgid "%d update pending"
+#~ msgid_plural "%d updates pending"
+#~ msgstr[0] "%d uuendus ootel"
+#~ msgstr[1] "%d uuendust ootel"
+
+#~ msgid "New Arch Linux Update"
+#~ msgid_plural "New Arch Linux Updates"
+#~ msgstr[0] "Uus Arch Linux'i uuendus"
+#~ msgstr[1] "Uued Arch Linux'i uuendused"
+
+#, javascript-format
+#~ msgid "There is %d update pending"
+#~ msgid_plural "There are %d updates pending"
+#~ msgstr[0] "%d uuendus on ootel"
+#~ msgstr[1] "%d uuendust on ootel"
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "Kasuta lühiaegseid teateid (automaatselt sulguv)"

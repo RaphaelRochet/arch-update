@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 07:48+0100\n"
 "PO-Revision-Date: 2022-09-23 11:27-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
@@ -19,118 +19,75 @@ msgstr ""
 "X-Generator: Gtranslator 42.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "Configurações"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "Atualizar agora"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr "Abrir o gerenciador de pacotes"
 
-#: extension.js:119
 msgid "Checking"
 msgstr "Verificando"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "Verificar agora"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "Aguardando pela primeira verificação"
 
-#: extension.js:347
-#, javascript-format
-msgid "%d update pending"
-msgid_plural "%d updates pending"
-msgstr[0] "%d atualização pendente"
-msgstr[1] "%d atualizações pendentes"
-
-#: extension.js:373 extension.js:379
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nova atualização do Arch Linux"
-msgstr[1] "Novas atualizações do Arch Linux"
-
-#: extension.js:380
-#, javascript-format
-msgid "There is %d update pending"
-msgid_plural "There are %d updates pending"
-msgstr[0] "Existe %d atualização pendente"
-msgstr[1] "Existem %d atualizações pendentes"
-
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Atenção: Você deve ter instalado o pacman-contrib para utilizar o script "
 "'checkupdate'."
 
-#: extension.js:399
 msgid "Error"
 msgstr "Erro"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "Atualizado :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "Configurações básicas"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Verificando por atualizações"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Tempo de espera antes da primeira verificação (segundos)"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Intervalo entre as verificações de atualização (minutos)"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indicador"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "Visível sempre"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr "Utilizar ícones embutidos"
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Exibir o contador de atualização no indicador"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr "Posição no painel"
 
-#: prefs.xml:136
 msgid "Left"
 msgstr "Esquerda"
 
-#: prefs.xml:137
 msgid "Center"
 msgstr "Centro"
 
-#: prefs.xml:138
 msgid "Right"
 msgstr "Direita"
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr "Menu"
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -138,47 +95,33 @@ msgstr ""
 "Expandir automaticamente a lista de atualizações se o contador for menor que "
 "este número (0 para desabilitar)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "Retirar os números das versões"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "Notificação"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "Enviar uma notificação quando novas atualizações estiverem disponíveis"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "Utilizar notificações temporárias (descartar automaticamente)"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "O que exibir nas notificações"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "Somente o contador"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "Nomes das novas atualizações"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "Nomes de todas as atualizações"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "Configurações avançadas"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "Comando para verificar se há atualizações de pacotes"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
@@ -186,27 +129,42 @@ msgstr ""
 "Desabilita a análise de saída, conta cada linha como uma atualização. Este é "
 "o comportamento antigo."
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "Comando para atualizar pacotes"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Caminho do diretório local do Pacman - Para detectar quando os novos pacotes "
 "são instalados"
 
-#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "Comando para abrir o gerenciador de pacotes (opcional)"
 
-#: prefs.xml:321
 msgid "Command to show info for a package (optional)"
 msgstr "Comando para mostra informações para um pacote (opcional)"
 
-#: prefs.xml:336
 msgid "About"
 msgstr "Sobre"
+
+#, javascript-format
+#~ msgid "%d update pending"
+#~ msgid_plural "%d updates pending"
+#~ msgstr[0] "%d atualização pendente"
+#~ msgstr[1] "%d atualizações pendentes"
+
+#~ msgid "New Arch Linux Update"
+#~ msgid_plural "New Arch Linux Updates"
+#~ msgstr[0] "Nova atualização do Arch Linux"
+#~ msgstr[1] "Novas atualizações do Arch Linux"
+
+#, javascript-format
+#~ msgid "There is %d update pending"
+#~ msgid_plural "There are %d updates pending"
+#~ msgstr[0] "Existe %d atualização pendente"
+#~ msgstr[1] "Existem %d atualizações pendentes"
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "Utilizar notificações temporárias (descartar automaticamente)"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Temporizadores</b>"

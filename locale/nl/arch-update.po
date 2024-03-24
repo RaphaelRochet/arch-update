@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 07:48+0100\n"
 "PO-Revision-Date: 2023-10-09 13:15+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -18,118 +18,75 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "Voorkeuren"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "Nu bijwerken"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr "Pakketbeheer openen"
 
-#: extension.js:119
 msgid "Checking"
 msgstr "Bezig met controleren…"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "Nu controleren"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "Bezig met wachten op eerste controle…"
 
-#: extension.js:347
-#, javascript-format
-msgid "%d update pending"
-msgid_plural "%d updates pending"
-msgstr[0] "%d update in de wachtrij"
-msgstr[1] "%d updates in de wachtrij"
-
-#: extension.js:373 extension.js:379
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Nieuwe Arch Linux-update"
-msgstr[1] "Nieuwe Arch Linux-updates"
-
-#: extension.js:380
-#, javascript-format
-msgid "There is %d update pending"
-msgid_plural "There are %d updates pending"
-msgstr[0] "Er staat %d update in de wachtrij"
-msgstr[1] "Er staan %d updates in de wachtrij"
-
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Let op: om het ‘checkupdates’-script te kunnen gebruiken dient u ‘pacman-"
 "contrib’ te installeren."
 
-#: extension.js:399
 msgid "Error"
 msgstr "Foutmelding"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "De software is actueel :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "Algemene voorkeuren"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Bezig met controleren…"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Wachttijd alvorens eerste controle (in seconden)"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Wachttijd tussen controles (in minuten)"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "Indicator"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "Altijd tonen"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr "Meegeleverde pictogrammen gebruiken"
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Aantal updates tonen op indicator"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr "Positie op bovenbalk"
 
-#: prefs.xml:136
 msgid "Left"
 msgstr "Links"
 
-#: prefs.xml:137
 msgid "Center"
 msgstr "Midden"
 
-#: prefs.xml:138
 msgid "Right"
 msgstr "Rechts"
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr "Menu"
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -137,47 +94,33 @@ msgstr ""
 "Lijst automatisch uitklappen als het aantal updates meer is dan hier "
 "opgegeven (0=uitschakelen)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "Versienummers verbergen"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "Melding"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "Toon een melding als er updates beschikbaar zijn"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "Meldingen automatisch verwerpen"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "Hoeveel informatie updatemeldingen moeten bevatten"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "Alleen het aantal"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "Namen van nieuwe updates"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "Alle namen van updates"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "Geavanceerde voorkeuren"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "Uit te voeren opdracht bij updatecontroles"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
@@ -185,24 +128,39 @@ msgstr ""
 "Schakel uitvoerverwerking uit en tel elke regel mee als update. Dit is het "
 "oorspronkelijke gedrag."
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "Uit te voeren opdracht bij pakketbijwerkingen"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
 "Lokale Pacman-locatie - Om te detecteren wanneer nieuwe pakketten worden "
 "geïnstalleerd"
 
-#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "Uit te voeren opdracht bij het openen van pakketbeheer (optioneel)"
 
-#: prefs.xml:321
 msgid "Command to show info for a package (optional)"
 msgstr "Uit te voeren opdracht bij tonen van pakketinformatie (optioneel)"
 
-#: prefs.xml:336
 msgid "About"
 msgstr "Over"
+
+#, javascript-format
+#~ msgid "%d update pending"
+#~ msgid_plural "%d updates pending"
+#~ msgstr[0] "%d update in de wachtrij"
+#~ msgstr[1] "%d updates in de wachtrij"
+
+#~ msgid "New Arch Linux Update"
+#~ msgid_plural "New Arch Linux Updates"
+#~ msgstr[0] "Nieuwe Arch Linux-update"
+#~ msgstr[1] "Nieuwe Arch Linux-updates"
+
+#, javascript-format
+#~ msgid "There is %d update pending"
+#~ msgid_plural "There are %d updates pending"
+#~ msgstr[0] "Er staat %d update in de wachtrij"
+#~ msgstr[1] "Er staan %d updates in de wachtrij"
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "Meldingen automatisch verwerpen"

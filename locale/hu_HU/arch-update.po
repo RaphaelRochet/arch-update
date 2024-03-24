@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-09 23:48+0200\n"
+"POT-Creation-Date: 2024-03-24 07:48+0100\n"
 "PO-Revision-Date: 2022-05-10 21:58+0200\n"
 "Last-Translator: infeeeee <gyetpet@mailbox.org>\n"
 "Language-Team: Hungarian <gyetpet@mailbox.org>\n"
@@ -19,118 +19,75 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Gtranslator 40.0\n"
 
-#: extension.js:113
 msgid "Settings"
 msgstr "Beállítások"
 
-#: extension.js:114 extension.js:578
 msgid "Update now"
 msgstr "Frissítés most"
 
-#: extension.js:115
 msgid "Open package manager"
 msgstr "Csomagkezelő megnyitása"
 
-#: extension.js:119
 msgid "Checking"
 msgstr "Ellenőrzés"
 
-#: extension.js:130
 msgid "Check now"
 msgstr "Ellenőrzés most"
 
-#: extension.js:153
 msgid "Waiting first check"
 msgstr "Várakozás az első ellenőrzésre"
 
-#: extension.js:347
-#, javascript-format
-msgid "%d update pending"
-msgid_plural "%d updates pending"
-msgstr[0] "%d frissítés függőben"
-msgstr[1] "%d frissítés függőben"
-
-#: extension.js:373 extension.js:379
-msgid "New Arch Linux Update"
-msgid_plural "New Arch Linux Updates"
-msgstr[0] "Új Arch Linux frissítés"
-msgstr[1] "Új Arch Linux frissítések"
-
-#: extension.js:380
-#, javascript-format
-msgid "There is %d update pending"
-msgid_plural "There are %d updates pending"
-msgstr[0] "%d frissítés függőben"
-msgstr[1] "%d frissítés függőben"
-
-#: extension.js:397
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
 "Megjegyzés: a pacman-contrib csomag telepítése szükséges a 'checkupdates' "
 "szkript használatához"
 
-#: extension.js:399
 msgid "Error"
 msgstr "Hiba"
 
-#: extension.js:404
 msgid "Up to date :)"
 msgstr "Naprakész :)"
 
-#: prefs.xml:44
 msgid "Basic settings"
 msgstr "Alap beállítások"
 
-#: prefs.xml:49
 msgid "Checking for updates"
 msgstr "Frissítések ellenőrzése"
 
-#: prefs.xml:52
 msgid "Time to wait before first check (seconds)"
 msgstr "Várakozási idő az első ellenőrzés előtt (másodperc)"
 
-#: prefs.xml:64
 msgid "Interval between updates check (minutes)"
 msgstr "Időtartam a frissítések ellenőrzése között (perc)"
 
-#: prefs.xml:79
 msgid "Indicator"
 msgstr "Frissítésjelző"
 
-#: prefs.xml:82
 msgid "Always visible"
 msgstr "Mindig látható"
 
-#: prefs.xml:94
 msgid "Use built-in icons"
 msgstr "Beépített ikonok használata"
 
-#: prefs.xml:106
 msgid "Show updates count on indicator"
 msgstr "Frissítések számának megjelenítése"
 
-#: prefs.xml:118
 msgid "Position in Panel"
 msgstr "Pozíció a felső sávon"
 
-#: prefs.xml:136
 msgid "Left"
 msgstr "Bal"
 
-#: prefs.xml:137
 msgid "Center"
 msgstr "Közép"
 
-#: prefs.xml:138
 msgid "Right"
 msgstr "Jobb"
 
-#: prefs.xml:157
 msgid "Menu"
 msgstr ""
 
-#: prefs.xml:160
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
@@ -138,69 +95,70 @@ msgstr ""
 "Frissítési lista automatikus kinyitása, ha a frissítések száma kevesebb mint "
 "ez az érték (0 kikapcsolja)"
 
-#: prefs.xml:172 prefs.xml:230
 msgid "Strip out versions numbers"
 msgstr "Veríószámok kihagyása"
 
-#: prefs.xml:187
 msgid "Notification"
 msgstr "Értesítés"
 
-#: prefs.xml:190
 msgid "Send a notification when new updates are available"
 msgstr "Értesítés megjelenítése, amikor új frissítések állnak rendelkezésre"
 
-#: prefs.xml:202
-msgid "Use transient notifications (auto dismiss)"
-msgstr "Eltűnő értesítések használata (automatikus elutasítás)"
-
-#: prefs.xml:214
 msgid "How much information to show on notifications"
 msgstr "Értesítésen megjelenitendő adatok"
 
-#: prefs.xml:220
 msgid "Count only"
 msgstr "Csak a frissítések száma"
 
-#: prefs.xml:221
 msgid "New updates names"
 msgstr "Új frissítések nevei"
 
-#: prefs.xml:222
 msgid "All updates names"
 msgstr "Minden frissítés neve"
 
-#: prefs.xml:245
 msgid "Advanced settings"
 msgstr "Haladó beállítások"
 
-#: prefs.xml:250
 msgid "Command to check for package updates"
 msgstr "Parancs a frissítések ellenőrzéséhez"
 
-#: prefs.xml:262
 msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
 
-#: prefs.xml:276
 msgid "Command to update packages"
 msgstr "Parancs a csomagok frissítéséhez"
 
-#: prefs.xml:291
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr "Pacman helyi könyvtár útvonala - Az új telepítések ellenőrzéséhez"
 
-#: prefs.xml:306
 msgid "Command to open package manager (optional)"
 msgstr "Parancs a csomagkezelő megnyitásához (nem kötelező)"
 
-#: prefs.xml:321
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Parancs a csomagkezelő megnyitásához (nem kötelező)"
 
-#: prefs.xml:336
 msgid "About"
 msgstr ""
+
+#, javascript-format
+#~ msgid "%d update pending"
+#~ msgid_plural "%d updates pending"
+#~ msgstr[0] "%d frissítés függőben"
+#~ msgstr[1] "%d frissítés függőben"
+
+#~ msgid "New Arch Linux Update"
+#~ msgid_plural "New Arch Linux Updates"
+#~ msgstr[0] "Új Arch Linux frissítés"
+#~ msgstr[1] "Új Arch Linux frissítések"
+
+#, javascript-format
+#~ msgid "There is %d update pending"
+#~ msgid_plural "There are %d updates pending"
+#~ msgstr[0] "%d frissítés függőben"
+#~ msgstr[1] "%d frissítés függőben"
+
+#~ msgid "Use transient notifications (auto dismiss)"
+#~ msgstr "Eltűnő értesítések használata (automatikus elutasítás)"
