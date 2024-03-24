@@ -28,6 +28,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v59
+- Fix some translations strings missing in v58
+
 ### v58
 - Gnome 46
 
