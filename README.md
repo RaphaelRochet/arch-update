@@ -28,6 +28,9 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v58
+- Gnome 46
+
 ### v57
 - Fix pacman dir change needing restart
 - Fix notifications not working
