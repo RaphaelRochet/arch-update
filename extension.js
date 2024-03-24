@@ -21,6 +21,7 @@ import Clutter from 'gi://Clutter';
 import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Gio from 'gi://Gio';
+import GioUnix from 'gi://GioUnix';
 import GLib from 'gi://GLib';
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -526,7 +527,7 @@ class ArchUpdateIndicator extends Button {
 			let [res, pid, in_fd, out_fd, err_fd]  = GLib.spawn_async_with_pipes(null, argvp, null, GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
 			// Let's buffer the command's output - that's a input for us !
 			this._updateProcess_stream = new Gio.DataInputStream({
-				base_stream: new Gio.UnixInputStream({fd: out_fd})
+				base_stream: new GioUnix.InputStream({fd: out_fd})
 			});
 			// We will process the output at once when it's done
 			this._updateProcess_sourceId = GLib.child_watch_add(0, pid, () => {this._checkUpdatesRead()} );
