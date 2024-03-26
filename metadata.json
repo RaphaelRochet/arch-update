@@ -6,5 +6,5 @@
   "uuid": "arch-update@RaphaelRochet", 
   "gettext-domain": "arch-update",
   "settings-schema": "org.gnome.shell.extensions.arch-update",
-  "version": 59
+  "version": 60
 }
