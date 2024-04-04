@@ -53,6 +53,7 @@ let STRIP_VERSIONS_N   = true;
 let AUTO_EXPAND_LIST   = 0;
 let DISABLE_PARSING    = false;
 let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.org/packages/%2$s/%3$s/%1$s";
+let LINKIFY_MENU       = true;
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
@@ -233,6 +234,7 @@ class ArchUpdateIndicator extends Button {
 		STRIP_VERSIONS_N = this._settings.get_boolean('strip-versions-in-notification');
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
 		PACKAGE_INFO_CMD = this._settings.get_string('package-info-cmd');
+		LINKIFY_MENU = this._settings.get_boolean('linkify-menu');
 		this.managerMenuItem.visible = ( MANAGER_CMD != "" );
 		this._checkShowHide();
 		this._updateStatus();
@@ -476,7 +478,7 @@ class ArchUpdateIndicator extends Button {
 			let label = new St.Label({
 				text: name,
 				x_expand: true,
-				style_class: 'arch-updates-update-name-link'
+				style_class: LINKIFY_MENU ? 'arch-updates-update-name-link': 'arch-updates-update-name'
 			});
 			let button = new St.Button({
 				child: label,
