@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2017-03-05 00:04+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -151,6 +151,9 @@ msgstr "دستور برای بروزرسانی بسته‌ها"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "دستور برای بروزرسانی بسته‌ها"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

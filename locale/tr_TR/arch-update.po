@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2019-03-21 07:26+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@yandex.com>\n"
 "Language-Team: Turkish\n"
@@ -157,6 +157,9 @@ msgstr "Paket yöneticisini açma komutu (isteğe bağlı)"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Paket yöneticisini açma komutu (isteğe bağlı)"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

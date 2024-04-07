@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2023-10-09 13:15+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -158,6 +158,9 @@ msgstr "Uit te voeren opdracht bij het openen van pakketbeheer (optioneel)"
 
 msgid "Command to show info for a package (optional)"
 msgstr "Uit te voeren opdracht bij tonen van pakketinformatie (optioneel)"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr "Over"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2021-06-22 13:47+0300\n"
 "Last-Translator: Egor Vorontsov <sdoregor@sdore.me>\n"
 "Language-Team: \n"
@@ -160,6 +160,9 @@ msgstr "Команда для запуска пакетного менеджер
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Команда для запуска пакетного менеджера (опционально)"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

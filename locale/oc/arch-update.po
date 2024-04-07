@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2021-12-07 16:36+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
@@ -157,6 +157,9 @@ msgstr "Comanda per dobrir lo gestionari de paquets (opcional)"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Comanda per dobrir lo gestionari de paquets (opcional)"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

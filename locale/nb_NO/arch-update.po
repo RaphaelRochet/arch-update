@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pk 101\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2016-04-26 23:25+0200\n"
 "Last-Translator:  <per.kristian.nordnes@gmail.com>\n"
 "Language-Team: Norwegian Bokmal\n"
@@ -158,6 +158,9 @@ msgstr "Kommando for å oppdatere pakker"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Kommando for å oppdatere pakker"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

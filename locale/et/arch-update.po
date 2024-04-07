@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2018-05-21 19:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -153,6 +153,9 @@ msgstr "Paketihalduri avamise käsklus (valikuline)"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Paketihalduri avamise käsklus (valikuline)"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

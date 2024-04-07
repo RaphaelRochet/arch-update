@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2021-08-30 17:30+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -149,6 +149,9 @@ msgstr "패키지 관리자를 열 때 사용할 명령어"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "패키지 관리자를 열 때 사용할 명령어"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr ""

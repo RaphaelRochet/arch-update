@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 11:25+0100\n"
+"POT-Creation-Date: 2024-04-07 22:14+0200\n"
 "PO-Revision-Date: 2024-03-24 11:27+0100\n"
 "Last-Translator: \"Andus\" <anduse@andus.dev>\n"
 "Language-Team: polski <>\n"
@@ -168,6 +168,9 @@ msgstr "Polecenie służące do aktualizacji"
 #, fuzzy
 msgid "Command to show info for a package (optional)"
 msgstr "Polecenie służące do aktualizacji"
+
+msgid "Display package names as links (underlined)"
+msgstr ""
 
 msgid "About"
 msgstr "O"
