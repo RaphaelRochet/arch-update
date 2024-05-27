@@ -2,14 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Dušan Kazik <prescott66@gmail.com>, 2016, 2017.
+# Jose Riha <jose1711@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 22:14+0200\n"
-"PO-Revision-Date: 2017-11-18 15:06+0100\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"PO-Revision-Date: 2024-05-27 23:45+0200\n"
+"Last-Translator: Jose Riha <jose1711@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -59,6 +60,7 @@ msgstr[2] "Je dostupných %d aktualizácií"
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Poznámka: aby ste mohli použiť skript 'checkupdates', musíte nainštalovať pacman-contrib."
 
 msgid "Error"
 msgstr "Chyba"
@@ -85,35 +87,35 @@ msgid "Always visible"
 msgstr "Vždy viditeľný"
 
 msgid "Use built-in icons"
-msgstr ""
+msgstr "Použiť zabudované ikony"
 
 msgid "Show updates count on indicator"
 msgstr "Zobraziť počet aktualizácií v indikátore"
 
 msgid "Position in Panel"
-msgstr ""
+msgstr "Umiestnenie na paneli"
 
 msgid "Left"
-msgstr ""
+msgstr "Vľavo"
 
 msgid "Center"
-msgstr ""
+msgstr "V strede"
 
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 msgid "Menu"
-msgstr ""
+msgstr "Ponuka"
 
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
 "Automaticky rozšíriť zoznam aktualizácií, ak je počet aktualizácií menší ako "
-"táto hodnota (0 na zakázanie)"
+"táto hodnota (0 pre zakázanie)"
 
 msgid "Strip out versions numbers"
-msgstr "Odstrániť čísla verzií"
+msgstr "Odstrihnúť čísla verzií"
 
 msgid "Notification"
 msgstr "Oznámenie"
@@ -143,6 +145,7 @@ msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
+"Vypnúť spracovanie výstupu, každý riadok sa bude počítať ako aktualizácia. Toto je staré správanie."
 
 msgid "Command to update packages"
 msgstr "Príkaz na aktualizáciu balíkov"
@@ -155,15 +158,14 @@ msgstr ""
 msgid "Command to open package manager (optional)"
 msgstr "Príkaz na otvorenie správcu balíkov (voliteľné)"
 
-#, fuzzy
 msgid "Command to show info for a package (optional)"
-msgstr "Príkaz na otvorenie správcu balíkov (voliteľné)"
+msgstr "Príkaz na zobrazenie informácií o balíku (voliteľné)"
 
 msgid "Display package names as links (underlined)"
-msgstr ""
+msgstr "Zobrazovať názvy balíkov ako odkazy (podčiarknuté)"
 
 msgid "About"
-msgstr ""
+msgstr "O programe"
 
 #~ msgid "Use transient notifications (auto dismiss)"
 #~ msgstr "Použiť prechodné oznámenia (automatické zahodenie)"
