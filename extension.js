@@ -54,6 +54,7 @@ let AUTO_EXPAND_LIST   = 0;
 let DISABLE_PARSING    = false;
 let PACKAGE_INFO_CMD   = "xdg-open https://www.archlinux.org/packages/%2$s/%3$s/%1$s";
 let LINKIFY_MENU       = true;
+let SHOW_TIMECHECKED   = true;
 
 /* Variables we want to keep when extension is disabled (eg during screen lock) */
 let FIRST_BOOT         = 1;
@@ -86,6 +87,7 @@ const ArchUpdateIndicator = GObject.registerClass(
 		_updateProcess_stream: null,
 		_updateProcess_pid: null,
 		_updateList: [],
+		_timeChecked: null,
 	},
 class ArchUpdateIndicator extends Button {
 
@@ -138,13 +140,18 @@ class ArchUpdateIndicator extends Button {
 		this.checkNowMenuContainer = new PopupMenu.PopupMenuSection();
 		this.checkNowMenuContainer.box.add_child(this.checkNowMenuItem);
 
+		// A placeholder to show the last check time
+		this.timeCheckedMenu = new PopupMenu.PopupMenuItem( "-", {reactive:false} );
+
 		// Assemble all menu items into the popup menu
 		this.menu.addMenuItem(this.menuExpander);
+		this.menu.addMenuItem(this.timeCheckedMenu);
 		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(this.updateNowMenuItem);
 		this.menu.addMenuItem(this.checkingMenuItem);
 		this.menu.addMenuItem(this.checkNowMenuContainer);
 		this.menu.addMenuItem(this.managerMenuItem);
+		this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
@@ -237,7 +244,9 @@ class ArchUpdateIndicator extends Button {
 		AUTO_EXPAND_LIST = this._settings.get_int('auto-expand-list');
 		PACKAGE_INFO_CMD = this._settings.get_string('package-info-cmd');
 		LINKIFY_MENU = this._settings.get_boolean('linkify-menu');
+		SHOW_TIMECHECKED = this._settings.get_boolean('show-timechecked');
 		this.managerMenuItem.visible = ( MANAGER_CMD != "" );
+		this.timeCheckedMenu.visible = SHOW_TIMECHECKED;
 		this._checkShowHide();
 		this._updateStatus();
 		this._startFolderMonitor();
@@ -575,6 +584,9 @@ class ArchUpdateIndicator extends Button {
 		} else {
 			this._updateStatus(this._updateList.filter(function(line) { return RE_UpdateLine.test(line) }).length);
 		}
+		this._timeChecked = new Date();
+		this.timeCheckedMenu.label.set_text( _("Last checked") + "  " + this._timeChecked.toLocaleString() );
+		this.timeCheckedMenu.visible = SHOW_TIMECHECKED;
 	}
 
 	_showNotification(title, message) {
