@@ -113,6 +113,8 @@ class ArchUpdateIndicator extends Button {
 		// Prepare the special menu : a submenu for updates list that will look like a regular menu item when disabled
 		// Scrollability will also be taken care of by the popupmenu
 		this.menuExpander = new PopupMenu.PopupSubMenuMenuItem('');
+		this.menuExpanderContainer = new St.BoxLayout({ vertical: true, style_class: 'arch-updates-updates-list' });
+		this.menuExpander.menu.box.add_child( this.menuExpanderContainer );
 
 		// Other standard menu items
 		let settingsMenuItem = new PopupMenu.PopupMenuItem(_('Settings'));
@@ -415,7 +417,6 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_updateMenuExpander(enabled, label) {
-		this.menuExpander.menu.box.destroy_all_children();
 		if (label == "") {
 			// No text, hide the menuitem
 			this.menuExpander.visible = false;
@@ -426,6 +427,7 @@ class ArchUpdateIndicator extends Button {
 			this.menuExpander.label.set_text(label);
 			this.menuExpander.visible = true;
 			if (enabled && this._updateList.length > 0) {
+				this.menuExpanderContainer.destroy_all_children();
 				this._updateList.forEach( item => {
 					if(DISABLE_PARSING) {
 						var menutext = item;
@@ -433,12 +435,12 @@ class ArchUpdateIndicator extends Button {
 							var chunks = menutext.split(" ",2);
 							menutext = chunks[0];
 						}
-						this.menuExpander.menu.box.add_child( this._createPackageLabel(menutext) );
+						this.menuExpanderContainer.add_child( this._createPackageLabel(menutext) );
 					} else {
 						let matches = item.match(RE_UpdateLine);
 						if (matches == null) {
 							// Not an update
-							this.menuExpander.menu.box.add_child( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
+							this.menuExpanderContainer.add_child( new St.Label({ text: item, style_class: 'arch-updates-update-title' }) );
 						} else {
 							let hBox = new St.BoxLayout({ vertical: false, style_class: 'arch-updates-update-line' });
 							hBox.add_child( this._createPackageLabel(matches[1]) );
@@ -452,7 +454,7 @@ class ArchUpdateIndicator extends Button {
 									text: matches[3],
 									style_class: 'arch-updates-update-version-to' }) );
 							}
-							this.menuExpander.menu.box.add_child( hBox );
+							this.menuExpanderContainer.add_child( hBox );
 						}
 					}
 				} );
