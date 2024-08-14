@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2018-03-14 23:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -63,6 +63,9 @@ msgstr "שגיאה"
 msgid "Up to date :)"
 msgstr "הכל מעודכן :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "הגדרות"
 
@@ -109,6 +112,9 @@ msgstr "הרחב אוטומטית את הרשימה אם כמות העדכוני
 
 msgid "Strip out versions numbers"
 msgstr "הסר מספרי גרסה"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "התראה"

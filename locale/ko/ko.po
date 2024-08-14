@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2021-08-30 17:30+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -60,6 +60,9 @@ msgstr "오류"
 msgid "Up to date :)"
 msgstr "시스템이 최신 상태입니다."
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "일반"
 
@@ -107,6 +110,9 @@ msgstr "(사용 안 함 = 0)"
 
 msgid "Strip out versions numbers"
 msgstr "버전 표시"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "알림"

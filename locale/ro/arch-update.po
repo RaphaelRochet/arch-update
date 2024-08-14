@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2018-12-23 06:16+0200\n"
 "Last-Translator: Sorin-Mihai Vârgolici <sorin-mihai@vargolici.com>\n"
 "Language-Team: Romanian <>\n"
@@ -70,6 +70,9 @@ msgstr "Eroare"
 msgid "Up to date :)"
 msgstr "Actualizat :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Setări de bază"
 
@@ -118,6 +121,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Înlătură numerele versiunilor"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Notificare"

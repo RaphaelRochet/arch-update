@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2021-07-20 16:14+0800\n"
 "Last-Translator: zhmars <18466397+zhmars@users.noreply.github.com>\n"
 "Language-Team: \n"
@@ -60,6 +60,9 @@ msgstr "错误"
 msgid "Up to date :)"
 msgstr "已是最新 ^_^"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "基本设置"
 
@@ -106,6 +109,9 @@ msgstr "如果更新数低于此数值则自动展开更新列表（0 表示禁�
 
 msgid "Strip out versions numbers"
 msgstr "剔除版本号"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "通知"

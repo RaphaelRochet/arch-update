@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2017-05-10 20:15+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -67,6 +67,9 @@ msgstr "Грешка"
 msgid "Up to date :)"
 msgstr "Ажурно :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Основне поставке"
 
@@ -114,6 +117,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Без бројева верзија"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Обавештења"

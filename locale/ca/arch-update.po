@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2016-10-30 14:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -63,6 +63,9 @@ msgstr "Error"
 msgid "Up to date :)"
 msgstr "Actualitzat :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Preferències"
 
@@ -111,6 +114,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "No mostres el número de les versions"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Notificació"

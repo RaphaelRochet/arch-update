@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2015-11-17 19:33+0100\n"
 "Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,6 +62,9 @@ msgstr "Chyba"
 msgid "Up to date :)"
 msgstr "Vše aktualizováno"
 
+msgid "Last checked"
+msgstr ""
+
 #, fuzzy
 msgid "Basic settings"
 msgstr "Nastavení"
@@ -114,6 +117,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Nezobrazovat čísla verzí"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 #, fuzzy
 msgid "Notification"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,6 +63,9 @@ msgstr ""
 msgid "Up to date :)"
 msgstr ""
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr ""
 
@@ -108,6 +111,9 @@ msgid ""
 msgstr ""
 
 msgid "Strip out versions numbers"
+msgstr ""
+
+msgid "Show date/time of last check"
 msgstr ""
 
 msgid "Notification"

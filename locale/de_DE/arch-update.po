@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2021-04-09 07:38+0200\n"
 "Last-Translator: Onno Giesmann <nutzer3105@gmail.com>\n"
 "Language-Team: \n"
@@ -66,6 +66,9 @@ msgstr "Fehler"
 msgid "Up to date :)"
 msgstr "Auf dem Laufenden :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Standardeinstellungen"
 
@@ -114,6 +117,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Versionsnummern weglassen"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Benachrichtigung"

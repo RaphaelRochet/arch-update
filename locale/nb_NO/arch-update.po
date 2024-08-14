@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pk 101\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2016-04-26 23:25+0200\n"
 "Last-Translator:  <per.kristian.nordnes@gmail.com>\n"
 "Language-Team: Norwegian Bokmal\n"
@@ -61,6 +61,9 @@ msgstr "Feil"
 msgid "Up to date :)"
 msgstr "Oppdatert :)"
 
+msgid "Last checked"
+msgstr ""
+
 #, fuzzy
 msgid "Basic settings"
 msgstr "Innstillinger"
@@ -113,6 +116,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Ikke vis versjonsnummer"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 #, fuzzy
 msgid "Notification"

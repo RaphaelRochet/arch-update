@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2022-09-23 11:27-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
@@ -66,6 +66,9 @@ msgstr "Erro"
 msgid "Up to date :)"
 msgstr "Atualizado :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Configurações básicas"
 
@@ -114,6 +117,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Retirar os números das versões"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Notificação"

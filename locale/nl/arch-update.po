@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2023-10-09 13:15+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -65,6 +65,9 @@ msgstr "Foutmelding"
 msgid "Up to date :)"
 msgstr "De software is actueel :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Algemene voorkeuren"
 
@@ -113,6 +116,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Versienummers verbergen"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Melding"

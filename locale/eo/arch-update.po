@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2018-06-04 12:46+0900\n"
 "Last-Translator: 鈴木雪 <SuzukiYuki97@gmail.com>\n"
 "Language-Team: Esperanto <>\n"
@@ -65,6 +65,9 @@ msgstr "Eraro"
 msgid "Up to date :)"
 msgstr "Ĝisdata :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Bazaj agordoj"
 
@@ -113,6 +116,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Fortiru versiaj numeroj"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Sciigo"

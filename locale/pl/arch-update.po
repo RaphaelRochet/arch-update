@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2024-03-24 11:27+0100\n"
 "Last-Translator: \"Andus\" <anduse@andus.dev>\n"
 "Language-Team: polski <>\n"
@@ -70,6 +70,9 @@ msgstr "Błąd"
 msgid "Up to date :)"
 msgstr "Wszystko jest aktualne :)"
 
+msgid "Last checked"
+msgstr ""
+
 #, fuzzy
 msgid "Basic settings"
 msgstr "Ustawienia"
@@ -121,6 +124,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Usuń numery wersji"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 #, fuzzy
 msgid "Notification"

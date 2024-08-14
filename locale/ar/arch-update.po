@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2017-05-21 22:02+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -75,6 +75,9 @@ msgstr "عُطل"
 msgid "Up to date :)"
 msgstr "محَدَّث :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "الإعدادات الأساسيّة"
 
@@ -122,6 +125,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "أزل أرقام الإصدارات"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "التنبيهات"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 22:14+0200\n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
 "PO-Revision-Date: 2020-03-03 19:26+0100\n"
 "Last-Translator: Josef Gottlander <josef.gottlander@gmail.com>\n"
 "Language-Team: Swedish\n"
@@ -66,6 +66,9 @@ msgstr "Fel"
 msgid "Up to date :)"
 msgstr "Uppdaterad :)"
 
+msgid "Last checked"
+msgstr ""
+
 msgid "Basic settings"
 msgstr "Grundinställningar"
 
@@ -114,6 +117,9 @@ msgstr ""
 
 msgid "Strip out versions numbers"
 msgstr "Ta bort versionnummer"
+
+msgid "Show date/time of last check"
+msgstr ""
 
 msgid "Notification"
 msgstr "Aviseringar"
