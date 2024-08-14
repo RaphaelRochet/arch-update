@@ -60,6 +60,7 @@ let SHOW_TIMECHECKED   = true;
 let FIRST_BOOT         = 1;
 let UPDATES_PENDING    = -1;
 let UPDATES_LIST       = [];
+let LAST_CHECK         = undefined;
 
 export default class ArchUpdateIndicatorExtension extends Extension {
 	constructor(metadata) {
@@ -87,7 +88,6 @@ const ArchUpdateIndicator = GObject.registerClass(
 		_updateProcess_stream: null,
 		_updateProcess_pid: null,
 		_updateList: [],
-		_timeChecked: null,
 	},
 class ArchUpdateIndicator extends Button {
 
@@ -165,6 +165,7 @@ class ArchUpdateIndicator extends Button {
 		// Some initial status display
 		this._showChecking(false);
 		this._updateMenuExpander(false, _('Waiting first check'));
+		if (LAST_CHECK) this._updateLastCheckMenu();
 
 		// Restore previous updates list if any
 		this._updateList = UPDATES_LIST;
@@ -250,11 +251,26 @@ class ArchUpdateIndicator extends Button {
 		this._checkShowHide();
 		this._updateStatus();
 		this._startFolderMonitor();
+		this._scheduleCheck();
+	}
+
+	_scheduleCheck() {
 		let that = this;
 		if (this._TimeoutId) GLib.source_remove(this._TimeoutId);
-		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, CHECK_INTERVAL, function () {
+		let delay = CHECK_INTERVAL; // seconds before next check
+		if (LAST_CHECK) {
+			// Adjust the delay so that locking screen or changing settings does not reset
+			// the countdown to next check
+			// Remove how many seconds already passed since last check
+			delay -= ((new Date()) - LAST_CHECK) / 1000;
+			// Do not go under "First check delay" setting
+			if (delay < BOOT_WAIT) delay = BOOT_WAIT;
+		}
+		console.log(`Arch-update : next update check schedule in (seconds) ` + delay.toString());
+		this._TimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, delay, function () {
 			that._checkUpdates();
-			return true;
+			that._TimeoutId = undefined;
+			return false;
 		});
 	}
 
@@ -352,6 +368,11 @@ class ArchUpdateIndicator extends Button {
 			this.checkNowMenuItem.visible = true;
 			this.checkingMenuItem.visible = false;
 		}
+	}
+
+	_updateLastCheckMenu() {
+		this.timeCheckedMenu.label.set_text( _("Last checked") + "  " + LAST_CHECK.toLocaleString() );
+		this.timeCheckedMenu.visible = SHOW_TIMECHECKED;
 	}
 
 	_updateStatus(updatesCount) {
@@ -526,6 +547,8 @@ class ArchUpdateIndicator extends Button {
 	}
 
 	_checkUpdates() {
+		// Remove timer if any (in case the trigger was menu or external)
+		if (this._TimeoutId) { GLib.source_remove(this._TimeoutId) ; this._TimeoutId = undefined }
 		if(this._updateProcess_sourceId) {
 			// A check is already running ! Maybe we should kill it and run another one ?
 			return;
@@ -549,6 +572,12 @@ class ArchUpdateIndicator extends Button {
 			this.lastUnknowErrorString = err.message.toString();
 			this._updateStatus(-2);
 		}
+		// Update last check (start) time and schedule next check even if the current one is not done yet
+		// doing so makes sure it will be scheduled even if failed or canceled, and we don't end in
+		// a looping test
+		LAST_CHECK = new Date();
+		this._updateLastCheckMenu();
+		this._scheduleCheck();
 	}
 
 	_cancelCheck() {
@@ -584,9 +613,6 @@ class ArchUpdateIndicator extends Button {
 		} else {
 			this._updateStatus(this._updateList.filter(function(line) { return RE_UpdateLine.test(line) }).length);
 		}
-		this._timeChecked = new Date();
-		this.timeCheckedMenu.label.set_text( _("Last checked") + "  " + this._timeChecked.toLocaleString() );
-		this.timeCheckedMenu.visible = SHOW_TIMECHECKED;
 	}
 
 	_showNotification(title, message) {
