@@ -1,22 +1,22 @@
 # Brazilian Portuguese translation of arch-update.
-# Copyright (C) 2023 arch-update'S COPYRIGHT HOLDER
+# Copyright (C) 2024 arch-update'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the arch-update package.
 # Fábio Nogueira <fnogueira@gnome.org>, 2015-2021.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2022-2023.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2022-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: arch-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-14 09:15+0200\n"
-"PO-Revision-Date: 2022-09-23 11:27-0300\n"
+"PO-Revision-Date: 2024-08-26 11:27-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 42.0\n"
+"X-Generator: Gtranslator 46.1\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 msgid "Settings"
@@ -67,10 +67,10 @@ msgid "Up to date :)"
 msgstr "Atualizado :)"
 
 msgid "Last checked"
-msgstr ""
+msgstr "Última verificação"
 
 msgid "Basic settings"
-msgstr "Configurações básicas"
+msgstr "Configs básicas"
 
 msgid "Checking for updates"
 msgstr "Verificando por atualizações"
@@ -85,7 +85,7 @@ msgid "Indicator"
 msgstr "Indicador"
 
 msgid "Always visible"
-msgstr "Visível sempre"
+msgstr "Sempre visível"
 
 msgid "Use built-in icons"
 msgstr "Utilizar ícones embutidos"
@@ -140,7 +140,7 @@ msgid "All updates names"
 msgstr "Nomes de todas as atualizações"
 
 msgid "Advanced settings"
-msgstr "Configurações avançadas"
+msgstr "Configs avançadas"
 
 msgid "Command to check for package updates"
 msgstr "Comando para verificar se há atualizações de pacotes"
@@ -167,7 +167,7 @@ msgid "Command to show info for a package (optional)"
 msgstr "Comando para mostra informações para um pacote (opcional)"
 
 msgid "Display package names as links (underlined)"
-msgstr ""
+msgstr "Exibir nomes de pacotes como links (sublinhados)"
 
 msgid "About"
 msgstr "Sobre"
