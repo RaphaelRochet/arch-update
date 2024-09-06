@@ -28,6 +28,10 @@ To install, simply download as zip and unzip contents in ~/.local/share/gnome-sh
 
 ## Changes
 
+### v63
+- Update translation : Brazilian Portugues
+- Fix errors after extension being disabled
+
 ### v62
 - Better timer handling
 - Spacing tweaks in menu
