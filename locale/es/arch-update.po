@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Cristian Beroiza <cberoiza@gmail.com>, 2016.
 # Alonso Lara <alonso.lara.plana@gmail.com>, 2017.
-#
+# Xoán Sampaíño <xoansampainho@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Arch-Update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-14 09:15+0200\n"
-"PO-Revision-Date: 2021-02-12 11:13+0100\n"
-"Last-Translator: Xoán Sampaíño <xoansampainho@gmail.com>\n"
+"PO-Revision-Date: 2024-09-06 09:00+0100\n"
+"Last-Translator: Kiba Gasteiz <kibafang@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgid "Up to date :)"
 msgstr "El sistema está actualizado"
 
 msgid "Last checked"
-msgstr ""
+msgstr "Última comprobación"
 
 msgid "Basic settings"
 msgstr "Ajustes básicos"
@@ -106,7 +106,7 @@ msgid "Right"
 msgstr "Derecha"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
@@ -119,7 +119,7 @@ msgid "Strip out versions numbers"
 msgstr "Quitar números de versión"
 
 msgid "Show date/time of last check"
-msgstr ""
+msgstr "Mostrar fecha y hora de la última comprobación"
 
 msgid "Notification"
 msgstr "Notificaciones"
@@ -149,6 +149,8 @@ msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
+"Deshabilitar análisis de salida, contar cada línea como una actualización."
+"Este es el antiguo funcionamiento."
 
 msgid "Command to update packages"
 msgstr "Orden para actualizar los paquetes"
@@ -166,10 +168,10 @@ msgid "Command to show info for a package (optional)"
 msgstr "Orden para abrir el gestor de paquetes (opcional)"
 
 msgid "Display package names as links (underlined)"
-msgstr ""
+msgstr "Mostrar nombres de paquetes como enlaces (subrayados)"
 
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #~ msgid "Use transient notifications (auto dismiss)"
 #~ msgstr "Usar notificaciones transitorias (cierre automático)"
