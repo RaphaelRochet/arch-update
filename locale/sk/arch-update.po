@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-14 09:15+0200\n"
-"PO-Revision-Date: 2024-05-27 23:45+0200\n"
+"PO-Revision-Date: 2024-10-08 21:17+0200\n"
 "Last-Translator: Jose Riha <jose1711@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -29,13 +29,13 @@ msgid "Open package manager"
 msgstr "Otvoriť správcu balíkov"
 
 msgid "Checking"
-msgstr "Kontroluje sa"
+msgstr "Kontrolujem"
 
 msgid "Check now"
 msgstr "Skontrolovať teraz"
 
 msgid "Waiting first check"
-msgstr "Čaká sa na prvú kontrolu"
+msgstr "Čakám na prvú kontrolu"
 
 #, javascript-format
 msgid "%d update pending"
@@ -70,7 +70,7 @@ msgid "Up to date :)"
 msgstr "Všetko je aktuálne :)"
 
 msgid "Last checked"
-msgstr ""
+msgstr "Posledná kontrola"
 
 msgid "Basic settings"
 msgstr "Základné nastavenia"
@@ -116,13 +116,13 @@ msgid ""
 "disable)"
 msgstr ""
 "Automaticky rozšíriť zoznam aktualizácií, ak je počet aktualizácií menší ako "
-"táto hodnota (0 pre zakázanie)"
+"táto hodnota (0 zakáže)"
 
 msgid "Strip out versions numbers"
 msgstr "Odstrihnúť čísla verzií"
 
 msgid "Show date/time of last check"
-msgstr ""
+msgstr "Zobraziť dátum a čas poslednej kontroly"
 
 msgid "Notification"
 msgstr "Oznámenie"
@@ -131,7 +131,7 @@ msgid "Send a notification when new updates are available"
 msgstr "Odoslať oznámenie, keď sú dostupné nové aktualizácie"
 
 msgid "How much information to show on notifications"
-msgstr "Koľko informácií zobraziť v oznámeniach"
+msgstr "Koľko informácií zobrazovať v oznámeniach"
 
 msgid "Count only"
 msgstr "Iba počet"
