@@ -1,0 +1,171 @@
+# Georgian translation for arch-update.
+# Copyright (C) 2024 arch-update's authors.
+# This file is distributed under the same license as the arch-update package.
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arch-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-14 09:15+0200\n"
+"PO-Revision-Date: 2024-11-29 06:10+0100\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <(nothing)>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "Settings"
+msgstr "მორგება"
+
+msgid "Update now"
+msgstr "ახლა განახლება"
+
+msgid "Open package manager"
+msgstr "პაკეტების მმართველის გახსნა"
+
+msgid "Checking"
+msgstr "შემოწმება"
+
+msgid "Check now"
+msgstr "ახლა შემოწმება"
+
+msgid "Waiting first check"
+msgstr "პირველი შემოწმების მოლოდინი"
+
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "დარჩენილია %d განახლება"
+msgstr[1] "დარჩენილია %d განახლება"
+
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "ახალი Arch Linux-ის განახლება"
+msgstr[1] "ახალი Arch Linux-ის განახლებები"
+
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "დარჩენილია %d განახლება"
+msgstr[1] "დარჩენილია %d განახლება"
+
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+"შენიშვნა : 'checkupdates' სკრიპტის გამოსაყენებლად პაკეტი pacman-contrib უნდა "
+"დააყენოთ."
+
+msgid "Error"
+msgstr "შეცდომა"
+
+msgid "Up to date :)"
+msgstr "განახლებულია :)"
+
+msgid "Last checked"
+msgstr "ბოლო შემოწმება"
+
+msgid "Basic settings"
+msgstr "ძირითადი პარამეტრები"
+
+msgid "Checking for updates"
+msgstr "განახლებების შემოწმება"
+
+msgid "Time to wait before first check (seconds)"
+msgstr "მოლოდინის დრო პირველ შემოწმებამდე (წამებში)"
+
+msgid "Interval between updates check (minutes)"
+msgstr "ინტერვალი განახლებების შემოწმებას შორის (წუთებში)"
+
+msgid "Indicator"
+msgstr "მაჩვენებელი"
+
+msgid "Always visible"
+msgstr "ყოველთვის ხილული"
+
+msgid "Use built-in icons"
+msgstr "ჩაშენებული ხატულების გამოყენება"
+
+msgid "Show updates count on indicator"
+msgstr "განახლებების რაოდენობის გამოტანა მაჩვენებელზე"
+
+msgid "Position in Panel"
+msgstr "მდებარეობა პანელზე"
+
+msgid "Left"
+msgstr "მარცხნივ"
+
+msgid "Center"
+msgstr "ცენტრი"
+
+msgid "Right"
+msgstr "მარჯვნივ"
+
+msgid "Menu"
+msgstr "მენიუ"
+
+msgid ""
+"Auto-expand updates list if updates count is less than this number (0 to "
+"disable)"
+msgstr ""
+"განახლებების სიის ავტომატური გაშლა, თუ განახლებების რაოდენობა ამ რაოდენობაზე "
+"ნაკლებია (0 გამოსართავად)"
+
+msgid "Strip out versions numbers"
+msgstr "ვერსიის ნომრების წაკვეთა"
+
+msgid "Show date/time of last check"
+msgstr "ბოლო შემოწმების თარიღისა და დროის ჩვენება"
+
+msgid "Notification"
+msgstr "გაფრთხილება"
+
+msgid "Send a notification when new updates are available"
+msgstr "გაფრთხილების გაგზავნა, როცა ხელმისაწვდომია ახალი განახლებები"
+
+msgid "How much information to show on notifications"
+msgstr "რამდენი ინფორმაციაა ნაჩვენები გაფრთხილებებზე"
+
+msgid "Count only"
+msgstr "მხოლოდ რაოდენობა"
+
+msgid "New updates names"
+msgstr "ახალი განახლების სახელები"
+
+msgid "All updates names"
+msgstr "ყველა განახლების სახელი"
+
+msgid "Advanced settings"
+msgstr "დამატებითი პარამეტრები"
+
+msgid "Command to check for package updates"
+msgstr "ბრძანება პაკეტებს განახლების შესამოწმებლად"
+
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+"გამოტანის დამუშავები გამორთვა. თითოეული ხაზი ჩაითვლება განახლებად. ეს ძველი "
+"ქცევაა."
+
+msgid "Command to update packages"
+msgstr "ბრძანება პაკეტების განახლებისთვის"
+
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr ""
+"Pacman-ის ლოკალური საქაღალდის ბილიკი - ახალი პაკეტების დაყენების აღმოსაჩენად"
+
+msgid "Command to open package manager (optional)"
+msgstr "ბრძანება პაკეტების მმართველის გასახსნელად (არასავალდებულო)"
+
+msgid "Command to show info for a package (optional)"
+msgstr "ბრძანება პაკეტის ინფორმაციის საჩვენებლად (არასავალდებულო)"
+
+msgid "Display package names as links (underlined)"
+msgstr "პაკეტის სახელების ბმულის სახით ჩვენება (ხაზგასმული)"
+
+msgid "About"
+msgstr "შესახებ"
