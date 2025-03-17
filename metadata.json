@@ -1,10 +1,10 @@
 {
   "description": "Update indicator for Arch Linux and GNOME Shell. Runs gnome-terminal by default, you can change in settings. \n** Note : you need to install the package pacman-contrib to use the checkupdates script. **\n  Can support AUR or other distros by changing command used to check for and apply updates.",
   "name": "Arch Linux Updates Indicator",
-  "shell-version": [ "46", "47" ],
+  "shell-version": [ "46", "47", "48" ],
   "url": "https://github.com/RaphaelRochet/arch-update", 
   "uuid": "arch-update@RaphaelRochet", 
   "gettext-domain": "arch-update",
   "settings-schema": "org.gnome.shell.extensions.arch-update",
-  "version": 63
+  "version": 64
 }
