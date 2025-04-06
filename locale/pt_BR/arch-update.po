@@ -67,7 +67,7 @@ msgid "Up to date :)"
 msgstr "Atualizado :)"
 
 msgid "Last checked"
-msgstr "Última verificação"
+msgstr "Última verificação às"
 
 # Tab label, keep this short to avoid ellipsization
 msgid "Basic settings"
