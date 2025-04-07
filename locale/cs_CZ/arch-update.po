@@ -5,17 +5,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-14 09:15+0200\n"
-"PO-Revision-Date: 2015-11-17 19:33+0100\n"
-"Last-Translator: Jaroslav Lichtblau <svetlemodry@archlinux.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-04-07 12:52+0200\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
+"Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "Settings"
 msgstr "Nastavení"
@@ -24,10 +25,10 @@ msgid "Update now"
 msgstr "Aktualizovat"
 
 msgid "Open package manager"
-msgstr ""
+msgstr "Otevřít správce balíčků"
 
 msgid "Checking"
-msgstr "Kontroluji"
+msgstr "Kontroluje se"
 
 msgid "Check now"
 msgstr "Zkontrolovat"
@@ -39,39 +40,42 @@ msgstr "Čekání na první kontrolu"
 msgid "%d update pending"
 msgid_plural "%d updates pending"
 msgstr[0] "%d čekající aktualizace"
-msgstr[1] "%d čekajících aktualizací"
+msgstr[1] "%d čekající aktualizace"
+msgstr[2] "%d čekajících aktualizací"
 
 msgid "New Arch Linux Update"
 msgid_plural "New Arch Linux Updates"
 msgstr[0] "Nová aktualizace pro Arch Linux"
 msgstr[1] "Nové aktualizace pro Arch Linux"
+msgstr[2] "Nové aktualizace pro Arch Linux"
 
 #, javascript-format
 msgid "There is %d update pending"
 msgid_plural "There are %d updates pending"
 msgstr[0] "Je dostupná %d čekající aktualizace"
-msgstr[1] "Je dostupných %d čekajících aktualizací"
+msgstr[1] "Jsou dostupné %d čekající aktualizace"
+msgstr[2] "Je dostupných %d čekajících aktualizací"
 
 msgid ""
 "Note : you have to install pacman-contrib to use the 'checkupdates' script."
 msgstr ""
+"Poznámka: pro použití skriptu 'checkupdates' musíte nainstalovat pacman-"
+"contrib."
 
 msgid "Error"
 msgstr "Chyba"
 
 msgid "Up to date :)"
-msgstr "Vše aktualizováno"
+msgstr "Vše aktualizováno :)"
 
 msgid "Last checked"
-msgstr ""
+msgstr "Poslední kontrola"
 
-#, fuzzy
 msgid "Basic settings"
-msgstr "Nastavení"
+msgstr "Základní nastavení"
 
-#, fuzzy
 msgid "Checking for updates"
-msgstr "<b>Kontrola aktualizací</b>"
+msgstr "Kontrola aktualizací"
 
 msgid "Time to wait before first check (seconds)"
 msgstr "Čas zpoždění před první kontrolou (sekundy)"
@@ -79,51 +83,48 @@ msgstr "Čas zpoždění před první kontrolou (sekundy)"
 msgid "Interval between updates check (minutes)"
 msgstr "Časový interval mezi aktualizacemi (minuty)"
 
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>Indikátor</b>"
+msgstr "Indikátor"
 
 msgid "Always visible"
 msgstr "Vždy viditelný"
 
 msgid "Use built-in icons"
-msgstr ""
+msgstr "Použít vestavěné ikony"
 
 msgid "Show updates count on indicator"
 msgstr "Zobrazovat u indikátoru počet aktualizací"
 
 msgid "Position in Panel"
-msgstr ""
+msgstr "Umístění v panelu"
 
 msgid "Left"
-msgstr ""
+msgstr "Vlevo"
 
 msgid "Center"
-msgstr ""
+msgstr "Uprostřed"
 
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 msgid "Menu"
-msgstr ""
+msgstr "Nabídka"
 
-#, fuzzy
 msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
-" Automaticky otevírat seznam aktualizací pokud je počet nižší než toto číslo "
+"Automaticky otevírat seznam aktualizací pokud je počet nižší než toto číslo "
 "(0 vypne)"
 
 msgid "Strip out versions numbers"
 msgstr "Nezobrazovat čísla verzí"
 
 msgid "Show date/time of last check"
-msgstr ""
+msgstr "Zobrazit datum/čas poslední kontroly"
 
-#, fuzzy
 msgid "Notification"
-msgstr "<b>Upozornění</b>"
+msgstr "Upozornění"
 
 msgid "Send a notification when new updates are available"
 msgstr "Zobrazit upozornění při dostupných aktualizacích"
@@ -140,9 +141,8 @@ msgstr "Jména nových aktualizací"
 msgid "All updates names"
 msgstr "Jména všech aktualizací"
 
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Další možnosti</b>"
+msgstr "Pokročilá nastavení"
 
 msgid "Command to check for package updates"
 msgstr "Příkaz pro kontrolu aktuálnosti balíčků"
@@ -151,27 +151,27 @@ msgid ""
 "Disable output parsing, count every line as an update. This is the old "
 "behavior."
 msgstr ""
+"Zakázat zpracování výstupu, počítat každý řádek jako aktualizaci. Toto je "
+"staré chování."
 
 msgid "Command to update packages"
 msgstr "Příkaz pro aktualizaci balíčků"
 
 msgid "Pacman local directory path - To detect when new packages are installed"
 msgstr ""
-"Cesta k místnímu pacman adresáři - Pro detekci instalace nových balíčků"
+"Cesta k místnímu pacman adresáři - pro detekci instalace nových balíčků"
 
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Příkaz pro aktualizaci balíčků"
+msgstr "Příkaz pro otevření správce balíčků (volitelné)"
 
-#, fuzzy
 msgid "Command to show info for a package (optional)"
-msgstr "Příkaz pro aktualizaci balíčků"
+msgstr "Příkaz pro zobrazení informací o balíčku (volitelné)"
 
 msgid "Display package names as links (underlined)"
-msgstr ""
+msgstr "Zobrazit názvy balíčků jako odkazy (podtržené)"
 
 msgid "About"
-msgstr ""
+msgstr "O aplikaci"
 
 #~ msgid "Use transient notifications (auto dismiss)"
 #~ msgstr "Používat dočasná upozornění (samozavírací)"
