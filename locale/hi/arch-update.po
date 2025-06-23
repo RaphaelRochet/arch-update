@@ -1,0 +1,168 @@
+# Hindi translation for arch-update.
+# Copyright (C) 2024 arch-update's authors.
+# This file is distributed under the same license as the arch-update package.
+# Translated by Avinash Duduskar, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arch-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-23 12:52+0530\n"
+"PO-Revision-Date: 2025-06-23 126:52+0530\n"
+"Last-Translator: Avinash Duduskar\n"
+"Language-Team: Hindi <>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+msgid "Update now"
+msgstr "अभी अपडेट करें"
+
+msgid "Open package manager"
+msgstr "पैकेज प्रबंधक खोलें"
+
+msgid "Checking"
+msgstr "जांच कर रहे हैं"
+
+msgid "Check now"
+msgstr "अभी जांचें"
+
+msgid "Waiting first check"
+msgstr "प्रारंभिक जांच की प्रतीक्षा"
+
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "%d अपडेट लंबित है"
+msgstr[1] "%d अपडेट्स लंबित हैं"
+
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "नया Arch Linux अपडेट"
+msgstr[1] "नए Arch Linux अपडेट्स"
+
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "%d अपडेट लंबित है"
+msgstr[1] "%d अपडेट्स लंबित हैं"
+
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+"नोट: 'checkupdates' स्क्रिप्ट उपयोग करने के लिए pacman-contrib पैकेज इंस्टॉल करना आवश्यक है।"
+
+msgid "Error"
+msgstr "त्रुटि"
+
+msgid "Up to date :)"
+msgstr "सभी अपडेट हो चुके हैं :)"
+
+msgid "Last checked"
+msgstr "आखिरी जांच"
+
+msgid "Basic settings"
+msgstr "मूल सेटिंग्स"
+
+msgid "Checking for updates"
+msgstr "अपडेट्स के लिए जांच हो रही है"
+
+msgid "Time to wait before first check (seconds)"
+msgstr "पहली जांच से पहले प्रतीक्षा का समय (सेकंड में)"
+
+msgid "Interval between updates check (minutes)"
+msgstr "अपडेट जांच के बीच अंतराल (मिनट में)"
+
+msgid "Indicator"
+msgstr "संकेतक"
+
+msgid "Always visible"
+msgstr "हमेशा दिखाई दे"
+
+msgid "Use built-in icons"
+msgstr "इन-बिल्ट आइकन का उपयोग करें"
+
+msgid "Show updates count on indicator"
+msgstr "संकेतक पर अपडेट की संख्या दिखाएं"
+
+msgid "Position in Panel"
+msgstr "पैनल में स्थिति"
+
+msgid "Left"
+msgstr "बायाँ"
+
+msgid "Center"
+msgstr "मध्य"
+
+msgid "Right"
+msgstr "दायाँ"
+
+msgid "Menu"
+msgstr "मेनू"
+
+msgid ""
+"Auto-expand updates list if updates count is less than this number (0 to "
+"disable)"
+msgstr ""
+"अगर अपडेट्स की संख्या इससे कम हो तो सूची को अपने-आप विस्तारित करें (0 से अक्षम करें)"
+
+msgid "Strip out versions numbers"
+msgstr "संस्करण नंबर हटाएँ"
+
+msgid "Show date/time of last check"
+msgstr "पिछली जांच की तारीख/समय दिखाएँ"
+
+msgid "Notification"
+msgstr "सूचना"
+
+msgid "Send a notification when new updates are available"
+msgstr "जब नए अपडेट उपलब्ध हों, तब सूचना भेजें"
+
+msgid "How much information to show on notifications"
+msgstr "सूचनाओं में कितनी जानकारी दिखाई जाए"
+
+msgid "Count only"
+msgstr "केवल संख्या"
+
+msgid "New updates names"
+msgstr "नए अपडेट्स के नाम"
+
+msgid "All updates names"
+msgstr "सभी अपडेट्स के नाम"
+
+msgid "Advanced settings"
+msgstr "विकसित सेटिंग्स"
+
+msgid "Command to check for package updates"
+msgstr "पैकेज अपडेट जांचने के लिए कमांड"
+
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+"आउटपुट पार्सिंग अक्षम करें, हर पंक्ति को एक अपडेट मानें। यह पुराना व्यवहार है।"
+
+msgid "Command to update packages"
+msgstr "पैकेज अपडेट करने के लिए कमांड"
+
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr ""
+"Pacman की लोकल डायरेक्टरी पथ - नए पैकेज इंस्टॉल होने पर पता लगाने के लिए"
+
+msgid "Command to open package manager (optional)"
+msgstr "पैकेज प्रबंधक खोलने के लिए कमांड (वैकल्पिक)"
+
+msgid "Command to show info for a package (optional)"
+msgstr "किसी पैकेज की जानकारी दिखाने का कमांड (वैकल्पिक)"
+
+msgid "Display package names as links (underlined)"
+msgstr "पैकेज के नाम लिंक के रूप में दिखाएं (रेखांकित)"
+
+msgid "About"
+msgstr "जानकारी"
