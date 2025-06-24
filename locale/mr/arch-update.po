@@ -1,0 +1,168 @@
+# Marathi translation for arch-update.
+# Copyright (C) 2024 arch-update's authors.
+# This file is distributed under the same license as the arch-update package.
+# Translated by Avinash Duduskar, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arch-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-23 12:55+0530\n"
+"PO-Revision-Date: 2025-06-23 12:55+0530\n"
+"Last-Translator: Avinash Duduskar\n"
+"Language-Team: Marathi <>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "Settings"
+msgstr "सेटिंग्ज"
+
+msgid "Update now"
+msgstr "आता अद्ययावत करा"
+
+msgid "Open package manager"
+msgstr "पॅकेज व्यवस्थापक उघडा"
+
+msgid "Checking"
+msgstr "तपासणी चालू आहे"
+
+msgid "Check now"
+msgstr "आता तपासा"
+
+msgid "Waiting first check"
+msgstr "प्रारंभिक तपासणीची वाट पाहत आहे"
+
+#, javascript-format
+msgid "%d update pending"
+msgid_plural "%d updates pending"
+msgstr[0] "%d अद्ययावत प्रलंबित आहे"
+msgstr[1] "%d अद्ययावत प्रलंबित आहेत"
+
+msgid "New Arch Linux Update"
+msgid_plural "New Arch Linux Updates"
+msgstr[0] "नवीन Arch Linux अद्ययावत"
+msgstr[1] "नवीन Arch Linux अद्ययावत"
+
+#, javascript-format
+msgid "There is %d update pending"
+msgid_plural "There are %d updates pending"
+msgstr[0] "%d अद्ययावत प्रलंबित आहे"
+msgstr[1] "%d अद्ययावत प्रलंबित आहेत"
+
+msgid ""
+"Note : you have to install pacman-contrib to use the 'checkupdates' script."
+msgstr ""
+"टीप : 'checkupdates' स्क्रिप्ट वापरण्यासाठी pacman-contrib पॅकेज स्थापित करणे आवश्यक आहे."
+
+msgid "Error"
+msgstr "त्रुटी"
+
+msgid "Up to date :)"
+msgstr "सर्व अद्ययावत झाले आहेत :)"
+
+msgid "Last checked"
+msgstr "शेवटची तपासणी"
+
+msgid "Basic settings"
+msgstr "मूलभूत सेटिंग्ज"
+
+msgid "Checking for updates"
+msgstr "अद्ययावत साठी तपासणी होत आहे"
+
+msgid "Time to wait before first check (seconds)"
+msgstr "पहिल्या तपासणीपूर्वी प्रतीक्षा वेळ (सेकंदात)"
+
+msgid "Interval between updates check (minutes)"
+msgstr "अद्ययावत तपासणीमधील अंतर (मिनिटांमध्ये)"
+
+msgid "Indicator"
+msgstr "सूचक"
+
+msgid "Always visible"
+msgstr "नेहमी दृश्यमान"
+
+msgid "Use built-in icons"
+msgstr "अंतर्गत चिन्हे वापरा"
+
+msgid "Show updates count on indicator"
+msgstr "सूचकावर अद्ययावतची संख्या दर्शवा"
+
+msgid "Position in Panel"
+msgstr "पॅनेलमधील स्थान"
+
+msgid "Left"
+msgstr "डावीकडे"
+
+msgid "Center"
+msgstr "मध्यभागी"
+
+msgid "Right"
+msgstr "उजवीकडे"
+
+msgid "Menu"
+msgstr "मेनू"
+
+msgid ""
+"Auto-expand updates list if updates count is less than this number (0 to "
+"disable)"
+msgstr ""
+"जर अद्ययावतची संख्या या संख्येपेक्षा कमी असेल तर यादी आपोआप विस्तारित करा (0 = निष्क्रिय करा)"
+
+msgid "Strip out versions numbers"
+msgstr "आवृत्ती क्रमांक काढून टाका"
+
+msgid "Show date/time of last check"
+msgstr "शेवटच्या तपासणीची तारीख/वेळ दर्शवा"
+
+msgid "Notification"
+msgstr "सूचना"
+
+msgid "Send a notification when new updates are available"
+msgstr "नवीन अद्ययावत उपलब्ध असल्यास सूचना पाठवा"
+
+msgid "How much information to show on notifications"
+msgstr "सूचनांमध्ये किती माहिती दर्शवायची"
+
+msgid "Count only"
+msgstr "फक्त संख्या"
+
+msgid "New updates names"
+msgstr "नवीन अद्ययावतची नावे"
+
+msgid "All updates names"
+msgstr "सर्व अद्ययावतची नावे"
+
+msgid "Advanced settings"
+msgstr "प्रगत सेटिंग्ज"
+
+msgid "Command to check for package updates"
+msgstr "पॅकेज अद्ययावत तपासण्यासाठी आदेश"
+
+msgid ""
+"Disable output parsing, count every line as an update. This is the old "
+"behavior."
+msgstr ""
+"आउटपुट पार्सिंग निष्क्रिय करा, प्रत्येक ओळ एका अद्ययावत म्हणून मोजा. हे जुनं वर्तन आहे."
+
+msgid "Command to update packages"
+msgstr "पॅकेजेस अद्ययावत करण्यासाठी आदेश"
+
+msgid "Pacman local directory path - To detect when new packages are installed"
+msgstr ""
+"Pacman स्थानिक डिरेक्टरीचा मार्ग - नवीन पॅकेजेस कधी स्थापित झाली हे शोधण्यासाठी"
+
+msgid "Command to open package manager (optional)"
+msgstr "पॅकेज व्यवस्थापक उघडण्यासाठी आदेश (ऐच्छिक)"
+
+msgid "Command to show info for a package (optional)"
+msgstr "पॅकेजची माहिती दाखविण्यासाठी आदेश (ऐच्छिक)"
+
+msgid "Display package names as links (underlined)"
+msgstr "पॅकेज नावे लिंक म्हणून दर्शवा (रेषांकित)"
+
+msgid "About"
+msgstr "बद्दल"
