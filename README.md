@@ -1,6 +1,8 @@
 # arch-update
 Update indicator for Arch Linux and GNOME Shell
 
+Note : Since 2026, the project has been moved to CodeBerg : https://codeberg.org/RaphaelRochet/arch-update
+
 ## Warning for Gnome 42+
 Default update command tries to run "gnome-terminal".
 You need to either install gnome-terminal or edit update command in advanced options to run Console. See wiki for examples.
@@ -17,7 +19,7 @@ If you use the default "checkupdates" way you will need to install "pacman-contr
 
 ## AUR, Flatpak, ...
 You can easily add support for AUR or another package manager, by editing check and updates commands.
-You will find many examples in the wiki : https://github.com/RaphaelRochet/arch-update/wiki
+You will find many examples in the wiki : https://codeberg.org/RaphaelRochet/arch-update/wiki
 
 ## One-click install
 It's on extensions.gnome.org :
