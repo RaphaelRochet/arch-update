@@ -8,6 +8,7 @@ Default update command tries to run "gnome-terminal".
 You need to either install gnome-terminal or edit update command in advanced options to run Console. See wiki for examples.
 
 ## Features
+- You can use any Terminal you want via advanced settings
 - Uses pacman's «checkupdates» by default and thus does not need root access
 - Optional update count display on panel
 - Optional notification on new updates (defaults to off)
